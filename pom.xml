@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nl.bitwalker</groupId>
 	<name>User-Agent-Utils</name>
-	<url>http://code.google.com/p/user-agent-utils/</url>
+	<url>http://java.net/projects/user-agent-utils</url>
 	<artifactId>UserAgentUtils</artifactId>
 	<version>1.2.3</version>
 	<description>Utility classes to handle user-agents.</description>
@@ -30,17 +30,17 @@
 	</developers>
 
 	<issueManagement>
-		<system>Google Code</system>
-		<url>http://code.google.com/p/user-agent-utils/issues/list</url>
+		<system>JIRA</system>
+		<url>http://java.net/jira/browse/USER_AGENT_UTILS</url>
 	</issueManagement>
 
 	<scm>
 		<connection>
-			scm:svn:http://user-agent-utils.googlecode.com/svn/trunk/
+			scm:svn:https://svn.java.net/svn/user-agent-utils~svn/
 		</connection>
 		<tag>HEAD</tag>
 		<url>
-			http://code.google.com/p/user-agent-utils/source/browse
+			http://java.net/projects/user-agent-utils/sources/svn/show
 		</url>
 	</scm>
 
