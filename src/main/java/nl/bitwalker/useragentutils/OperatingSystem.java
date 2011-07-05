@@ -69,8 +69,8 @@ public enum OperatingSystem {
 	/**
 	 * PalmOS, exact version unkown
 	 */
-	WEBOS(			Manufacturer.PALM,null,11, "WebOS", new String[] { "webOS" },  null, DeviceType.MOBILE, null ), 
-	PALM(			Manufacturer.PALM,null,10, "PalmOS", new String[] { "Palm" },  null, DeviceType.MOBILE, null ), 
+	WEBOS(			Manufacturer.HP,null,11, "WebOS", new String[] { "webOS" },  null, DeviceType.MOBILE, null ), 
+	PALM(			Manufacturer.HP,null,10, "PalmOS", new String[] { "Palm" },  null, DeviceType.MOBILE, null ), 
 	
 
 	/**

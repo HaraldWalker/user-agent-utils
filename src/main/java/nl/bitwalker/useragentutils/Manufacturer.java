@@ -74,9 +74,9 @@ public enum Manufacturer {
 	 */
 	BLACKBERRY(7, "Research In Motion Limited"),	
 	/**
-	 * Palm, Inc.
+	 * Hewlett-Packard Company, previously Palm
 	 */
-	PALM(8, "Palm, Inc. "),
+	HP(8, "Hewlet Packard"),
 	/**
 	 * Sony Ericsson Mobile Communications AB
 	 */
