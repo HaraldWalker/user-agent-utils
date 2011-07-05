@@ -82,6 +82,10 @@ public enum Manufacturer {
 	 */
 	SONY_ERICSSON(9, "Sony Ericsson Mobile Communications AB"),
 	/**
+	 * Samsung Electronics
+	 */
+	SAMSUNG(20, "Samsung Electronics"),
+	/**
 	 * Sony Computer Entertainment, Inc.
 	 */
 	SONY(10, "Sony Computer Entertainment, Inc."),

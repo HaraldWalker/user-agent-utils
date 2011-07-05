@@ -95,6 +95,12 @@ public enum OperatingSystem {
 	MAEMO(			Manufacturer.NOKIA,null, 2, "Maemo", new String[] { "Maemo" },  null, DeviceType.MOBILE, null ),
 
 	/**
+	 * Bada is a mobile operating system being developed by Samsung Electronics.
+	 */
+	BADA(			Manufacturer.SAMSUNG,null, 2, "Bada", new String[] { "Bada" },  null, DeviceType.MOBILE, null ),
+
+	
+	/**
 	 * Various Linux based operating systems.
 	 */
 	LINUX(			Manufacturer.OTHER,null, 2, "Linux", new String[] { "Linux" , "CamelHttpStream" }, null, DeviceType.COMPUTER, null ), // CamelHttpStream is being used by Evolution, an email client for Linux

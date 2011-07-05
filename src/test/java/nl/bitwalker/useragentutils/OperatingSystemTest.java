@@ -187,7 +187,13 @@ public class OperatingSystemTest {
 	};
 	
 	String[] windowsMobile7 = {
-			"Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0) Asus;Galaxy6"
+			"Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0) Asus;Galaxy6",
+			"Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)"
+	};
+	
+	String[] bada = {
+			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500NEJE5; U; Bada/1.0; fr-fr) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.0 Mobile WVGA SMM-MMS/1.2.0 NexPlayer/3.0 profile/MIDP-2.1 configuration/CLDC-1.1 OPN-B",
+			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500XXJL2; U; Bada/1.2; de-de) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.2 Mobile WVGA SMM-MMS/1.2.0 OPN-B"
 	};
 	
 	String[] maemo = {
@@ -214,6 +220,7 @@ public class OperatingSystemTest {
 		testAgents(windowsXP, OperatingSystem.WINDOWS_XP);
 		testAgents(windows98, OperatingSystem.WINDOWS_98);
 		testAgents(palmOsDevices, OperatingSystem.PALM);
+		testAgents(bada, OperatingSystem.BADA);
 		testAgents(webOS, OperatingSystem.WEBOS);
 		testAgents(symbian9phones, OperatingSystem.SYMBIAN9);
 		testAgents(symbian8phones, OperatingSystem.SYMBIAN8);
@@ -237,6 +244,7 @@ public class OperatingSystemTest {
 		testDeviceTypes(windowsMobile7, DeviceType.MOBILE);
 		testDeviceTypes(windowsVista, DeviceType.COMPUTER);
 		testDeviceTypes(palmOsDevices, DeviceType.MOBILE);
+		testDeviceTypes(bada, DeviceType.MOBILE);
 		testDeviceTypes(tablets, DeviceType.TABLET);
 		testDeviceTypes(gameconsoles, DeviceType.GAME_CONSOLE);
 	}

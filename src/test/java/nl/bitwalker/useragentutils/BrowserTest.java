@@ -113,6 +113,10 @@ public class BrowserTest {
 	     "Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 7.6) PPC; MDA Vario/3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1",
 	     "Palm750/v0005 Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 7.6) UP.Link/6.3.0.0.0"
 	};
+	
+	String[] ieMobile9 = new String[] {
+			"Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)"
+	};
 		
 	String[] lotusNotes = new String[] {
 		"Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)",
@@ -158,6 +162,11 @@ public class BrowserTest {
 			"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:2.0b9pre) Gecko/20101228 Firefox/4.0b9pre"
 	};
 	
+	String[] firefox5 = new String[] {
+			"Mozilla/5.0 (Windows NT 6.1; U; ru; rv:5.0.1.6) Gecko/20110501 Firefox/5.0.1 Firefox/5.0.1",
+			"Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0"
+	};
+	
 	String[] firefox3mobile = {
 			"Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900"
 	};
@@ -170,7 +179,8 @@ public class BrowserTest {
 	String[] safari5 = {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_4; en-us) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16",
 			"Mozilla/5.0 (Windows; U; Windows NT 6.1; ja-JP) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16",
-			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_5; en-us) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
+			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_5; en-us) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4",
+			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7; da-dk) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1"
 	};
 	
 	String[] safari4 = {
@@ -185,6 +195,10 @@ public class BrowserTest {
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3A101a Safari/419.3", // Mobile Safari 3.0
 			"Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B367 Safari/531.21.10",
 			"Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7"
+	};
+	
+	String[] dolfin = {
+			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500NEJE5; U; Bada/1.0; fr-fr) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.0 Mobile WVGA SMM-MMS/1.2.0 NexPlayer/3.0 profile/MIDP-2.1 configuration/CLDC-1.1 OPN-B"
 	};
 	
 	// similar to Safari, but doesn't mention Safari in the user-agent string
@@ -311,6 +325,7 @@ public class BrowserTest {
 		testAgents(outookExpress, Browser.OUTLOOK_EXPRESS7);
 		testAgents(ieMobile6, Browser.IEMOBILE6);
 		testAgents(ieMobile7, Browser.IEMOBILE7);
+		testAgents(ieMobile9, Browser.IEMOBILE9);
 		testAgents(lotusNotes, Browser.LOTUS_NOTES);
 		testAgents(lynxClient, Browser.LYNX);
 		testAgents(konqueror, Browser.KONQUEROR);
@@ -320,8 +335,10 @@ public class BrowserTest {
 		testAgents(chrome10, Browser.CHROME10);
 		testAgents(firefox3, Browser.FIREFOX3);
 		testAgents(firefox4, Browser.FIREFOX4);
+		testAgents(firefox5, Browser.FIREFOX5);
 		testAgents(firefox3mobile, Browser.FIREFOX3MOBILE);
 		testAgents(safari, Browser.SAFARI);
+		testAgents(dolfin, Browser.DOLFIN2);
 		testAgents(safari5, Browser.SAFARI5);
 		testAgents(safari4, Browser.SAFARI4);
 		testAgents(mobileSafari, Browser.MOBILE_SAFARI);

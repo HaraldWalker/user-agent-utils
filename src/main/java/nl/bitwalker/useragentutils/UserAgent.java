@@ -44,6 +44,7 @@ package nl.bitwalker.useragentutils;
  * Resources:<br>
  * <a href="http://www.useragentstring.com">User Agent String.Com</a><br>
  * <a href="http://www.user-agents.org">List of User-Agents</a><br>
+ * <a href="http://user-agent-string.info">user-agent-string.info</a><br>
  * <a href="http://www.zytrax.com/tech/web/browser_ids.htm">Browser ID (User-Agent) Strings</a><br>
  * <a href="http://www.zytrax.com/tech/web/mobile_ids.html">Mobile Browser ID (User-Agent) Strings</a><br>
  * <a href="http://www.joergkrusesweb.de/internet/browser/user-agent.html">Browser-Kennungen</a><br>
