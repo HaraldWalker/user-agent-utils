@@ -73,6 +73,9 @@ public class BrowserTest {
 			"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0"
 	};
 	
+	String[] ie10clients = new String[] {
+			"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"
+	};	
 	
 	String[] ie55clients = new String[] {
 			"Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0; .NET CLR 1.1.4322)",
@@ -153,6 +156,22 @@ public class BrowserTest {
 			"Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/534.15 (KHTML, like Gecko) Ubuntu/10.10 Chromium/10.0.613.0 Chrome/10.0.613.0 Safari/534.15"
 	};
 	
+	String[] chrome11 = new String[] {
+			"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.697.0 Safari/534.24"
+	};
+	
+	String[] chrome12 = new String[] {
+			"Mozilla/5.0 (X11; CrOS i686 12.0.742.91) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.93 Safari/534.30"
+	};
+	
+	String[] chrome13 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41 Safari/535.1"
+	};
+	
+	String[] chrome14 = new String[] {
+			"Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.815.0 Safari/535.1"
+	};
+	
 	String[] firefox3 = new String[] {
 			"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.14) Gecko/2009090216 Ubuntu/9.04 (jaunty) Firefox/3.0.14"
 	};
@@ -166,6 +185,11 @@ public class BrowserTest {
 			"Mozilla/5.0 (Windows NT 6.1; U; ru; rv:5.0.1.6) Gecko/20110501 Firefox/5.0.1 Firefox/5.0.1",
 			"Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0"
 	};
+
+	String[] firefox6 = new String[] {
+	"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0a2) Gecko/20110612 Firefox/6.0a2"
+	};
+
 	
 	String[] firefox3mobile = {
 			"Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900"
@@ -319,6 +343,7 @@ public class BrowserTest {
 		testAgents(ie7clients, Browser.IE7);
 		testAgents(ie8clients, Browser.IE8);
 		testAgents(ie9clients, Browser.IE9);
+		testAgents(ie10clients, Browser.IE10);
 		testAgents(ieTooOld, Browser.IE);
 		testAgents(outlook2007, Browser.OUTLOOK2007);
 		testAgents(outlook2010, Browser.OUTLOOK2010);
@@ -333,9 +358,14 @@ public class BrowserTest {
 		testAgents(chrome8, Browser.CHROME8);
 		testAgents(chrome9, Browser.CHROME9);
 		testAgents(chrome10, Browser.CHROME10);
+		testAgents(chrome11, Browser.CHROME11);
+		testAgents(chrome12, Browser.CHROME12);
+		testAgents(chrome13, Browser.CHROME13);
+		testAgents(chrome14, Browser.CHROME14);
 		testAgents(firefox3, Browser.FIREFOX3);
 		testAgents(firefox4, Browser.FIREFOX4);
 		testAgents(firefox5, Browser.FIREFOX5);
+		testAgents(firefox6, Browser.FIREFOX6);
 		testAgents(firefox3mobile, Browser.FIREFOX3MOBILE);
 		testAgents(safari, Browser.SAFARI);
 		testAgents(dolfin, Browser.DOLFIN2);
