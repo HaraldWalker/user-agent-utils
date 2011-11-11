@@ -61,6 +61,10 @@ public enum OperatingSystem {
 	WINDOWS_98(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,5, "Windows 98", new String[] { "Windows 98","Win98" },  new String[] { "Palm" }, DeviceType.COMPUTER, null ), // before Win 
 
 	ANDROID(		Manufacturer.GOOGLE,null, 0, "Android", new String[] { "Android" },  null, DeviceType.MOBILE, null ),
+	/**
+	 * First Android 4 device is the Galaxy Nexus phone. Once there are also Tablets with Android 4 we we will have to find a solution to distinguish between mobile phones and tablets.
+	 */
+	ANDROID4(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 4, "Android 4.x", new String[] { "Android 4" },  null, DeviceType.MOBILE, null ),
 	ANDROID3_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 30, "Android 3.x Tablet", new String[] { "Android 3" },  null, DeviceType.TABLET, null ), // as long as there are not Android 3.x phones this should be enough
 	ANDROID2(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 2, "Android 2.x", new String[] { "Android 2" },  null, DeviceType.MOBILE, null ),
 	ANDROID2_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID2, 20, "Android 2.x Tablet", new String[] { "GT-P1000","SCH-I800" },  null, DeviceType.TABLET, null ),
@@ -77,6 +81,7 @@ public enum OperatingSystem {
 	 * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
 	 */	
 	IOS(Manufacturer.APPLE,null, 2, "iOS", new String[] { "like Mac OS X" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+	iOS5_IPHONE(Manufacturer.APPLE,OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new String[] { "iPhone OS 5" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 	iOS4_IPHONE(Manufacturer.APPLE,OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new String[] { "iPhone OS 4" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 	MAC_OS_X_IPAD(	Manufacturer.APPLE, OperatingSystem.IOS, 50, "Mac OS X (iPad)", new String[] { "iPad" },  null, DeviceType.TABLET, null ), // before Mac OS X
 	MAC_OS_X_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 40, "Mac OS X (iPhone)", new String[] { "iPhone" },  null, DeviceType.MOBILE, null ), // before Mac OS X
