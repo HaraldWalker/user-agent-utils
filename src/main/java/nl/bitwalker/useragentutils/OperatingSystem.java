@@ -108,7 +108,10 @@ public enum OperatingSystem {
 	/**
 	 * Various Linux based operating systems.
 	 */
-	LINUX(			Manufacturer.OTHER,null, 2, "Linux", new String[] { "Linux" , "CamelHttpStream" }, null, DeviceType.COMPUTER, null ), // CamelHttpStream is being used by Evolution, an email client for Linux
+	KINDLE(		Manufacturer.AMAZON,null, 1, "Linux (Kindle)", new String[] { "Kindle" }, null, DeviceType.TABLET, null ),	
+	KINDLE3(		Manufacturer.AMAZON,OperatingSystem.KINDLE, 30, "Linux (Kindle 3)", new String[] { "Kindle/3" }, null, DeviceType.TABLET, null ),	
+	KINDLE2(		Manufacturer.AMAZON,OperatingSystem.KINDLE, 20, "Linux (Kindle 2)", new String[] { "Kindle/2" }, null, DeviceType.TABLET, null ),	
+	LINUX(		Manufacturer.OTHER,null, 2, "Linux", new String[] { "Linux" , "CamelHttpStream" }, null, DeviceType.COMPUTER, null ), // CamelHttpStream is being used by Evolution, an email client for Linux
 
 	/**
 	 * Other Symbian OS versions
@@ -150,7 +153,7 @@ public enum OperatingSystem {
 	 */
 	BLACKBERRY(		Manufacturer.BLACKBERRY,null, 1, "BlackBerryOS", new String[] { "BlackBerry" }, null, DeviceType.MOBILE, null ),	
 	BLACKBERRY7(	Manufacturer.BLACKBERRY,OperatingSystem.BLACKBERRY, 7, "BlackBerry 7", new String[] { "Version/7" }, null, DeviceType.MOBILE, null ),	
-	BLACKBERRY6(	Manufacturer.BLACKBERRY,OperatingSystem.BLACKBERRY, 6, "BlackBerry 6", new String[] { "Version/6" }, null, DeviceType.MOBILE, null ),	
+	BLACKBERRY6(	Manufacturer.BLACKBERRY,OperatingSystem.BLACKBERRY, 6, "BlackBerry 6", new String[] { "Version/6" }, null, DeviceType.MOBILE, null ),		
 	
 	UNKNOWN(		Manufacturer.OTHER,null, 1, "Unknown", new String[0], null, DeviceType.UNKNOWN, null );
 	
