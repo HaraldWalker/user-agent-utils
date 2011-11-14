@@ -231,6 +231,11 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)"
 	};
 	
+	String[] roku = {
+			"Roku/DVP-4.1 (024.01E01250A)", // Roku 2 XD
+			"Roku/DVP-3.0 (013.00E02227A)"
+	};
+	
 	/**
 	 * Test method for {@link nl.bitwalker.useragentutils.OperatingSystem#isInUserAgentString(java.lang.String)}.
 	 */
@@ -271,6 +276,7 @@ public class OperatingSystemTest {
 		testAgents(maemo, OperatingSystem.MAEMO);
 		testAgents(kindle2, OperatingSystem.KINDLE2);
 		testAgents(kindle3, OperatingSystem.KINDLE3);
+		testAgents(roku, OperatingSystem.ROKU);
 		testAgents(googleTV, OperatingSystem.GOOGLE_TV);}
 
 	

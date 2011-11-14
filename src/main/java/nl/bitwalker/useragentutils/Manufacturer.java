@@ -124,8 +124,11 @@ public enum Manufacturer {
 	/**
 	 * Amazon
 	 */
-	AMAZON(20, "Amazon")
-	;
+	AMAZON(20, "Amazon.com, Inc."),
+	/*
+	 * Roku sells home digital media products
+	 */
+	ROKU(21, "Roku, Inc.");
 	
 	
 	private final byte id;

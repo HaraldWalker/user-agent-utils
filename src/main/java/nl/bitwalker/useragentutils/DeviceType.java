@@ -49,8 +49,7 @@ public enum DeviceType {
 	 */
 	GAME_CONSOLE("Game console"),
 	/**
-	 * Digital media receiver like the Apple TV.
-	 * No device detection implemented yet for this category. Please send provide user-agent strings if you have some.
+	 * Digital media receiver like the Google TV.
 	 */	
 	DMR("Digital media receiver"),
 	/**
