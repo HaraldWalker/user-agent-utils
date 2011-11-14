@@ -62,6 +62,12 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13" // dropped the mobile part, so Android without mobile should be a tablet!
 	};
 	
+	String[] googleTV = {
+			"Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/161242",
+			"Mozilla/5.0 (X11; U: Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/162671", // Sony
+			"Mozilla/5.0 (X11; U: Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/b39389" // Logitech Revue
+	};
+	
 	String[] gameconsoles = {
 			"Mozilla/5.0 (PLAYSTATION 3; 1.00)",
 			"Opera/9.30 (Nintendo Wii; U; ; 2071; Wii Shop Channel/1.0; en)"
@@ -264,7 +270,9 @@ public class OperatingSystemTest {
 		testAgents(android4g, OperatingSystem.ANDROID4);
 		testAgents(maemo, OperatingSystem.MAEMO);
 		testAgents(kindle2, OperatingSystem.KINDLE2);
-		testAgents(kindle3, OperatingSystem.KINDLE3);}
+		testAgents(kindle3, OperatingSystem.KINDLE3);
+		testAgents(googleTV, OperatingSystem.GOOGLE_TV);}
+
 	
 	@Test
 	public void testDeviceTypes() {
@@ -275,6 +283,7 @@ public class OperatingSystemTest {
 		testDeviceTypes(bada, DeviceType.MOBILE);
 		testDeviceTypes(tablets, DeviceType.TABLET);
 		testDeviceTypes(gameconsoles, DeviceType.GAME_CONSOLE);
+		testDeviceTypes(googleTV, DeviceType.DMR);
 	}
 	
 	public void testGroupRecursion() {

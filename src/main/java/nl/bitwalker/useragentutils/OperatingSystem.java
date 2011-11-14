@@ -52,7 +52,7 @@ public enum OperatingSystem {
 	 * Windows Mobile / Windows CE. Exact version unknown.
 	 */
 	WINDOWS(		Manufacturer.MICROSOFT,null,1, "Windows", new String[] { "Windows" }, new String[] { "Palm" }, DeviceType.COMPUTER, null ), // catch the rest of older Windows systems (95, NT,...)
-	WINDOWS_7(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new String[] { "Windows NT 6.1" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 7 is called 6.1 LOL
+	WINDOWS_7(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new String[] { "Windows NT 6.1" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 7 is called 6.1 LOL
 	WINDOWS_VISTA(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new String[] { "Windows NT 6" }, null, DeviceType.COMPUTER, null ), // before Win
 	WINDOWS_2000(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,15, "Windows 2000", new String[] { "Windows NT 5.0" }, null, DeviceType.COMPUTER, null ), // before Win
 	WINDOWS_XP(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,10, "Windows XP", new String[] { "Windows NT 5" }, null, DeviceType.COMPUTER, null ), // before Win, 5.1 and 5.2 are basically XP systems
@@ -80,9 +80,9 @@ public enum OperatingSystem {
 	/**
 	 * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
 	 */	
-	IOS(Manufacturer.APPLE,null, 2, "iOS", new String[] { "like Mac OS X" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
-	iOS5_IPHONE(Manufacturer.APPLE,OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new String[] { "iPhone OS 5" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
-	iOS4_IPHONE(Manufacturer.APPLE,OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new String[] { "iPhone OS 4" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+	IOS(			Manufacturer.APPLE,null, 2, "iOS", new String[] { "like Mac OS X" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+	iOS5_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new String[] { "iPhone OS 5" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+	iOS4_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new String[] { "iPhone OS 4" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 	MAC_OS_X_IPAD(	Manufacturer.APPLE, OperatingSystem.IOS, 50, "Mac OS X (iPad)", new String[] { "iPad" },  null, DeviceType.TABLET, null ), // before Mac OS X
 	MAC_OS_X_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 40, "Mac OS X (iPhone)", new String[] { "iPhone" },  null, DeviceType.MOBILE, null ), // before Mac OS X
 	MAC_OS_X_IPOD(	Manufacturer.APPLE, OperatingSystem.IOS, 30, "Mac OS X (iPod)", new String[] { "iPod" },  null, DeviceType.MOBILE, null ), // before Mac OS X
@@ -104,14 +104,18 @@ public enum OperatingSystem {
 	 */
 	BADA(			Manufacturer.SAMSUNG,null, 2, "Bada", new String[] { "Bada" },  null, DeviceType.MOBILE, null ),
 
-	
+    /**
+     *  Google TV uses Android 2.x or 3.x but doesn't identify itself as Android.
+     */
+	GOOGLE_TV(		Manufacturer.GOOGLE,null, 100, "Android (Google TV)", new String[] { "GoogleTV" }, null, DeviceType.DMR, null ),	
+
 	/**
 	 * Various Linux based operating systems.
 	 */
-	KINDLE(		Manufacturer.AMAZON,null, 1, "Linux (Kindle)", new String[] { "Kindle" }, null, DeviceType.TABLET, null ),	
+	KINDLE(			Manufacturer.AMAZON,null, 1, "Linux (Kindle)", new String[] { "Kindle" }, null, DeviceType.TABLET, null ),	
 	KINDLE3(		Manufacturer.AMAZON,OperatingSystem.KINDLE, 30, "Linux (Kindle 3)", new String[] { "Kindle/3" }, null, DeviceType.TABLET, null ),	
 	KINDLE2(		Manufacturer.AMAZON,OperatingSystem.KINDLE, 20, "Linux (Kindle 2)", new String[] { "Kindle/2" }, null, DeviceType.TABLET, null ),	
-	LINUX(		Manufacturer.OTHER,null, 2, "Linux", new String[] { "Linux" , "CamelHttpStream" }, null, DeviceType.COMPUTER, null ), // CamelHttpStream is being used by Evolution, an email client for Linux
+	LINUX(			Manufacturer.OTHER,null, 2, "Linux", new String[] { "Linux" , "CamelHttpStream" }, null, DeviceType.COMPUTER, null ), // CamelHttpStream is being used by Evolution, an email client for Linux
 
 	/**
 	 * Other Symbian OS versions
@@ -181,7 +185,7 @@ public enum OperatingSystem {
 		this.aliases = aliases;
 		this.excludeList = exclude;
 		this.deviceType = deviceType;
-		if (versionRegexString != null) {
+		if (versionRegexString != null) { // not implemented yet
 			this.versionRegEx = Pattern.compile(versionRegexString);
 		}
 	}
