@@ -122,10 +122,10 @@ public enum Manufacturer {
 	 */
 	MMC(19, "Mail.com Media Corporation"),
 	/**
-	 * Amazon
+	 * Amazon.com, Inc.
 	 */
 	AMAZON(20, "Amazon.com, Inc."),
-	/*
+	/**
 	 * Roku sells home digital media products
 	 */
 	ROKU(21, "Roku, Inc.");
