@@ -37,6 +37,8 @@
 
 package nl.bitwalker.useragentutils;
 
+import java.io.Serializable;
+
 /**
  * Container class for user-agent information with operating system and browser details. 
  * Can decode user-agent strings.
@@ -62,9 +64,10 @@ package nl.bitwalker.useragentutils;
  * @author harald
  *
  */
-public class UserAgent
+public class UserAgent implements Serializable
 {
 	
+	private static final long serialVersionUID = 7025462762784240212L;
 	private OperatingSystem operatingSystem = OperatingSystem.UNKNOWN;
 	private Browser browser = Browser.UNKNOWN;
 	private int id;
