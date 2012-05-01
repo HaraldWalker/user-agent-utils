@@ -45,6 +45,7 @@ import java.io.Serializable;
  * <br><br>
  * Resources:<br>
  * <a href="http://www.useragentstring.com">User Agent String.Com</a><br>
+ * <a href="http://www.myuseragentstring.com/">My User Agent String</a><br>
  * <a href="http://www.user-agents.org">List of User-Agents</a><br>
  * <a href="http://user-agent-string.info">user-agent-string.info</a><br>
  * <a href="http://www.zytrax.com/tech/web/browser_ids.htm">Browser ID (User-Agent) Strings</a><br>
