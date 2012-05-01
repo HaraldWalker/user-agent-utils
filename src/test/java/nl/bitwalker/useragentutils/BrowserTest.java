@@ -137,6 +137,11 @@ public class BrowserTest {
 			"Mozilla/5.0 (compatible; Konqueror/3.1; Linux 2.4.21-20.0.1.ELsmp; X11; i686; , en_US, en, de)"
 	};
 	
+	String[] chromeMobile = new String[] {
+			"Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7",
+			"Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Galaxy Nexus Build/IML74K) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Mobile Safari/535.7"
+	};
+	
 	String[] chrome = new String[] {
 			"Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/532.9 (KHTML, like Gecko) Chrome/5.0.310.0 Safari/532.9",
 			"Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/532.9 (KHTML, like Gecko) Chrome/5.0.309.0 Safari/532.9"
@@ -218,7 +223,8 @@ public class BrowserTest {
 			"Mozilla/5.0 (iPod; U; CPU iPhone OS 2_0 like Mac OS X; de-de) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5A347 Safari/525.20", // Mobile Safari 3.1.1
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3A101a Safari/419.3", // Mobile Safari 3.0
 			"Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B367 Safari/531.21.10",
-			"Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7"
+			"Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"
 	};
 	
 	String[] dolfin = {
@@ -293,6 +299,10 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.17) Gecko/20080914 Thunderbird/2.0.0.17"
 	};
 	
+	String[] silk = {
+			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true"
+	};
+	
 	
 	/**
 	 * Test method for {@link nl.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}.
@@ -326,6 +336,8 @@ public class BrowserTest {
 		testVersions("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.1.13) Gecko/20100914 Mnenhy/0.8.3 SeaMonkey/2.0.8", new Version("2.0.8", "2", "0"));
 		testVersions("Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE90-1/07.24.0.3; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413 UP.Link/6.2.3.18.0",null);
 		testVersions("Mozilla/5.0 (compatible; Googlebot/2.1; http://www.google.com/bot.html)", null); // no version information for some browsers
+		testVersions("Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7", new Version("16.0.912.75", "16", "0"));
+		testVersions("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true", new Version("1.1.0-80", "1", "1"));
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {
@@ -354,6 +366,7 @@ public class BrowserTest {
 		testAgents(lotusNotes, Browser.LOTUS_NOTES);
 		testAgents(lynxClient, Browser.LYNX);
 		testAgents(konqueror, Browser.KONQUEROR);
+		testAgents(chromeMobile, Browser.CHROME_MOBILE);
 		testAgents(chrome, Browser.CHROME);
 		testAgents(chrome8, Browser.CHROME8);
 		testAgents(chrome9, Browser.CHROME9);
@@ -385,6 +398,7 @@ public class BrowserTest {
 		testAgents(tools, Browser.DOWNLOAD);
 		testAgents(thunderbird3, Browser.THUNDERBIRD3);
 		testAgents(thunderbird2, Browser.THUNDERBIRD2);
+		testAgents(silk, Browser.SILK);
 	}
 	
 	private void testAgents(String[] agentStrings, Browser expectedBrowser) {
