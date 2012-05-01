@@ -60,7 +60,8 @@ public class OperatingSystemTest {
 			"Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 600x800)",
 			"Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)",
 			"Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13", // dropped the mobile part, so Android without mobile should be a tablet!
-			"Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.8+ like Gecko) Version/0.0.1 Safari/534.8+"
+			"Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.8+ like Gecko) Version/0.0.1 Safari/534.8+",
+			"Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Transformer TF101 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30"
 	};
 	
 	String[] googleTV = {
@@ -190,6 +191,21 @@ public class OperatingSystemTest {
 	String[] android4g = {
 			"Mozilla/5.0 (Linux; U; Android 4.0.1; en-us; Galaxy Nexus Build/ICL41) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
 	};
+	
+	String[] android2_tablet= {
+	"Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Kindle Fire Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"
+	};
+
+	String[] android3_tablet= {
+		"Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13",
+		"Mozilla/5.0 (Linux; U; Android 3.0.1; en-us; Xoom Build/HRI66) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13",
+		"Mozilla/5.0 (Linux; U; Android 3.1; en-us; GT-P7510 Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13" // Samsung Galaxy Tab
+	};
+	
+	String[] android4_tablet = {
+			"Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Transformer TF101 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+			"Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7"
+	};
 			
 	String[] windows98 = { 
 			"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Rogers Hi·Speed Internet; (R1 1.3))",
@@ -230,6 +246,11 @@ public class OperatingSystemTest {
 	
 	String[] kindle3 = {
 			"Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)"
+	};
+	
+	String[] kindle_fire = {
+		"Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Kindle Fire Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
+		"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true" // silk mode
 	};
 	
 	String[] roku = {
@@ -274,6 +295,9 @@ public class OperatingSystemTest {
 		testAgents(android1g, OperatingSystem.ANDROID1);
 		testAgents(android2g, OperatingSystem.ANDROID2);
 		testAgents(android4g, OperatingSystem.ANDROID4);
+		testAgents(android2_tablet, OperatingSystem.ANDROID2_TABLET);
+		testAgents(android3_tablet, OperatingSystem.ANDROID3_TABLET);
+		testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
 		testAgents(maemo, OperatingSystem.MAEMO);
 		testAgents(kindle2, OperatingSystem.KINDLE2);
 		testAgents(kindle3, OperatingSystem.KINDLE3);

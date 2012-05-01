@@ -64,10 +64,11 @@ public enum OperatingSystem {
 	/**
 	 * First Android 4 device is the Galaxy Nexus phone. Once there are also Tablets with Android 4 we we will have to find a solution to distinguish between mobile phones and tablets.
 	 */
-	ANDROID4(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 4, "Android 4.x", new String[] { "Android 4" },  null, DeviceType.MOBILE, null ),
+	ANDROID4(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 4, "Android 4.x", new String[] { "Android 4","Android-4" },  null, DeviceType.MOBILE, null ),
+	ANDROID4_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID4, 40, "Android 4.x Tablet", new String[] { "Xoom", "Transformer" },  null, DeviceType.TABLET, null ),
 	ANDROID3_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 30, "Android 3.x Tablet", new String[] { "Android 3" },  null, DeviceType.TABLET, null ), // as long as there are not Android 3.x phones this should be enough
 	ANDROID2(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 2, "Android 2.x", new String[] { "Android 2" },  null, DeviceType.MOBILE, null ),
-	ANDROID2_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID2, 20, "Android 2.x Tablet", new String[] { "GT-P1000","SCH-I800" },  null, DeviceType.TABLET, null ),
+	ANDROID2_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID2, 20, "Android 2.x Tablet", new String[] { "Kindle Fire", "GT-P1000","SCH-I800" },  null, DeviceType.TABLET, null ),
 	ANDROID1(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 1, "Android 1.x", new String[] { "Android 1" },  null, DeviceType.MOBILE, null ),
 	
 	/**
