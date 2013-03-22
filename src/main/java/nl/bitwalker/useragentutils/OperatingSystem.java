@@ -78,7 +78,7 @@ public enum OperatingSystem {
 	 */
 	WEBOS(			Manufacturer.HP,null,11, "WebOS", new String[] { "webOS" },  null, DeviceType.MOBILE, null ), 
 	PALM(			Manufacturer.HP,null,10, "PalmOS", new String[] { "Palm" },  null, DeviceType.MOBILE, null ), 
-	
+	MEEGO(			Manufacturer.NOKIA,null,3, "MeeGo", new String[] { "MeeGo" },  null, DeviceType.MOBILE, null ),		
 
 	/**
 	 * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.

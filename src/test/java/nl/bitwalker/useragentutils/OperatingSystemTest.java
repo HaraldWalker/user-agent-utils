@@ -126,6 +126,10 @@ public class OperatingSystemTest {
 			"SonyEricssonP1i/R100 Mozilla/4.0 (compatible; MSIE 6.0; Symbian OS; 661) Opera 8.65 [nl]"
 	};
 	
+	String[] meeGo = {
+			"Mozilla/5.0 (MeeGo; NokiaN9) AppleWebKit/534.13 (KHTML, like Gecko) NokiaBrowser/8.5.0 Mobile Safari/534.13"
+	};
+	
 	String[] sonyEricssonPhones = {
 			"SonyEricssonK550i/R1JD Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1",
 			"SonyEricssonK610i/R1CB Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1"
@@ -329,6 +333,7 @@ public class OperatingSystemTest {
 		testDeviceTypes(windowsVista, DeviceType.COMPUTER);
 		testDeviceTypes(palmOsDevices, DeviceType.MOBILE);
 		testDeviceTypes(bada, DeviceType.MOBILE);
+		testDeviceTypes(meeGo, DeviceType.MOBILE);
 		testDeviceTypes(tablets, DeviceType.TABLET);
 		testDeviceTypes(gameconsoles, DeviceType.GAME_CONSOLE);
 		testDeviceTypes(googleTV, DeviceType.DMR);
