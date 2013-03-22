@@ -228,6 +228,10 @@ public class OperatingSystemTest {
 			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; MDDC; MSOffice 12)",
 			"Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1) ; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Media Center PC 5.0; SLCC1; InfoPath.2)"
 	};
+
+	String[] windows8 = {
+			"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)"
+	};
 	
 	String[] windowsMobile7 = {
 			"Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0) Asus;Galaxy6",
@@ -278,6 +282,7 @@ public class OperatingSystemTest {
 		testAgents(windowsMobile7, OperatingSystem.WINDOWS_MOBILE7);
 		testAgents(windowsVista, OperatingSystem.WINDOWS_VISTA);
 		testAgents(windows7, OperatingSystem.WINDOWS_7);
+		testAgents(windows8, OperatingSystem.WINDOWS_8);
 		testAgents(windowsXP, OperatingSystem.WINDOWS_XP);
 		testAgents(windows98, OperatingSystem.WINDOWS_98);
 		testAgents(palmOsDevices, OperatingSystem.PALM);
