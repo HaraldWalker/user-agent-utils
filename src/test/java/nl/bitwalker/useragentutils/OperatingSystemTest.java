@@ -51,7 +51,7 @@ import org.junit.Test;
  *
  */
 public class OperatingSystemTest {
-
+	
 	String[] tablets = {
 			"Mozilla/5.0 (Linux; U; Android 2.2; es-es; GT-P1000 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
 			"Mozilla/5.0 (Linux; U; Android 2.2; en-us; SCH-I800 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
@@ -155,6 +155,11 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
 	};
 	
+	String[] iPhone6 = 
+	{
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25"
+	};
+	
 	String[] iPods = {
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; nl-nl) AppleWebKit/420.1 (KHTML, like Gecko)",
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko)",
@@ -165,7 +170,9 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B367 Safari/531.21.10", // final iPad Simulator
 			"Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10",
 			"Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; ja-jp) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5",
-			"Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"
+			"Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
+			"Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25",
+			"Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25"
 	};
 	
 	String[] blackberries = {
@@ -307,6 +314,7 @@ public class OperatingSystemTest {
 		testAgents(iPhones, OperatingSystem.MAC_OS_X_IPHONE);
 		testAgents(iPhone4, OperatingSystem.iOS4_IPHONE);
 		testAgents(iPhone5, OperatingSystem.iOS5_IPHONE);
+		testAgents(iPhone6, OperatingSystem.iOS6_IPHONE);
 		testAgents(iPods, OperatingSystem.MAC_OS_X_IPOD);
 		testAgents(iPad, OperatingSystem.MAC_OS_X_IPAD);
 		testAgents(blackberries, OperatingSystem.BLACKBERRY);
@@ -321,7 +329,8 @@ public class OperatingSystemTest {
 		testAgents(kindle2, OperatingSystem.KINDLE2);
 		testAgents(kindle3, OperatingSystem.KINDLE3);
 		testAgents(roku, OperatingSystem.ROKU);
-		testAgents(googleTV, OperatingSystem.GOOGLE_TV);}
+		testAgents(googleTV, OperatingSystem.GOOGLE_TV);
+	}
 
 	
 	@Test
@@ -335,6 +344,7 @@ public class OperatingSystemTest {
 		testDeviceTypes(bada, DeviceType.MOBILE);
 		testDeviceTypes(meeGo, DeviceType.MOBILE);
 		testDeviceTypes(tablets, DeviceType.TABLET);
+		testDeviceTypes(iPad, DeviceType.TABLET);	
 		testDeviceTypes(gameconsoles, DeviceType.GAME_CONSOLE);
 		testDeviceTypes(googleTV, DeviceType.DMR);
 	}
@@ -410,7 +420,7 @@ public class OperatingSystemTest {
 		for (String agentString : agentStrings)
 		{
 			assertEquals(expectedOperatingSystem, OperatingSystem.parseUserAgentString(agentString));
-		}		
+		}	
 	}
 
 }
