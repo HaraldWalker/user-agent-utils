@@ -239,6 +239,11 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)"
 	};
 	
+	String[] windowsMobile8 = {
+			"Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 920)",
+			"Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 820)"
+	};
+	
 	String[] bada = {
 			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500NEJE5; U; Bada/1.0; fr-fr) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.0 Mobile WVGA SMM-MMS/1.2.0 NexPlayer/3.0 profile/MIDP-2.1 configuration/CLDC-1.1 OPN-B",
 			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500XXJL2; U; Bada/1.2; de-de) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.2 Mobile WVGA SMM-MMS/1.2.0 OPN-B"
@@ -281,6 +286,7 @@ public class OperatingSystemTest {
 	public void testParseUserAgentString() {
 		testAgents(windowsCEdivices, OperatingSystem.WINDOWS_MOBILE);
 		testAgents(windowsMobile7, OperatingSystem.WINDOWS_MOBILE7);
+		testAgents(windowsMobile8, OperatingSystem.WINDOWS_PHONE8);
 		testAgents(windowsVista, OperatingSystem.WINDOWS_VISTA);
 		testAgents(windows7, OperatingSystem.WINDOWS_7);
 		testAgents(windows8, OperatingSystem.WINDOWS_8);
@@ -318,6 +324,7 @@ public class OperatingSystemTest {
 	public void testDeviceTypes() {
 		testDeviceTypes(windowsCEdivices, DeviceType.MOBILE);
 		testDeviceTypes(windowsMobile7, DeviceType.MOBILE);
+		testDeviceTypes(windowsMobile8, DeviceType.MOBILE);
 		testDeviceTypes(iPhone5, DeviceType.MOBILE);
 		testDeviceTypes(windowsVista, DeviceType.COMPUTER);
 		testDeviceTypes(palmOsDevices, DeviceType.MOBILE);

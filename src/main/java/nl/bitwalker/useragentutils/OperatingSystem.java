@@ -57,7 +57,8 @@ public enum OperatingSystem {
 	WINDOWS_VISTA(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new String[] { "Windows NT 6" }, null, DeviceType.COMPUTER, null ), // before Win
 	WINDOWS_2000(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,15, "Windows 2000", new String[] { "Windows NT 5.0" }, null, DeviceType.COMPUTER, null ), // before Win
 	WINDOWS_XP(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,10, "Windows XP", new String[] { "Windows NT 5" }, null, DeviceType.COMPUTER, null ), // before Win, 5.1 and 5.2 are basically XP systems
-	WINDOWS_MOBILE7(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 51, "Windows Mobile 7", new String[] { "Windows Phone OS 7" },  null, DeviceType.MOBILE, null ), // before Win
+	WINDOWS_PHONE8(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 52, "Windows Phone 8", new String[] { "Windows Phone 8" },  null, DeviceType.MOBILE, null ), // before Win
+	WINDOWS_MOBILE7(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 51, "Windows Phone 7", new String[] { "Windows Phone OS 7" },  null, DeviceType.MOBILE, null ), // should be Windows Phone 7 but to keep it compatible we'll leave the name as is.
 	WINDOWS_MOBILE(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 50, "Windows Mobile", new String[] { "Windows CE" },  null, DeviceType.MOBILE, null ), // before Win
 	WINDOWS_98(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,5, "Windows 98", new String[] { "Windows 98","Win98" },  new String[] { "Palm" }, DeviceType.COMPUTER, null ), // before Win 
 
