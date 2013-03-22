@@ -146,7 +146,8 @@ public class OperatingSystemTest {
 	
 	String[] iPhone5 = 
 	{
-			"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
 	};
 	
 	String[] iPods = {
@@ -311,6 +312,7 @@ public class OperatingSystemTest {
 	public void testDeviceTypes() {
 		testDeviceTypes(windowsCEdivices, DeviceType.MOBILE);
 		testDeviceTypes(windowsMobile7, DeviceType.MOBILE);
+		testDeviceTypes(iPhone5, DeviceType.MOBILE);
 		testDeviceTypes(windowsVista, DeviceType.COMPUTER);
 		testDeviceTypes(palmOsDevices, DeviceType.MOBILE);
 		testDeviceTypes(bada, DeviceType.MOBILE);
