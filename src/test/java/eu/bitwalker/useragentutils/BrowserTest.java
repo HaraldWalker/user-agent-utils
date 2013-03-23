@@ -37,15 +37,15 @@
 
 package eu.bitwalker.useragentutils;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
-
-import eu.bitwalker.useragentutils.Browser;
-import eu.bitwalker.useragentutils.Version;
 
 /**
  * @author harald
@@ -429,6 +429,18 @@ public class BrowserTest {
 		testAgents(iTunes, Browser.APPLE_ITUNES);
 		testAgents(appStore, Browser.APPLE_APPSTORE);
 		testAgents(airApp, Browser.ADOBE_AIR);
+	}
+	
+	@Test
+	public void testCustomUserAgentParsing() {
+		// Test limited to the big browser families. As Camino can not be detected any longer, the second best match is Firefox3 (a child of Firefox).
+		for (String agentString : camino2) {
+			assertEquals(Browser.FIREFOX3, Browser.parseUserAgentString(agentString,Arrays.asList(Browser.IE,Browser.CHROME, Browser.APPLE_WEB_KIT, Browser.FIREFOX)));
+		}
+		// When there is no match in the given set, return UNKNOWN
+		for (String agentString : opera9) {
+			assertEquals(Browser.UNKNOWN, Browser.parseUserAgentString(agentString,Arrays.asList(Browser.IE,Browser.CHROME, Browser.APPLE_WEB_KIT, Browser.FIREFOX)));
+		}
 	}
 	
 	private void testAgents(String[] agentStrings, Browser expectedBrowser) {

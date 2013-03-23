@@ -381,7 +381,21 @@ public enum Browser {
 	 */
 	public static Browser parseUserAgentString(String agentString)
 	{
-		for (Browser browser : topLevelBrowsers) {
+		return parseUserAgentString(agentString, topLevelBrowsers);
+	}
+	
+	/**
+	 * Iterates over the given Browsers (incl. children) to compare the browser 
+	 * signature with the user agent string. 
+	 * If no match can be found Browser.UNKNOWN will be returned.
+	 * Steps out of loop as soon as there is a match.
+	 * Be aware that if the order of the provided Browsers is incorrect or if the set is too limited it can lead to false matches!
+	 * @param agentString
+	 * @return Browser
+	 */
+	public static Browser parseUserAgentString(String agentString, List<Browser> browsers)
+	{
+		for (Browser browser : browsers) {
 			Browser match = browser.checkUserAgent(agentString);
 			if (match != null) {
 				return match; // either current operatingSystem or a child object

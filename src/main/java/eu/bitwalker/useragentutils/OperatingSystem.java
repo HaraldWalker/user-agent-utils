@@ -305,7 +305,19 @@ public enum OperatingSystem {
 	 */
 	public static OperatingSystem parseUserAgentString(String agentString)
 	{
-		for (OperatingSystem operatingSystem : topLevelOperatingSystems)
+		return parseUserAgentString(agentString, topLevelOperatingSystems);
+	}
+	
+	/**
+	 * Parses the user agent string and returns the best match for the given operating systems. 
+	 * Returns OperatingSystem.UNKNOWN if there is no match.
+	 * Be aware that if the order of the provided operating systems is incorrect or the set is too limited it can lead to false matches!
+	 * @param agentString
+	 * @return OperatingSystem
+	 */
+	public static OperatingSystem parseUserAgentString(String agentString, List<OperatingSystem> operatingSystems)
+	{
+		for (OperatingSystem operatingSystem : operatingSystems)
 		{
 			OperatingSystem match = operatingSystem.checkUserAgent(agentString);
 			if (match != null) {

@@ -42,6 +42,7 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
@@ -335,6 +336,16 @@ public class OperatingSystemTest {
 		testAgents(googleTV, OperatingSystem.GOOGLE_TV);
 	}
 
+	@Test
+	public void testCustomUserAgentParsing() {
+		for (String agentString : android4g) {
+			assertEquals(OperatingSystem.ANDROID4, OperatingSystem.parseUserAgentString(agentString,Arrays.asList(OperatingSystem.SYMBIAN7, OperatingSystem.ANDROID)));
+		}
+		// When there is no match in the given set, return UNKNOWN
+		for (String agentString : roku) {
+			assertEquals(OperatingSystem.UNKNOWN, OperatingSystem.parseUserAgentString(agentString,Arrays.asList(OperatingSystem.SYMBIAN7, OperatingSystem.ANDROID)));
+		}
+	}
 	
 	@Test
 	public void testDeviceTypes() {
