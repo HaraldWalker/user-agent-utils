@@ -5,7 +5,7 @@ Utilities for processing user-agent strings. Can be used to handle http requests
 
 http://haraldwalker.github.com/user-agent-utils/
 
-New in Version 1.6
+New in Version 1.8
 ------------------
 
 * Option just to check just for a given collection of browsers or operating systems
