@@ -198,6 +198,9 @@ public class BrowserTest {
 	"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0a2) Gecko/20110612 Firefox/6.0a2"
 	};
 
+	String[] firefox19 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:19.0) Gecko/20100101 Firefox/19.0"
+	};
 	
 	String[] firefox3mobile = {
 			"Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900"
@@ -206,6 +209,10 @@ public class BrowserTest {
 	String[] safari = {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/525.28.3 (KHTML, like Gecko) Version/3.2.3 Safari/525.28.3",
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-gb) AppleWebKit/523.10.6 (KHTML, like Gecko) Version/3.0.4 Safari/523.10.6"
+	};
+	
+	String[] safari6 = {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
 	};
 	
 	String[] safari5 = {
@@ -396,9 +403,11 @@ public class BrowserTest {
 		testAgents(firefox4, Browser.FIREFOX4);
 		testAgents(firefox5, Browser.FIREFOX5);
 		testAgents(firefox6, Browser.FIREFOX6);
+		testAgents(firefox19, Browser.FIREFOX19);
 		testAgents(firefox3mobile, Browser.FIREFOX3MOBILE);
 		testAgents(safari, Browser.SAFARI);
 		testAgents(dolfin, Browser.DOLFIN2);
+		testAgents(safari6, Browser.SAFARI6);
 		testAgents(safari5, Browser.SAFARI5);
 		testAgents(safari4, Browser.SAFARI4);
 		testAgents(mobileSafari, Browser.MOBILE_SAFARI);
@@ -409,6 +418,7 @@ public class BrowserTest {
 		testAgents(opera, Browser.OPERA);
 		testAgents(opera10, Browser.OPERA10);
 		testAgents(camino2, Browser.CAMINO2);
+		testAgents(camino, Browser.CAMINO);		
 		testAgents(flock, Browser.FLOCK);
 		testAgents(seaMonkey, Browser.SEAMONKEY);
 		testAgents(bots, Browser.BOT);
