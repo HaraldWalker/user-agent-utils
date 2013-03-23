@@ -98,7 +98,6 @@ public class BrowserTest {
 			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Media Center PC 6.0; SLCC2; ms-office; MSOffice 14)"
 	};
 	
-	
 	String[] outookExpress = new String[] {
 			"Outlook-Express/7.0 (MSIE 6.0; Windows NT 5.1; SV1; SIMBAR={xxx}; .NET CLR 2.0.50727; .NET CLR 1.1.4322; TmstmpExt)",
 			"Outlook-Express/7.0 (MSIE 7.0; Windows NT 5.1; InfoPath.2; .NET CLR 1.1.4322; .NET CLR 2.0.50727; TmstmpExt)"
@@ -306,6 +305,18 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true"
 	};
 	
+	String[] iTunes = {
+			"iTunes/10.2.2 (Windows; Microsoft Windows XP Home Edition Service Pack 3 (Build 2600)) AppleWebKit/533.21.1"
+	};
+	
+	String[] appStore = {
+			"MacAppStore/1.1.2 (Macintosh; U; Intel Mac OS X 10.7.3; en) AppleWebKit/534.53.11 "
+	};
+	
+	String[] airApp = {
+			"Mozilla/5.0 (Windows; U; cs-CZ) AppleWebKit/526.9+ (KHTML, like Gecko) AdobeAIR/1.5.1"
+	};
+	
 	
 	/**
 	 * Test method for {@link nl.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}.
@@ -388,7 +399,7 @@ public class BrowserTest {
 		testAgents(safari5, Browser.SAFARI5);
 		testAgents(safari4, Browser.SAFARI4);
 		testAgents(mobileSafari, Browser.MOBILE_SAFARI);
-		testAgents(appleMail, Browser.APPLE_MAIL);
+		testAgents(appleMail, Browser.APPLE_WEB_KIT);
 		testAgents(omniWeb, Browser.OMNIWEB);
 		testAgents(operaMini, Browser.OPERA_MINI);
 		testAgents(opera9, Browser.OPERA9);
@@ -402,6 +413,9 @@ public class BrowserTest {
 		testAgents(thunderbird3, Browser.THUNDERBIRD3);
 		testAgents(thunderbird2, Browser.THUNDERBIRD2);
 		testAgents(silk, Browser.SILK);
+		testAgents(iTunes, Browser.APPLE_ITUNES);
+		testAgents(appStore, Browser.APPLE_APPSTORE);
+		testAgents(airApp, Browser.ADOBE_AIR);
 	}
 	
 	private void testAgents(String[] agentStrings, Browser expectedBrowser) {

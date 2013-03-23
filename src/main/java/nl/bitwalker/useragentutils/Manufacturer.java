@@ -128,7 +128,11 @@ public enum Manufacturer {
 	/**
 	 * Roku sells home digital media products
 	 */
-	ROKU(21, "Roku, Inc.");
+	ROKU(21, "Roku, Inc."),
+	/**
+	 * Adobe Systems Inc.
+	 */
+	ADOBE(23, "Adobe Systems Inc.");
 	
 	
 	private final byte id;
