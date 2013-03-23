@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008, Harald Walker (bitwalker.nl) 
+* Copyright (c) 2008-2013, Harald Walker (bitwalker.eu)  
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -35,24 +35,48 @@
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package nl.bitwalker.useragentutils;
+package eu.bitwalker.useragentutils;
 
 /**
- * Enum constants classifying the different types of applications which are common in referrer strings
+ * Enum constants classifying the different types of browsers which are common in user-agent strings
  * @author harald
  *
  */
-public enum ApplicationType {
+public enum BrowserType {
 
 	/**
-	 * Webmail service like Windows Live Hotmail and Gmail.
+	 * Standard web-browser
 	 */
-	WEBMAIL("Webmail client"),
+	WEB_BROWSER("Browser"),
+	/**
+	 * Special web-browser for mobile devices
+	 */
+	MOBILE_BROWSER("Browser (mobile)"),
+	/**
+	 * Text only browser like the good old Lynx
+	 */
+	TEXT_BROWSER("Browser (text only)"),
+	/**
+	 * Email client like Thunderbird
+	 */
+	EMAIL_CLIENT("Email Client"),
+	/**
+	 * Search robot, spider, crawler,...
+	 */
+	ROBOT("Robot"),
+	/**
+	 * Downloading tools
+	 */
+	TOOL("Downloading tool"),
+	/**
+	 * Application
+	 */
+	APP("Application"),
 	UNKNOWN("unknown");
 	
 	private String name;
 	
-	private ApplicationType(String name) {
+	private BrowserType(String name) {
 		this.name = name;
 	}
 

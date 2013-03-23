@@ -1,11 +1,15 @@
 /**
  * 
  */
-package nl.bitwalker.useragentutils;
+package eu.bitwalker.useragentutils;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import eu.bitwalker.useragentutils.Browser;
+import eu.bitwalker.useragentutils.OperatingSystem;
+import eu.bitwalker.useragentutils.UserAgent;
 
 /**
  * @author harald
@@ -14,7 +18,7 @@ import org.junit.Test;
 public class UserAgentTest {
 
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.UserAgent#parseUserAgentString(java.lang.String)}.
+	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#parseUserAgentString(java.lang.String)}.
 	 */
 	@Test
 	public void testParseUserAgentString() {
@@ -24,7 +28,7 @@ public class UserAgentTest {
 	}
 
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.UserAgent#toString()}.
+	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#toString()}.
 	 */
 	@Test
 	public void testToString() {
@@ -33,7 +37,7 @@ public class UserAgentTest {
 	}
 
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.UserAgent#valueOf(int)}.
+	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#valueOf(int)}.
 	 */
 	@Test
 	public void testValueOf() {
@@ -43,7 +47,7 @@ public class UserAgentTest {
 	}
 
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.UserAgent#valueOf(String)}.
+	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#valueOf(String)}.
 	 */
 	@Test
 	public void testValueOf2() {

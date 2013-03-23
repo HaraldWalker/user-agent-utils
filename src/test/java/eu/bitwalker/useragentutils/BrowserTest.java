@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008, Harald Walker (bitwalker.nl) 
+* Copyright (c) 2013, Harald Walker (bitwalker.eu) 
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -35,7 +35,7 @@
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package nl.bitwalker.useragentutils;
+package eu.bitwalker.useragentutils;
 
 import static org.junit.Assert.*;
 
@@ -43,6 +43,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+
+import eu.bitwalker.useragentutils.Browser;
+import eu.bitwalker.useragentutils.Version;
 
 /**
  * @author harald
@@ -319,7 +322,7 @@ public class BrowserTest {
 	
 	
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}.
+	 * Test method for {@link eu.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}.
 	 */
 	@Test
 	public void testIsBrowser() {
@@ -360,7 +363,7 @@ public class BrowserTest {
 	}
 	
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.Browser#parseUserAgentString(java.lang.String)}.
+	 * Test method for {@link eu.bitwalker.useragentutils.Browser#parseUserAgentString(java.lang.String)}.
 	 */
 	@Test
 	public void testParseUserAgentString() {

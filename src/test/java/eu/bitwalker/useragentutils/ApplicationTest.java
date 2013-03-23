@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008, Harald Walker (bitwalker.nl) 
+* Copyright (c) 2008-2013, Harald Walker (bitwalker.eu)  
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -35,7 +35,7 @@
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package nl.bitwalker.useragentutils;
+package eu.bitwalker.useragentutils;
 
 import static org.junit.Assert.*;
 
@@ -43,6 +43,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+
+import eu.bitwalker.useragentutils.Application;
 
 /**
  * Test class for application detection.
@@ -126,7 +128,7 @@ public class ApplicationTest {
 	// "http://g1a83.mail.126.com/a/s?func=mbox:readMessageHTML&sid=abcdefg&mid=11:123456",
 
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.Application#isInReferrerString(java.lang.String)}.
+	 * Test method for {@link eu.bitwalker.useragentutils.Application#isInReferrerString(java.lang.String)}.
 	 */
 	@Test
 	public void testIsBrowser() {
@@ -134,7 +136,7 @@ public class ApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.Application#parseReferrerString(java.lang.String)}.
+	 * Test method for {@link eu.bitwalker.useragentutils.Application#parseReferrerString(java.lang.String)}.
 	 */
 	@Test
 	public void testParseUserAgentString() {

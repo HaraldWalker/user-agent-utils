@@ -34,7 +34,7 @@
 * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-package nl.bitwalker.useragentutils;
+package eu.bitwalker.useragentutils;
 
 /**
  * Enum constants classifying the different types of rendering engines which are being used by browsers.

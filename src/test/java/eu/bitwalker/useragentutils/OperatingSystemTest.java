@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008-2010, Harald Walker (bitwalker.nl) 
+* Copyright (c) 2008-2013, Harald Walker (bitwalker.eu)  
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -35,7 +35,7 @@
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package nl.bitwalker.useragentutils;
+package eu.bitwalker.useragentutils;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -45,6 +45,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+
+import eu.bitwalker.useragentutils.DeviceType;
+import eu.bitwalker.useragentutils.OperatingSystem;
 
 /**
  * @author harald
@@ -283,7 +286,7 @@ public class OperatingSystemTest {
 	};
 	
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.OperatingSystem#isInUserAgentString(java.lang.String)}.
+	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#isInUserAgentString(java.lang.String)}.
 	 */
 	@Test
 	public void testIsInUserAgentString() {
@@ -291,7 +294,7 @@ public class OperatingSystemTest {
 	}
 
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.OperatingSystem#parseUserAgentString(java.lang.String)}.
+	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#parseUserAgentString(java.lang.String)}.
 	 */
 	@Test
 	public void testParseUserAgentString() {
@@ -356,7 +359,7 @@ public class OperatingSystemTest {
 	}
 
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.OperatingSystem#valueOf(short)} 
+	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#valueOf(short)} 
 	 */
 	@Test
 	public void testValueOf() {
@@ -374,7 +377,7 @@ public class OperatingSystemTest {
 	}
 	
 	/**
-	 * Test method for {@link nl.bitwalker.useragentutils.OperatingSystem#valueOf(String)} 
+	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#valueOf(String)} 
 	 */
 	@Test
 	public void testValueOfString() {

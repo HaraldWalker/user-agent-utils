@@ -35,7 +35,7 @@
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package nl.bitwalker.useragentutils;
+package eu.bitwalker.useragentutils;
 
 import java.util.ArrayList;
 import java.util.List;
