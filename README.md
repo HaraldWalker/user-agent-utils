@@ -5,6 +5,13 @@ Utilities for processing user-agent strings. Can be used to handle http requests
 
 http://haraldwalker.github.com/user-agent-utils/
 
+New in Version 1.6
+------------------
+
+* Option just to check just for a given collection browsers or operating systems
+* Updated Chrome, Firefox and Safari detection to include the latest versions
+* Minor code optimizations
+
 Javadoc
 -------
 http://haraldwalker.github.com/user-agent-utils/javadoc/
