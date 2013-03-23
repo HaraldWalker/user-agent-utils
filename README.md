@@ -8,7 +8,7 @@ http://haraldwalker.github.com/user-agent-utils/
 New in Version 1.6
 ------------------
 
-* Option just to check just for a given collection browsers or operating systems
+* Option just to check just for a given collection of browsers or operating systems
 * Updated Chrome, Firefox and Safari detection to include the latest versions
 * Minor code optimizations
 
