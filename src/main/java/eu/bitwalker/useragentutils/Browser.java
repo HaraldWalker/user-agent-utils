@@ -209,23 +209,31 @@ public enum Browser {
 	private final Browser parent;
 	private List<Browser> children;
 	private Pattern versionRegEx;
+	private static List<Browser> topLevelBrowsers;
 	
 	private Browser(Manufacturer manufacturer, Browser parent, int versionId, String name, String[] aliases, String[] exclude, BrowserType browserType, RenderingEngine renderingEngine, String versionRegexString) {
 		this.id =  (short) ( ( manufacturer.getId() << 8) + (byte) versionId);
 		this.name = name;
 		this.parent = parent;
 		this.children = new ArrayList<Browser>();
-		if (this.parent != null) {
-			this.parent.children.add(this);
-		}
 		this.aliases = aliases;
 		this.excludeList = exclude;
 		this.browserType = browserType;
 		this.manufacturer = manufacturer;
 		this.renderingEngine = renderingEngine;
-		if (versionRegexString != null) {
+		if (versionRegexString != null)
 			this.versionRegEx = Pattern.compile(versionRegexString);
-		}
+		if (this.parent == null) 
+			addTopLevelBrowser(this);
+		else 
+			this.parent.children.add(this);
+	}
+	
+	// create collection of top level browsers during initialization
+	private static void addTopLevelBrowser(Browser browser) {
+		if(topLevelBrowsers == null)
+			topLevelBrowsers = new ArrayList<Browser>();	
+		topLevelBrowsers.add(browser);
 	}
 	
 	public short getId() {
@@ -352,19 +360,18 @@ public enum Browser {
 	 * Iterates over all Browsers to compare the browser signature with 
 	 * the user agent string. If no match can be found Browser.UNKNOWN will
 	 * be returned.
+	 * Starts with the top level browsers and only if one of those matches 
+	 * checks children browsers.
+	 * Steps out of loop as soon as there is a match.
 	 * @param agentString
 	 * @return Browser
 	 */
 	public static Browser parseUserAgentString(String agentString)
 	{
-		for (Browser browser : Browser.values())
-		{
-			// only check top level objects
-			if (browser.parent == null) {
-				Browser match = browser.checkUserAgent(agentString);
-				if (match != null) {
-					return match; // either current operatingSystem or a child object
-				}
+		for (Browser browser : topLevelBrowsers) {
+			Browser match = browser.checkUserAgent(agentString);
+			if (match != null) {
+				return match; // either current operatingSystem or a child object
 			}
 		}
 		return Browser.UNKNOWN;

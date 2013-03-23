@@ -177,15 +177,13 @@ public enum OperatingSystem {
 	private final OperatingSystem parent;
 	private List<OperatingSystem> children;
 	private Pattern versionRegEx;
+	private static List<OperatingSystem> topLevelOperatingSystems;
 	
 	private OperatingSystem(Manufacturer manufacturer, OperatingSystem parent, int versionId, String name, String[] aliases,
 		 String[] exclude, DeviceType deviceType, String versionRegexString) {
 		this.manufacturer = manufacturer;
 		this.parent = parent;
 		this.children = new ArrayList<OperatingSystem>();
-		if (this.parent != null) {
-			this.parent.children.add(this);
-		}
 		// combine manufacturer and version id to one unique id. 
 		this.id =  (short) ( ( manufacturer.getId() << 8) + (byte) versionId);
 		this.name = name;
@@ -195,8 +193,18 @@ public enum OperatingSystem {
 		if (versionRegexString != null) { // not implemented yet
 			this.versionRegEx = Pattern.compile(versionRegexString);
 		}
+		if (this.parent == null)
+			addTopLevelOperatingSystem(this);
+		else
+			this.parent.children.add(this);
 	}
 
+	// create collection of top level operating systems during initialization
+	private static void addTopLevelOperatingSystem(OperatingSystem os) {
+		if(topLevelOperatingSystems == null)
+			topLevelOperatingSystems = new ArrayList<OperatingSystem>();	
+		topLevelOperatingSystems.add(os);
+	}
 	
 	public short getId() {
 		return id;
@@ -297,16 +305,13 @@ public enum OperatingSystem {
 	 */
 	public static OperatingSystem parseUserAgentString(String agentString)
 	{
-		for (OperatingSystem operatingSystem : OperatingSystem.values())
+		for (OperatingSystem operatingSystem : topLevelOperatingSystems)
 		{
-			// only check top level objects
-			if (operatingSystem.parent == null) {
-				OperatingSystem match = operatingSystem.checkUserAgent(agentString);
-				if (match != null) {
-					return match; // either current operatingSystem or a child object
-				}
+			OperatingSystem match = operatingSystem.checkUserAgent(agentString);
+			if (match != null) {
+				return match; // either current operatingSystem or a child object
 			}
-		}
+		}	
 		return OperatingSystem.UNKNOWN;
 	}
 		
