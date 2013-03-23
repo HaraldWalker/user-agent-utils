@@ -5,7 +5,7 @@
 	<name>User-Agent-Utils</name>
 	<url>http://java.net/projects/user-agent-utils</url>
 	<artifactId>UserAgentUtils</artifactId>
-	<version>1.6</version>
+	<version>1.7</version>
 	<description>Utility classes to handle user-agents.</description>
 	<licenses>
 		<license>
@@ -20,7 +20,7 @@
 		<developer>
 			<id>harald</id>
 			<name>Harald Walker</name>
-			<url>http://www.bitwalker.nl</url>
+			<url>http://www.bitwalker.eu</url>
 			<roles>
 				<role>developer</role>
 			</roles>
