@@ -18,7 +18,7 @@
 	</licenses>
 	<developers>
 		<developer>
-			<id>harald</id>
+			<id>haraldwalker</id>
 			<name>Harald Walker</name>
 			<url>http://www.bitwalker.eu</url>
 			<roles>
@@ -107,7 +107,7 @@
 						<exclude>**/Test*.java</exclude>
 					</excludes>
 					<sourcepath>src/main/java</sourcepath> 
-				    <subpackages>nl.bitwalker.useragentutils</subpackages> 
+				    <subpackages>eu.bitwalker.useragentutils</subpackages> 
 					<source>1.5</source>					
 				</configuration>
 			</plugin>
