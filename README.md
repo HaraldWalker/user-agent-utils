@@ -5,13 +5,10 @@ Utilities for processing user-agent strings. Can be used to handle http requests
 
 http://haraldwalker.github.com/user-agent-utils/
 
-New in Version 1.8
+New in Version 1.9
 ------------------
 
-* Option just to check just for a given collection of browsers or operating systems
-* Updated Chrome, Firefox and Safari detection to include the latest versions
-* Minor code optimizations
-* The package name has changed. Update import statements if you've been using the library before!
+* 
 
 Javadoc
 -------
@@ -37,6 +34,6 @@ Add dependency:
 <dependency>
    <groupId>bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.8</version>
+   <version>1.9</version>
 </dependency>
 ```
