@@ -32,11 +32,11 @@ Include our github repository in your pom.xml:
    </snapshots>
 </repository>
 ```
-
+Add dependency:
 ```xml
 <dependency>
-  		<groupId>bitwalker</groupId>
-			<artifactId>UserAgentUtils</artifactId>
-			<version>1.8</version>
+   <groupId>bitwalker</groupId>
+   <artifactId>UserAgentUtils</artifactId>
+   <version>1.8</version>
 </dependency>
 ```
