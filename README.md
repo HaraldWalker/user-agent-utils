@@ -15,3 +15,17 @@ New in Version 1.8
 Javadoc
 -------
 http://haraldwalker.github.com/user-agent-utils/javadoc/
+
+Maven
+-----
+```xml
+<repository>
+  <id>bitwalker.user-agent-utils.mvn.repo</id>
+  <url>https://github.com/user-agent-utils/mvn-repo/raw/master</url>
+  <!-- use snapshot version -->
+  <snapshots>
+     <enabled>true</enabled>
+      <updatePolicy>always</updatePolicy>
+   </snapshots>
+</repository>
+```
