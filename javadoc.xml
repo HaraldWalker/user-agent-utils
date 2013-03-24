@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project default="javadoc">
-    <target name="javadoc">
-        <javadoc access="public" author="true" classpath="target/test-classes:/Users/harald/.m2/repository/junit/junit/4.7/junit-4.7.jar" destdir="javadoc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" source="1.5" sourcefiles="src/main/java/eu/bitwalker/useragentutils/Version.java,src/main/java/eu/bitwalker/useragentutils/OperatingSystem.java,src/main/java/eu/bitwalker/useragentutils/DeviceType.java,src/main/java/eu/bitwalker/useragentutils/RenderingEngine.java,src/main/java/eu/bitwalker/useragentutils/Application.java,src/main/java/eu/bitwalker/useragentutils/Browser.java,src/main/java/eu/bitwalker/useragentutils/UserAgent.java,src/main/java/eu/bitwalker/useragentutils/Manufacturer.java,src/main/java/eu/bitwalker/useragentutils/ApplicationType.java,src/main/java/eu/bitwalker/useragentutils/BrowserType.java" sourcepath="src/test/resources:src/main/resources:src/main/java" splitindex="true" use="true" version="true"/>
-    </target>
-</project>
