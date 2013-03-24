@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>nl.bitwalker</groupId>
+	<groupId>bitwalker</groupId>
 	<name>User-Agent-Utils</name>
 	<url>http://java.net/projects/user-agent-utils</url>
 	<artifactId>UserAgentUtils</artifactId>
-	<version>1.7</version>
+	<version>1.8</version>
 	<description>Utility classes to handle user-agents.</description>
+	<properties>
+    	<github.global.server>github</github.global.server>
+	</properties>
 	<licenses>
 		<license>
 			<name>New BSD License</name>
@@ -18,7 +21,7 @@
 	</licenses>
 	<developers>
 		<developer>
-			<id>harald</id>
+			<id>haraldwalker</id>
 			<name>Harald Walker</name>
 			<url>http://www.bitwalker.eu</url>
 			<roles>
@@ -43,6 +46,13 @@
 		</url>
 	</scm>
 
+	<distributionManagement>
+	    <repository>
+	        <id>internal.repo</id>
+	        <name>Temporary Staging Repository</name>
+	        <url>file://${project.build.directory}/mvn-repo</url>
+	    </repository>
+	</distributionManagement>
 
 	<build>
 		<finalName>${project.artifactId}-${project.version}</finalName>
@@ -54,6 +64,33 @@
 					<source>1.5</source>
 					<target>1.5</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.7</version>
+				<configuration>
+					<message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
+					<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
+					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+					<branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
+					<includes>
+						<include>**/*</include>
+					</includes>
+					<merge>true</merge>
+					<repositoryName>user-agent-utils</repositoryName>      <!-- github repo name -->
+					<repositoryOwner>haraldwalker</repositoryOwner>        <!-- github username -->
+				</configuration>
+				<executions>
+					<!-- run site-maven-plugin's 'site' target as part of the build's normal 
+						'deploy' phase -->
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<artifactId>maven-site-plugin</artifactId>
@@ -107,7 +144,7 @@
 						<exclude>**/Test*.java</exclude>
 					</excludes>
 					<sourcepath>src/main/java</sourcepath> 
-				    <subpackages>nl.bitwalker.useragentutils</subpackages> 
+				    <subpackages>eu.bitwalker.useragentutils</subpackages> 
 					<source>1.5</source>					
 				</configuration>
 			</plugin>
