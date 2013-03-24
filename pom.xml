@@ -5,7 +5,7 @@
 	<name>User-Agent-Utils</name>
 	<url>http://java.net/projects/user-agent-utils</url>
 	<artifactId>UserAgentUtils</artifactId>
-	<version>1.8</version>
+	<version>1.9-snapshot</version>
 	<description>Utility classes to handle user-agents.</description>
 	<properties>
     	<github.global.server>github</github.global.server>
