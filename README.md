@@ -21,7 +21,7 @@ Maven
 ```xml
 <repository>
   <id>bitwalker.user-agent-utils.mvn.repo</id>
-  <url>https://github.com/user-agent-utils/mvn-repo/raw/master</url>
+  <url>https://raw.github.com/HaraldWalker/user-agent-utils/mvn-repo/</url>
   <!-- use snapshot version -->
   <snapshots>
      <enabled>true</enabled>
