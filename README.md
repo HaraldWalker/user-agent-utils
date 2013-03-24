@@ -18,6 +18,8 @@ http://haraldwalker.github.com/user-agent-utils/javadoc/
 
 Maven
 -----
+
+Include our github repository in your pom.xml:
 ```xml
 <repository>
   <id>bitwalker.user-agent-utils.mvn.repo</id>
