@@ -9,7 +9,8 @@ New in Version 1.9 (unreleased)
 ------------------
 
 * Fixed version detection of Chrome Mobile
-* Added Firefox 20 detection
+* Added Firefox 20 detection plus beta and future versions
+* Added beta and future versions of Chrome
 
 Javadoc
 -------
