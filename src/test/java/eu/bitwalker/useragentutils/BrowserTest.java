@@ -331,6 +331,11 @@ public class BrowserTest {
 			"Mozilla/5.0 (Windows; U; cs-CZ) AppleWebKit/526.9+ (KHTML, like Gecko) AdobeAIR/1.5.1"
 	};
 	
+	String[] blackberry10 = {
+			"Mozilla/5.0 (BB10; Touch) AppleWebKit/537.1 (KHTML, like Gecko) Version/10.0.0.1337 Mobile Safari/537.1",
+			"Mozilla/5.0 (BB10; Kbd) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.1.0.1485 Mobile Safari/537.10+"
+	};
+	
 	
 	/**
 	 * Test method for {@link eu.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}.
@@ -366,6 +371,8 @@ public class BrowserTest {
 		testVersions("Mozilla/5.0 (compatible; Googlebot/2.1; http://www.google.com/bot.html)", null); // no version information for some browsers
 		testVersions("Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7", new Version("16.0.912.75", "16", "0"));
 		testVersions("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true", new Version("1.1.0-80", "1", "1"));
+		testVersions("Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3", new Version("19.0.1084.60", "19", "0"));
+		testVersions("Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7", new Version("16.0.912.75", "16", "0"));
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {
@@ -434,6 +441,7 @@ public class BrowserTest {
 		testAgents(iTunes, Browser.APPLE_ITUNES);
 		testAgents(appStore, Browser.APPLE_APPSTORE);
 		testAgents(airApp, Browser.ADOBE_AIR);
+		testAgents(blackberry10, Browser.BLACKBERRY10);
 	}
 	
 	@Test
