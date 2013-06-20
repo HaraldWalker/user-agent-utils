@@ -5,7 +5,7 @@
 	<name>User-Agent-Utils</name>
 	<url>http://java.net/projects/user-agent-utils</url>
 	<artifactId>UserAgentUtils</artifactId>
-	<version>1.9-snapshot</version>
+	<version>1.9</version>
 	<description>Utility classes to handle user-agents.</description>
 	<properties>
     	<github.global.server>github</github.global.server>
@@ -68,7 +68,7 @@
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
-				<version>0.7</version>
+				<version>0.8</version>
 				<configuration>
 					<message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
 					<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->

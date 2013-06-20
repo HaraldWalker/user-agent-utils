@@ -5,7 +5,7 @@ Utilities for processing user-agent strings. Can be used to handle http requests
 
 http://haraldwalker.github.com/user-agent-utils/
 
-New in Version 1.9 (unreleased)
+New in Version 1.9
 ------------------
 
 * Fixed version detection of Chrome Mobile
