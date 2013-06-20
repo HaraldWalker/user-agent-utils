@@ -331,6 +331,11 @@ public class BrowserTest {
 			"Mozilla/5.0 (Windows; U; cs-CZ) AppleWebKit/526.9+ (KHTML, like Gecko) AdobeAIR/1.5.1"
 	};
 	
+	String[] blackberry10 = {
+			"Mozilla/5.0 (BB10; Touch) AppleWebKit/537.1 (KHTML, like Gecko) Version/10.0.0.1337 Mobile Safari/537.1",
+			"Mozilla/5.0 (BB10; Kbd) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.1.0.1485 Mobile Safari/537.10+"
+	};
+	
 	
 	/**
 	 * Test method for {@link eu.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}.
@@ -436,6 +441,7 @@ public class BrowserTest {
 		testAgents(iTunes, Browser.APPLE_ITUNES);
 		testAgents(appStore, Browser.APPLE_APPSTORE);
 		testAgents(airApp, Browser.ADOBE_AIR);
+		testAgents(blackberry10, Browser.BLACKBERRY10);
 	}
 	
 	@Test
