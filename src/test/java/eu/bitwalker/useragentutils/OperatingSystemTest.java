@@ -227,7 +227,7 @@ public class OperatingSystemTest {
  	};
 			
 	String[] windows98 = { 
-			"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Rogers HiáSpeed Internet; (R1 1.3))",
+			"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Rogers Hiï¿½Speed Internet; (R1 1.3))",
 			"Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.8b3) Gecko/20050713 SeaMonkey/1.0a"
 	};	
 	
@@ -247,6 +247,10 @@ public class OperatingSystemTest {
 
 	String[] windows8 = {
 			"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)"
+	};
+	
+	String[] windows81 = {
+			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
 	};
 	
 	String[] windowsMobile7 = {
@@ -305,6 +309,7 @@ public class OperatingSystemTest {
 		testAgents(windowsVista, OperatingSystem.WINDOWS_VISTA);
 		testAgents(windows7, OperatingSystem.WINDOWS_7);
 		testAgents(windows8, OperatingSystem.WINDOWS_8);
+		testAgents(windows81, OperatingSystem.WINDOWS_81);
 		testAgents(windowsXP, OperatingSystem.WINDOWS_XP);
 		testAgents(windows98, OperatingSystem.WINDOWS_98);
 		testAgents(palmOsDevices, OperatingSystem.PALM);

@@ -77,7 +77,12 @@ public class BrowserTest {
 	};
 	
 	String[] ie10clients = new String[] {
-			"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"
+			"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)",
+			"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)"
+	};	
+	
+	String[] ie11clients = new String[] {
+			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
 	};	
 	
 	String[] ie55clients = new String[] {
@@ -391,6 +396,7 @@ public class BrowserTest {
 		testAgents(ie8clients, Browser.IE8);
 		testAgents(ie9clients, Browser.IE9);
 		testAgents(ie10clients, Browser.IE10);
+		testAgents(ie11clients, Browser.IE11);
 		testAgents(ieTooOld, Browser.IE);
 		testAgents(outlook2007, Browser.OUTLOOK2007);
 		testAgents(outlook2010, Browser.OUTLOOK2010);
