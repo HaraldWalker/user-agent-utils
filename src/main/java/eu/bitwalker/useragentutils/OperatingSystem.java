@@ -52,7 +52,8 @@ public enum OperatingSystem {
 	 * Windows Mobile / Windows CE. Exact version unknown.
 	 */
 	WINDOWS(		Manufacturer.MICROSOFT,null,1, "Windows", new String[] { "Windows" }, new String[] { "Palm" }, DeviceType.COMPUTER, null ), // catch the rest of older Windows systems (95, NT,...)
-		WINDOWS_8(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new String[] { "Windows NT 6.2" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 7 is called 6.1 LOL
+		WINDOWS_81(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,23, "Windows 8.1", new String[] { "Windows NT 6.3" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 8.1 is called 6.3 LOL
+		WINDOWS_8(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new String[] { "Windows NT 6.2" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 8 is called 6.2 LOL
 		WINDOWS_7(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new String[] { "Windows NT 6.1" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 7 is called 6.1 LOL
 		WINDOWS_VISTA(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new String[] { "Windows NT 6" }, null, DeviceType.COMPUTER, null ), // before Win
 		WINDOWS_2000(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,15, "Windows 2000", new String[] { "Windows NT 5.0" }, null, DeviceType.COMPUTER, null ), // before Win
