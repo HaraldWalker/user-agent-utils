@@ -185,6 +185,10 @@ public class BrowserTest {
 			"Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.815.0 Safari/535.1"
 	};
 	
+	String[] chrome29 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36"
+	};
+	
 	String[] firefox3 = new String[] {
 			"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.14) Gecko/2009090216 Ubuntu/9.04 (jaunty) Firefox/3.0.14"
 	};
@@ -273,6 +277,24 @@ public class BrowserTest {
 	String[] opera10 = {
 			"Opera/9.80 (Windows NT 5.2; U; en) Presto/2.2.15 Version/10.10",
 			"Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.6.30 Version/10.61"
+		};
+	
+	String[] opera11 = {
+			"Opera/9.80 (Windows NT 6.1; WOW64; U; pt) Presto/2.10.229 Version/11.62",
+			"Opera/9.80 (Windows NT 6.0; U; pl) Presto/2.10.229 Version/11.62"
+		};
+	
+	String[] opera12 = {
+			"Opera/9.80 (Windows NT 6.1; U; es-ES) Presto/2.9.181 Version/12.00",
+			"Opera/12.0(Windows NT 5.1;U;en)Presto/22.9.168 Version/12.00"
+		};
+	
+	String[] opera15 = {
+			"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36 OPR/15.0.1147.100"
+		};
+	
+	String[] opera16 = {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36 OPR/16.0.1196.73"
 		};
 	
 	String[] operaMini = {
@@ -378,6 +400,9 @@ public class BrowserTest {
 		testVersions("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true", new Version("1.1.0-80", "1", "1"));
 		testVersions("Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3", new Version("19.0.1084.60", "19", "0"));
 		testVersions("Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7", new Version("16.0.912.75", "16", "0"));
+		testVersions("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36 OPR/15.0.1147.100", new Version("15.0.1147.100", "15", "0"));
+		testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36 OPR/16.0.1196.73", new Version("16.0.1196.73", "16", "0"));
+		testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36", new Version("29.0.1547.65", "29", "0"));
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {
@@ -416,6 +441,7 @@ public class BrowserTest {
 		testAgents(chrome12, Browser.CHROME12);
 		testAgents(chrome13, Browser.CHROME13);
 		testAgents(chrome14, Browser.CHROME14);
+		testAgents(chrome29, Browser.CHROME29);
 		testAgents(firefox3, Browser.FIREFOX3);
 		testAgents(firefox4, Browser.FIREFOX4);
 		testAgents(firefox5, Browser.FIREFOX5);
@@ -435,6 +461,10 @@ public class BrowserTest {
 		testAgents(opera9, Browser.OPERA9);
 		testAgents(opera, Browser.OPERA);
 		testAgents(opera10, Browser.OPERA10);
+		testAgents(opera11, Browser.OPERA11);
+		testAgents(opera12, Browser.OPERA12);
+		testAgents(opera15, Browser.OPERA15);
+		testAgents(opera16, Browser.OPERA16);
 		testAgents(camino2, Browser.CAMINO2);
 		testAgents(camino, Browser.CAMINO);		
 		testAgents(flock, Browser.FLOCK);
