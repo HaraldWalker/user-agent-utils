@@ -50,11 +50,12 @@ import java.util.regex.Pattern;
 
 public enum Browser {
 
-	OPERA(			Manufacturer.OPERA, null, 1, "Opera", new String[] { "Opera" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Opera\\/(([\\d]+)\\.([\\w]+))"),   // before MSIE
+	OPERA(			Manufacturer.OPERA, null, 1, "Opera", new String[] { " OPR/", "Opera" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Opera\\/(([\\d]+)\\.([\\w]+))"),   // before MSIE
 		OPERA_MINI(		Manufacturer.OPERA, Browser.OPERA, 20, "Opera Mini", new String[] { "Opera Mini"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.PRESTO, null), // Opera for mobile devices
-		/**
-		 * For some strange reason Opera uses 9.80 in the user-agent string and otherwise it is very inconsistent. Use the getVersion method if you really want to know which version it is.
-		 */
+		OPERA16(		Manufacturer.OPERA, Browser.OPERA, 16, "Opera 16", new String[] { "OPR/16." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+		OPERA15(		Manufacturer.OPERA, Browser.OPERA, 15, "Opera 15", new String[] { "OPR/15." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),		
+		OPERA12(		Manufacturer.OPERA, Browser.OPERA, 12, "Opera 12", new String[] { "Opera/12", "Version/12." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
+		OPERA11(		Manufacturer.OPERA, Browser.OPERA, 11, "Opera 11", new String[] { "Version/11." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
 		OPERA10(		Manufacturer.OPERA, Browser.OPERA, 10, "Opera 10", new String[] { "Opera/9.8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),  
 		OPERA9(			Manufacturer.OPERA, Browser.OPERA, 5, "Opera 9", new String[] { "Opera/9" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, null),  
 	KONQUEROR(		Manufacturer.OTHER, null, 1, "Konqueror", new String[] { "Konqueror"}, null, BrowserType.WEB_BROWSER, RenderingEngine.KHTML, "Konqueror\\/(([0-9]+)\\.?([\\w]+)?(-[\\w]+)?)" ),  
@@ -104,8 +105,8 @@ public enum Browser {
 	/**
 	 * Google Chrome browser
 	 */
-	CHROME( 		Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome" }, new String[] { "Web Preview" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ), // before Mozilla
-		CHROME28( 		Manufacturer.GOOGLE, Browser.CHROME, 33, "Chrome 28", new String[] { "Chrome/28" }, new String[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+	CHROME( 		Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome" }, new String[] { "OPR/", "Web Preview" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ), // before Mozilla
+		CHROME28( 		Manufacturer.GOOGLE, Browser.CHROME, 33, "Chrome 28", new String[] { "Chrome/28" }, new String[] { "OPR/", "Web Preview"  }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME27( 		Manufacturer.GOOGLE, Browser.CHROME, 32, "Chrome 27", new String[] { "Chrome/27" }, new String[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME26( 		Manufacturer.GOOGLE, Browser.CHROME, 31, "Chrome 26", new String[] { "Chrome/26" }, new String[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME25( 		Manufacturer.GOOGLE, Browser.CHROME, 30, "Chrome 25", new String[] { "Chrome/25" }, new String[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
@@ -129,7 +130,7 @@ public enum Browser {
 	
 	OMNIWEB(		Manufacturer.OTHER, null, 2, "Omniweb", new String[] { "OmniWeb" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // 
 
-	SAFARI(			Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)" ),  // before AppleWebKit
+	SAFARI(			Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)" ),  // before AppleWebKit
 		CHROME_MOBILE( 	Manufacturer.GOOGLE, Browser.SAFARI, 100, "Chrome Mobile", new String[] { "CrMo","CriOS" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ), 
 		BLACKBERRY10( Manufacturer.BLACKBERRY, Browser.SAFARI, 10, "BlackBerry", new String[] { "BB10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null),
 		MOBILE_SAFARI(	Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new String[] { "Mobile Safari","Mobile/" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),  // before Safari
@@ -143,7 +144,7 @@ public enum Browser {
 	/*
 	 * Apple WebKit compatible client. Can be a browser or an application with embedded browser using UIWebView.
 	 */
-	APPLE_WEB_KIT(	Manufacturer.APPLE, null, 50, "Apple WebKit", new String[] { "AppleWebKit" }, new String[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit 
+	APPLE_WEB_KIT(	Manufacturer.APPLE, null, 50, "Apple WebKit", new String[] { "AppleWebKit" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit 
 		APPLE_ITUNES(	Manufacturer.APPLE, Browser.APPLE_WEB_KIT, 52, "iTunes", new String[] { "iTunes" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit 
 		APPLE_APPSTORE(	Manufacturer.APPLE, Browser.APPLE_WEB_KIT, 53, "App Store", new String[] { "MacAppStore" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit 
 		ADOBE_AIR(	Manufacturer.ADOBE, Browser.APPLE_WEB_KIT, 1, "Adobe AIR application", new String[] { "AdobeAIR" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit 
