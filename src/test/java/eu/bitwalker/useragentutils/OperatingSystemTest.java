@@ -68,6 +68,14 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Transformer TF101 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30"
 	};
 	
+	String[] genericMobile = {
+			"Mozilla/5.0 (Mobile; rv:18.0) Gecko/18.0 Firefox/18.0" // e.g. on Firefox OS without indication of OS name
+	};
+	
+	String[] genericTablet = {
+			"Mozilla/5.0 (Tablet; rv:22.0) Gecko/22.0 Firefox/22.0" // e.g. on Firefox OS without indication of OS name
+	};
+	
 	String[] googleTV = {
 			"Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/161242",
 			"Mozilla/5.0 (X11; U: Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/162671", // Sony
@@ -225,9 +233,17 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; Android 4.0.4; en-gb; GT-P7500 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
 			"Mozilla/5.0 (Linux; U; Android 4.1.1; en-gb; ASUS Transformer Pad TF700T Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30"
  	};
+	
+	String[] androidMobile = {
+			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
+	};
+	
+	String[] androidTablet = {
+			"Mozilla/5.0 (Android; Tablet; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
+	};
 			
 	String[] windows98 = { 
-			"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Rogers HiáSpeed Internet; (R1 1.3))",
+			"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Rogers Hiï¿½Speed Internet; (R1 1.3))",
 			"Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.8b3) Gecko/20050713 SeaMonkey/1.0a"
 	};	
 	
@@ -247,6 +263,10 @@ public class OperatingSystemTest {
 
 	String[] windows8 = {
 			"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)"
+	};
+	
+	String[] windows81 = {
+			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
 	};
 	
 	String[] windowsMobile7 = {
@@ -305,6 +325,7 @@ public class OperatingSystemTest {
 		testAgents(windowsVista, OperatingSystem.WINDOWS_VISTA);
 		testAgents(windows7, OperatingSystem.WINDOWS_7);
 		testAgents(windows8, OperatingSystem.WINDOWS_8);
+		testAgents(windows81, OperatingSystem.WINDOWS_81);
 		testAgents(windowsXP, OperatingSystem.WINDOWS_XP);
 		testAgents(windows98, OperatingSystem.WINDOWS_98);
 		testAgents(palmOsDevices, OperatingSystem.PALM);
@@ -329,11 +350,16 @@ public class OperatingSystemTest {
 		testAgents(android2_tablet, OperatingSystem.ANDROID2_TABLET);
 		testAgents(android3_tablet, OperatingSystem.ANDROID3_TABLET);
 		testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
+		testAgents(androidMobile, OperatingSystem.ANDROID_MOBILE);
+		testAgents(androidTablet, OperatingSystem.ANDROID_TABLET);
 		testAgents(maemo, OperatingSystem.MAEMO);
 		testAgents(kindle2, OperatingSystem.KINDLE2);
 		testAgents(kindle3, OperatingSystem.KINDLE3);
 		testAgents(roku, OperatingSystem.ROKU);
 		testAgents(googleTV, OperatingSystem.GOOGLE_TV);
+		testAgents(genericMobile, OperatingSystem.UNKNOWN_MOBILE);
+		testAgents(genericTablet, OperatingSystem.UNKNOWN_TABLET);
+
 	}
 
 	@Test

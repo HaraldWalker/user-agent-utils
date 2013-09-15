@@ -5,13 +5,13 @@ Utilities for processing user-agent strings. Can be used to handle http requests
 
 http://haraldwalker.github.com/user-agent-utils/
 
-New in Version 1.9
+New in Version 1.10
 ------------------
 
-* Fixed version detection of Chrome Mobile
-* Added Firefox 20 detection plus beta and future versions
-* Added beta and future versions of Chrome
-* Detect BlackBerry10 browser
+* Fixed and extended OS and browser detection when using Firefox on mobiles or tablets
+* Added additional and future Firefox versions
+* Added Chrome 29
+* Added Opera 11, 12, 15 & 16 
 
 Javadoc
 -------
@@ -37,6 +37,6 @@ Add dependency:
 <dependency>
    <groupId>bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.9</version>
+   <version>1.10</version>
 </dependency>
 ```
