@@ -172,7 +172,9 @@ public enum OperatingSystem {
 
 	BLACKBERRY_TABLET(Manufacturer.BLACKBERRY,null, 100, "BlackBerry Tablet OS", new String[] { "RIM Tablet OS" }, null, DeviceType.TABLET, null ),	
 	
-	ROKU(			Manufacturer.ROKU,null, 1, "Roku OS", new String[] { "Roku" }, null, DeviceType.DMR, null ),	
+	ROKU(			Manufacturer.ROKU,null, 1, "Roku OS", new String[] { "Roku" }, null, DeviceType.DMR, null ),
+	UNKNOWN_MOBILE(	Manufacturer.OTHER,null, 3, "Unknown mobile", new String[] {"Mobile"}, null, DeviceType.MOBILE, null ),
+	UNKNOWN_TABLET(	Manufacturer.OTHER,null, 4, "Unknown tablet", new String[] {"Tablet"}, null, DeviceType.TABLET, null ),
 	UNKNOWN(		Manufacturer.OTHER,null, 1, "Unknown", new String[0], null, DeviceType.UNKNOWN, null );
 	
 	private final short id;

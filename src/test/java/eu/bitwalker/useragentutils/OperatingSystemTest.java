@@ -68,6 +68,14 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Transformer TF101 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30"
 	};
 	
+	String[] genericMobile = {
+			"Mozilla/5.0 (Mobile; rv:18.0) Gecko/18.0 Firefox/18.0" // e.g. on Firefox OS without indication of OS name
+	};
+	
+	String[] genericTablet = {
+			"Mozilla/5.0 (Tablet; rv:22.0) Gecko/22.0 Firefox/22.0" // e.g. on Firefox OS without indication of OS name
+	};
+	
 	String[] googleTV = {
 			"Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/161242",
 			"Mozilla/5.0 (X11; U: Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/162671", // Sony
@@ -349,6 +357,9 @@ public class OperatingSystemTest {
 		testAgents(kindle3, OperatingSystem.KINDLE3);
 		testAgents(roku, OperatingSystem.ROKU);
 		testAgents(googleTV, OperatingSystem.GOOGLE_TV);
+		testAgents(genericMobile, OperatingSystem.UNKNOWN_MOBILE);
+		testAgents(genericTablet, OperatingSystem.UNKNOWN_TABLET);
+
 	}
 
 	@Test
