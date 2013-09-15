@@ -5,13 +5,10 @@ Utilities for processing user-agent strings. Can be used to handle http requests
 
 http://haraldwalker.github.com/user-agent-utils/
 
-New in Version 1.10
+New in Version 1.11-snapshot (unreleased)
 ------------------
 
-* Fixed and extended OS and browser detection when using Firefox on mobiles or tablets
-* Added additional and future Firefox versions
-* Added Chrome 29
-* Added Opera 11, 12, 15 & 16 
+* ... 
 
 Javadoc
 -------
