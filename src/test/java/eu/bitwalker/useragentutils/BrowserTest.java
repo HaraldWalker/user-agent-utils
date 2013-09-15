@@ -214,9 +214,21 @@ public class BrowserTest {
 	String[] firefox20 = new String[] {
 		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0"
 	};
+	
+	String[] firefox25 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:25.0) Gecko/20100101 Firefox/25.0"
+	};
 
 	String[] firefox3mobile = {
 			"Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900"
+	};
+	
+	String[] firefoxMobile = {
+		"Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0"	
+	};
+	
+	String[] firefoxMobile23 = {
+			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0"	
 	};
 	
 	String[] safari = {
@@ -448,7 +460,10 @@ public class BrowserTest {
 		testAgents(firefox6, Browser.FIREFOX6);
 		testAgents(firefox19, Browser.FIREFOX19);
 		testAgents(firefox20, Browser.FIREFOX20);
+		testAgents(firefox25, Browser.FIREFOX25);
 		testAgents(firefox3mobile, Browser.FIREFOX3MOBILE);
+		testAgents(firefoxMobile, Browser.FIREFOX_MOBILE);
+		testAgents(firefoxMobile23, Browser.FIREFOX_MOBILE23);
 		testAgents(safari, Browser.SAFARI);
 		testAgents(dolfin, Browser.DOLFIN2);
 		testAgents(safari6, Browser.SAFARI6);
