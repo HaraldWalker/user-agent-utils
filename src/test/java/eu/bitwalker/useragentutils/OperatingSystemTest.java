@@ -225,6 +225,14 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; Android 4.0.4; en-gb; GT-P7500 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
 			"Mozilla/5.0 (Linux; U; Android 4.1.1; en-gb; ASUS Transformer Pad TF700T Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30"
  	};
+	
+	String[] androidMobile = {
+			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
+	};
+	
+	String[] androidTablet = {
+			"Mozilla/5.0 (Android; Tablet; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
+	};
 			
 	String[] windows98 = { 
 			"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Rogers Hi�Speed Internet; (R1 1.3))",
@@ -334,6 +342,8 @@ public class OperatingSystemTest {
 		testAgents(android2_tablet, OperatingSystem.ANDROID2_TABLET);
 		testAgents(android3_tablet, OperatingSystem.ANDROID3_TABLET);
 		testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
+		testAgents(androidMobile, OperatingSystem.ANDROID_MOBILE);
+		testAgents(androidTablet, OperatingSystem.ANDROID_TABLET);
 		testAgents(maemo, OperatingSystem.MAEMO);
 		testAgents(kindle2, OperatingSystem.KINDLE2);
 		testAgents(kindle3, OperatingSystem.KINDLE3);
