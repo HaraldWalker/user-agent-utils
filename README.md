@@ -8,6 +8,9 @@ http://haraldwalker.github.com/user-agent-utils/
 For the latest release, go to
 https://github.com/HaraldWalker/user-agent-utils/tree/master
 
+Buy me a beer:
+<a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+
 New in Version 1.11-snapshot (unreleased)
 ------------------
 
