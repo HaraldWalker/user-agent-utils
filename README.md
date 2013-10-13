@@ -43,3 +43,34 @@ Add dependency:
    <version>1.10</version>
 </dependency>
 ```
+
+Contributors
+------------
+* Please use the `trunk` branch on GitHub when making pull request
+
+Changelog
+---------
+
+1.10
+----
+
+* Fixed and extended OS and browser detection when using Firefox on mobiles or tablets
+* Added additional and future Firefox versions
+* Added Chrome 29
+* Added Opera 11, 12, 15 & 16 
+ 
+1.9
+---
+
+* Fixed version detection of Chrome Mobile
+* Added Firefox 20 detection plus beta and future versions
+* Added beta and future versions of Chrome
+
+1.8
+---
+
+* Option just to check just for a given collection of browsers or operating systems
+* Updated Chrome, Firefox and Safari detection to include the latest versions
+* Minor code optimizations
+* The package name has changed. Update import statements if you've been using the library before! 
+
