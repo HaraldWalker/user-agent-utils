@@ -11,12 +11,10 @@ https://github.com/HaraldWalker/user-agent-utils/tree/master
 Buy me a beer:  
 <a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
 
-New in Version 1.11
+New in Version 1.12 (unreleased)
 -------------------
 
-* Fixed none unique manufacturer id (issue #22)
-* added IOS 7 detection and improved IOS detection for iPads (issue #21)
-* added Chrome 30 and 31
+* (tba)
 
 Javadoc
 -------
@@ -52,6 +50,13 @@ Contributors
 
 Changelog
 ---------
+
+1.11
+----
+
+* Fixed none unique manufacturer id (issue #22)
+* added IOS 7 detection and improved IOS detection for iPads (issue #21)
+* added Chrome 30 and 31
 
 1.10
 ----
