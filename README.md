@@ -40,7 +40,7 @@ Add dependency:
 <dependency>
    <groupId>bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.10</version>
+   <version>1.11</version>
 </dependency>
 ```
 
