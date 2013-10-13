@@ -5,13 +5,18 @@ Utilities for processing user-agent strings. Can be used to handle http requests
 
 http://haraldwalker.github.com/user-agent-utils/
 
-New in Version 1.10
+For the latest release, go to
+https://github.com/HaraldWalker/user-agent-utils/tree/master
+
+Buy me a beer:  
+<a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+
+New in Version 1.11-snapshot (unreleased)
 ------------------
 
-* Fixed and extended OS and browser detection when using Firefox on mobiles or tablets
-* Added additional and future Firefox versions
-* Added Chrome 29
-* Added Opera 11, 12, 15 & 16 
+* Fixed none unique manufacturer id (issue #22)
+* added IOS 7 detection and improved IOS detection for iPads (issue #21)
+* added Chrome 30 and 31
 
 Javadoc
 -------
@@ -40,3 +45,34 @@ Add dependency:
    <version>1.10</version>
 </dependency>
 ```
+
+Contributors
+------------
+* Please use the `trunk` branch on GitHub when making a pull request
+
+Changelog
+---------
+
+1.10
+----
+
+* Fixed and extended OS and browser detection when using Firefox on mobiles or tablets
+* Added additional and future Firefox versions
+* Added Chrome 29
+* Added Opera 11, 12, 15 & 16 
+ 
+1.9
+---
+
+* Fixed version detection of Chrome Mobile
+* Added Firefox 20 detection plus beta and future versions
+* Added beta and future versions of Chrome
+
+1.8
+---
+
+* Option just to check just for a given collection of browsers or operating systems
+* Updated Chrome, Firefox and Safari detection to include the latest versions
+* Minor code optimizations
+* The package name has changed. Update import statements if you've been using the library before! 
+

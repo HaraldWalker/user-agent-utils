@@ -124,7 +124,7 @@ public enum Manufacturer {
 	/**
 	 * Amazon.com, Inc.
 	 */
-	AMAZON(20, "Amazon.com, Inc."),
+	AMAZON(24, "Amazon.com, Inc."),
 	/**
 	 * Roku sells home digital media products
 	 */
@@ -135,7 +135,7 @@ public enum Manufacturer {
 	ADOBE(23, "Adobe Systems Inc.");
 	
 	
-	private final byte id;
+	private final short id;
 	private final String name;
 	
 	private Manufacturer(int id, String name) {
@@ -146,7 +146,7 @@ public enum Manufacturer {
 	/**
 	 * @return the id
 	 */
-	public byte getId() {
+	public short getId() {
 		return id;
 	}
 
