@@ -14,7 +14,7 @@ Buy me a beer:
 New in Version 1.11-snapshot (unreleased)
 ------------------
 
-* ... 
+* Fixed none unique manufacturer id (issue #22)
 
 Javadoc
 -------
