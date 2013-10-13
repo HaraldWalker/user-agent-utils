@@ -46,7 +46,7 @@ Add dependency:
 
 Contributors
 ------------
-* Please use the `trunk` branch on GitHub when making pull request
+* Please use the `trunk` branch on GitHub when making a pull request
 
 Changelog
 ---------
