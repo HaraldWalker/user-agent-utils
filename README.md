@@ -16,6 +16,7 @@ New in Version 1.11-snapshot (unreleased)
 
 * Fixed none unique manufacturer id (issue #22)
 * added IOS 7 detection and improved IOS detection for iPads (issue #21)
+* added Chrome 30 and 31
 
 Javadoc
 -------
