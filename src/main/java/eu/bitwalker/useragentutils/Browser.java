@@ -68,7 +68,7 @@ public enum Browser {
 	/**
 	 * Family of Internet Explorer browsers
 	 */
-	IE( 			Manufacturer.MICROSOFT, null, 1, "Internet Explorer", new String[] { "MSIE", "Trident" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "(?:MSIE (([\\d]+)\\.([\\w]+))|Trident\\/(([0-9]+)\\.([0-9]+)))" ), // before Mozilla
+	IE( 			Manufacturer.MICROSOFT, null, 1, "Internet Explorer", new String[] { "MSIE", "Trident" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "MSIE (([\\d]+)\\.([\\w]+))" ), // before Mozilla
 		/**
 		 * Since version 7 Outlook Express is identifying itself. By detecting Outlook Express we can not 
 		 * identify the Internet Explorer version which is probably used for the rendering.
