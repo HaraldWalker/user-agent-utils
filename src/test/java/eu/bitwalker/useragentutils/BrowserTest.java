@@ -415,6 +415,7 @@ public class BrowserTest {
 		testVersions("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36 OPR/15.0.1147.100", new Version("15.0.1147.100", "15", "0"));
 		testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36 OPR/16.0.1196.73", new Version("16.0.1196.73", "16", "0"));
 		testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36", new Version("29.0.1547.65", "29", "0"));
+		testVersions("Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko", new Version("11.0", "11", "0"));
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {

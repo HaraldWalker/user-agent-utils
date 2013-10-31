@@ -82,7 +82,7 @@ public enum Browser {
 		IEMOBILE9(		Manufacturer.MICROSOFT, Browser.IE, 123, "IE Mobile 9", new String[] { "IEMobile/9" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
 		IEMOBILE7(		Manufacturer.MICROSOFT, Browser.IE, 121, "IE Mobile 7", new String[] { "IEMobile 7" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
 		IEMOBILE6(		Manufacturer.MICROSOFT, Browser.IE, 120, "IE Mobile 6", new String[] { "IEMobile 6" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
-		IE11(			Manufacturer.MICROSOFT, Browser.IE, 95, "Internet Explorer 11", new String[] { "Trident/7" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "Trident\\/7\\.0; rv:11" ),   // before Mozilla
+		IE11(			Manufacturer.MICROSOFT, Browser.IE, 95, "Internet Explorer 11", new String[] { "Trident/7" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "Trident\\/7(?:\\.[0-9]*)?; rv:(([0-9]+)\\.?([0-9]+))" ),   // before Mozilla
 		IE10(			Manufacturer.MICROSOFT, Browser.IE, 92, "Internet Explorer 10", new String[] { "MSIE 10" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null ),   // before MSIE
 		IE9(			Manufacturer.MICROSOFT, Browser.IE, 90, "Internet Explorer 9", new String[] { "MSIE 9" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null ),   // before MSIE
 		IE8(			Manufacturer.MICROSOFT, Browser.IE, 80, "Internet Explorer 8", new String[] { "MSIE 8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null ),   // before MSIE
