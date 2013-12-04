@@ -120,11 +120,15 @@ public class Version implements Comparable<Version> {
 	        String[] otherVersionParts = other.version.split("\\.");
 
 	        for (int i = 0; i < Math.min(versionParts.length, otherVersionParts.length); i++) {
-	            int comparisonResult = versionParts[i].compareTo(otherVersionParts[i]);
-	            if (comparisonResult == 0) {
-	                continue;
+	            if (versionParts[i].length() == otherVersionParts[i].length()) {
+	        	int comparisonResult = versionParts[i].compareTo(otherVersionParts[i]);
+	        	if (comparisonResult == 0) {
+	        	    continue;
+	        	} else {
+	        	    return comparisonResult;
+	        	}
 	            } else {
-	                return comparisonResult;
+	        	return versionParts[i].length() > otherVersionParts[i].length() ? 1 : -1;
 	            }
 	        }
 
