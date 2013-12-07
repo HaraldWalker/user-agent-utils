@@ -375,6 +375,10 @@ public class BrowserTest {
 			"Mozilla/5.0 (BB10; Kbd) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.1.0.1485 Mobile Safari/537.10+"
 	};
 	
+	// proxy server with fake browser reference
+	String[] proxy = {
+			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
+	};
 	
 	/**
 	 * Test method for {@link eu.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}.
@@ -487,6 +491,7 @@ public class BrowserTest {
 		testAgents(seaMonkey, Browser.SEAMONKEY);
 		testAgents(bots, Browser.BOT);
 		testAgents(tools, Browser.DOWNLOAD);
+		testAgents(proxy, Browser.DOWNLOAD);
 		testAgents(thunderbird3, Browser.THUNDERBIRD3);
 		testAgents(thunderbird2, Browser.THUNDERBIRD2);
 		testAgents(silk, Browser.SILK);
