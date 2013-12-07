@@ -341,7 +341,8 @@ public class BrowserTest {
 	
 	String[] tools = {
 			"curl/7.19.5 (i586-pc-mingw32msvc) libcurl/7.19.5 OpenSSL/0.9.8l zlib/1.2.3",
-			"Wget/1.8.1"
+			"Wget/1.8.1",
+			"Apache-HttpClient/release (java 1.5)"
 	};
 	
 	String[] thunderbird3 = {
@@ -420,6 +421,7 @@ public class BrowserTest {
 		testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36 OPR/16.0.1196.73", new Version("16.0.1196.73", "16", "0"));
 		testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36", new Version("29.0.1547.65", "29", "0"));
 		testVersions("Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko", new Version("11.0", "11", "0"));
+		testVersions("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)", new Version("7.0", "7", "0")); // issue #31
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {
