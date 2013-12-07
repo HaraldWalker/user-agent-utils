@@ -339,6 +339,11 @@ public class BrowserTest {
 			"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.8 (KHTML, like Gecko; Google Web Preview) Chrome/19.0.1084.36 Safari/536.8"
 	};
 	
+	String[] mobileBot = {
+			"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7 (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)",
+			"DoCoMo/2.0 N905i(c100;TB;W24H16) (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)"
+	};
+	
 	String[] tools = {
 			"curl/7.19.5 (i586-pc-mingw32msvc) libcurl/7.19.5 OpenSSL/0.9.8l zlib/1.2.3",
 			"Wget/1.8.1",
@@ -492,6 +497,7 @@ public class BrowserTest {
 		testAgents(flock, Browser.FLOCK);
 		testAgents(seaMonkey, Browser.SEAMONKEY);
 		testAgents(bots, Browser.BOT);
+		testAgents(mobileBot, Browser.BOT_MOBILE);
 		testAgents(tools, Browser.DOWNLOAD);
 		testAgents(proxy, Browser.DOWNLOAD);
 		testAgents(thunderbird3, Browser.THUNDERBIRD3);
