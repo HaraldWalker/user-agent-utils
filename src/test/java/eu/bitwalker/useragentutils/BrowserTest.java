@@ -127,6 +127,10 @@ public class BrowserTest {
 	String[] ieMobile9 = new String[] {
 			"Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)"
 	};
+	
+	String[] ieMobile10 = new String[] {
+			"Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 920)"
+	};
 		
 	String[] lotusNotes = new String[] {
 		"Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)",
@@ -453,6 +457,7 @@ public class BrowserTest {
 		testAgents(ieMobile6, Browser.IEMOBILE6);
 		testAgents(ieMobile7, Browser.IEMOBILE7);
 		testAgents(ieMobile9, Browser.IEMOBILE9);
+		testAgents(ieMobile10, Browser.IEMOBILE10);
 		testAgents(lotusNotes, Browser.LOTUS_NOTES);
 		testAgents(lynxClient, Browser.LYNX);
 		testAgents(konqueror, Browser.KONQUEROR);
