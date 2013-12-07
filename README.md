@@ -15,7 +15,7 @@ New in Version 1.12
 -------------------
 
 * Fix for version detection of Internet Explorer 11, contributed by https://github.com/parker
-* Browser version are now comparable (#33), contributed by https://github.com/reindyr
+* Browser versions are now comparable (#33), contributed by https://github.com/reindyr
 * Detect image proxy used by Google for Gmail
 * Detect Google's mobile bot (#8)
 * Internet Explorer 10 mobile version added (#28)
