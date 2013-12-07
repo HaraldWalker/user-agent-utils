@@ -11,15 +11,10 @@ https://github.com/HaraldWalker/user-agent-utils/tree/master
 Support me and buy me a beer:  
 <a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
 
-New in Version 1.12
+New in Version 1.13 (unreleased)
 -------------------
 
-* Fix for version detection of Internet Explorer 11, contributed by https://github.com/parker
-* Browser versions are now comparable (#33), contributed by https://github.com/reindyr
-* Detect image proxy used by Google for Gmail
-* Detect Google's mobile bot (#8)
-* Internet Explorer 10 mobile version added (#28)
-* Improved Chrome mobile detection (#30)
+* TBD
 
 Javadoc
 -------
@@ -55,6 +50,15 @@ Contributors
 
 Changelog
 ---------
+
+1.12
+----
+* Fix for version detection of Internet Explorer 11, contributed by https://github.com/parker
+* Browser versions are now comparable (#33), contributed by https://github.com/reindyr
+* Detect image proxy used by Google for Gmail
+* Detect Google's mobile bot (#8)
+* Internet Explorer 10 mobile version added (#28)
+* Improved Chrome mobile detection (#30)
 
 1.11
 ----
