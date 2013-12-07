@@ -127,6 +127,10 @@ public class BrowserTest {
 	String[] ieMobile9 = new String[] {
 			"Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)"
 	};
+	
+	String[] ieMobile10 = new String[] {
+			"Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 920)"
+	};
 		
 	String[] lotusNotes = new String[] {
 		"Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)",
@@ -147,7 +151,8 @@ public class BrowserTest {
 	String[] chromeMobile = new String[] {
 			"Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7",
 			"Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Galaxy Nexus Build/IML74K) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Mobile Safari/535.7",
-			"Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3"
+			"Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3",
+			"Mozilla/5.0 (Linux; Android 4.1.2; LT22i Build/6.2.A.1.100) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36"
 	};
 	
 	String[] chrome = new String[] {
@@ -339,9 +344,15 @@ public class BrowserTest {
 			"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.8 (KHTML, like Gecko; Google Web Preview) Chrome/19.0.1084.36 Safari/536.8"
 	};
 	
+	String[] mobileBot = {
+			"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7 (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)",
+			"DoCoMo/2.0 N905i(c100;TB;W24H16) (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)"
+	};
+	
 	String[] tools = {
 			"curl/7.19.5 (i586-pc-mingw32msvc) libcurl/7.19.5 OpenSSL/0.9.8l zlib/1.2.3",
-			"Wget/1.8.1"
+			"Wget/1.8.1",
+			"Apache-HttpClient/release (java 1.5)"
 	};
 	
 	String[] thunderbird3 = {
@@ -375,6 +386,10 @@ public class BrowserTest {
 			"Mozilla/5.0 (BB10; Kbd) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.1.0.1485 Mobile Safari/537.10+"
 	};
 	
+	// proxy server with fake browser reference
+	String[] proxy = {
+			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
+	};
 	
 	/**
 	 * Test method for {@link eu.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}.
@@ -415,6 +430,9 @@ public class BrowserTest {
 		testVersions("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36 OPR/15.0.1147.100", new Version("15.0.1147.100", "15", "0"));
 		testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36 OPR/16.0.1196.73", new Version("16.0.1196.73", "16", "0"));
 		testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36", new Version("29.0.1547.65", "29", "0"));
+		testVersions("Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko", new Version("11.0", "11", "0"));
+		testVersions("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)", new Version("7.0", "7", "0")); // issue #31
+		testVersions("Mozilla/5.0 (Linux; Android 4.1.2; LT22i Build/6.2.A.1.100) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36", new Version("31.0.1650.59", "31", "0"));
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {
@@ -441,6 +459,7 @@ public class BrowserTest {
 		testAgents(ieMobile6, Browser.IEMOBILE6);
 		testAgents(ieMobile7, Browser.IEMOBILE7);
 		testAgents(ieMobile9, Browser.IEMOBILE9);
+		testAgents(ieMobile10, Browser.IEMOBILE10);
 		testAgents(lotusNotes, Browser.LOTUS_NOTES);
 		testAgents(lynxClient, Browser.LYNX);
 		testAgents(konqueror, Browser.KONQUEROR);
@@ -485,7 +504,9 @@ public class BrowserTest {
 		testAgents(flock, Browser.FLOCK);
 		testAgents(seaMonkey, Browser.SEAMONKEY);
 		testAgents(bots, Browser.BOT);
+		testAgents(mobileBot, Browser.BOT_MOBILE);
 		testAgents(tools, Browser.DOWNLOAD);
+		testAgents(proxy, Browser.DOWNLOAD);
 		testAgents(thunderbird3, Browser.THUNDERBIRD3);
 		testAgents(thunderbird2, Browser.THUNDERBIRD2);
 		testAgents(silk, Browser.SILK);

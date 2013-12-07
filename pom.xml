@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>bitwalker</groupId>
 	<name>User-Agent-Utils</name>
 	<url>http://java.net/projects/user-agent-utils</url>
 	<artifactId>UserAgentUtils</artifactId>
-	<version>1.11</version>
+	<version>1.12-snapshot</version>
 	<description>Utility classes to handle user-agents.</description>
 	<properties>
     	<github.global.server>github</github.global.server>

@@ -8,15 +8,18 @@ http://haraldwalker.github.com/user-agent-utils/
 For the latest release, go to
 https://github.com/HaraldWalker/user-agent-utils/tree/master
 
-Buy me a beer:  
+Support me and buy me a beer:  
 <a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
 
-New in Version 1.11
+New in Version 1.12
 -------------------
 
-* Fixed none unique manufacturer id (issue #22)
-* added IOS 7 detection and improved IOS detection for iPads (issue #21)
-* added Chrome 30 and 31
+* Fix for version detection of Internet Explorer 11, contributed by https://github.com/parker
+* Browser versions are now comparable (#33), contributed by https://github.com/reindyr
+* Detect image proxy used by Google for Gmail
+* Detect Google's mobile bot (#8)
+* Internet Explorer 10 mobile version added (#28)
+* Improved Chrome mobile detection (#30)
 
 Javadoc
 -------
@@ -42,7 +45,7 @@ Add dependency:
 <dependency>
    <groupId>bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.10</version>
+   <version>1.12</version>
 </dependency>
 ```
 
@@ -52,6 +55,13 @@ Contributors
 
 Changelog
 ---------
+
+1.11
+----
+
+* Fixed none unique manufacturer id (issue #22)
+* added IOS 7 detection and improved IOS detection for iPads (issue #21)
+* added Chrome 30 and 31
 
 1.10
 ----

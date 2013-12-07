@@ -318,6 +318,11 @@ public class OperatingSystemTest {
 			"Roku/DVP-3.0 (013.00E02227A)"
 	};
 	
+	
+	String[] proxy = {
+			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
+	};
+	
 	/**
 	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#isInUserAgentString(java.lang.String)}.
 	 */
@@ -372,6 +377,7 @@ public class OperatingSystemTest {
 		testAgents(kindle3, OperatingSystem.KINDLE3);
 		testAgents(roku, OperatingSystem.ROKU);
 		testAgents(googleTV, OperatingSystem.GOOGLE_TV);
+		testAgents(proxy, OperatingSystem.PROXY);
 		testAgents(genericMobile, OperatingSystem.UNKNOWN_MOBILE);
 		testAgents(genericTablet, OperatingSystem.UNKNOWN_TABLET);
 
