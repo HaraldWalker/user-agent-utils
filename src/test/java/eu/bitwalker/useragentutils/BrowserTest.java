@@ -82,7 +82,8 @@ public class BrowserTest {
 	};	
 	
 	String[] ie11clients = new String[] {
-			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
+			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",
+			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko" //64bit Win8
 	};	
 	
 	String[] ie55clients = new String[] {
