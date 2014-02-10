@@ -68,7 +68,7 @@ public enum Browser {
 	/**
 	 * Family of Internet Explorer browsers
 	 */
-	IE( 			Manufacturer.MICROSOFT, null, 1, "Internet Explorer", new String[] { "MSIE", "Trident" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "MSIE (([\\d]+)\\.([\\w]+))" ), // before Mozilla
+	IE( 			Manufacturer.MICROSOFT, null, 1, "Internet Explorer", new String[] { "MSIE", "Trident", "IE " }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "MSIE (([\\d]+)\\.([\\w]+))" ), // before Mozilla
 		/**
 		 * Since version 7 Outlook Express is identifying itself. By detecting Outlook Express we can not 
 		 * identify the Internet Explorer version which is probably used for the rendering.
@@ -83,6 +83,11 @@ public enum Browser {
 		IEMOBILE9(		Manufacturer.MICROSOFT, Browser.IE, 123, "IE Mobile 9", new String[] { "IEMobile/9" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
 		IEMOBILE7(		Manufacturer.MICROSOFT, Browser.IE, 121, "IE Mobile 7", new String[] { "IEMobile 7" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
 		IEMOBILE6(		Manufacturer.MICROSOFT, Browser.IE, 120, "IE Mobile 6", new String[] { "IEMobile 6" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
+        IE11_RSS(       Manufacturer.MICROSOFT, Browser.IE, 96, "Internet Explorer 11", new String[] { "IE 11." }, null, BrowserType.RSS, RenderingEngine.TRIDENT, "IE (([0-9]+)\\.?([0-9]+))" ),   // RSS IE 11
+        IE10_RSS(       Manufacturer.MICROSOFT, Browser.IE, 93, "Internet Explorer 10", new String[] { "Windows-RSS-Platform/2.0 (MSIE 10" }, null, BrowserType.RSS, RenderingEngine.TRIDENT, null ),   // RSS IE 10
+        IE9_RSS(       Manufacturer.MICROSOFT, Browser.IE, 91, "Internet Explorer 9", new String[] { "Windows-RSS-Platform/2.0 (MSIE 9" }, null, BrowserType.RSS, RenderingEngine.TRIDENT, null ),   // RSS IE 9
+        IE8_RSS(       Manufacturer.MICROSOFT, Browser.IE, 81, "Internet Explorer 8", new String[] { "Windows-RSS-Platform/2.0 (MSIE 8" }, null, BrowserType.RSS, RenderingEngine.TRIDENT, null ),   // RSS IE 8
+        IE7_RSS(       Manufacturer.MICROSOFT, Browser.IE, 71, "Internet Explorer 7", new String[] { "Windows-RSS-Platform/1.0 (MSIE 7" }, null, BrowserType.RSS, RenderingEngine.TRIDENT, null ),   // RSS IE 7
 		IE11(			Manufacturer.MICROSOFT, Browser.IE, 95, "Internet Explorer 11", new String[] { "Trident/7" }, new String[] {"MSIE 7"}, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "Trident\\/7(?:\\.[0-9]*)?;.*rv:(([0-9]+)\\.?([0-9]+))" ),   // before Mozilla
 		IE10(			Manufacturer.MICROSOFT, Browser.IE, 92, "Internet Explorer 10", new String[] { "MSIE 10" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null ),   // before MSIE
 		IE9(			Manufacturer.MICROSOFT, Browser.IE, 90, "Internet Explorer 9", new String[] { "MSIE 9" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null ),   // before MSIE
