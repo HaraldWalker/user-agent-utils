@@ -1,11 +1,11 @@
 /*
-* Copyright (c) 2013, Harald Walker (bitwalker.eu) 
+* Copyright (c) 2013, Harald Walker (bitwalker.eu)
 * All rights reserved.
-* 
+*
 * Redistribution and use in source and binary forms, with or
 * without modification, are permitted provided that the
 * following conditions are met:
-* 
+*
 * * Redistributions of source code must retain the above
 * copyright notice, this list of conditions and the following
 * disclaimer.
@@ -195,6 +195,19 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36"
 	};
 
+	String[] chrome31 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36"
+	};
+
+	String[] chrome32 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.77 Safari/537.36",
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36"
+	};
+
+	String[] chrome33 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36"
+	};
+
 	String[] firefox3 = new String[] {
 			"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.14) Gecko/2009090216 Ubuntu/9.04 (jaunty) Firefox/3.0.14"
 	};
@@ -228,15 +241,15 @@ public class BrowserTest {
 	String[] firefox3mobile = {
 			"Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900"
 	};
-	
+
 	String[] firefoxMobile = {
-		"Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0"	
+		"Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0"
 	};
-	
+
 	String[] firefoxMobile23 = {
-			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0"	
+			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0"
 	};
-	
+
 	String[] safari = {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/525.28.3 (KHTML, like Gecko) Version/3.2.3 Safari/525.28.3",
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-gb) AppleWebKit/523.10.6 (KHTML, like Gecko) Version/3.0.4 Safari/523.10.6"
@@ -258,8 +271,8 @@ public class BrowserTest {
 			"Mozilla/5.0 (Windows; U; Windows NT 6.1; es-ES) AppleWebKit/531.22.7 (KHTML, like Gecko) Version/4.0.5 Safari/531.22.7",
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/531.2+ (KHTML, like Gecko) Version/4.0.1 Safari/530.18"
 	};
-	
-	String[] mobileSafari = {			
+
+	String[] mobileSafari = {
 			"Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
 			"Mozilla/5.0 (iPod; U; CPU iPhone OS 2_0 like Mac OS X; de-de) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5A347 Safari/525.20", // Mobile Safari 3.1.1
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3A101a Safari/419.3", // Mobile Safari 3.0
@@ -405,12 +418,12 @@ public class BrowserTest {
 	String[] airApp = {
 			"Mozilla/5.0 (Windows; U; cs-CZ) AppleWebKit/526.9+ (KHTML, like Gecko) AdobeAIR/1.5.1"
 	};
-	
+
 	String[] blackberry10 = {
 			"Mozilla/5.0 (BB10; Touch) AppleWebKit/537.1 (KHTML, like Gecko) Version/10.0.0.1337 Mobile Safari/537.1",
 			"Mozilla/5.0 (BB10; Kbd) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.1.0.1485 Mobile Safari/537.10+"
 	};
-	
+
 	// proxy server with fake browser reference
 	String[] proxy = {
 			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
@@ -423,9 +436,9 @@ public class BrowserTest {
 	public void testIsBrowser() {
 		assertTrue(Browser.SAFARI.isInUserAgentString("Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1A543a Safari/419.3"));
 	}
-	
+
 	/**
-	 * 
+	 *
 	 */
 	@Test
 	public void testVersionDetection() {
@@ -460,11 +473,11 @@ public class BrowserTest {
 		testVersions("Mozilla/5.0 (Linux; Android 4.1.2; LT22i Build/6.2.A.1.100) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36", new Version("31.0.1650.59", "31", "0"));
 	}
 
-	private void testVersions(String ua, Version expectedVersion) {
-		Version version = Browser.parseUserAgentString(ua).getVersion(ua);
+	private void testVersions(final String ua, final Version expectedVersion) {
+		final Version version = Browser.parseUserAgentString(ua).getVersion(ua);
 		assertEquals(expectedVersion, version);
 	}
-	
+
 	/**
 	 * Test method for {@link eu.bitwalker.useragentutils.Browser#parseUserAgentString(java.lang.String)}.
 	 */
@@ -498,6 +511,9 @@ public class BrowserTest {
 		testAgents(chrome13, Browser.CHROME13);
 		testAgents(chrome14, Browser.CHROME14);
 		testAgents(chrome29, Browser.CHROME29);
+		testAgents(chrome31, Browser.CHROME31);
+		testAgents(chrome32, Browser.CHROME32);
+		testAgents(chrome33, Browser.CHROME33);
 		testAgents(firefox3, Browser.FIREFOX3);
 		testAgents(firefox4, Browser.FIREFOX4);
 		testAgents(firefox5, Browser.FIREFOX5);
@@ -529,7 +545,7 @@ public class BrowserTest {
 		testAgents(opera19, Browser.OPERA19);
 		testAgents(opera20, Browser.OPERA20);
 		testAgents(camino2, Browser.CAMINO2);
-		testAgents(camino, Browser.CAMINO);		
+		testAgents(camino, Browser.CAMINO);
 		testAgents(flock, Browser.FLOCK);
 		testAgents(seaMonkey, Browser.SEAMONKEY);
 		testAgents(bots, Browser.BOT);
@@ -544,48 +560,48 @@ public class BrowserTest {
 		testAgents(airApp, Browser.ADOBE_AIR);
 		testAgents(blackberry10, Browser.BLACKBERRY10);
 	}
-	
+
 	@Test
 	public void testCustomUserAgentParsing() {
 		// Test limited to the big browser families. As Camino can not be detected any longer, the second best match is Firefox3 (a child of Firefox).
-		for (String agentString : camino2) {
+		for (final String agentString : camino2) {
 			assertEquals(Browser.FIREFOX3, Browser.parseUserAgentString(agentString,Arrays.asList(Browser.IE,Browser.CHROME, Browser.APPLE_WEB_KIT, Browser.FIREFOX)));
 		}
 		// When there is no match in the given set, return UNKNOWN
-		for (String agentString : opera9) {
+		for (final String agentString : opera9) {
 			assertEquals(Browser.UNKNOWN, Browser.parseUserAgentString(agentString,Arrays.asList(Browser.IE,Browser.CHROME, Browser.APPLE_WEB_KIT, Browser.FIREFOX)));
 		}
 	}
-	
-	private void testAgents(String[] agentStrings, Browser expectedBrowser) {
-		for (String agentString : agentStrings) {
+
+	private void testAgents(final String[] agentStrings, final Browser expectedBrowser) {
+		for (final String agentString : agentStrings) {
 			assertEquals(expectedBrowser, Browser.parseUserAgentString(agentString));
-		}		
+		}
 	}
-	
+
 	@Test
 	public void testIncompleteUAString() {
 		try {
-			Browser browser = Browser.parseUserAgentString("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us) AppleWebKit/531.21.11 (KHTML, like");	
+			final Browser browser = Browser.parseUserAgentString("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us) AppleWebKit/531.21.11 (KHTML, like");
 			browser.getVersion("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us) AppleWebKit/531.21.11 (KHTML, like");
-			Browser browser2 = Browser.parseUserAgentString("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.0.8) Gecko/2009032608 Firefox");	
+			final Browser browser2 = Browser.parseUserAgentString("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.0.8) Gecko/2009032608 Firefox");
 			browser2.getVersion("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.0.8) Gecko/2009032608 Firefox");
-			Browser browser3 = Browser.parseUserAgentString("Mozilla/4.0 (compatible; MSIE 8");	
-			browser3.getVersion("Mozilla/4.0 (compatible; MSIE 8");			
-		} catch (Exception e) {
+			final Browser browser3 = Browser.parseUserAgentString("Mozilla/4.0 (compatible; MSIE 8");
+			browser3.getVersion("Mozilla/4.0 (compatible; MSIE 8");
+		} catch (final Exception e) {
 			fail(e.getMessage());
 		}
 	}
-	
+
 	/**
 	 * Test if generated id values are unique.
 	 */
 	@Test
 	public void testUniqueIdValues() {
-		
-		List<Short> retrievedIdValues = new ArrayList<Short>();
-		
-		for (Browser browser : Browser.values()) {
+
+		final List<Short> retrievedIdValues = new ArrayList<Short>();
+
+		for (final Browser browser : Browser.values()) {
 			assertTrue(browser.toString(),!retrievedIdValues.contains(browser.getId()));
 			retrievedIdValues.add(browser.getId());
 		}
