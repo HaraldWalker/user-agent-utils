@@ -83,7 +83,7 @@ public class BrowserTest {
 	
 	String[] ie11clients = new String[] {
 			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",
-			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko" //64bit Win8
+			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko", //64bit Win8
 	};	
 	
 	String[] ie55clients = new String[] {
@@ -132,7 +132,35 @@ public class BrowserTest {
 	String[] ieMobile10 = new String[] {
 			"Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 920)"
 	};
-		
+
+	
+    String[] ie7Rss = new String[] {
+            "Windows-RSS-Platform/1.0 (MSIE 7.0; Windows NT 5.1)",
+            "Windows-RSS-Platform/1.0 (MSIE 7.0; Windows NT 6.0)",
+            "Windows-RSS-Platform/1.0 (MSIE 7.0; Windows NT 6.1)"
+    };
+    
+    String[] ie8Rss = new String[] {
+            "Windows-RSS-Platform/2.0 (MSIE 8.0; Windows NT 6.0)",
+    };
+    
+	
+	
+	String[] ie9Rss = new String[] {
+            "Windows-RSS-Platform/2.0 (MSIE 9.0; Windows NT 6.0)"
+    };
+
+    String[] ie10Rss = new String[] {
+            "Windows-RSS-Platform/2.0 (MSIE 10.0; Windows NT 6.0)"
+    };
+
+    String[] ie11Rss = new String[] {
+            "Windows-RSS-Platform/2.0 (IE 11.0; Windows NT 6.1)"
+    };
+    
+    
+	
+	
 	String[] lotusNotes = new String[] {
 		"Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)",
 		"Mozilla/4.0 (compatible; Lotus-Notes/6.0; Windows-NT)"
@@ -434,6 +462,7 @@ public class BrowserTest {
 		testVersions("Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko", new Version("11.0", "11", "0"));
 		testVersions("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)", new Version("7.0", "7", "0")); // issue #31
 		testVersions("Mozilla/5.0 (Linux; Android 4.1.2; LT22i Build/6.2.A.1.100) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36", new Version("31.0.1650.59", "31", "0"));
+        testVersions("Windows-RSS-Platform/2.0 (IE 11.0; Windows NT 6.1)", new Version("11.0", "11", "0"));
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {
@@ -461,6 +490,11 @@ public class BrowserTest {
 		testAgents(ieMobile7, Browser.IEMOBILE7);
 		testAgents(ieMobile9, Browser.IEMOBILE9);
 		testAgents(ieMobile10, Browser.IEMOBILE10);
+        testAgents(ie7Rss, Browser.IE7);
+        testAgents(ie8Rss, Browser.IE8);
+        testAgents(ie9Rss, Browser.IE9);
+        testAgents(ie10Rss, Browser.IE10);
+		testAgents(ie11Rss, Browser.IE11);
 		testAgents(lotusNotes, Browser.LOTUS_NOTES);
 		testAgents(lynxClient, Browser.LYNX);
 		testAgents(konqueror, Browser.KONQUEROR);
