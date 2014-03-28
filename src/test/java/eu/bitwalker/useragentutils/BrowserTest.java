@@ -490,11 +490,11 @@ public class BrowserTest {
 		testAgents(ieMobile7, Browser.IEMOBILE7);
 		testAgents(ieMobile9, Browser.IEMOBILE9);
 		testAgents(ieMobile10, Browser.IEMOBILE10);
-        testAgents(ie7Rss, Browser.IE7_RSS);
-        testAgents(ie8Rss, Browser.IE8_RSS);
-        testAgents(ie9Rss, Browser.IE9_RSS);
-        testAgents(ie10Rss, Browser.IE10_RSS);
-		testAgents(ie11Rss, Browser.IE11_RSS);
+        testAgents(ie7Rss, Browser.IE7);
+        testAgents(ie8Rss, Browser.IE8);
+        testAgents(ie9Rss, Browser.IE9);
+        testAgents(ie10Rss, Browser.IE10);
+		testAgents(ie11Rss, Browser.IE11);
 		testAgents(lotusNotes, Browser.LOTUS_NOTES);
 		testAgents(lynxClient, Browser.LYNX);
 		testAgents(konqueror, Browser.KONQUEROR);

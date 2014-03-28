@@ -72,10 +72,6 @@ public enum BrowserType {
 	 * Application
 	 */
 	APP("Application"),
-    /**
-     * RSS Tool
-     */
-    RSS("Rss Tool"),
 	UNKNOWN("unknown");
 	
 	private String name;
