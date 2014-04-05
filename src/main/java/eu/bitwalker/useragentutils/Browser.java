@@ -346,7 +346,7 @@ public enum Browser {
 	{
 		for (String alias : aliases)
 		{
-			if (agentString.toLowerCase().indexOf(alias.toLowerCase()) != -1)
+			if (agentString != null && agentString.toLowerCase().indexOf(alias.toLowerCase()) != -1)
 				return true;
 		}
 		return false;
@@ -362,7 +362,7 @@ public enum Browser {
 	{
 		if (excludeList != null) {
 			for (String exclude : excludeList) {
-				if (agentString.toLowerCase().indexOf(exclude.toLowerCase()) != -1)
+				if (agentString != null && agentString.toLowerCase().indexOf(exclude.toLowerCase()) != -1)
 					return true;
 			}
 		}
