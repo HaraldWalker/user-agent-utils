@@ -323,6 +323,10 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
 	};
 	
+	String[] unknown = {
+		null	
+	};
+	
 	/**
 	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#isInUserAgentString(java.lang.String)}.
 	 */
@@ -380,6 +384,7 @@ public class OperatingSystemTest {
 		testAgents(proxy, OperatingSystem.PROXY);
 		testAgents(genericMobile, OperatingSystem.UNKNOWN_MOBILE);
 		testAgents(genericTablet, OperatingSystem.UNKNOWN_TABLET);
+		testAgents(unknown, OperatingSystem.UNKNOWN);
 
 	}
 

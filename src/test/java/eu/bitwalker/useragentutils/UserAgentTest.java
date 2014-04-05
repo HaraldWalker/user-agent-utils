@@ -26,6 +26,18 @@ public class UserAgentTest {
 		assertEquals(OperatingSystem.WINDOWS_XP, userAgent.getOperatingSystem());
 		assertEquals(Browser.IE6, userAgent.getBrowser());
 	}
+	
+	/**
+	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#parseUserAgentString(java.lang.String)} 
+	 * that checks for proper handling of a <code>null</code> userAgentString.
+	 */
+	@Test
+	public void testParseUserAgentStringNull() {
+		UserAgent userAgent = UserAgent.parseUserAgentString(null);
+		assertEquals(OperatingSystem.UNKNOWN, userAgent.getOperatingSystem());
+		assertEquals(Browser.UNKNOWN, userAgent.getBrowser());
+		assertNull(userAgent.getBrowserVersion());
+	}
 
 	/**
 	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#toString()}.
