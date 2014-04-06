@@ -14,15 +14,9 @@ Support me and buy me a beer:
 If you are looking for a more complete user-agent detection, have a look at the libraries that use the user-agent-string.info database.  
 http://user-agent-string.info/download  
 
-New in Version 1.13 (unreleased)
+New in Version 1.14 (unreleased)
 -------------------
-
-* Added additional Chrome and Opera browser versions
-* Added current and future Firefox versons
-* Added agent string handling for Microsoft RSS platform user-agents
-* Added detection of Windows Phone 8.1 and IE Mobile 11.
-* Fixed null pointer exception when user-agent-string was null
-* Adjusted IE11 regex to match IE11 on Win8 
+TBA
 
 
 Javadoc
@@ -59,6 +53,16 @@ Contributors
 
 Changelog
 ---------
+
+1.13  
+----  
+* Added additional Chrome and Opera browser versions
+* Added current and future Firefox versons
+* Added agent string handling for Microsoft RSS platform user-agents
+* Added detection of Windows Phone 8.1 and IE Mobile 11.
+* Fixed null pointer exception when user-agent-string was null
+* Adjusted IE11 regex to match IE11 on Win8 
+
 
 1.12
 ----
