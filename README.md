@@ -11,15 +11,19 @@ https://github.com/HaraldWalker/user-agent-utils/tree/master
 Support me and buy me a beer:  
 <a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
 
-New in Version 1.12
+If you are looking for a more complete user-agent detection, have a look at the libraries that use the user-agent-string.info database.  
+http://user-agent-string.info/download  
+
+New in Version 1.13 (unreleased)
 -------------------
 
-* Fix for version detection of Internet Explorer 11, contributed by https://github.com/parker
-* Browser versions are now comparable (#33), contributed by https://github.com/reindyr
-* Detect image proxy used by Google for Gmail
-* Detect Google's mobile bot (#8)
-* Internet Explorer 10 mobile version added (#28)
-* Improved Chrome mobile detection (#30)
+* Added additional Chrome and Opera browser versions
+* Added current and future Firefox versons
+* Added agent string handling for Microsoft RSS platform user-agents
+* Added detection of Windows Phone 8.1 and IE Mobile 11.
+* Fixed null pointer exception when user-agent-string was null
+* Adjusted IE11 regex to match IE11 on Win8 
+
 
 Javadoc
 -------
@@ -55,6 +59,15 @@ Contributors
 
 Changelog
 ---------
+
+1.12
+----
+* Fix for version detection of Internet Explorer 11, contributed by https://github.com/parker
+* Browser versions are now comparable (#33), contributed by https://github.com/reindyr
+* Detect image proxy used by Google for Gmail
+* Detect Google's mobile bot (#8)
+* Internet Explorer 10 mobile version added (#28)
+* Improved Chrome mobile detection (#30)
 
 1.11
 ----

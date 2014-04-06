@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008-2013, Harald Walker (bitwalker.eu)  
+* Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers  
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -227,6 +227,7 @@ public class OperatingSystemTest {
 	
 	String[] android4g = {
 			"Mozilla/5.0 (Linux; U; Android 4.0.1; en-us; Galaxy Nexus Build/ICL41) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+			"Mozilla/5.0 (Linux; Android 4.4; Nexus 4 Build/KRT16E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.105 Mobile Safari"
 	};
 	
 	String[] android2_tablet= {
@@ -243,8 +244,13 @@ public class OperatingSystemTest {
  			"Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Transformer TF101 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
 			"Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7",
 			"Mozilla/5.0 (Linux; U; Android 4.0.4; en-gb; GT-P7500 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
-			"Mozilla/5.0 (Linux; U; Android 4.1.1; en-gb; ASUS Transformer Pad TF700T Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30"
- 	};
+			"Mozilla/5.0 (Linux; U; Android 4.0; xx-xx; GT-P5100 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30", // Samsung GT-P5100 (Galaxy Tab 2 10.1)
+			"Mozilla/5.0 (Linux; U; Android 4.1.1; en-gb; ASUS Transformer Pad TF700T Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+			"Mozilla/5.0 (Linux; Android 4.4; Nexus 7 Build/KOT24) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.105 Safari/537.36",
+			"Mozilla/5.0 (Linux; U; Android 4.2; en-us; Nexus 10 Build/JOP12D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+			"Mozilla/5.0 (Linux; U; Android 4.2.2; nl-nl; SM-T310 Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30", // Samsung Galaxy Tab 3
+			"Mozilla/5.0 (Linux; U; Android 4.1; xx-xx; ME301T Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30" // Asus ME301T (MeMO Pad Smart 10)
+	};
 	
 	String[] androidMobile = {
 			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
@@ -291,6 +297,10 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 820)"
 	};
 	
+	String[] windowsMobile8_1 = {
+			"Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; HTC; HTC6990LVW) like Gecko"
+	};
+	
 	String[] bada = {
 			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500NEJE5; U; Bada/1.0; fr-fr) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.0 Mobile WVGA SMM-MMS/1.2.0 NexPlayer/3.0 profile/MIDP-2.1 configuration/CLDC-1.1 OPN-B",
 			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500XXJL2; U; Bada/1.2; de-de) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.2 Mobile WVGA SMM-MMS/1.2.0 OPN-B"
@@ -323,6 +333,10 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
 	};
 	
+	String[] unknown = {
+		null	
+	};
+	
 	/**
 	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#isInUserAgentString(java.lang.String)}.
 	 */
@@ -339,6 +353,7 @@ public class OperatingSystemTest {
 		testAgents(windowsCEdivices, OperatingSystem.WINDOWS_MOBILE);
 		testAgents(windowsMobile7, OperatingSystem.WINDOWS_MOBILE7);
 		testAgents(windowsMobile8, OperatingSystem.WINDOWS_PHONE8);
+		testAgents(windowsMobile8_1, OperatingSystem.WINDOWS_PHONE8_1);
 		testAgents(windowsVista, OperatingSystem.WINDOWS_VISTA);
 		testAgents(windows7, OperatingSystem.WINDOWS_7);
 		testAgents(windows8, OperatingSystem.WINDOWS_8);
@@ -380,6 +395,7 @@ public class OperatingSystemTest {
 		testAgents(proxy, OperatingSystem.PROXY);
 		testAgents(genericMobile, OperatingSystem.UNKNOWN_MOBILE);
 		testAgents(genericTablet, OperatingSystem.UNKNOWN_TABLET);
+		testAgents(unknown, OperatingSystem.UNKNOWN);
 
 	}
 

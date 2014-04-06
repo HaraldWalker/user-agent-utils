@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2013, Harald Walker (bitwalker.eu) 
+* Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers 
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -78,11 +78,13 @@ public class BrowserTest {
 	
 	String[] ie10clients = new String[] {
 			"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)",
-			"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)"
+			"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)",
+			"Mozilla/5.0 (compatible; MSIE 10.6; Windows NT 6.1; Trident/5.0; InfoPath.2; SLCC1; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727) 3gpp-gba UNTRUSTED/1.0"
 	};	
 	
 	String[] ie11clients = new String[] {
-			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
+			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",
+			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko", //64bit Win8
 	};	
 	
 	String[] ie55clients = new String[] {
@@ -104,6 +106,10 @@ public class BrowserTest {
 	String[] outlook2010 = new String[] {
 			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Trident/4.0; GTB6.4; Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1) ; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 1.1.4322; .NET CLR 3.5.30729; .NET CLR 3.0.30729; OfficeLiveConnector.1.3; OfficeLivePatch.0.0; MSOffice 14)",
 			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Media Center PC 6.0; SLCC2; ms-office; MSOffice 14)"
+	};
+	
+	String[] outlook2013 = new String[] {
+			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Win64; x64; Trident/6.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; Tablet PC 2.0; Microsoft Outlook 15.0.4481; ms-office; MSOffice 15)"
 	};
 	
 	String[] outookExpress = new String[] {
@@ -131,7 +137,39 @@ public class BrowserTest {
 	String[] ieMobile10 = new String[] {
 			"Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 920)"
 	};
-		
+
+	
+	String[] ieMobile11 = {
+			"Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; HTC; HTC6990LVW) like Gecko"
+	};
+	
+    String[] ie7Rss = new String[] {
+            "Windows-RSS-Platform/1.0 (MSIE 7.0; Windows NT 5.1)",
+            "Windows-RSS-Platform/1.0 (MSIE 7.0; Windows NT 6.0)",
+            "Windows-RSS-Platform/1.0 (MSIE 7.0; Windows NT 6.1)"
+    };
+    
+    String[] ie8Rss = new String[] {
+            "Windows-RSS-Platform/2.0 (MSIE 8.0; Windows NT 6.0)",
+    };
+    
+	
+	
+	String[] ie9Rss = new String[] {
+            "Windows-RSS-Platform/2.0 (MSIE 9.0; Windows NT 6.0)"
+    };
+
+    String[] ie10Rss = new String[] {
+            "Windows-RSS-Platform/2.0 (MSIE 10.0; Windows NT 6.0)"
+    };
+
+    String[] ie11Rss = new String[] {
+            "Windows-RSS-Platform/2.0 (IE 11.0; Windows NT 6.1)"
+    };
+    
+    
+	
+	
 	String[] lotusNotes = new String[] {
 		"Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)",
 		"Mozilla/4.0 (compatible; Lotus-Notes/6.0; Windows-NT)"
@@ -194,6 +232,20 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36"
 	};
 	
+	String[] chrome32 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.77 Safari/537.36",
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36"
+	};
+
+	String[] chrome33 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36"
+	};
+
+	String[] chrome31 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36"
+	};
+
+	
 	String[] firefox3 = new String[] {
 			"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.14) Gecko/2009090216 Ubuntu/9.04 (jaunty) Firefox/3.0.14"
 	};
@@ -222,6 +274,10 @@ public class BrowserTest {
 	
 	String[] firefox25 = new String[] {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:25.0) Gecko/20100101 Firefox/25.0"
+	};
+	
+	String[] firefox28 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:28.0) Gecko/20100101 Firefox/28.0"
 	};
 
 	String[] firefox3mobile = {
@@ -312,6 +368,30 @@ public class BrowserTest {
 	
 	String[] opera16 = {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36 OPR/16.0.1196.73"
+		};
+	
+	String[] opera17 = {
+			"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36 OPR/17.0.1241.53"
+		};
+
+	String[] opera18 = {
+			"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36 OPR/18.0.1284.63",
+			"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36 OPR/18.0.1284.68",
+			"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36 OPR/18.0.1284.49",
+
+		};
+
+	String[] opera19 = {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.76 Safari/537.36 OPR/19.0.1326.39 (Edition Next)",
+			"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.76 Safari/537.36 OPR/19.0.1326.56",
+			"Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.102 Safari/537.36 OPR/19.0.1326.59",
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36 OPR/19.0.1326.63",
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36 OPR/19.0.1326.63"
+		};
+
+	String[] opera20 = {
+			"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.91 Safari/537.36 OPR/20.0.1387.37 (Edition Next)",
+			"Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.46 Safari/537.36 OPR/20.0.1387.16 (Edition Developer)"
 		};
 	
 	String[] operaMini = {
@@ -433,6 +513,7 @@ public class BrowserTest {
 		testVersions("Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko", new Version("11.0", "11", "0"));
 		testVersions("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)", new Version("7.0", "7", "0")); // issue #31
 		testVersions("Mozilla/5.0 (Linux; Android 4.1.2; LT22i Build/6.2.A.1.100) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36", new Version("31.0.1650.59", "31", "0"));
+        testVersions("Windows-RSS-Platform/2.0 (IE 11.0; Windows NT 6.1)", new Version("11.0", "11", "0"));
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {
@@ -460,6 +541,12 @@ public class BrowserTest {
 		testAgents(ieMobile7, Browser.IEMOBILE7);
 		testAgents(ieMobile9, Browser.IEMOBILE9);
 		testAgents(ieMobile10, Browser.IEMOBILE10);
+		testAgents(ieMobile11, Browser.IEMOBILE11);
+        testAgents(ie7Rss, Browser.IE7);
+        testAgents(ie8Rss, Browser.IE8);
+        testAgents(ie9Rss, Browser.IE9);
+        testAgents(ie10Rss, Browser.IE10);
+		testAgents(ie11Rss, Browser.IE11);
 		testAgents(lotusNotes, Browser.LOTUS_NOTES);
 		testAgents(lynxClient, Browser.LYNX);
 		testAgents(konqueror, Browser.KONQUEROR);
@@ -473,6 +560,9 @@ public class BrowserTest {
 		testAgents(chrome13, Browser.CHROME13);
 		testAgents(chrome14, Browser.CHROME14);
 		testAgents(chrome29, Browser.CHROME29);
+		testAgents(chrome31, Browser.CHROME31);
+		testAgents(chrome32, Browser.CHROME32);
+		testAgents(chrome33, Browser.CHROME33);
 		testAgents(firefox3, Browser.FIREFOX3);
 		testAgents(firefox4, Browser.FIREFOX4);
 		testAgents(firefox5, Browser.FIREFOX5);
@@ -499,6 +589,10 @@ public class BrowserTest {
 		testAgents(opera12, Browser.OPERA12);
 		testAgents(opera15, Browser.OPERA15);
 		testAgents(opera16, Browser.OPERA16);
+		testAgents(opera17, Browser.OPERA17);
+		testAgents(opera18, Browser.OPERA18);
+		testAgents(opera19, Browser.OPERA19);
+		testAgents(opera20, Browser.OPERA20);
 		testAgents(camino2, Browser.CAMINO2);
 		testAgents(camino, Browser.CAMINO);		
 		testAgents(flock, Browser.FLOCK);

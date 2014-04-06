@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2013, Harald Walker (bitwalker.eu) 
+* Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -58,6 +58,7 @@ public enum OperatingSystem {
 		WINDOWS_VISTA(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new String[] { "Windows NT 6" }, null, DeviceType.COMPUTER, null ), // before Win
 		WINDOWS_2000(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,15, "Windows 2000", new String[] { "Windows NT 5.0" }, null, DeviceType.COMPUTER, null ), // before Win
 		WINDOWS_XP(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,10, "Windows XP", new String[] { "Windows NT 5"}, new String[] { "ggpht.com"  }, DeviceType.COMPUTER, null ), // before Win, 5.1 and 5.2 are basically XP systems
+		WINDOWS_PHONE8_1(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 53, "Windows Phone 8.1", new String[] { "Windows Phone 8.1" },  null, DeviceType.MOBILE, null ), // before Win
 		WINDOWS_PHONE8(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 52, "Windows Phone 8", new String[] { "Windows Phone 8" },  null, DeviceType.MOBILE, null ), // before Win
 		WINDOWS_MOBILE7(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 51, "Windows Phone 7", new String[] { "Windows Phone OS 7" },  null, DeviceType.MOBILE, null ), // should be Windows Phone 7 but to keep it compatible we'll leave the name as is.
 		WINDOWS_MOBILE(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 50, "Windows Mobile", new String[] { "Windows CE" },  null, DeviceType.MOBILE, null ), // before Win
@@ -274,7 +275,7 @@ public enum OperatingSystem {
 	{		
 		for (String alias : aliases)
 		{
-			if (agentString.toLowerCase().indexOf(alias.toLowerCase()) != -1)
+			if (agentString != null && agentString.toLowerCase().indexOf(alias.toLowerCase()) != -1)
 				return true;
 		}	
 		return false;
@@ -290,7 +291,7 @@ public enum OperatingSystem {
 	{
 		if (excludeList != null) {
 			for (String exclude : excludeList) {
-				if (agentString.toLowerCase().indexOf(exclude.toLowerCase()) != -1)
+				if (agentString != null && agentString.toLowerCase().indexOf(exclude.toLowerCase()) != -1)
 					return true;
 			}
 		}
