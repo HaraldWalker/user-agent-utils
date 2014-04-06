@@ -135,6 +135,10 @@ public class BrowserTest {
 	};
 
 	
+	String[] ieMobile11 = {
+			"Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; HTC; HTC6990LVW) like Gecko"
+	};
+	
     String[] ie7Rss = new String[] {
             "Windows-RSS-Platform/1.0 (MSIE 7.0; Windows NT 5.1)",
             "Windows-RSS-Platform/1.0 (MSIE 7.0; Windows NT 6.0)",
@@ -533,6 +537,7 @@ public class BrowserTest {
 		testAgents(ieMobile7, Browser.IEMOBILE7);
 		testAgents(ieMobile9, Browser.IEMOBILE9);
 		testAgents(ieMobile10, Browser.IEMOBILE10);
+		testAgents(ieMobile11, Browser.IEMOBILE11);
         testAgents(ie7Rss, Browser.IE7);
         testAgents(ie8Rss, Browser.IE8);
         testAgents(ie9Rss, Browser.IE9);
