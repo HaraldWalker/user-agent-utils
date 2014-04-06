@@ -14,7 +14,7 @@ Support me and buy me a beer:
 If you are looking for a more complete user-agent detection, have a look at the libraries that use the user-agent-string.info database.  
 http://user-agent-string.info/download  
 
-New in Version 1.13 (unreleased)
+New in Version 1.13
 -------------------
 
 * Added additional Chrome and Opera browser versions
@@ -49,7 +49,7 @@ Add dependency:
 <dependency>
    <groupId>bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.12</version>
+   <version>1.13</version>
 </dependency>
 ```
 
