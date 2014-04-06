@@ -14,7 +14,13 @@ Support me and buy me a beer:
 New in Version 1.13 (unreleased)
 -------------------
 
-* TBD
+* Added additional Chrome and Opera browser versions
+* Added current and future Firefox versons
+* Added agent string handling for Microsoft RSS platform user-agents
+* Added detection of Windows Phone 8.1 and IE Mobile 11.
+* Fixed null pointer exception when user-agent-string was null
+* Adjusted IE11 regex to match IE11 on Win8 
+
 
 Javadoc
 -------
