@@ -227,6 +227,7 @@ public class OperatingSystemTest {
 	
 	String[] android4g = {
 			"Mozilla/5.0 (Linux; U; Android 4.0.1; en-us; Galaxy Nexus Build/ICL41) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+			"Mozilla/5.0 (Linux; Android 4.4; Nexus 4 Build/KRT16E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.105 Mobile Safari"
 	};
 	
 	String[] android2_tablet= {
@@ -243,8 +244,13 @@ public class OperatingSystemTest {
  			"Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Transformer TF101 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
 			"Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7",
 			"Mozilla/5.0 (Linux; U; Android 4.0.4; en-gb; GT-P7500 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
-			"Mozilla/5.0 (Linux; U; Android 4.1.1; en-gb; ASUS Transformer Pad TF700T Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30"
- 	};
+			"Mozilla/5.0 (Linux; U; Android 4.0; xx-xx; GT-P5100 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30", // Samsung GT-P5100 (Galaxy Tab 2 10.1)
+			"Mozilla/5.0 (Linux; U; Android 4.1.1; en-gb; ASUS Transformer Pad TF700T Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+			"Mozilla/5.0 (Linux; Android 4.4; Nexus 7 Build/KOT24) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.105 Safari/537.36",
+			"Mozilla/5.0 (Linux; U; Android 4.2; en-us; Nexus 10 Build/JOP12D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+			"Mozilla/5.0 (Linux; U; Android 4.2.2; nl-nl; SM-T310 Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30", // Samsung Galaxy Tab 3
+			"Mozilla/5.0 (Linux; U; Android 4.1; xx-xx; ME301T Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30" // Asus ME301T (MeMO Pad Smart 10)
+	};
 	
 	String[] androidMobile = {
 			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
