@@ -62,10 +62,10 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.0</version>
+				<version>3.1</version>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.6</source>
+					<target>1.6</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -97,7 +97,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>2.0</version>
+				<version>3.3</version>
 				<configuration>
 					<outputDirectory>
 						site/
@@ -126,7 +126,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-install-plugin</artifactId>
-				<version>2.4</version>
+				<version>2.5.1</version>
 			</plugin>
 
 			<plugin>
@@ -153,7 +153,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.4</version>
+				<version>2.9.1</version>
 				<configuration>
 					<destDir>javadoc2</destDir>
 					<excludes>
@@ -161,14 +161,14 @@
 					</excludes>
 					<sourcepath>src/main/java</sourcepath> 
 				    <subpackages>eu.bitwalker.useragentutils</subpackages> 
-					<source>1.5</source>					
+					<source>1.6</source>					
 				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>
 					maven-project-info-reports-plugin
 				</artifactId>
-				<version>2.0.1</version>
+				<version>2.7</version>
 			</plugin>
 		</plugins>
 	</reporting>
@@ -176,7 +176,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
+			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
