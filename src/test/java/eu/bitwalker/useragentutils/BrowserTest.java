@@ -223,6 +223,20 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36"
 	};
 	
+	String[] chrome32 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.77 Safari/537.36",
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36"
+	};
+
+	String[] chrome33 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36"
+	};
+
+	String[] chrome31 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36"
+	};
+
+	
 	String[] firefox3 = new String[] {
 			"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.14) Gecko/2009090216 Ubuntu/9.04 (jaunty) Firefox/3.0.14"
 	};
@@ -508,6 +522,9 @@ public class BrowserTest {
 		testAgents(chrome13, Browser.CHROME13);
 		testAgents(chrome14, Browser.CHROME14);
 		testAgents(chrome29, Browser.CHROME29);
+		testAgents(chrome31, Browser.CHROME31);
+		testAgents(chrome32, Browser.CHROME32);
+		testAgents(chrome33, Browser.CHROME33);
 		testAgents(firefox3, Browser.FIREFOX3);
 		testAgents(firefox4, Browser.FIREFOX4);
 		testAgents(firefox5, Browser.FIREFOX5);
