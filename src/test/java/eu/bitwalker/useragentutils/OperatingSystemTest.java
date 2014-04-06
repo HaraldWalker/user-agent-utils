@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008-2013, Harald Walker (bitwalker.eu)  
+* Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers  
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
