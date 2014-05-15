@@ -30,7 +30,7 @@ Include our github repository in your pom.xml:
 ```xml
 <repository>
   <id>bitwalker.user-agent-utils.mvn.repo</id>
-  <url>https://raw.github.com/HaraldWalker/user-agent-utils/mvn-repo/</url>
+  <url>https://raw.githubusercontent.com/HaraldWalker/user-agent-utils/mvn-repo/</url>
   <!-- use snapshot version -->
   <snapshots>
      <enabled>true</enabled>
@@ -43,7 +43,7 @@ Add dependency:
 <dependency>
    <groupId>bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.12</version>
+   <version>1.13</version>
 </dependency>
 ```
 
