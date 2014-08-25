@@ -98,6 +98,13 @@ public enum Browser {
 	 */
 	CHROME( 		Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ), // before Mozilla
 		CHROME_MOBILE( 	Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo","CriOS", "Mobile Safari" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ), 
+		CHROME40( 		Manufacturer.GOOGLE, Browser.CHROME, 45, "Chrome 40", new String[] { "Chrome/40" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME39( 		Manufacturer.GOOGLE, Browser.CHROME, 44, "Chrome 39", new String[] { "Chrome/39" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME38( 		Manufacturer.GOOGLE, Browser.CHROME, 43, "Chrome 38", new String[] { "Chrome/38" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME37( 		Manufacturer.GOOGLE, Browser.CHROME, 42, "Chrome 37", new String[] { "Chrome/37" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME36( 		Manufacturer.GOOGLE, Browser.CHROME, 41, "Chrome 36", new String[] { "Chrome/36" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME35( 		Manufacturer.GOOGLE, Browser.CHROME, 40, "Chrome 35", new String[] { "Chrome/35" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME34( 		Manufacturer.GOOGLE, Browser.CHROME, 39, "Chrome 34", new String[] { "Chrome/34" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME33( 		Manufacturer.GOOGLE, Browser.CHROME, 38, "Chrome 33", new String[] { "Chrome/33" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME32( 		Manufacturer.GOOGLE, Browser.CHROME, 37, "Chrome 32", new String[] { "Chrome/32" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME31( 		Manufacturer.GOOGLE, Browser.CHROME, 36, "Chrome 31", new String[] { "Chrome/31" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
@@ -170,6 +177,15 @@ public enum Browser {
 		FIREFOX3MOBILE(	Manufacturer.MOZILLA, Browser.FIREFOX, 31, "Firefox 3 Mobile", new String[] { "Firefox/3.5 Maemo" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 		FIREFOX_MOBILE(	Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new String[] { "Mobile" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 			FIREFOX_MOBILE23(Manufacturer.MOZILLA, FIREFOX_MOBILE, 223, "Firefox Mobile 23", new String[] { "Firefox/23" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+		FIREFOX40(		Manufacturer.MOZILLA, Browser.FIREFOX, 217, "Firefox 40", new String[] { "Firefox/40" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
+		FIREFOX39(		Manufacturer.MOZILLA, Browser.FIREFOX, 216, "Firefox 39", new String[] { "Firefox/39" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
+		FIREFOX38(		Manufacturer.MOZILLA, Browser.FIREFOX, 215, "Firefox 38", new String[] { "Firefox/38" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
+		FIREFOX37(		Manufacturer.MOZILLA, Browser.FIREFOX, 214, "Firefox 37", new String[] { "Firefox/37" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
+		FIREFOX36(		Manufacturer.MOZILLA, Browser.FIREFOX, 213, "Firefox 36", new String[] { "Firefox/36" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
+		FIREFOX35(		Manufacturer.MOZILLA, Browser.FIREFOX, 212, "Firefox 35", new String[] { "Firefox/35" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
+		FIREFOX34(		Manufacturer.MOZILLA, Browser.FIREFOX, 211, "Firefox 34", new String[] { "Firefox/34" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
+		FIREFOX33(		Manufacturer.MOZILLA, Browser.FIREFOX, 210, "Firefox 33", new String[] { "Firefox/33" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
+		FIREFOX32(		Manufacturer.MOZILLA, Browser.FIREFOX, 109, "Firefox 32", new String[] { "Firefox/32" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
 		FIREFOX31(		Manufacturer.MOZILLA, Browser.FIREFOX, 310, "Firefox 31", new String[] { "Firefox/31" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
 		FIREFOX30(		Manufacturer.MOZILLA, Browser.FIREFOX, 300, "Firefox 30", new String[] { "Firefox/30" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
 		FIREFOX29(		Manufacturer.MOZILLA, Browser.FIREFOX, 290, "Firefox 29", new String[] { "Firefox/29" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine		
