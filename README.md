@@ -16,8 +16,11 @@ http://user-agent-string.info/download
 
 New in Version 1.14 (unreleased)
 -------------------
-TBA
-
+- IOS8 support added  
+- added Opera Coast as new mobile browser  
+- more Chrome and Firefox versions added, including future releases (up to Firefox 40 and Chrome 40)
+- added 3 Opera versions  
+- performance improvements
 
 Javadoc
 -------
