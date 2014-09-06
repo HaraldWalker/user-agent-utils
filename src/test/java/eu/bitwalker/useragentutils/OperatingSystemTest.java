@@ -177,6 +177,11 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53"
 	};
 	
+	String[] iPhone8 = 
+	{
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/538.34.9 (KHTML, like Gecko) Mobile/12A4265u"
+	};
+	
 	String[] iPods = {
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; nl-nl) AppleWebKit/420.1 (KHTML, like Gecko)",
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko)",
@@ -197,6 +202,10 @@ public class OperatingSystemTest {
 	
 	String[] iPadIos7 = {
 			"Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53"
+	};
+	
+	String[] iPadIos8 = {
+			"Mozilla/5.0 (iPad; CPU OS 8_0 like Mac OS X) AppleWebKit/538.34.9 (KHTML, like Gecko) Mobile/12A4265u"
 	};
 	
 	String[] blackberries = {
@@ -373,9 +382,11 @@ public class OperatingSystemTest {
 		testAgents(iPhone5, OperatingSystem.iOS5_IPHONE);
 		testAgents(iPhone6, OperatingSystem.iOS6_IPHONE);
 		testAgents(iPhone7, OperatingSystem.iOS7_IPHONE);
+		testAgents(iPhone8, OperatingSystem.iOS8_IPHONE);
 		testAgents(iPods, OperatingSystem.MAC_OS_X_IPOD);
 		testAgents(iPadIos6, OperatingSystem.iOS6_IPAD);
 		testAgents(iPadIos7, OperatingSystem.iOS7_IPAD);
+		testAgents(iPadIos8, OperatingSystem.iOS8_IPAD);
 		testAgents(iPad, OperatingSystem.MAC_OS_X_IPAD);
 		testAgents(blackberries, OperatingSystem.BLACKBERRY);
 		testAgents(blackberry6, OperatingSystem.BLACKBERRY6);
