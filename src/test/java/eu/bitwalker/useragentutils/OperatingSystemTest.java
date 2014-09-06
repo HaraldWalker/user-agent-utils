@@ -237,6 +237,7 @@ public class OperatingSystemTest {
 	String[] android4g = {
 			"Mozilla/5.0 (Linux; U; Android 4.0.1; en-us; Galaxy Nexus Build/ICL41) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
 			"Mozilla/5.0 (Linux; Android 4.4; Nexus 4 Build/KRT16E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.105 Mobile Safari"
+			//"Dalvik/2.0.0 (Linux; U; Android 4.4.4; Nexus 5 Build/KTU84P) evme/2.0.2533" // disabled as it is not clear yet, which client sends this incomplete user-agent
 	};
 	
 	String[] android2_tablet= {
