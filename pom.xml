@@ -8,7 +8,7 @@
 	<name>User-Agent-Utils</name>
 	<url>http://java.net/projects/user-agent-utils</url>
 	<artifactId>UserAgentUtils</artifactId>
-	<version>1.13</version>
+	<version>1.14</version>
 	<description>Utility classes to handle user-agents.</description>
 	<properties>
     	<github.global.server>github</github.global.server>
@@ -34,20 +34,16 @@
 		</developer>
 	</developers>
 
-	<issueManagement>
-		<system>JIRA</system>
-		<url>http://java.net/jira/browse/USER_AGENT_UTILS</url>
-	</issueManagement>
+    <issueManagement>
+        <url>https://github.com/HaraldWalker/user-agent-utils/issues</url>
+        <system>GitHub</system>
+    </issueManagement>
 
 	<scm>
-		<connection>
-			scm:svn:https://svn.java.net/svn/user-agent-utils~svn/
-		</connection>
-		<tag>HEAD</tag>
-		<url>
-			http://java.net/projects/user-agent-utils/sources/svn/show
-		</url>
-	</scm>
+        <url>https://github.com/HaraldWalker/user-agent-utils</url>
+        <connection>scm:git:git://github.com:HaraldWalker/user-agent-utils.git</connection>
+        <developerConnection>scm:git:git@github.com:HaraldWalker/user-agent-utils.git</developerConnection>
+    </scm>
 
 	<distributionManagement>
 	    <repository>

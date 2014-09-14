@@ -92,11 +92,13 @@ public enum OperatingSystem {
 	 * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
 	 */	
 	IOS(			Manufacturer.APPLE,null, 2, "iOS", new String[] { "iPhone OS", "like Mac OS X" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS8_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 45, "iOS 8 (iPhone)", new String[] { "iPhone OS 8" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS7_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 44, "iOS 7 (iPhone)", new String[] { "iPhone OS 7" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS6_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 43, "iOS 6 (iPhone)", new String[] { "iPhone OS 6" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS5_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new String[] { "iPhone OS 5" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS4_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new String[] { "iPhone OS 4" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		MAC_OS_X_IPAD(	Manufacturer.APPLE, OperatingSystem.IOS, 50, "Mac OS X (iPad)", new String[] { "iPad" },  null, DeviceType.TABLET, null ), // before Mac OS X
+		iOS8_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 53, "iOS 8 (iPad)", new String[] { "OS 8" },  null, DeviceType.TABLET, null ), // before Mac OS X
 		iOS7_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 52, "iOS 7 (iPad)", new String[] { "OS 7" },  null, DeviceType.TABLET, null ), // before Mac OS X
 		iOS6_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 51, "iOS 6 (iPad)", new String[] { "OS 6" },  null, DeviceType.TABLET, null ), // before Mac OS X
 		MAC_OS_X_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 40, "Mac OS X (iPhone)", new String[] { "iPhone" },  null, DeviceType.MOBILE, null ), // before Mac OS X
