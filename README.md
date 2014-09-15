@@ -14,13 +14,9 @@ Support me and buy me a beer:
 If you are looking for a more complete user-agent detection, have a look at the libraries that use the user-agent-string.info database.  
 http://user-agent-string.info/download  
 
-New in Version 1.14 (unreleased)
+New in Version 1.15 (unreleased)
 -------------------
-- IOS8 support added  
-- added Opera Coast as new mobile browser  
-- more Chrome and Firefox versions added, including future releases (up to Firefox 40 and Chrome 40)
-- added 3 Opera versions  
-- performance improvements
+TBA
 
 Javadoc
 -------
@@ -56,6 +52,14 @@ Contributors
 
 Changelog
 ---------
+
+1.14
+----
+- IOS8 support added  
+- added Opera Coast as new mobile browser  
+- more Chrome and Firefox versions added, including future releases (up to Firefox 40 and Chrome 40)
+- added 3 Opera versions  
+- performance improvements
 
 1.13  
 ----  
