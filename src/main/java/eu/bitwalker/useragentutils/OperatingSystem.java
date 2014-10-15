@@ -242,7 +242,13 @@ public enum OperatingSystem {
 	 * Left in here for backwards compatibility.
 	 */
 	public boolean isMobileDevice() {
-		return deviceType.equals(DeviceType.MOBILE);
+		switch(deviceType){
+			case MOBILE:
+			case TABLET:
+				return true;
+			default:
+				return false;
+		}
 	}
 		
 	public DeviceType getDeviceType() {
