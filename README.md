@@ -16,7 +16,8 @@ http://user-agent-string.info/download
 
 New in Version 1.15 (unreleased)
 -------------------
-TBA
+- Safari 7 and 8 added
+- iOS 8.1 added
 
 Javadoc
 -------
