@@ -302,6 +302,14 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-gb) AppleWebKit/523.10.6 (KHTML, like Gecko) Version/3.0.4 Safari/523.10.6"
 	};
 	
+	String[] safari8 = {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10) AppleWebKit/600.1.25 (KHTML, like Gecko) Version/8.0 Safari/600.1.25"
+	};
+	
+	String[] safari7 = {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71"
+	};
+	
 	String[] safari6 = {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
 	};
@@ -596,6 +604,8 @@ public class BrowserTest {
 		testAgents(firefoxMobile23, Browser.FIREFOX_MOBILE23);
 		testAgents(safari, Browser.SAFARI);
 		testAgents(dolfin, Browser.DOLFIN2);
+		testAgents(safari8, Browser.SAFARI8);
+		testAgents(safari7, Browser.SAFARI7);
 		testAgents(safari6, Browser.SAFARI6);
 		testAgents(safari5, Browser.SAFARI5);
 		testAgents(safari4, Browser.SAFARI4);
