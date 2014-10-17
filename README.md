@@ -35,6 +35,15 @@ Add dependency:
 </dependency>
 ```
 
+Add dependency for snapshot releases:
+```xml
+<dependency>
+   <groupId>eu.bitwalker</groupId>
+   <artifactId>UserAgentUtils</artifactId>
+   <version>1.15-SNAPSHOT</version>
+</dependency>
+```
+
 Contributors
 ------------
 * Please use the `trunk` branch on GitHub when making a pull request
