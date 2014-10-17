@@ -279,6 +279,11 @@ public class OperatingSystemTest {
 	String[] androidTablet = {
 			"Mozilla/5.0 (Android; Tablet; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
 	};
+	
+	String[] chromeOS = {
+			"Mozilla/5.0 (X11; CrOS armv7l 5500.100.6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.120 Safari/537.36",
+			"Mozilla/5.0 (X11; CrOS x86_64 5841.73.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.126 Safari/537.36"
+	};
 			
 	String[] windows98 = { 
 			"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Rogers Hi-Speed Internet; (R1 1.3))",
@@ -411,6 +416,7 @@ public class OperatingSystemTest {
 		testAgents(android4_wearable, OperatingSystem.ANDROID4_WEARABLE);
 		testAgents(androidMobile, OperatingSystem.ANDROID_MOBILE);
 		testAgents(androidTablet, OperatingSystem.ANDROID_TABLET);
+		testAgents(chromeOS, OperatingSystem.CHROME_OS);
 		testAgents(maemo, OperatingSystem.MAEMO);
 		testAgents(kindle2, OperatingSystem.KINDLE2);
 		testAgents(kindle3, OperatingSystem.KINDLE3);

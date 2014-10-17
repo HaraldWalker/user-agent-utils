@@ -18,6 +18,8 @@ New in Version 1.15 (unreleased)
 -------------------
 - Safari 7 and 8 added
 - iOS 8.1 added
+- Wearable device category added with detection of Google Glass
+- Chrome OS added
 
 Javadoc
 -------

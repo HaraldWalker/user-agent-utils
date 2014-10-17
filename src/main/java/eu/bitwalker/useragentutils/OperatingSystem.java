@@ -81,7 +81,10 @@ public enum OperatingSystem {
 		 */
 		ANDROID_TABLET(	Manufacturer.GOOGLE,OperatingSystem.ANDROID, 12, "Android Tablet", new String[] { "Tablet" },  null, DeviceType.TABLET, null ),
 
-	
+	/**
+	 * 	Chrome OS by Google, mostly used on Chromebooks and Chromeboxes
+	 */
+	CHROME_OS(		Manufacturer.GOOGLE,null, 1000, "Chrome OS", new String[] { "CrOS" },  null, DeviceType.COMPUTER, null ),
 	/**
 	 * PalmOS, exact version unkown
 	 */
