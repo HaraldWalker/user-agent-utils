@@ -65,6 +65,10 @@ public enum DeviceType {
 	 */	
 	DMR("Digital media receiver"),
 	/**
+	 * Miniature device like a smart watch or interactive glasses
+	 */	
+	WEARABLE("Wearable computer"),
+	/**
 	 * Other or unknow type of device.
 	 */	
 	UNKNOWN("Unknown");

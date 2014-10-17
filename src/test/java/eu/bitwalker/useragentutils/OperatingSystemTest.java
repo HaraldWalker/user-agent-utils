@@ -267,6 +267,11 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; Android 4.1; xx-xx; ME301T Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30" // Asus ME301T (MeMO Pad Smart 10)
 	};
 	
+	String[] android4_wearable = {
+			"Mozilla/5.0 (Linux; U; Android 4.0.4; en-us; Glass 1 Build/IMM76L; XE7) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
+	};
+
+	
 	String[] androidMobile = {
 			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
 	};
@@ -403,6 +408,7 @@ public class OperatingSystemTest {
 		testAgents(android2_tablet, OperatingSystem.ANDROID2_TABLET);
 		testAgents(android3_tablet, OperatingSystem.ANDROID3_TABLET);
 		testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
+		testAgents(android4_wearable, OperatingSystem.ANDROID4_WEARABLE);
 		testAgents(androidMobile, OperatingSystem.ANDROID_MOBILE);
 		testAgents(androidTablet, OperatingSystem.ANDROID_TABLET);
 		testAgents(maemo, OperatingSystem.MAEMO);
