@@ -24,7 +24,7 @@ New in Version 1.14
 
 Javadoc
 -------
-http://haraldwalker.github.com/user-agent-utils/javadoc/
+http://bitwalker.eu/user-agent-utils/javadoc/index.html
 
 Maven
 -----
