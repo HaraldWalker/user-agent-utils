@@ -3,7 +3,7 @@ user-agent-utils
 
 Utilities for processing user-agent strings. Can be used to handle http requests in real-time or to analyze log files.
 
-http://haraldwalker.github.com/user-agent-utils/
+http://www.bitwalker.eu/software/user-agent-utils
 
 For the latest release, go to
 https://github.com/HaraldWalker/user-agent-utils/tree/master
