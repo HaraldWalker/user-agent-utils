@@ -23,7 +23,7 @@ New in Version 1.15 (unreleased)
 
 Javadoc
 -------
-http://haraldwalker.github.com/user-agent-utils/javadoc/
+http://bitwalker.eu/user-agent-utils-snapshot/javadoc/index.html
 
 Maven
 -----
