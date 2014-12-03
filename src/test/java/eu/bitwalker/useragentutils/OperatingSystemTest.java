@@ -65,7 +65,8 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)",
 			"Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13", // dropped the mobile part, so Android without mobile should be a tablet!
 			"Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.8+ like Gecko) Version/0.0.1 Safari/534.8+",
-			"Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Transformer TF101 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30"
+			"Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Transformer TF101 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+            "Mozilla/5.0 (Linux; Android 5.0; Nexus 9 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Safari/537.36"
 	};
 	
 	String[] genericMobile = {
@@ -244,6 +245,10 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; Android 4.4; Nexus 4 Build/KRT16E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.105 Mobile Safari"
 			//"Dalvik/2.0.0 (Linux; U; Android 4.4.4; Nexus 5 Build/KTU84P) evme/2.0.2533" // disabled as it is not clear yet, which client sends this incomplete user-agent
 	};
+
+    String[] android5g = {
+            "Mozilla/5.0 (Linux; Android 5.0; Nexus 4 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Mobile Safari/537.36"
+    };
 	
 	String[] android2_tablet= {
 	"Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Kindle Fire Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"
@@ -414,6 +419,7 @@ public class OperatingSystemTest {
 		testAgents(android1g, OperatingSystem.ANDROID1);
 		testAgents(android2g, OperatingSystem.ANDROID2);
 		testAgents(android4g, OperatingSystem.ANDROID4);
+        testAgents(android5g, OperatingSystem.ANDROID5);
 		testAgents(android2_tablet, OperatingSystem.ANDROID2_TABLET);
 		testAgents(android3_tablet, OperatingSystem.ANDROID3_TABLET);
 		testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
