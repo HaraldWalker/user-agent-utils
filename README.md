@@ -21,6 +21,7 @@ New in Version 1.15 (unreleased)
 - Wearable device category added with detection of Google Glass
 - Chrome OS added
 - Windows 10 added
+- Android 5 added
 
 Javadoc
 -------
