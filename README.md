@@ -11,20 +11,18 @@ https://github.com/HaraldWalker/user-agent-utils/tree/master
 Support me and buy me a beer:  
 <a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
 
-If you are looking for a more complete user-agent detection, have a look at the libraries that use the user-agent-string.info database.  
-http://user-agent-string.info/download  
-
-New in Version 1.14
+New in Version 1.15
 -------------------
-- IOS8 support added  
-- added Opera Coast as new mobile browser  
-- more Chrome and Firefox versions added, including future releases (up to Firefox 40 and Chrome 40)
-- added 3 Opera versions  
-- performance improvements
+- Safari 7 and 8 added
+- iOS 8.1 added
+- Wearable device category added with detection of Google Glass
+- Chrome OS added
+- Windows 10 added
+- Android 5 added
 
 Javadoc
 -------
-http://bitwalker.eu/user-agent-utils/javadoc/index.html
+http://bitwalker.eu/user-agent-utils-snapshot/javadoc/index.html
 
 Maven
 -----
@@ -34,7 +32,16 @@ Add dependency:
 <dependency>
    <groupId>eu.bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.14</version>
+   <version>1.15</version>
+</dependency>
+```
+
+Add dependency for snapshot releases:
+```xml
+<dependency>
+   <groupId>eu.bitwalker</groupId>
+   <artifactId>UserAgentUtils</artifactId>
+   <version>1.16-SNAPSHOT</version>
 </dependency>
 ```
 
@@ -44,6 +51,14 @@ Contributors
 
 Changelog
 ---------
+
+1.14
+----
+- IOS8 support added  
+- added Opera Coast as new mobile browser  
+- more Chrome and Firefox versions added, including future releases (up to Firefox 40 and Chrome 40)
+- added 3 Opera versions  
+- performance improvements
 
 1.13  
 ----  

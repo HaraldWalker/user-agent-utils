@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>bitwalker</groupId>
+	<groupId>eu.bitwalker</groupId>
 	<name>User-Agent-Utils</name>
-	<url>http://java.net/projects/user-agent-utils</url>
+	<url>http://www.bitwalker.eu/software/user-agent-utils</url>
 	<artifactId>UserAgentUtils</artifactId>
-	<version>1.14</version>
+	<version>1.15</version>
 	<description>Utility classes to handle user-agents.</description>
 	<properties>
-    	<github.global.server>github</github.global.server>
+		<github.global.server>github</github.global.server>
 	</properties>
 	<licenses>
 		<license>
@@ -34,23 +33,27 @@
 		</developer>
 	</developers>
 
-    <issueManagement>
-        <url>https://github.com/HaraldWalker/user-agent-utils/issues</url>
-        <system>GitHub</system>
-    </issueManagement>
+	<issueManagement>
+		<url>https://github.com/HaraldWalker/user-agent-utils/issues</url>
+		<system>GitHub</system>
+	</issueManagement>
 
 	<scm>
-        <url>https://github.com/HaraldWalker/user-agent-utils</url>
-        <connection>scm:git:git://github.com:HaraldWalker/user-agent-utils.git</connection>
-        <developerConnection>scm:git:git@github.com:HaraldWalker/user-agent-utils.git</developerConnection>
-    </scm>
+		<url>https://github.com/HaraldWalker/user-agent-utils</url>
+		<connection>scm:git:git://github.com:HaraldWalker/user-agent-utils.git</connection>
+		<developerConnection>scm:git:git@github.com:HaraldWalker/user-agent-utils.git</developerConnection>
+	</scm>
 
 	<distributionManagement>
-	    <repository>
-	        <id>internal.repo</id>
-	        <name>Temporary Staging Repository</name>
-	        <url>file://${project.build.directory}/mvn-repo</url>
-	    </repository>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<name>Maven Central Staging Repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
 	</distributionManagement>
 
 	<build>
@@ -65,31 +68,15 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<version>0.8</version>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.3</version>
+				<extensions>true</extensions>
 				<configuration>
-					<message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
-					<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
-					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
-					<branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
-					<includes>
-						<include>**/*</include>
-					</includes>
-					<merge>true</merge>
-					<repositoryName>user-agent-utils</repositoryName>      <!-- github repo name -->
-					<repositoryOwner>haraldwalker</repositoryOwner>        <!-- github username -->
+					<serverId>ossrh</serverId>
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
-				<executions>
-					<!-- run site-maven-plugin's 'site' target as part of the build's normal 
-						'deploy' phase -->
-					<execution>
-						<goals>
-							<goal>site</goal>
-						</goals>
-						<phase>deploy</phase>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<artifactId>maven-site-plugin</artifactId>
@@ -101,17 +88,27 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
 				<configuration>
-					<destDir>javadoc1</destDir>
+					<destDir>javadoc</destDir>
 					<excludes>
 						<exclude>**/Test*.java</exclude>
 					</excludes>
 				</configuration>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
-                <version>2.4</version>
+				<version>2.4</version>
 				<configuration>
 					<useFile>true</useFile>
 					<argLine>-ea</argLine>
@@ -129,7 +126,7 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.4</version>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
@@ -137,7 +134,25 @@
 					<execution>
 						<id>attach-sources</id>
 						<goals>
-							<goal>jar</goal>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<configuration>
+    <useAgent>true</useAgent>
+  </configuration>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -155,9 +170,9 @@
 					<excludes>
 						<exclude>**/Test*.java</exclude>
 					</excludes>
-					<sourcepath>src/main/java</sourcepath> 
-				    <subpackages>eu.bitwalker.useragentutils</subpackages> 
-					<source>1.6</source>					
+					<sourcepath>src/main/java</sourcepath>
+					<subpackages>eu.bitwalker.useragentutils</subpackages>
+					<source>1.6</source>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -168,7 +183,7 @@
 			</plugin>
 		</plugins>
 	</reporting>
-	<dependencies>		
+	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

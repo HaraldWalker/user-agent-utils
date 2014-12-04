@@ -65,7 +65,8 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)",
 			"Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13", // dropped the mobile part, so Android without mobile should be a tablet!
 			"Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.8+ like Gecko) Version/0.0.1 Safari/534.8+",
-			"Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Transformer TF101 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30"
+			"Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; Transformer TF101 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+            "Mozilla/5.0 (Linux; Android 5.0; Nexus 9 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Safari/537.36"
 	};
 	
 	String[] genericMobile = {
@@ -182,6 +183,11 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/538.34.9 (KHTML, like Gecko) Mobile/12A4265u"
 	};
 	
+	String[] iPhone8_1 = 
+	{
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B401 Safari/600.1.4"
+	};
+	
 	String[] iPods = {
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; nl-nl) AppleWebKit/420.1 (KHTML, like Gecko)",
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko)",
@@ -239,6 +245,10 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; Android 4.4; Nexus 4 Build/KRT16E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.105 Mobile Safari"
 			//"Dalvik/2.0.0 (Linux; U; Android 4.4.4; Nexus 5 Build/KTU84P) evme/2.0.2533" // disabled as it is not clear yet, which client sends this incomplete user-agent
 	};
+
+    String[] android5g = {
+            "Mozilla/5.0 (Linux; Android 5.0; Nexus 4 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Mobile Safari/537.36"
+    };
 	
 	String[] android2_tablet= {
 	"Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Kindle Fire Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"
@@ -262,12 +272,22 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; Android 4.1; xx-xx; ME301T Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30" // Asus ME301T (MeMO Pad Smart 10)
 	};
 	
+	String[] android4_wearable = {
+			"Mozilla/5.0 (Linux; U; Android 4.0.4; en-us; Glass 1 Build/IMM76L; XE7) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
+	};
+
+	
 	String[] androidMobile = {
 			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
 	};
 	
 	String[] androidTablet = {
 			"Mozilla/5.0 (Android; Tablet; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
+	};
+	
+	String[] chromeOS = {
+			"Mozilla/5.0 (X11; CrOS armv7l 5500.100.6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.120 Safari/537.36",
+			"Mozilla/5.0 (X11; CrOS x86_64 5841.73.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.126 Safari/537.36"
 	};
 			
 	String[] windows98 = { 
@@ -295,6 +315,10 @@ public class OperatingSystemTest {
 	
 	String[] windows81 = {
 			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
+	};
+	
+	String[] windows10 = {
+			"Mozilla/5.0 (Windows NT 6.4; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0 Build ID: 20141001101141"
 	};
 	
 	String[] windowsMobile7 = {
@@ -384,6 +408,7 @@ public class OperatingSystemTest {
 		testAgents(iPhone6, OperatingSystem.iOS6_IPHONE);
 		testAgents(iPhone7, OperatingSystem.iOS7_IPHONE);
 		testAgents(iPhone8, OperatingSystem.iOS8_IPHONE);
+		testAgents(iPhone8_1, OperatingSystem.iOS8_1_IPHONE);
 		testAgents(iPods, OperatingSystem.MAC_OS_X_IPOD);
 		testAgents(iPadIos6, OperatingSystem.iOS6_IPAD);
 		testAgents(iPadIos7, OperatingSystem.iOS7_IPAD);
@@ -394,11 +419,14 @@ public class OperatingSystemTest {
 		testAgents(android1g, OperatingSystem.ANDROID1);
 		testAgents(android2g, OperatingSystem.ANDROID2);
 		testAgents(android4g, OperatingSystem.ANDROID4);
+        testAgents(android5g, OperatingSystem.ANDROID5);
 		testAgents(android2_tablet, OperatingSystem.ANDROID2_TABLET);
 		testAgents(android3_tablet, OperatingSystem.ANDROID3_TABLET);
 		testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
+		testAgents(android4_wearable, OperatingSystem.ANDROID4_WEARABLE);
 		testAgents(androidMobile, OperatingSystem.ANDROID_MOBILE);
 		testAgents(androidTablet, OperatingSystem.ANDROID_TABLET);
+		testAgents(chromeOS, OperatingSystem.CHROME_OS);
 		testAgents(maemo, OperatingSystem.MAEMO);
 		testAgents(kindle2, OperatingSystem.KINDLE2);
 		testAgents(kindle3, OperatingSystem.KINDLE3);

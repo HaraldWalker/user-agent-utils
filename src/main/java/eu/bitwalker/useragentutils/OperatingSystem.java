@@ -52,6 +52,7 @@ public enum OperatingSystem {
 	 * Windows Mobile / Windows CE. Exact version unknown.
 	 */
 	WINDOWS(		Manufacturer.MICROSOFT,null,1, "Windows", new String[] { "Windows" }, new String[] { "Palm", "ggpht.com"  }, DeviceType.COMPUTER, null ), // catch the rest of older Windows systems (95, NT,...)
+		WINDOWS_10(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,24, "Windows 10", new String[] { "Windows NT 6.4" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 10 is called 6.4 LOL
 		WINDOWS_81(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,23, "Windows 8.1", new String[] { "Windows NT 6.3" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 8.1 is called 6.3 LOL
 		WINDOWS_8(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new String[] { "Windows NT 6.2" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 8 is called 6.2 LOL
 		WINDOWS_7(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new String[] { "Windows NT 6.1" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 7 is called 6.1 LOL
@@ -65,8 +66,11 @@ public enum OperatingSystem {
 		WINDOWS_98(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,5, "Windows 98", new String[] { "Windows 98","Win98" },  new String[] { "Palm" }, DeviceType.COMPUTER, null ), // before Win 
 
 	ANDROID(		Manufacturer.GOOGLE,null, 0, "Android", new String[] { "Android" },  null, DeviceType.MOBILE, null ),
-		ANDROID4(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 4, "Android 4.x", new String[] { "Android 4","Android-4" },  null, DeviceType.MOBILE, null ),
-		ANDROID4_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID4, 40, "Android 4.x Tablet", new String[] { "Android 4","Android-4" },   new String[] { "mobile" }, DeviceType.TABLET, null ),
+        ANDROID5(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 5, "Android 5.x", new String[] { "Android 5", "Android-5" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+        ANDROID5_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID5, 50, "Android 5.x Tablet", new String[] { "Android 5", "Android-5"}, new String[] { "mobile", "glass" }, DeviceType.TABLET, null ),
+		ANDROID4(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 4, "Android 4.x", new String[] { "Android 4", "Android-4" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+		ANDROID4_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID4, 40, "Android 4.x Tablet", new String[] { "Android 4", "Android-4"}, new String[] { "mobile", "glass" }, DeviceType.TABLET, null ),
+		ANDROID4_WEARABLE(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 400, "Android 4.x", new String[] { "Android 4" }, null, DeviceType.WEARABLE, null ),
 		ANDROID3_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 30, "Android 3.x Tablet", new String[] { "Android 3" },  null, DeviceType.TABLET, null ), // as long as there are not Android 3.x phones this should be enough
 		ANDROID2(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 2, "Android 2.x", new String[] { "Android 2" },  null, DeviceType.MOBILE, null ),
 		ANDROID2_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID2, 20, "Android 2.x Tablet", new String[] { "Kindle Fire", "GT-P1000","SCH-I800" },  null, DeviceType.TABLET, null ),
@@ -80,7 +84,10 @@ public enum OperatingSystem {
 		 */
 		ANDROID_TABLET(	Manufacturer.GOOGLE,OperatingSystem.ANDROID, 12, "Android Tablet", new String[] { "Tablet" },  null, DeviceType.TABLET, null ),
 
-	
+	/**
+	 * 	Chrome OS by Google, mostly used on Chromebooks and Chromeboxes
+	 */
+	CHROME_OS(		Manufacturer.GOOGLE,null, 1000, "Chrome OS", new String[] { "CrOS" },  null, DeviceType.COMPUTER, null ),
 	/**
 	 * PalmOS, exact version unkown
 	 */
@@ -92,13 +99,15 @@ public enum OperatingSystem {
 	 * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
 	 */	
 	IOS(			Manufacturer.APPLE,null, 2, "iOS", new String[] { "iPhone OS", "like Mac OS X" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
-		iOS8_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 45, "iOS 8 (iPhone)", new String[] { "iPhone OS 8" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS8_1_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 46, "iOS 8.1 (iPhone)", new String[] { "iPhone OS 8_1" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS8_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 45, "iOS 8 (iPhone)", new String[] { "iPhone OS 8_0" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS7_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 44, "iOS 7 (iPhone)", new String[] { "iPhone OS 7" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS6_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 43, "iOS 6 (iPhone)", new String[] { "iPhone OS 6" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS5_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new String[] { "iPhone OS 5" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS4_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new String[] { "iPhone OS 4" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		MAC_OS_X_IPAD(	Manufacturer.APPLE, OperatingSystem.IOS, 50, "Mac OS X (iPad)", new String[] { "iPad" },  null, DeviceType.TABLET, null ), // before Mac OS X
-		iOS8_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 53, "iOS 8 (iPad)", new String[] { "OS 8" },  null, DeviceType.TABLET, null ), // before Mac OS X
+		iOS8_1_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 54, "iOS 8.1 (iPad)", new String[] { "OS 8_1" },  null, DeviceType.TABLET, null ), // before Mac OS X
+		iOS8_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 53, "iOS 8 (iPad)", new String[] { "OS 8_0" },  null, DeviceType.TABLET, null ), // before Mac OS X
 		iOS7_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 52, "iOS 7 (iPad)", new String[] { "OS 7" },  null, DeviceType.TABLET, null ), // before Mac OS X
 		iOS6_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 51, "iOS 6 (iPad)", new String[] { "OS 6" },  null, DeviceType.TABLET, null ), // before Mac OS X
 		MAC_OS_X_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 40, "Mac OS X (iPhone)", new String[] { "iPhone" },  null, DeviceType.MOBILE, null ), // before Mac OS X
@@ -239,8 +248,9 @@ public enum OperatingSystem {
 	
 	/*
 	 * Shortcut to check of an operating system is a mobile device.
-	 * Left in here for backwards compatibility.
+	 * Left in here for backwards compatibility. Use .getDeciceType() instead.
 	 */
+	@Deprecated
 	public boolean isMobileDevice() {
 		return deviceType.equals(DeviceType.MOBILE);
 	}
