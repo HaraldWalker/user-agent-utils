@@ -327,7 +327,10 @@ public class OperatingSystemTest {
 			"Roku/DVP-4.1 (024.01E01250A)", // Roku 2 XD
 			"Roku/DVP-3.0 (013.00E02227A)"
 	};
-	
+
+	String[] hipmunkApp = {
+		"Hipmunk/20141122.9212041 CFNetwork/711.0.6 Darwin/14.0.0"
+	};
 	
 	String[] proxy = {
 			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
@@ -396,6 +399,7 @@ public class OperatingSystemTest {
 		testAgents(genericMobile, OperatingSystem.UNKNOWN_MOBILE);
 		testAgents(genericTablet, OperatingSystem.UNKNOWN_TABLET);
 		testAgents(unknown, OperatingSystem.UNKNOWN);
+		testAgents(hipmunkApp, OperatingSystem.IOS);
 
 	}
 
@@ -421,9 +425,10 @@ public class OperatingSystemTest {
 		testDeviceTypes(bada, DeviceType.MOBILE);
 		testDeviceTypes(meeGo, DeviceType.MOBILE);
 		testDeviceTypes(tablets, DeviceType.TABLET);
-		testDeviceTypes(iPad, DeviceType.TABLET);	
+		testDeviceTypes(iPad, DeviceType.TABLET);
 		testDeviceTypes(gameconsoles, DeviceType.GAME_CONSOLE);
 		testDeviceTypes(googleTV, DeviceType.DMR);
+		testDeviceTypes(hipmunkApp, DeviceType.MOBILE);
 	}
 	
 	public void testGroupRecursion() {
