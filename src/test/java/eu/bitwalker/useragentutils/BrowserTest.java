@@ -471,6 +471,18 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.17) Gecko/20080914 Thunderbird/2.0.0.17"
 	};
 	
+	String[] onshapeIPad = {
+			"Onshape/1.13.8 (iPad; iOS 8.1.2; Scale/2.00)"
+	};
+
+	String[] onshapeIPhone = {
+			"Onshape/1.13.8 (iPhone; iOS 8.1.2; Scale/3.00)"
+	};
+
+	String[] onshapeAndroid = {
+			"Onshape/1.13.8 (Linux; Android 5.0.1; nvidia SHIELD Tablet)"
+	};
+
 	String[] silk = {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true"
 	};
@@ -637,6 +649,9 @@ public class BrowserTest {
 		testAgents(proxy, Browser.DOWNLOAD);
 		testAgents(thunderbird3, Browser.THUNDERBIRD3);
 		testAgents(thunderbird2, Browser.THUNDERBIRD2);
+                testAgents(onshapeIPad, Browser.ONSHAPE_IPAD);
+                testAgents(onshapeIPhone, Browser.ONSHAPE_IPHONE);
+                testAgents(onshapeAndroid, Browser.ONSHAPE_ANDROID);
 		testAgents(silk, Browser.SILK);
 		testAgents(iTunes, Browser.APPLE_ITUNES);
 		testAgents(appStore, Browser.APPLE_APPSTORE);

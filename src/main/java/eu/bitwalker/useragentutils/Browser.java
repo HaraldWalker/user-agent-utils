@@ -242,6 +242,14 @@ public enum Browser {
 		THUNDERBIRD3(  	Manufacturer.MOZILLA, Browser.THUNDERBIRD, 130, "Thunderbird 3", new String[] { "Thunderbird/3" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.GECKO, null ),  // using Gecko Engine
 		THUNDERBIRD2(  	Manufacturer.MOZILLA, Browser.THUNDERBIRD, 120, "Thunderbird 2", new String[] { "Thunderbird/2" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.GECKO, null ),  // using Gecko Engine	
 		
+	/*
+	 * Onshape client.
+	 */
+	ONSHAPE(                Manufacturer.ONSHAPE, null,            1, "Onshape", new String[] {"Onshape"}, null, BrowserType.APP, RenderingEngine.OTHER, "Onshape\\/(([\\d]+)\\.([\\d]+).([\\d]+))"),
+		ONSHAPE_IPAD( 	Manufacturer.ONSHAPE, Browser.ONSHAPE, 2, "iPad",    new String[] {"iPad"},    null, BrowserType.APP, RenderingEngine.OTHER, "iPad"),
+		ONSHAPE_IPHONE(	Manufacturer.ONSHAPE, Browser.ONSHAPE, 3, "iPhone",  new String[] {"iPhone"},  null, BrowserType.APP, RenderingEngine.OTHER, "iPhone"),
+		ONSHAPE_ANDROID(Manufacturer.ONSHAPE, Browser.ONSHAPE, 4, "Android", new String[] {"Android"}, null, BrowserType.APP, RenderingEngine.OTHER, "Linux"),
+
 	SEAMONKEY(		Manufacturer.OTHER, null, 15, "SeaMonkey", new String[]{"SeaMonkey"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "SeaMonkey\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
 	
 	BOT(			Manufacturer.OTHER, null,12, "Robot/Spider", new String[] {"Googlebot", "Web Preview", "bot", "spider", "crawler", "Feedfetcher", "Slurp", "Twiceler", "Nutch", "BecomeBot"}, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
