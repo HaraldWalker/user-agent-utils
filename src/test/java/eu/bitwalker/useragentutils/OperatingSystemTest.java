@@ -148,13 +148,144 @@ public class OperatingSystemTest {
 			"SonyEricssonK610i/R1CB Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1"
 	};
 	
-	String[] iPhones = 
+	String[] cfnetworkUnknownVersion =
+	{
+			"anAppName/1.7.8.3.CFNetwork/999.1.4.Darwin/13.0.0"
+	};
+
+	String[] ios31 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/459.1.4.Darwin/10.0.0"
+	};
+
+	String[] ios40 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/485.2.4.Darwin/10.0.0"
+	};
+
+	String[] ios41 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/485.10.4.Darwin/10.0.0"
+	};
+
+	String[] ios42 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/485.12.4.Darwin/10.0.0"
+	};
+
+	String[] ios43 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/485.13.4.Darwin/11.0.0"
+	};
+
+	String[] ios50 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/548.0.4.Darwin/11.0.0"
+	};
+
+	String[] ios51 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/548.1.4.Darwin/11.0.0"
+	};
+
+	String[] ios60 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/602.0.4.Darwin/13.0.0",
+			"anAppName/1.7.8.3.CFNetwork/609.0.4.Darwin/13.0.0"
+	};
+
+	String[] ios61 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/609.1.4.Darwin/13.0.0"
+	};
+
+	String[] ios70 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/672.0.4.Darwin/14.0.0"
+	};
+
+	String[] ios71 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/672.1.4.Darwin/14.0.0"
+	};
+
+	String[] ios80 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/711.0.4.Darwin/14.0.0"
+	};
+
+	String[] ios81 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/711.1.4.Darwin/14.0.0"
+	};
+
+	String[] macOsX102 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/1.1"
+	};
+
+
+	String[] macOsX103 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/1.2.1"
+	};
+
+
+	String[] macOsX104 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/128.1.4.Darwin/8.0.0",
+			"anAppName/1.7.8.3.CFNetwork/129.1.4.Darwin/8.11.0"
+	};
+
+
+	String[] macOsX105 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/217.1.4.Darwin/9.0.0",
+			"anAppName/1.7.8.3.CFNetwork/220.1.4.Darwin/9.1.0",
+			"anAppName/1.7.8.3.CFNetwork/221.1.4.Darwin/9.2.0",
+			"anAppName/1.7.8.3.CFNetwork/330.1.4.Darwin/9.3.0",
+			"anAppName/1.7.8.3.CFNetwork/339.1.4.Darwin/9.6.0",
+			"anAppName/1.7.8.3.CFNetwork/422.1.4.Darwin/9.7.0",
+			"anAppName/1.7.8.3.CFNetwork/438.1.4.Darwin/9.8.0"
+	};
+
+
+	String[] macOsX106 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/454.1.4.Darwin/10.0.0"
+	};
+
+
+	String[] macOsX107 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/520.1.4.Darwin/11.0.0"
+	};
+
+
+	String[] macOsX108 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/596.1.4.Darwin/12.0.0"
+	};
+
+
+	String[] macOsX109 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/673.1.4.Darwin/13.0.0"
+	};
+
+
+	String[] macOsX1010 =
+	{
+			"anAppName/1.7.8.3.CFNetwork/720.1.4.Darwin/14.0.0"
+	};
+
+	String[] iPhones =
 	{
 			"Mozilla/5.0 (iPhone; U; CPU like Mac OS X; nl-nl) AppleWebKit/420.1 (KHTML, like Gecko)",
 			"Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko)",
 			"Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/4A93 Safari/419.3"
 	};
-	
+
 	String[] iPhone4 = 
 	{
 			"Mozilla/5.0 (iPhone Simulator; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7",
@@ -402,6 +533,29 @@ public class OperatingSystemTest {
 		testAgents(symbian7phones, OperatingSystem.SYMBIAN7);
 		testAgents(symbianPhones, OperatingSystem.SYMBIAN);
 		testAgents(sonyEricssonPhones, OperatingSystem.SONY_ERICSSON);
+		testAgents(cfnetworkUnknownVersion, OperatingSystem.MAC_OS_X_OR_IOS);
+		testAgents(ios31, OperatingSystem.IOS_3_1);
+		testAgents(ios40, OperatingSystem.IOS_4_0);
+		testAgents(ios41, OperatingSystem.IOS_4_1);
+		testAgents(ios42, OperatingSystem.IOS_4_2);
+		testAgents(ios43, OperatingSystem.IOS_4_3);
+		testAgents(ios50, OperatingSystem.IOS_5_0);
+		testAgents(ios51, OperatingSystem.IOS_5_1);
+		testAgents(ios60, OperatingSystem.IOS_6_0);
+		testAgents(ios61, OperatingSystem.IOS_6_1);
+		testAgents(ios70, OperatingSystem.IOS_7_0);
+		testAgents(ios71, OperatingSystem.IOS_7_1);
+		testAgents(ios80, OperatingSystem.IOS_8_0);
+		testAgents(ios81, OperatingSystem.IOS_8_1);
+		testAgents(macOsX102, OperatingSystem.MAC_OS_X_10_2);
+		testAgents(macOsX103, OperatingSystem.MAC_OS_X_10_3);
+		testAgents(macOsX104, OperatingSystem.MAC_OS_X_10_4);
+		testAgents(macOsX105, OperatingSystem.MAC_OS_X_10_5);
+		testAgents(macOsX106, OperatingSystem.MAC_OS_X_10_6);
+		testAgents(macOsX107, OperatingSystem.MAC_OS_X_10_7);
+		testAgents(macOsX108, OperatingSystem.MAC_OS_X_10_8);
+		testAgents(macOsX109, OperatingSystem.MAC_OS_X_10_9);
+		testAgents(macOsX1010, OperatingSystem.MAC_OS_X_10_10);
 		testAgents(iPhones, OperatingSystem.MAC_OS_X_IPHONE);
 		testAgents(iPhone4, OperatingSystem.iOS4_IPHONE);
 		testAgents(iPhone5, OperatingSystem.iOS5_IPHONE);
