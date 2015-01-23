@@ -93,12 +93,12 @@ public enum OperatingSystem {
 	 */
 	WEBOS(			Manufacturer.HP,null,11, "WebOS", new String[] { "webOS" },  null, DeviceType.MOBILE, null ), 
 	PALM(			Manufacturer.HP,null,10, "PalmOS", new String[] { "Palm" },  null, DeviceType.MOBILE, null ), 
-	MEEGO(			Manufacturer.NOKIA,null,3, "MeeGo", new String[] { "MeeGo" },  null, DeviceType.MOBILE, null ),		
+	MEEGO(			Manufacturer.NOKIA,null,3, "MeeGo", new String[] { "MeeGo" },  null, DeviceType.MOBILE, null ),
 
 	/**
 	 * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
 	 */	
-	IOS(			Manufacturer.APPLE,null, 2, "iOS", new String[] { "iPhone OS", "like Mac OS X" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+	IOS(			Manufacturer.APPLE,null, 2, "iOS", withIosCFNetworkVersions(new String[] { "iPhone OS", "like Mac OS X" }),  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS8_1_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 46, "iOS 8.1 (iPhone)", new String[] { "iPhone OS 8_1" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS8_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 45, "iOS 8 (iPhone)", new String[] { "iPhone OS 8_0" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS7_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 44, "iOS 7 (iPhone)", new String[] { "iPhone OS 7" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
@@ -112,8 +112,32 @@ public enum OperatingSystem {
 		iOS6_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 51, "iOS 6 (iPad)", new String[] { "OS 6" },  null, DeviceType.TABLET, null ), // before Mac OS X
 		MAC_OS_X_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 40, "Mac OS X (iPhone)", new String[] { "iPhone" },  null, DeviceType.MOBILE, null ), // before Mac OS X
 		MAC_OS_X_IPOD(	Manufacturer.APPLE, OperatingSystem.IOS, 30, "Mac OS X (iPod)", new String[] { "iPod" },  null, DeviceType.MOBILE, null ), // before Mac OS X
-	
-	MAC_OS_X(		Manufacturer.APPLE,null, 10, "Mac OS X", new String[] { "Mac OS X" , "CFNetwork"}, null, DeviceType.COMPUTER, null ), // before Mac	
+		IOS_3_1(   Manufacturer.APPLE, OperatingSystem.IOS, 310, "IOS 3.1", new String[] { "459" },  null, DeviceType.MOBILE, null ),
+		IOS_4_0(   Manufacturer.APPLE, OperatingSystem.IOS, 400, "IOS 4.0", new String[] { "485.2" },  null, DeviceType.MOBILE, null ),
+		IOS_4_1(   Manufacturer.APPLE, OperatingSystem.IOS, 410, "IOS 4.1", new String[] { "485.10" },  null, DeviceType.MOBILE, null ),
+		IOS_4_2(   Manufacturer.APPLE, OperatingSystem.IOS, 420, "IOS 4.2", new String[] { "485.12" },  null, DeviceType.MOBILE, null ),
+		IOS_4_3(   Manufacturer.APPLE, OperatingSystem.IOS, 430, "IOS 4.3", new String[] { "485.13" },  null, DeviceType.MOBILE, null ),
+		IOS_5_0(   Manufacturer.APPLE, OperatingSystem.IOS, 500, "IOS 5.0", new String[] { "548.0" },  null, DeviceType.MOBILE, null ),
+		IOS_5_1(   Manufacturer.APPLE, OperatingSystem.IOS, 510, "IOS 5.1", new String[] { "548.1" },  null, DeviceType.MOBILE, null ),
+		IOS_6_1(   Manufacturer.APPLE, OperatingSystem.IOS, 610, "IOS 6.1", new String[] { "609.1" },  null, DeviceType.MOBILE, null ),
+		IOS_6_0(   Manufacturer.APPLE, OperatingSystem.IOS, 600, "IOS 6.0", new String[] { "602", "609" },  null, DeviceType.MOBILE, null ),
+		IOS_7_0(   Manufacturer.APPLE, OperatingSystem.IOS, 700, "IOS 7.0", new String[] { "672.0" },  null, DeviceType.MOBILE, null ),
+		IOS_7_1(   Manufacturer.APPLE, OperatingSystem.IOS, 710, "IOS 7.1", new String[] { "672.1" },  null, DeviceType.MOBILE, null ),
+		IOS_8_0(   Manufacturer.APPLE, OperatingSystem.IOS, 800, "IOS 8.0", new String[] { "711.0" },  null, DeviceType.MOBILE, null ),
+		IOS_8_1(   Manufacturer.APPLE, OperatingSystem.IOS, 810, "IOS 8.1", new String[] { "711.1" },  null, DeviceType.MOBILE, null ),
+
+	MAC_OS_X(		Manufacturer.APPLE,null, 10, "Mac OS X", withMacOsXCFNetworkVersions(new String[] {"Mac OS X"}), null, DeviceType.COMPUTER, null ), // before Mac
+		MAC_OS_X_10_3(  Manufacturer.APPLE, OperatingSystem.MAC_OS_X, 103, "Mac OS X 10.3 Panther", new String[] { "1.2." },  null, DeviceType.COMPUTER, null ),
+		MAC_OS_X_10_4(  Manufacturer.APPLE, OperatingSystem.MAC_OS_X, 104, "Mac OS X 10.4 Tiger", new String[] { "128", "129" },  null, DeviceType.COMPUTER, null ),
+		MAC_OS_X_10_5(  Manufacturer.APPLE, OperatingSystem.MAC_OS_X, 105, "Mac OS X 10.5 Leopard", new String[] { "217", "220", "221", "330", "339", "422", "438"},  null, DeviceType.COMPUTER, null ),
+		MAC_OS_X_10_6(  Manufacturer.APPLE, OperatingSystem.MAC_OS_X, 106, "Mac OS X 10.6 Snow Leopard", new String[] { "454" },  null, DeviceType.COMPUTER, null ),
+		MAC_OS_X_10_7(  Manufacturer.APPLE, OperatingSystem.MAC_OS_X, 107, "Mac OS X 10.7 Lion", new String[] { "520" },  null, DeviceType.COMPUTER, null ),
+		MAC_OS_X_10_8(  Manufacturer.APPLE, OperatingSystem.MAC_OS_X, 108, "Mac OS X 10.8 Mountain Lion", new String[] { "596" },  null, DeviceType.COMPUTER, null ),
+		MAC_OS_X_10_9(  Manufacturer.APPLE, OperatingSystem.MAC_OS_X, 109, "Mac OS X 10.9 Mavericks", new String[] { "673" },  null, DeviceType.COMPUTER, null ),
+		MAC_OS_X_10_10( Manufacturer.APPLE, OperatingSystem.MAC_OS_X, 1010, "Mac OS X 10.10 Yosemite", new String[] { "720" },  null, DeviceType.COMPUTER, null ),
+		MAC_OS_X_10_2(  Manufacturer.APPLE, OperatingSystem.MAC_OS_X, 102, "Mac OS X 10.2 Jaguar", new String[] { "1.1" },  null, DeviceType.COMPUTER, null ),
+
+	MAC_OS_X_OR_IOS(		Manufacturer.APPLE,null, 11, "Mac OS X or IOS", new String[] {"CFNetwork"}, null, DeviceType.UNKNOWN, null ), // before Mac
 
 	/**
 	 * Older Mac OS systems before Mac OS X
@@ -198,7 +222,37 @@ public enum OperatingSystem {
 	UNKNOWN_MOBILE(	Manufacturer.OTHER,null, 3, "Unknown mobile", new String[] {"Mobile"}, null, DeviceType.MOBILE, null ),
 	UNKNOWN_TABLET(	Manufacturer.OTHER,null, 4, "Unknown tablet", new String[] {"Tablet"}, null, DeviceType.TABLET, null ),
 	UNKNOWN(		Manufacturer.OTHER,null, 1, "Unknown", new String[0], null, DeviceType.UNKNOWN, null );
-	
+
+	private static String[] withIosCFNetworkVersions(String[] alternativeAliases) {
+		String[] versions =  {"459", "485", "548", "602", "609", "672", "711"};
+
+		ArrayList<String> aliases = new ArrayList<String>();
+		for (int i = 0; i < versions.length; i++) {
+			aliases.add("CFNetwork/" + versions[i]);
+		}
+
+		for (int i = 0; i < alternativeAliases.length; i++) {
+			aliases.add(alternativeAliases[i]);
+		}
+
+		return aliases.toArray(new String[aliases.size()]);
+	}
+
+	private static String[] withMacOsXCFNetworkVersions(String[] alternativeAliases) {
+		String[] versions =  {"1.1", "1.2", "128", "129", "217", "220", "221", "330", "339", "422", "438", "454", "520", "596", "673", "720"};
+
+		ArrayList<String> aliases = new ArrayList<String>();
+		for (int i = 0; i < versions.length; i++) {
+			aliases.add("CFNetwork/" + versions[i]);
+		}
+
+		for (int i = 0; i < alternativeAliases.length; i++) {
+			aliases.add(alternativeAliases[i]);
+		}
+
+		return aliases.toArray(new String[aliases.size()]);
+	}
+
 	private final short id;
 	private final String name;
 	private final String[] aliases;
