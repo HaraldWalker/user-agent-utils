@@ -648,11 +648,11 @@ public class BrowserTest {
 	public void testCustomUserAgentParsing() {
 		// Test limited to the big browser families. As Camino can not be detected any longer, the second best match is Firefox3 (a child of Firefox).
 		for (String agentString : camino2) {
-			assertEquals(Browser.FIREFOX3, Browser.parseUserAgentString(agentString,Arrays.asList(Browser.IE,Browser.CHROME, Browser.APPLE_WEB_KIT, Browser.FIREFOX)));
+			assertEquals(Browser.FIREFOX3, Browser.parseUserAgentString(agentString,Arrays.asList(Browser.IE, Browser.CHROME, Browser.APPLE_WEB_KIT, Browser.FIREFOX)));
 		}
 		// When there is no match in the given set, return UNKNOWN
 		for (String agentString : opera9) {
-			assertEquals(Browser.UNKNOWN, Browser.parseUserAgentString(agentString,Arrays.asList(Browser.IE,Browser.CHROME, Browser.APPLE_WEB_KIT, Browser.FIREFOX)));
+			assertEquals(Browser.UNKNOWN, Browser.parseUserAgentString(agentString,Arrays.asList(Browser.IE, Browser.CHROME, Browser.APPLE_WEB_KIT, Browser.FIREFOX)));
 		}
 	}
 	
@@ -665,12 +665,12 @@ public class BrowserTest {
 	@Test
 	public void testIncompleteUAString() {
 		try {
-			Browser browser = Browser.parseUserAgentString("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us) AppleWebKit/531.21.11 (KHTML, like");	
+			Browser browser = Browser.parseUserAgentString("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us) AppleWebKit/531.21.11 (KHTML, like");
 			browser.getVersion("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us) AppleWebKit/531.21.11 (KHTML, like");
-			Browser browser2 = Browser.parseUserAgentString("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.0.8) Gecko/2009032608 Firefox");	
+			Browser browser2 = Browser.parseUserAgentString("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.0.8) Gecko/2009032608 Firefox");
 			browser2.getVersion("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.0.8) Gecko/2009032608 Firefox");
 			Browser browser3 = Browser.parseUserAgentString("Mozilla/4.0 (compatible; MSIE 8");	
-			browser3.getVersion("Mozilla/4.0 (compatible; MSIE 8");			
+			browser3.getVersion("Mozilla/4.0 (compatible; MSIE 8");
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
