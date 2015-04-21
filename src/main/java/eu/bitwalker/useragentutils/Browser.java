@@ -38,10 +38,8 @@
 package eu.bitwalker.useragentutils;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.EnumSet;
+import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -285,7 +283,9 @@ public enum Browser {
 	private final Browser parent;
 	private final List<Browser> children = new ArrayList<Browser>();
 	private final Pattern versionRegEx;
-	private static final Set<Browser> topLevelBrowsers = EnumSet.copyOf(Holder.topLevelBrowsers);
+	
+	// we need this construct, because instances of an Enum class are loaded before its static initializers
+	private static final List<Browser> topLevelBrowsers = Collections.unmodifiableList(Holder.topLevelBrowsers);
 	private static final class Holder {
 		static final List<Browser> topLevelBrowsers = new ArrayList<Browser>();
 	}
