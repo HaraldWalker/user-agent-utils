@@ -447,7 +447,8 @@ public class BrowserTest {
 			"Mozilla/5.0 (compatible; Googlebot/2.1; http://www.google.com/bot.html)",
 			"Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
 			"Googlebot-Image/1.0",
-			"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.8 (KHTML, like Gecko; Google Web Preview) Chrome/19.0.1084.36 Safari/536.8"
+			"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.8 (KHTML, like Gecko; Google Web Preview) Chrome/19.0.1084.36 Safari/536.8",
+			"Mediapartners-Google"
 	};
 	
 	String[] mobileBot = {
