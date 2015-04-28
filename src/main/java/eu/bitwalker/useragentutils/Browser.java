@@ -398,40 +398,30 @@ public enum Browser {
     if (agentString == null) return false;
 
     String agentStringLowerCase = agentString.toLowerCase();
-		for (String alias : aliases)
-		{
-      if (agentStringLowerCase.contains(alias))
+
+		return contains(agentStringLowerCase, aliases);
+	}
+
+	/**
+	 * Returns true if str contains any other string from array as a substring.
+	 */
+	private boolean contains(String str, String[] array) {
+		for (String s: array) {
+			if (str.contains(s))
 				return true;
 		}
 		return false;
 	}
-	
-	/**
-	 * Checks if the given user-agent does not contain one of the tokens which should not match.
-	 * In most cases there are no excluding tokens, so the impact should be small.
-	 * @param agentString
-	 * @return
-	 */
-	private boolean containsExcludeToken(String agentString)
-	{
-    if (agentString == null) return false;
 
-		if (excludeList != null) {
-      String agentStringLowerCase = agentString.toLowerCase();
-      for (String exclude : excludeList) {
-        if (agentStringLowerCase.contains(exclude))
-					return true;
-			}
-		}
-		return false;
-	}
-	
-	private Browser checkUserAgent(String agentString) {
-		if (this.isInUserAgentString(agentString)) {
-			
+	// for performance reasons this method accepts only lower case agent string;
+	// it does not call toLowerCase because the method itself can be called too often
+	private Browser checkUserAgent(String lowerCaseAgentString) {
+		if (lowerCaseAgentString == null) return null;
+
+		if (contains(lowerCaseAgentString, aliases)) {
 			if (this.children.size() > 0) {
 				for (Browser childBrowser : this.children) {
-					Browser match = childBrowser.checkUserAgent(agentString);
+					Browser match = childBrowser.checkUserAgent(lowerCaseAgentString);
 					if (match != null) { 
 						return match;
 					}
@@ -439,7 +429,7 @@ public enum Browser {
 			}
 			
 			// if children didn't match we continue checking the current to prevent false positives
-			if (!this.containsExcludeToken(agentString)) {
+			if (excludeList == null || !contains(lowerCaseAgentString, excludeList)) {
 				return this;
 			}
 			
@@ -473,8 +463,12 @@ public enum Browser {
 	 */
 	public static Browser parseUserAgentString(String agentString, List<Browser> browsers)
 	{
+		if (agentString == null) return Browser.UNKNOWN;
+
+		String loCaseAgentString = agentString.toLowerCase();
+
 		for (Browser browser : browsers) {
-			Browser match = browser.checkUserAgent(agentString);
+			Browser match = browser.checkUserAgent(loCaseAgentString);
 			if (match != null) {
 				return match; // either current operatingSystem or a child object
 			}
