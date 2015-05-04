@@ -210,25 +210,40 @@ public enum OperatingSystem {
 	private Pattern versionRegEx;
 	private static List<OperatingSystem> topLevelOperatingSystems;
 	
-	private OperatingSystem(Manufacturer manufacturer, OperatingSystem parent, int versionId, String name, String[] aliases,
-		 String[] exclude, DeviceType deviceType, String versionRegexString) {
-		this.manufacturer = manufacturer;
-		this.parent = parent;
-		this.children = new ArrayList<OperatingSystem>();
-		// combine manufacturer and version id to one unique id. 
-		this.id =  (short) ( ( manufacturer.getId() << 8) + (byte) versionId);
-		this.name = name;
-		this.aliases = aliases;
-		this.excludeList = exclude;
-		this.deviceType = deviceType;
-		if (versionRegexString != null) { // not implemented yet
-			this.versionRegEx = Pattern.compile(versionRegexString);
-		}
-		if (this.parent == null)
-			addTopLevelOperatingSystem(this);
-		else
-			this.parent.children.add(this);
-	}
+    private OperatingSystem(Manufacturer manufacturer, OperatingSystem parent, int versionId, String name,
+        String[] aliases,
+        String[] exclude, DeviceType deviceType, String versionRegexString) {
+        this.manufacturer = manufacturer;
+        this.parent = parent;
+        this.children = new ArrayList<OperatingSystem>();
+        // combine manufacturer and version id to one unique id.
+        this.id = (short) ((manufacturer.getId() << 8) + (byte) versionId);
+        this.name = name;
+        if (aliases == null) {
+            this.aliases = aliases;
+        } else {
+            this.aliases = new String[aliases.length];
+            for (int i = 0; i < aliases.length; i++) {
+                this.aliases[i] = aliases[i].toLowerCase();
+            }
+        }
+        if (exclude == null) {
+            this.excludeList = exclude;
+        } else {
+            this.excludeList = new String[exclude.length];
+            for (int i = 0; i < exclude.length; i++) {
+                this.excludeList[i] = exclude[i].toLowerCase();
+            }
+        }
+        this.deviceType = deviceType;
+        if (versionRegexString != null) { // not implemented yet
+            this.versionRegEx = Pattern.compile(versionRegexString);
+        }
+        if (this.parent == null)
+            addTopLevelOperatingSystem(this);
+        else
+            this.parent.children.add(this);
+    }
 
 	// create collection of top level operating systems during initialization
 	private static void addTopLevelOperatingSystem(OperatingSystem os) {
@@ -287,7 +302,7 @@ public enum OperatingSystem {
 	{		
 		for (String alias : aliases)
 		{
-			if (agentString != null && agentString.toLowerCase().indexOf(alias.toLowerCase()) != -1)
+            if (agentString != null && agentString.toLowerCase().indexOf(alias) != -1)
 				return true;
 		}	
 		return false;
@@ -303,7 +318,7 @@ public enum OperatingSystem {
 	{
 		if (excludeList != null) {
 			for (String exclude : excludeList) {
-				if (agentString != null && agentString.toLowerCase().indexOf(exclude.toLowerCase()) != -1)
+                if (agentString != null && agentString.toLowerCase().indexOf(exclude) != -1)
 					return true;
 			}
 		}
