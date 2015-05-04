@@ -437,8 +437,11 @@ public enum Browser {
     }
 	
     private Browser checkUserAgent(String agentString) {
-        String agentLowercaseString = agentString == null ? null : agentString.toLowerCase();
-        if (agentLowercaseString != null && this.isInUserAgentLowercaseString(agentLowercaseString)) {
+        if (agentString == null) {
+            return null;
+        }
+        String agentLowercaseString = agentString.toLowerCase();
+        if (this.isInUserAgentLowercaseString(agentLowercaseString)) {
 
             if (this.children.size() > 0) {
                 for (Browser childBrowser : this.children) {
@@ -450,7 +453,7 @@ public enum Browser {
             }
 
             // if children didn't match we continue checking the current to prevent false positives
-            if (!(agentLowercaseString != null && this.containsExcludeTokenLowercase(agentLowercaseString))) {
+            if (!this.containsExcludeTokenLowercase(agentLowercaseString)) {
                 return this;
             }
 
