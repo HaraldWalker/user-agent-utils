@@ -441,11 +441,15 @@ public enum Browser {
             return null;
         }
         String agentLowercaseString = agentString.toLowerCase();
+        return checkUserAgentLowercase(agentLowercaseString);
+    }
+
+    private Browser checkUserAgentLowercase(String agentLowercaseString) {
         if (this.isInUserAgentLowercaseString(agentLowercaseString)) {
 
             if (this.children.size() > 0) {
                 for (Browser childBrowser : this.children) {
-                    Browser match = childBrowser.checkUserAgent(agentString);
+                    Browser match = childBrowser.checkUserAgentLowercase(agentLowercaseString);
                     if (match != null) {
                         return match;
                     }
