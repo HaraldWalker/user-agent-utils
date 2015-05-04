@@ -389,22 +389,27 @@ public enum Browser {
 		return this;
 	}
 
-	/*
-	 * Checks if the given user-agent string matches to the browser. 
-	 * Only checks for one specific browser. 
-	 */
-	public boolean isInUserAgentString(String agentString)
-	{
-    if (agentString == null) return false;
+    /*
+     * Checks if the given user-agent string matches to the browser.
+     * Only checks for one specific browser.
+     */
+    public boolean isInUserAgentString(String agentString)
+    {
+        if (agentString == null)
+            return false;
 
-    String agentStringLowerCase = agentString.toLowerCase();
-		for (String alias : aliases)
-		{
-      if (agentStringLowerCase.contains(alias))
-				return true;
-		}
-		return false;
-	}
+        String agentStringLowerCase = agentString.toLowerCase();
+        return isInUserAgentLowercaseString(agentStringLowerCase);
+    }
+
+    private boolean isInUserAgentLowercaseString(String agentStringLowerCase) {
+        for (String alias : aliases)
+        {
+            if (agentStringLowerCase.contains(alias))
+                return true;
+        }
+        return false;
+    }
 	
 	/**
 	 * Checks if the given user-agent does not contain one of the tokens which should not match.
@@ -426,26 +431,27 @@ public enum Browser {
 		return false;
 	}
 	
-	private Browser checkUserAgent(String agentString) {
-		if (this.isInUserAgentString(agentString)) {
-			
-			if (this.children.size() > 0) {
-				for (Browser childBrowser : this.children) {
-					Browser match = childBrowser.checkUserAgent(agentString);
-					if (match != null) { 
-						return match;
-					}
-				}
-			}
-			
-			// if children didn't match we continue checking the current to prevent false positives
-			if (!this.containsExcludeToken(agentString)) {
-				return this;
-			}
-			
-		}
-		return null;
-	}
+    private Browser checkUserAgent(String agentString) {
+        String agentLowercaseString = agentString == null ? null : agentString.toLowerCase();
+        if (agentLowercaseString != null && this.isInUserAgentLowercaseString(agentLowercaseString)) {
+
+            if (this.children.size() > 0) {
+                for (Browser childBrowser : this.children) {
+                    Browser match = childBrowser.checkUserAgent(agentString);
+                    if (match != null) {
+                        return match;
+                    }
+                }
+            }
+
+            // if children didn't match we continue checking the current to prevent false positives
+            if (!this.containsExcludeToken(agentString)) {
+                return this;
+            }
+
+        }
+        return null;
+    }
 	
 	/**
 	 * Iterates over all Browsers to compare the browser signature with 
