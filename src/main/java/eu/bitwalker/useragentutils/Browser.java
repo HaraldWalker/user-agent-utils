@@ -460,26 +460,42 @@ public enum Browser {
 	{
 		return parseUserAgentString(agentString, topLevelBrowsers);
 	}
-	
-	/**
-	 * Iterates over the given Browsers (incl. children) to compare the browser 
-	 * signature with the user agent string. 
-	 * If no match can be found Browser.UNKNOWN will be returned.
-	 * Steps out of loop as soon as there is a match.
-	 * Be aware that if the order of the provided Browsers is incorrect or if the set is too limited it can lead to false matches!
-	 * @param agentString
-	 * @return Browser
-	 */
-	public static Browser parseUserAgentString(String agentString, List<Browser> browsers)
-	{
-		for (Browser browser : browsers) {
-			Browser match = browser.checkUserAgent(agentString);
-			if (match != null) {
-				return match; // either current operatingSystem or a child object
-			}
-		}
-		return Browser.UNKNOWN;
-	}
+
+    public static Browser parseUserAgentLowercaseString(String agentString)
+    {
+        if (agentString == null) {
+            return Browser.UNKNOWN;
+        }
+        return parseUserAgentLowercaseString(agentString, topLevelBrowsers);
+    }
+
+    /**
+     * Iterates over the given Browsers (incl. children) to compare the browser 
+     * signature with the user agent string. 
+     * If no match can be found Browser.UNKNOWN will be returned.
+     * Steps out of loop as soon as there is a match.
+     * Be aware that if the order of the provided Browsers is incorrect or if the set is too limited it can lead to false matches!
+     * @param agentString
+     * @return Browser
+     */
+    public static Browser parseUserAgentString(String agentString, List<Browser> browsers)
+    {
+        if (agentString != null) {
+            String agentLowercaseString = agentString.toLowerCase();
+            return parseUserAgentLowercaseString(agentLowercaseString, browsers);
+        }
+        return Browser.UNKNOWN;
+    }
+
+    private static Browser parseUserAgentLowercaseString(String agentLowercaseString, List<Browser> browsers) {
+        for (Browser browser : browsers) {
+            Browser match = browser.checkUserAgentLowercase(agentLowercaseString);
+            if (match != null) {
+                return match; // either current operatingSystem or a child object
+            }
+        }
+        return Browser.UNKNOWN;
+    }
 		
 	/**
 	 * Returns the enum constant of this type with the specified id.

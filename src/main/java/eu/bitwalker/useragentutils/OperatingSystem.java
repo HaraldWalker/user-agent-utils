@@ -347,7 +347,15 @@ public enum OperatingSystem {
 	{
 		return parseUserAgentString(agentString, topLevelOperatingSystems);
 	}
-	
+
+    public static OperatingSystem parseUserAgentLowercaseString(String agentString)
+    {
+        if (agentString == null) {
+            return OperatingSystem.UNKNOWN;
+        }
+        return parseUserAgentLowercaseString(agentString, topLevelOperatingSystems);
+    }
+
     /**
      * Parses the user agent string and returns the best match for the given operating systems. 
      * Returns OperatingSystem.UNKNOWN if there is no match.
@@ -359,12 +367,18 @@ public enum OperatingSystem {
     {
         if (agentString != null) {
             final String agentLowercaseString = agentString.toLowerCase();
-            for (OperatingSystem operatingSystem : operatingSystems)
-            {
-                OperatingSystem match = operatingSystem.checkUserAgentLowercase(agentLowercaseString);
-                if (match != null) {
-                    return match; // either current operatingSystem or a child object
-                }
+            return parseUserAgentLowercaseString(agentLowercaseString, operatingSystems);
+        }
+        return OperatingSystem.UNKNOWN;
+    }
+
+    private static OperatingSystem parseUserAgentLowercaseString(final String agentLowercaseString,
+        List<OperatingSystem> operatingSystems) {
+        for (OperatingSystem operatingSystem : operatingSystems)
+        {
+            OperatingSystem match = operatingSystem.checkUserAgentLowercase(agentLowercaseString);
+            if (match != null) {
+                return match; // either current operatingSystem or a child object
             }
         }
         return OperatingSystem.UNKNOWN;
