@@ -289,8 +289,8 @@ public enum Browser {
 		this.name = name;
 		this.parent = parent;
 		this.children = new ArrayList<Browser>();
-		this.aliases = toLowerCase(aliases);
-		this.excludeList = toLowerCase(exclude);
+		this.aliases = Utils.toLowerCase(aliases);
+		this.excludeList = Utils.toLowerCase(exclude);
 		this.browserType = browserType;
 		this.manufacturer = manufacturer;
 		this.renderingEngine = renderingEngine;
@@ -302,17 +302,7 @@ public enum Browser {
 			this.parent.children.add(this);
 	}
 
-  private static String[] toLowerCase(String[] strArr) {
-    if (strArr == null) return null;
-    String[] res = new String[strArr.length];
-    for (int i=0; i<strArr.length; i++) {
-      res[i] = strArr[i].toLowerCase();
-    }
-    return res;
-  }
-
-
-	// create collection of top level browsers during initialization
+  // create collection of top level browsers during initialization
 	private static void addTopLevelBrowser(Browser browser) {
 		if(topLevelBrowsers == null)
 			topLevelBrowsers = new ArrayList<Browser>();	
