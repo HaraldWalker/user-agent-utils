@@ -210,25 +210,26 @@ public enum OperatingSystem {
 	private Pattern versionRegEx;
 	private static List<OperatingSystem> topLevelOperatingSystems;
 	
-	private OperatingSystem(Manufacturer manufacturer, OperatingSystem parent, int versionId, String name, String[] aliases,
-		 String[] exclude, DeviceType deviceType, String versionRegexString) {
-		this.manufacturer = manufacturer;
-		this.parent = parent;
-		this.children = new ArrayList<OperatingSystem>();
-		// combine manufacturer and version id to one unique id. 
-		this.id =  (short) ( ( manufacturer.getId() << 8) + (byte) versionId);
-		this.name = name;
-		this.aliases = aliases;
-		this.excludeList = exclude;
-		this.deviceType = deviceType;
-		if (versionRegexString != null) { // not implemented yet
-			this.versionRegEx = Pattern.compile(versionRegexString);
-		}
-		if (this.parent == null)
-			addTopLevelOperatingSystem(this);
-		else
-			this.parent.children.add(this);
-	}
+    private OperatingSystem(Manufacturer manufacturer, OperatingSystem parent, int versionId, String name,
+        String[] aliases,
+        String[] exclude, DeviceType deviceType, String versionRegexString) {
+        this.manufacturer = manufacturer;
+        this.parent = parent;
+        this.children = new ArrayList<OperatingSystem>();
+        // combine manufacturer and version id to one unique id.
+        this.id = (short) ((manufacturer.getId() << 8) + (byte) versionId);
+        this.name = name;
+        this.aliases = Utils.toLowerCase(aliases);
+        this.excludeList = Utils.toLowerCase(exclude);
+        this.deviceType = deviceType;
+        if (versionRegexString != null) { // not implemented yet
+            this.versionRegEx = Pattern.compile(versionRegexString);
+        }
+        if (this.parent == null)
+            addTopLevelOperatingSystem(this);
+        else
+            this.parent.children.add(this);
+    }
 
 	// create collection of top level operating systems during initialization
 	private static void addTopLevelOperatingSystem(OperatingSystem os) {
@@ -277,57 +278,64 @@ public enum OperatingSystem {
 		return manufacturer;
 	}
 
-	/**
-	 * Checks if the given user-agent string matches to the operating system. 
-	 * Only checks for one specific operating system. 
-	 * @param agentString
-	 * @return boolean
-	 */
-	public boolean isInUserAgentString(String agentString)
-	{		
-		for (String alias : aliases)
-		{
-			if (agentString != null && agentString.toLowerCase().indexOf(alias.toLowerCase()) != -1)
-				return true;
-		}	
-		return false;
-	}
+    /**
+     * Checks if the given user-agent string matches to the operating system. 
+     * Only checks for one specific operating system. 
+     * @param agentString
+     * @return boolean
+     */
+    public boolean isInUserAgentString(String agentString)
+    {
+        if (agentString == null) {
+            return false;
+        }
+        final String agentLowerCaseString = agentString.toLowerCase();
+        return isInUserAgentStringLowercase(agentLowerCaseString);
+    }
+
+    private boolean isInUserAgentStringLowercase(final String agentLowerCaseString) {
+        for (String alias : aliases)
+        {
+            if (agentLowerCaseString.contains(alias))
+                return true;
+        }
+        return false;
+    }
 	
-	/**
-	 * Checks if the given user-agent does not contain one of the tokens which should not match.
-	 * In most cases there are no excluding tokens, so the impact should be small.
-	 * @param agentString
-	 * @return
-	 */
-	private boolean containsExcludeToken(String agentString)
-	{
-		if (excludeList != null) {
-			for (String exclude : excludeList) {
-				if (agentString != null && agentString.toLowerCase().indexOf(exclude.toLowerCase()) != -1)
-					return true;
-			}
-		}
-		return false;
-	}
+    /**
+     * Checks if the given user-agent does not contain one of the tokens which should not match.
+     * In most cases there are no excluding tokens, so the impact should be small.
+     * @param agentString
+     * @return
+     */
+    private boolean containsExcludeTokenLowercase(final String agentLowerCaseString) {
+        if (excludeList != null) {
+            for (String exclude : excludeList) {
+                if (agentLowerCaseString.contains(exclude))
+                    return true;
+            }
+        }
+        return false;
+    }
 		
-	private OperatingSystem checkUserAgent(String agentString) {
-		if (this.isInUserAgentString(agentString)) {
-			if (this.children.size() > 0) {
-				for (OperatingSystem childOperatingSystem : this.children) {
-					OperatingSystem match = childOperatingSystem.checkUserAgent(agentString);
-					if (match != null) { 
-						return match;
-					}
-				}
-			}
-			// if children didn't match we continue checking the current to prevent false positives
-			if (!this.containsExcludeToken(agentString)) {
-				return this;
-			}
-			
-		}
-		return null;
-	}
+    private OperatingSystem checkUserAgentLowercase(String agentStringLowercase) {
+        if (this.isInUserAgentStringLowercase(agentStringLowercase)) {
+            if (this.children.size() > 0) {
+                for (OperatingSystem childOperatingSystem : this.children) {
+                    OperatingSystem match = childOperatingSystem.checkUserAgentLowercase(agentStringLowercase);
+                    if (match != null) {
+                        return match;
+                    }
+                }
+            }
+            // if children didn't match we continue checking the current to prevent false positives
+            if (!this.containsExcludeTokenLowercase(agentStringLowercase)) {
+                return this;
+            }
+
+        }
+        return null;
+    }
 	
 	/**
 	 * Parses user agent string and returns the best match. 
@@ -339,25 +347,42 @@ public enum OperatingSystem {
 	{
 		return parseUserAgentString(agentString, topLevelOperatingSystems);
 	}
-	
-	/**
-	 * Parses the user agent string and returns the best match for the given operating systems. 
-	 * Returns OperatingSystem.UNKNOWN if there is no match.
-	 * Be aware that if the order of the provided operating systems is incorrect or the set is too limited it can lead to false matches!
-	 * @param agentString
-	 * @return OperatingSystem
-	 */
-	public static OperatingSystem parseUserAgentString(String agentString, List<OperatingSystem> operatingSystems)
-	{
-		for (OperatingSystem operatingSystem : operatingSystems)
-		{
-			OperatingSystem match = operatingSystem.checkUserAgent(agentString);
-			if (match != null) {
-				return match; // either current operatingSystem or a child object
-			}
-		}	
-		return OperatingSystem.UNKNOWN;
-	}
+
+    public static OperatingSystem parseUserAgentLowercaseString(String agentString)
+    {
+        if (agentString == null) {
+            return OperatingSystem.UNKNOWN;
+        }
+        return parseUserAgentLowercaseString(agentString, topLevelOperatingSystems);
+    }
+
+    /**
+     * Parses the user agent string and returns the best match for the given operating systems. 
+     * Returns OperatingSystem.UNKNOWN if there is no match.
+     * Be aware that if the order of the provided operating systems is incorrect or the set is too limited it can lead to false matches!
+     * @param agentString
+     * @return OperatingSystem
+     */
+    public static OperatingSystem parseUserAgentString(String agentString, List<OperatingSystem> operatingSystems)
+    {
+        if (agentString != null) {
+            final String agentLowercaseString = agentString.toLowerCase();
+            return parseUserAgentLowercaseString(agentLowercaseString, operatingSystems);
+        }
+        return OperatingSystem.UNKNOWN;
+    }
+
+    private static OperatingSystem parseUserAgentLowercaseString(final String agentLowercaseString,
+        List<OperatingSystem> operatingSystems) {
+        for (OperatingSystem operatingSystem : operatingSystems)
+        {
+            OperatingSystem match = operatingSystem.checkUserAgentLowercase(agentLowercaseString);
+            if (match != null) {
+                return match; // either current operatingSystem or a child object
+            }
+        }
+        return OperatingSystem.UNKNOWN;
+    }
 		
 	/**
 	 * Returns the enum constant of this type with the specified id.
