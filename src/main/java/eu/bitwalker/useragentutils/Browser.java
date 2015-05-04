@@ -411,25 +411,30 @@ public enum Browser {
         return false;
     }
 	
-	/**
-	 * Checks if the given user-agent does not contain one of the tokens which should not match.
-	 * In most cases there are no excluding tokens, so the impact should be small.
-	 * @param agentString
-	 * @return
-	 */
-	private boolean containsExcludeToken(String agentString)
-	{
-    if (agentString == null) return false;
+    /**
+     * Checks if the given user-agent does not contain one of the tokens which should not match.
+     * In most cases there are no excluding tokens, so the impact should be small.
+     * @param agentString
+     * @return
+     */
+    private boolean containsExcludeToken(String agentString)
+    {
+        if (agentString == null)
+            return false;
 
-		if (excludeList != null) {
-      String agentStringLowerCase = agentString.toLowerCase();
-      for (String exclude : excludeList) {
-        if (agentStringLowerCase.contains(exclude))
-					return true;
-			}
-		}
-		return false;
-	}
+        String agentStringLowerCase = agentString.toLowerCase();
+        return containsExcludeTokenLowercase(agentStringLowerCase);
+    }
+
+    private boolean containsExcludeTokenLowercase(String agentStringLowerCase) {
+        if (excludeList != null) {
+            for (String exclude : excludeList) {
+                if (agentStringLowerCase.contains(exclude))
+                    return true;
+            }
+        }
+        return false;
+    }
 	
     private Browser checkUserAgent(String agentString) {
         String agentLowercaseString = agentString == null ? null : agentString.toLowerCase();
@@ -445,7 +450,7 @@ public enum Browser {
             }
 
             // if children didn't match we continue checking the current to prevent false positives
-            if (!this.containsExcludeToken(agentString)) {
+            if (!(agentLowercaseString != null && this.containsExcludeTokenLowercase(agentLowercaseString))) {
                 return this;
             }
 
