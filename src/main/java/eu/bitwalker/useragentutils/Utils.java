@@ -11,4 +11,15 @@ public class Utils {
         return res;
       }
 
+    static boolean contains(String str, String[] strArr) {
+        if (strArr == null)
+            return false;
+        for (int i = 0; i < strArr.length; i++) {
+            if (str.contains(strArr[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

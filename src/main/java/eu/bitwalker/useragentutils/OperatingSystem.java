@@ -294,12 +294,7 @@ public enum OperatingSystem {
     }
 
     private boolean isInUserAgentStringLowercase(final String agentLowerCaseString) {
-        for (String alias : aliases)
-        {
-            if (agentLowerCaseString.contains(alias))
-                return true;
-        }
-        return false;
+        return Utils.contains(agentLowerCaseString, aliases);
     }
 	
     /**
@@ -309,13 +304,7 @@ public enum OperatingSystem {
      * @return
      */
     private boolean containsExcludeTokenLowercase(final String agentLowerCaseString) {
-        if (excludeList != null) {
-            for (String exclude : excludeList) {
-                if (agentLowerCaseString.contains(exclude))
-                    return true;
-            }
-        }
-        return false;
+        return Utils.contains(agentLowerCaseString, excludeList);
     }
 		
     private OperatingSystem checkUserAgentLowercase(String agentStringLowercase) {

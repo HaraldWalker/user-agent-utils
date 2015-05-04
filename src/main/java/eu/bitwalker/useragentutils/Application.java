@@ -125,11 +125,7 @@ public enum Application {
     }
 
     private boolean isInReferrerStringLowercase(final String referrerStringLowercase) {
-        for (String alias : aliases) {
-            if (referrerStringLowercase.contains(alias))
-                return true;
-        }
-        return false;
+        return Utils.contains(referrerStringLowercase, aliases);
     }
 
     /*

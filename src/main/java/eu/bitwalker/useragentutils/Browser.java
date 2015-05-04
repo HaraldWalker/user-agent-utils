@@ -417,14 +417,6 @@ public enum Browser {
         return false;
     }
 	
-    private Browser checkUserAgent(String agentString) {
-        if (agentString == null) {
-            return null;
-        }
-        String agentLowercaseString = agentString.toLowerCase();
-        return checkUserAgentLowercase(agentLowercaseString);
-    }
-
     private Browser checkUserAgentLowercase(String agentLowercaseString) {
         if (this.isInUserAgentLowercaseString(agentLowercaseString)) {
 
