@@ -300,7 +300,7 @@ public enum OperatingSystem {
     /**
      * Checks if the given user-agent does not contain one of the tokens which should not match.
      * In most cases there are no excluding tokens, so the impact should be small.
-     * @param agentString
+     * @param agentLowerCaseString
      * @return
      */
     private boolean containsExcludeTokenLowercase(final String agentLowerCaseString) {

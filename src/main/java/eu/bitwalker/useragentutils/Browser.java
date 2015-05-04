@@ -393,28 +393,7 @@ public enum Browser {
     }
 
     private boolean isInUserAgentLowercaseString(String agentStringLowerCase) {
-        for (String alias : aliases)
-        {
-            if (agentStringLowerCase.contains(alias))
-                return true;
-        }
-        return false;
-    }
-	
-    /**
-     * Checks if the given user-agent does not contain one of the tokens which should not match.
-     * In most cases there are no excluding tokens, so the impact should be small.
-     * @param agentString
-     * @return
-     */
-    private boolean containsExcludeTokenLowercase(String agentStringLowerCase) {
-        if (excludeList != null) {
-            for (String exclude : excludeList) {
-                if (agentStringLowerCase.contains(exclude))
-                    return true;
-            }
-        }
-        return false;
+        return Utils.contains(agentStringLowerCase, aliases);
     }
 	
     private Browser checkUserAgentLowercase(String agentLowercaseString) {
@@ -430,7 +409,7 @@ public enum Browser {
             }
 
             // if children didn't match we continue checking the current to prevent false positives
-            if (!this.containsExcludeTokenLowercase(agentLowercaseString)) {
+            if (!Utils.contains(agentLowercaseString, excludeList)) {
                 return this;
             }
 

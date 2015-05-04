@@ -14,8 +14,8 @@ public class Utils {
     static boolean contains(String str, String[] strArr) {
         if (strArr == null)
             return false;
-        for (int i = 0; i < strArr.length; i++) {
-            if (str.contains(strArr[i])) {
+        for (String arrStr : strArr) {
+            if (str.contains(arrStr)) {
                 return true;
             }
         }
