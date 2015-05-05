@@ -76,7 +76,7 @@ public enum Manufacturer {
 	/**
 	 * Hewlett-Packard Company, previously Palm
 	 */
-	HP(8, "Hewlet Packard"),
+	HP(8, "Hewlett Packard"),
 	/**
 	 * Sony Ericsson Mobile Communications AB
 	 */
