@@ -38,6 +38,7 @@
 package eu.bitwalker.useragentutils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -280,22 +281,30 @@ public enum Browser {
 	private final Manufacturer manufacturer;
 	private final RenderingEngine renderingEngine;
 	private final Browser parent;
-	private List<Browser> children;
-	private Pattern versionRegEx;
-	private static List<Browser> topLevelBrowsers;
+	private final List<Browser> children = new ArrayList<Browser>();
+	private final Pattern versionRegEx;
+	
+	// we need this construct, because instances of an Enum class are loaded before its static initializers
+	private static final List<Browser> topLevelBrowsers = Collections.unmodifiableList(Holder.topLevelBrowsers);
+	private static final class Holder {
+		static final List<Browser> topLevelBrowsers = new ArrayList<Browser>();
+	}
 	
 	private Browser(Manufacturer manufacturer, Browser parent, int versionId, String name, String[] aliases, String[] exclude, BrowserType browserType, RenderingEngine renderingEngine, String versionRegexString) {
 		this.id =  (short) ( ( manufacturer.getId() << 8) + (byte) versionId);
 		this.name = name;
 		this.parent = parent;
-		this.children = new ArrayList<Browser>();
 		this.aliases = toLowerCase(aliases);
 		this.excludeList = toLowerCase(exclude);
 		this.browserType = browserType;
 		this.manufacturer = manufacturer;
 		this.renderingEngine = renderingEngine;
+    
 		if (versionRegexString != null)
 			this.versionRegEx = Pattern.compile(versionRegexString);
+		else
+			this.versionRegEx = null;
+      
 		if (this.parent == null) 
 			addTopLevelBrowser(this);
 		else 
@@ -311,12 +320,9 @@ public enum Browser {
     return res;
   }
 
-
 	// create collection of top level browsers during initialization
 	private static void addTopLevelBrowser(Browser browser) {
-		if(topLevelBrowsers == null)
-			topLevelBrowsers = new ArrayList<Browser>();	
-		topLevelBrowsers.add(browser);
+		Holder.topLevelBrowsers.add(browser);
 	}
 	
 	public short getId() {
@@ -471,7 +477,7 @@ public enum Browser {
 	 * @param agentString
 	 * @return Browser
 	 */
-	public static Browser parseUserAgentString(String agentString, List<Browser> browsers)
+	public static Browser parseUserAgentString(String agentString, Iterable<Browser> browsers)
 	{
 		for (Browser browser : browsers) {
 			Browser match = browser.checkUserAgent(agentString);
