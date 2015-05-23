@@ -425,6 +425,11 @@ public class BrowserTest {
 			"Mozilla/5.0 (iPad; CPU OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML like Gecko) Coast/1.1.2.64598 Mobile/11B511 Safari/7534.48.3"
 		};
 	
+	String[] operaMobile = {
+			"Mozilla/5.0 (Linux; Android 2.3.4; MT11i Build/4.0.2.A.0.62) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.123 Mobile Safari/537.22 OPR/14.0.1025.52315",
+			"Mozilla/5.0 (Linux; Android 4.1.2; HTC One SV Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Mobile Safari/537.36 OPR/28.0.1764.90386"
+	};
+	
 	String[] camino2 = {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en; rv:1.9.0.19) Gecko/2010111021 Camino/2.0.6 (MultiLang) (like Firefox/3.0.19)",
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en; rv:1.9.0.18) Gecko/2010021619 Camino/2.0.2 (like Firefox/3.0.18)"
@@ -544,6 +549,8 @@ public class BrowserTest {
         testVersions("Windows-RSS-Platform/2.0 (IE 11.0; Windows NT 6.1)", new Version("11.0", "11", "0"));
         testVersions("Mozilla/5.0 (iPad; CPU OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Coast/1.1.3.65998 Mobile/11B511 Safari/7534.48.3", new Version("1.1.3.65998", "1", "1"));
         testVersions("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36 OPR/23.0.1522.60", new Version("23.0.1522.60", "23", "0"));
+        testVersions("Mozilla/5.0 (Linux; Android 4.1.2; HTC One SV Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Mobile Safari/537.36 OPR/28.0.1764.90386", new Version("28.0.1764.90386", "28", "0"));
+
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {
@@ -615,6 +622,7 @@ public class BrowserTest {
 		testAgents(appleMail, Browser.APPLE_WEB_KIT);
 		testAgents(omniWeb, Browser.OMNIWEB);
 		testAgents(operaMini, Browser.OPERA_MINI);
+		testAgents(operaMobile, Browser.OPERA_MOBILE);
 		testAgents(opera9, Browser.OPERA9);
 		testAgents(opera, Browser.OPERA);
 		testAgents(opera10, Browser.OPERA10);
