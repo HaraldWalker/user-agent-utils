@@ -326,7 +326,8 @@ public class OperatingSystemTest {
 	};
 	
 	String[] windows10 = {
-			"Mozilla/5.0 (Windows NT 6.4; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0 Build ID: 20141001101141"
+			"Mozilla/5.0 (Windows NT 6.4; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0 Build ID: 20141001101141",
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0"
 	};
 	
 	String[] windowsMobile7 = {
