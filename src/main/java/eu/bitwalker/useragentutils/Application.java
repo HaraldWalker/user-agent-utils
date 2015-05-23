@@ -84,14 +84,14 @@ public enum Application {
 	private final ApplicationType applicationType;
 	private final Manufacturer manufacturer;
 
-	private Application(Manufacturer manufacturer, int versionId, String name,
-			String[] aliases, ApplicationType applicationType) {
-		this.id = (short) ((manufacturer.getId() << 8) + (byte) versionId);
-		this.name = name;
-		this.aliases = aliases;
-		this.applicationType = applicationType;
-		this.manufacturer = manufacturer;
-	}
+    private Application(Manufacturer manufacturer, int versionId, String name,
+        String[] aliases, ApplicationType applicationType) {
+        this.id = (short) ((manufacturer.getId() << 8) + (byte) versionId);
+        this.name = name;
+        this.aliases = Utils.toLowerCase(aliases);
+        this.applicationType = applicationType;
+        this.manufacturer = manufacturer;
+    }
 
 	public short getId() {
 		return id;
@@ -115,32 +115,34 @@ public enum Application {
 		return manufacturer;
 	}
 
-	/*
-	 * Checks if the given referrer string matches to the application. Only
-	 * checks for one specific application.
-	 */
-	public boolean isInReferrerString(String referrerString) {
-		for (String alias : aliases) {
-			if (referrerString.toLowerCase().indexOf(alias.toLowerCase()) != -1)
-				return true;
-		}
-		return false;
-	}
+    /*
+     * Checks if the given referrer string matches to the application. Only
+     * checks for one specific application.
+     */
+    public boolean isInReferrerString(String referrerString) {
+        final String referrerStringLowercase = referrerString.toLowerCase();
+        return isInReferrerStringLowercase(referrerStringLowercase);
+    }
 
-	/*
-	 * Iterates over all Application to compare the signature with the referrer
-	 * string. If no match can be found Application.UNKNOWN will be returned.
-	 */
-	public static Application parseReferrerString(String referrerString) {
-		// skip the empty and "-" referrer
-		if (referrerString != null && referrerString.length() > 1) {
-			for (Application applicationInList : Application.values()) {
-				if (applicationInList.isInReferrerString(referrerString))
-					return applicationInList;
-			}
-		}
-		return Application.UNKNOWN;
-	}
+    private boolean isInReferrerStringLowercase(final String referrerStringLowercase) {
+        return Utils.contains(referrerStringLowercase, aliases);
+    }
+
+    /*
+     * Iterates over all Application to compare the signature with the referrer
+     * string. If no match can be found Application.UNKNOWN will be returned.
+     */
+    public static Application parseReferrerString(String referrerString) {
+        // skip the empty and "-" referrer
+        if (referrerString != null && referrerString.length() > 1) {
+            String referrerStringLowercase = referrerString.toLowerCase();
+            for (Application applicationInList : Application.values()) {
+                if (applicationInList.isInReferrerStringLowercase(referrerStringLowercase))
+                    return applicationInList;
+            }
+        }
+        return Application.UNKNOWN;
+    }
 
 	/**
 	 * Returns the enum constant of this type with the specified id. Throws
