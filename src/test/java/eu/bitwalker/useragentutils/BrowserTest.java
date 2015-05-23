@@ -503,6 +503,12 @@ public class BrowserTest {
 			"Mozilla/5.0 (BB10; Kbd) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.1.0.1485 Mobile Safari/537.10+"
 	};
 	
+	String[] vivaldi = {
+			"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.89 Vivaldi/1.0.83.38 Safari/537.36",
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.114 Safari/537.36 Vivaldi/1.0.111.2",								
+			"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.114 Safari/537.36 Vivaldi/1.0.111.2",
+	};
+	
 	// proxy server with fake browser reference
 	String[] proxy = {
 			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
@@ -657,6 +663,7 @@ public class BrowserTest {
 		testAgents(appStore, Browser.APPLE_APPSTORE);
 		testAgents(airApp, Browser.ADOBE_AIR);
 		testAgents(blackberry10, Browser.BLACKBERRY10);
+		testAgents(vivaldi, Browser.VIVALDI);
 	}
 	
 	@Test
