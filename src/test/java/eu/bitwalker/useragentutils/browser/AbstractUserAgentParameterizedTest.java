@@ -22,21 +22,21 @@ public abstract class AbstractUserAgentParameterizedTest {
 
 	private final Browser expectedBrowser;
 
-	private final String osExpected;
+	private final OperatingSystem expectedOS;
 
-	private final String browserVersionExpected;
+	private final String expectedBrowserVersion;
 
 	/**
 	 * @param userAgentValue
 	 * @param browserExpected
 	 */
 	public AbstractUserAgentParameterizedTest(String userAgentValue,
-			Browser expectedBrowser, String browserVersionExpected,
-			String osExpected) {
+			Browser expectedBrowser, String expectedBrowserVersion,
+			OperatingSystem expectedOS) {
 		this.userAgentValue = userAgentValue;
 		this.expectedBrowser = expectedBrowser;
-		this.browserVersionExpected = browserVersionExpected;
-		this.osExpected = osExpected;
+		this.expectedBrowserVersion = expectedBrowserVersion;
+		this.expectedOS = expectedOS;
 	}
 
 	@Test
@@ -47,13 +47,13 @@ public abstract class AbstractUserAgentParameterizedTest {
 
 		Version browserVersion = userAgent.getBrowserVersion();
 		if (null != browserVersion) {
-			assertEquals(this.browserVersionExpected, browserVersion.toString());
+			assertEquals(this.expectedBrowserVersion, browserVersion.toString());
 		} else {
-			assertEquals(this.browserVersionExpected, browserVersion);
+			assertEquals(this.expectedBrowserVersion, browserVersion);
 		}
 
 		OperatingSystem os = userAgent.getOperatingSystem();
-		assertEquals(osExpected, os.toString());
+		assertEquals(expectedOS, os);
 	}
 
 }
