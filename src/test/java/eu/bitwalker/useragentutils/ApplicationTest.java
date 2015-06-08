@@ -37,13 +37,10 @@
 
 package eu.bitwalker.useragentutils;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import org.junit.Test;
 
@@ -70,18 +67,11 @@ public class ApplicationTest {
 	 */
 	@Test
 	public void testUniqueIdValues() {
-
 		List<Short> retrievedIdValues = new ArrayList<Short>();
 
 		for (Application application : Application.values()) {
 			assertTrue(!retrievedIdValues.contains(application.getId()));
 			retrievedIdValues.add(application.getId());
-		}
-
-		Set<Application> values = new HashSet<Application>();
-		for (Application app : Application.values()) {
-			assertFalse(values.contains(app));
-			values.add(app);
 		}
 	}
 
