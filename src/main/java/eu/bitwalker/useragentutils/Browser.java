@@ -139,9 +139,9 @@ public enum Browser {
 			
 	OMNIWEB(		Manufacturer.OTHER, null, 2, "Omniweb", new String[] { "OmniWeb" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // 
 
-	SAFARI(			Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)" ),  // before AppleWebKit
+	SAFARI(			Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "OPR/", "Coast/", "Web Preview","Googlebot-Mobile", "Applebot", "Vivaldi", "BingPreview", "bingbot", "CFNetwork" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)" ),  // before AppleWebKit
 		BLACKBERRY10( Manufacturer.BLACKBERRY, Browser.SAFARI, 10, "BlackBerry", new String[] { "BB10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null),
-		MOBILE_SAFARI(	Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new String[] { "Mobile Safari","Mobile/" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),  // before Safari
+		MOBILE_SAFARI(	Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new String[] { "Mobile Safari","Mobile/" }, new String[] { "OPR/", "Coast/", "Googlebot-Mobile", "BingPreview", "bingbot", "Google Web Preview", "CFNetwork" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),  // before Safari
 		SILK(			Manufacturer.AMAZON, Browser.SAFARI, 15, "Silk", new String[] { "Silk/" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Silk\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\-[\\w]+)?)" ),  // http://en.wikipedia.org/wiki/Amazon_Silk
 		SAFARI8(		Manufacturer.APPLE, Browser.SAFARI, 8, "Safari 8", new String[] { "Version/8" }, new String[] { "Applebot" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ),  // before AppleWebKit
 		SAFARI7(		Manufacturer.APPLE, Browser.SAFARI, 7, "Safari 7", new String[] { "Version/7" }, new String[]{"bing"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ),  // before AppleWebKit
@@ -262,7 +262,7 @@ public enum Browser {
 	
 	MOZILLA(		Manufacturer.MOZILLA, null, 1, "Mozilla", new String[] { "Mozilla", "Moozilla" }, new String[] {"ggpht.com"}, BrowserType.WEB_BROWSER, RenderingEngine.OTHER, null), // rest of the mozilla browsers
 	
-	CFNETWORK(		Manufacturer.OTHER, null, 6, "CFNetwork", new String[] { "CFNetwork" }, null, BrowserType.UNKNOWN, RenderingEngine.OTHER, null ), // Mac OS X cocoa library
+	CFNETWORK(		Manufacturer.OTHER, null, 6, "CFNetwork", new String[] { "CFNetwork" }, null, BrowserType.UNKNOWN, RenderingEngine.OTHER, "CFNetwork/(([\\d]+)(?:\\.([\\d]))?(?:\\.([\\d]+))?)" ), // Mac OS X cocoa library
 	
 	EUDORA(			Manufacturer.OTHER, null, 7, "Eudora", new String[] { "Eudora", "EUDORA" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.OTHER, null ),  // email client by Qualcomm
 	
