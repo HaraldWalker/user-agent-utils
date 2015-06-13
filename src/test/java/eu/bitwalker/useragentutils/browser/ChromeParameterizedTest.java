@@ -66,7 +66,12 @@ public class ChromeParameterizedTest extends AbstractUserAgentParameterizedTest 
 				// chrome29
 				{
 						"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36",
-						Browser.CHROME29, "29.0.1547.65", OperatingSystem.MAC_OS_X }
+						Browser.CHROME29, "29.0.1547.65", OperatingSystem.MAC_OS_X },
+				{
+							"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36",
+						Browser.CHROME43, "43.0.2357.124", OperatingSystem.MAC_OS_X
+				}
+					
 		});
 	}
 }
