@@ -11,7 +11,7 @@ https://github.com/HaraldWalker/user-agent-utils/tree/master
 Support me and buy me a beer:  
 <a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
 
-New in Version 1.16 (unreleased)
+New in Version 1.17 (unreleased)
 -------------------
 TBA
 
@@ -27,7 +27,7 @@ Add dependency:
 <dependency>
    <groupId>eu.bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.15</version>
+   <version>1.16</version>
 </dependency>
 ```
 
@@ -36,7 +36,7 @@ Add dependency for snapshot releases:
 <dependency>
    <groupId>eu.bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.16-SNAPSHOT</version>
+   <version>1.17-SNAPSHOT</version>
 </dependency>
 ```
 
@@ -46,6 +46,20 @@ Contributors
 
 Changelog
 ---------
+
+1.16
+----
+- iOS 8.2, 8.3, 8.4 and 9 added
+- Chrome updated with latest versions
+- Firefox updated with latest versions 
+- Updated Opera browser detection
+- Xbox OS and Internet Explorer for Xbox added  
+- Improved CFNETWORK browser detection 
+- Added Vivaldi browser
+- Improved Windows 10 detection
+- Improved bot detection
+- Added Android 5 tablet detection
+- Performance improvements
 
 1.15
 ----
