@@ -54,9 +54,9 @@ public enum OperatingSystem {
 	WINDOWS(		Manufacturer.MICROSOFT,null,1, "Windows", new String[] { "Windows" }, new String[] { "Palm", "ggpht.com"  }, DeviceType.COMPUTER, null ), // catch the rest of older Windows systems (95, NT,...)
 		WINDOWS_10(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,24, "Windows 10", new String[] { "Windows NT 6.4", "Windows NT 10" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 10 is called 6.4 LOL
 		WINDOWS_81(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,23, "Windows 8.1", new String[] { "Windows NT 6.3" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 8.1 is called 6.3 LOL
-		WINDOWS_8(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new String[] { "Windows NT 6.2" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 8 is called 6.2 LOL
-		WINDOWS_7(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new String[] { "Windows NT 6.1" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 7 is called 6.1 LOL
-		WINDOWS_VISTA(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new String[] { "Windows NT 6" }, null, DeviceType.COMPUTER, null ), // before Win
+		WINDOWS_8(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new String[] { "Windows NT 6.2" }, new String[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ), // before Win, yes, Windows 8 is called 6.2 LOL
+		WINDOWS_7(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new String[] { "Windows NT 6.1" }, new String[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ), // before Win, yes, Windows 7 is called 6.1 LOL
+		WINDOWS_VISTA(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new String[] { "Windows NT 6" }, new String[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ), // before Win
 		WINDOWS_2000(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,15, "Windows 2000", new String[] { "Windows NT 5.0" }, null, DeviceType.COMPUTER, null ), // before Win
 		WINDOWS_XP(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,10, "Windows XP", new String[] { "Windows NT 5"}, new String[] { "ggpht.com"  }, DeviceType.COMPUTER, null ), // before Win, 5.1 and 5.2 are basically XP systems
 		WINDOWS_PHONE8_1(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 53, "Windows Phone 8.1", new String[] { "Windows Phone 8.1" },  null, DeviceType.MOBILE, null ), // before Win
@@ -64,6 +64,7 @@ public enum OperatingSystem {
 		WINDOWS_MOBILE7(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 51, "Windows Phone 7", new String[] { "Windows Phone OS 7" },  null, DeviceType.MOBILE, null ), // should be Windows Phone 7 but to keep it compatible we'll leave the name as is.
 		WINDOWS_MOBILE(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 50, "Windows Mobile", new String[] { "Windows CE" },  null, DeviceType.MOBILE, null ), // before Win
 		WINDOWS_98(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,5, "Windows 98", new String[] { "Windows 98","Win98" },  new String[] { "Palm" }, DeviceType.COMPUTER, null ), // before Win 
+		XBOX_OS(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS,62, "Xbox OS",new String[]{"Xbox","Xbox One"},new String[]{}, DeviceType.GAME_CONSOLE, null),
 
 	ANDROID(		Manufacturer.GOOGLE,null, 0, "Android", new String[] { "Android" },  null, DeviceType.MOBILE, null ),
         ANDROID5(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 5, "Android 5.x", new String[] { "Android 5", "Android-5" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
