@@ -81,21 +81,22 @@ public class UserAgent implements Serializable
 		this.id = (( operatingSystem.getId() << 16) + browser.getId());
 	}
 	
-	public UserAgent(String userAgentString)
-	{
-		Browser browser = Browser.parseUserAgentString(userAgentString);
-		
-		OperatingSystem operatingSystem = OperatingSystem.UNKNOWN;
-		
-		// BOTs don't have an interesting OS for us
-		if (browser != Browser.BOT)
-			operatingSystem = OperatingSystem.parseUserAgentString(userAgentString);
-		
-		this.operatingSystem = operatingSystem;
-		this.browser = browser;
-		this.id = (( operatingSystem.getId() << 16) + browser.getId());
-		this.userAgentString = userAgentString;
-	}
+    public UserAgent(String userAgentString)
+    {
+        String userAgentLowercaseString = userAgentString == null ? null : userAgentString.toLowerCase();
+        Browser browser = Browser.parseUserAgentLowercaseString(userAgentLowercaseString);
+
+        OperatingSystem operatingSystem = OperatingSystem.UNKNOWN;
+
+        // BOTs don't have an interesting OS for us
+        if (browser != Browser.BOT)
+            operatingSystem = OperatingSystem.parseUserAgentLowercaseString(userAgentLowercaseString);
+
+        this.operatingSystem = operatingSystem;
+        this.browser = browser;
+        this.id = ((operatingSystem.getId() << 16) + browser.getId());
+        this.userAgentString = userAgentString;
+    }
 
 	
 	/**

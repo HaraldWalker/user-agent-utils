@@ -167,9 +167,6 @@ public class BrowserTest {
             "Windows-RSS-Platform/2.0 (IE 11.0; Windows NT 6.1)"
     };
     
-    
-	
-	
 	String[] lotusNotes = new String[] {
 		"Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)",
 		"Mozilla/4.0 (compatible; Lotus-Notes/6.0; Windows-NT)"
@@ -415,6 +412,10 @@ public class BrowserTest {
 			"	Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36 OPR/24.0.1558.51 (Edition Next)"
 		};
 	
+	String[] opera27 = {
+			"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36 OPR/27.0.1689.76"
+	};
+	
 	String[] operaMini = {
 		"Opera/9.60 (J2ME/MIDP; Opera Mini/4.2.13337/458; U; en) Presto/2.2.0",
 		"Opera/9.80 (J2ME/MIDP; Opera Mini/5.0.16823/1428; U; en) Presto/2.2.0"
@@ -424,6 +425,11 @@ public class BrowserTest {
 			"Mozilla/5.0 (iPad; CPU OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Coast/1.0.2.62956 Mobile/10B329 Safari/7534.48.3 ",
 			"Mozilla/5.0 (iPad; CPU OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML like Gecko) Coast/1.1.2.64598 Mobile/11B511 Safari/7534.48.3"
 		};
+	
+	String[] operaMobile = {
+			"Mozilla/5.0 (Linux; Android 2.3.4; MT11i Build/4.0.2.A.0.62) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.123 Mobile Safari/537.22 OPR/14.0.1025.52315",
+			"Mozilla/5.0 (Linux; Android 4.1.2; HTC One SV Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Mobile Safari/537.36 OPR/28.0.1764.90386"
+	};
 	
 	String[] camino2 = {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en; rv:1.9.0.19) Gecko/2010111021 Camino/2.0.6 (MultiLang) (like Firefox/3.0.19)",
@@ -447,7 +453,22 @@ public class BrowserTest {
 			"Mozilla/5.0 (compatible; Googlebot/2.1; http://www.google.com/bot.html)",
 			"Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
 			"Googlebot-Image/1.0",
-			"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.8 (KHTML, like Gecko; Google Web Preview) Chrome/19.0.1084.36 Safari/536.8"
+			"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.8 (KHTML, like Gecko; Google Web Preview) Chrome/19.0.1084.36 Safari/536.8",
+			"Mediapartners-Google",
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5 (Applebot/0.1)",
+			"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b",
+			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0; BingPreview/1.0b) like Gecko",
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53 BingPreview/1.0b",
+			"Version/7.0 Mobile/11A465 Safari/9537.53 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",
+			"Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko; Google Web Preview) Version/5.1 Mobile/9A334 Safari/7534.48.3",
+			"Mozilla/5.0 (X11; Linux x86_64; rv:10.0.12) Gecko/20100101 Firefox/21.0 WordPress.com mShots",
+			"Mozilla/5.0 (compatible; Seznam screenshot-generator 2.1; +http://fulltext.sblog.cz/screenshot/)",
+			"facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
+			"Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)",
+			"Mozilla/5.0 (compatible; YandexMarket/1.0; +http://yandex.com/bots)",
+			"Mozilla/5.0 (compatible; Ask Jeeves/Teoma; +http://about.ask.com/en/docs/about/webmasters.shtml)",
+			"ThumbSniper (http://thumbsniper.com)",
+			"Phantom.js bot"
 	};
 	
 	String[] mobileBot = {
@@ -490,6 +511,12 @@ public class BrowserTest {
 	String[] blackberry10 = {
 			"Mozilla/5.0 (BB10; Touch) AppleWebKit/537.1 (KHTML, like Gecko) Version/10.0.0.1337 Mobile Safari/537.1",
 			"Mozilla/5.0 (BB10; Kbd) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.1.0.1485 Mobile Safari/537.10+"
+	};
+	
+	String[] vivaldi = {
+			"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.89 Vivaldi/1.0.83.38 Safari/537.36",
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.114 Safari/537.36 Vivaldi/1.0.111.2",								
+			"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.114 Safari/537.36 Vivaldi/1.0.111.2",
 	};
 	
 	// proxy server with fake browser reference
@@ -542,6 +569,8 @@ public class BrowserTest {
         testVersions("Windows-RSS-Platform/2.0 (IE 11.0; Windows NT 6.1)", new Version("11.0", "11", "0"));
         testVersions("Mozilla/5.0 (iPad; CPU OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Coast/1.1.3.65998 Mobile/11B511 Safari/7534.48.3", new Version("1.1.3.65998", "1", "1"));
         testVersions("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36 OPR/23.0.1522.60", new Version("23.0.1522.60", "23", "0"));
+        testVersions("Mozilla/5.0 (Linux; Android 4.1.2; HTC One SV Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Mobile Safari/537.36 OPR/28.0.1764.90386", new Version("28.0.1764.90386", "28", "0"));
+
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {
@@ -613,6 +642,7 @@ public class BrowserTest {
 		testAgents(appleMail, Browser.APPLE_WEB_KIT);
 		testAgents(omniWeb, Browser.OMNIWEB);
 		testAgents(operaMini, Browser.OPERA_MINI);
+		testAgents(operaMobile, Browser.OPERA_MOBILE);
 		testAgents(opera9, Browser.OPERA9);
 		testAgents(opera, Browser.OPERA);
 		testAgents(opera10, Browser.OPERA10);
@@ -626,6 +656,7 @@ public class BrowserTest {
 		testAgents(opera20, Browser.OPERA20);
 		testAgents(opera23, Browser.OPERA23);
 		testAgents(opera24, Browser.OPERA24);
+		testAgents(opera27, Browser.OPERA27);
 		testAgents(operaCoast, Browser.COAST1);
 		testAgents(camino2, Browser.CAMINO2);
 		testAgents(camino, Browser.CAMINO);		
@@ -642,6 +673,7 @@ public class BrowserTest {
 		testAgents(appStore, Browser.APPLE_APPSTORE);
 		testAgents(airApp, Browser.ADOBE_AIR);
 		testAgents(blackberry10, Browser.BLACKBERRY10);
+		testAgents(vivaldi, Browser.VIVALDI);
 	}
 	
 	@Test

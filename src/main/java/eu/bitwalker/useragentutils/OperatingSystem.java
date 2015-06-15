@@ -52,11 +52,11 @@ public enum OperatingSystem {
 	 * Windows Mobile / Windows CE. Exact version unknown.
 	 */
 	WINDOWS(		Manufacturer.MICROSOFT,null,1, "Windows", new String[] { "Windows" }, new String[] { "Palm", "ggpht.com"  }, DeviceType.COMPUTER, null ), // catch the rest of older Windows systems (95, NT,...)
-		WINDOWS_10(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,24, "Windows 10", new String[] { "Windows NT 6.4" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 10 is called 6.4 LOL
+		WINDOWS_10(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,24, "Windows 10", new String[] { "Windows NT 6.4", "Windows NT 10" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 10 is called 6.4 LOL
 		WINDOWS_81(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,23, "Windows 8.1", new String[] { "Windows NT 6.3" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 8.1 is called 6.3 LOL
-		WINDOWS_8(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new String[] { "Windows NT 6.2" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 8 is called 6.2 LOL
-		WINDOWS_7(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new String[] { "Windows NT 6.1" }, null, DeviceType.COMPUTER, null ), // before Win, yes, Windows 7 is called 6.1 LOL
-		WINDOWS_VISTA(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new String[] { "Windows NT 6" }, null, DeviceType.COMPUTER, null ), // before Win
+		WINDOWS_8(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new String[] { "Windows NT 6.2" }, new String[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ), // before Win, yes, Windows 8 is called 6.2 LOL
+		WINDOWS_7(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new String[] { "Windows NT 6.1" }, new String[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ), // before Win, yes, Windows 7 is called 6.1 LOL
+		WINDOWS_VISTA(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new String[] { "Windows NT 6" }, new String[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ), // before Win
 		WINDOWS_2000(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,15, "Windows 2000", new String[] { "Windows NT 5.0" }, null, DeviceType.COMPUTER, null ), // before Win
 		WINDOWS_XP(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,10, "Windows XP", new String[] { "Windows NT 5"}, new String[] { "ggpht.com"  }, DeviceType.COMPUTER, null ), // before Win, 5.1 and 5.2 are basically XP systems
 		WINDOWS_PHONE8_1(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 53, "Windows Phone 8.1", new String[] { "Windows Phone 8.1" },  null, DeviceType.MOBILE, null ), // before Win
@@ -64,6 +64,7 @@ public enum OperatingSystem {
 		WINDOWS_MOBILE7(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 51, "Windows Phone 7", new String[] { "Windows Phone OS 7" },  null, DeviceType.MOBILE, null ), // should be Windows Phone 7 but to keep it compatible we'll leave the name as is.
 		WINDOWS_MOBILE(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 50, "Windows Mobile", new String[] { "Windows CE" },  null, DeviceType.MOBILE, null ), // before Win
 		WINDOWS_98(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,5, "Windows 98", new String[] { "Windows 98","Win98" },  new String[] { "Palm" }, DeviceType.COMPUTER, null ), // before Win 
+		XBOX_OS(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS,62, "Xbox OS",new String[]{"xbox"},new String[]{}, DeviceType.GAME_CONSOLE, null),
 
 	ANDROID(		Manufacturer.GOOGLE,null, 0, "Android", new String[] { "Android" },  null, DeviceType.MOBILE, null ),
         ANDROID5(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 5, "Android 5.x", new String[] { "Android 5", "Android-5" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
@@ -99,13 +100,21 @@ public enum OperatingSystem {
 	 * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
 	 */	
 	IOS(			Manufacturer.APPLE,null, 2, "iOS", new String[] { "iPhone OS", "like Mac OS X" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS9_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 90, "iOS 9 (iPhone)", new String[] { "iPhone OS 9" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS8_4_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 49, "iOS 8.4 (iPhone)", new String[] { "iPhone OS 8_4" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS8_3_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 48, "iOS 8.3 (iPhone)", new String[] { "iPhone OS 8_3" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS8_2_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 47, "iOS 8.2 (iPhone)", new String[] { "iPhone OS 8_2" },  null, DeviceType.MOBILE, null ), // version that added Apple Watch support
 		iOS8_1_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 46, "iOS 8.1 (iPhone)", new String[] { "iPhone OS 8_1" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
-		iOS8_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 45, "iOS 8 (iPhone)", new String[] { "iPhone OS 8_0" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS8_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 45, "iOS 8 (iPhone)", new String[] { "iPhone OS 8" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS7_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 44, "iOS 7 (iPhone)", new String[] { "iPhone OS 7" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS6_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 43, "iOS 6 (iPhone)", new String[] { "iPhone OS 6" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS5_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new String[] { "iPhone OS 5" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS4_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new String[] { "iPhone OS 4" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		MAC_OS_X_IPAD(	Manufacturer.APPLE, OperatingSystem.IOS, 50, "Mac OS X (iPad)", new String[] { "iPad" },  null, DeviceType.TABLET, null ), // before Mac OS X
+		iOS9_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 58, "iOS 9 (iPad)", new String[] { "OS 9" },  null, DeviceType.TABLET, null ), // before Mac OS X
+		iOS8_4_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 57, "iOS 8.4 (iPad)", new String[] { "OS 8_4" },  null, DeviceType.TABLET, null ), // before Mac OS X
+		iOS8_3_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 56, "iOS 8.3 (iPad)", new String[] { "OS 8_3" },  null, DeviceType.TABLET, null ), // before Mac OS X
+		iOS8_2_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 55, "iOS 8.2 (iPad)", new String[] { "OS 8_2" },  null, DeviceType.TABLET, null ), // before Mac OS X
 		iOS8_1_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 54, "iOS 8.1 (iPad)", new String[] { "OS 8_1" },  null, DeviceType.TABLET, null ), // before Mac OS X
 		iOS8_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 53, "iOS 8 (iPad)", new String[] { "OS 8_0" },  null, DeviceType.TABLET, null ), // before Mac OS X
 		iOS7_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 52, "iOS 7 (iPad)", new String[] { "OS 7" },  null, DeviceType.TABLET, null ), // before Mac OS X
@@ -210,25 +219,26 @@ public enum OperatingSystem {
 	private Pattern versionRegEx;
 	private static List<OperatingSystem> topLevelOperatingSystems;
 	
-	private OperatingSystem(Manufacturer manufacturer, OperatingSystem parent, int versionId, String name, String[] aliases,
-		 String[] exclude, DeviceType deviceType, String versionRegexString) {
-		this.manufacturer = manufacturer;
-		this.parent = parent;
-		this.children = new ArrayList<OperatingSystem>();
-		// combine manufacturer and version id to one unique id. 
-		this.id =  (short) ( ( manufacturer.getId() << 8) + (byte) versionId);
-		this.name = name;
-		this.aliases = aliases;
-		this.excludeList = exclude;
-		this.deviceType = deviceType;
-		if (versionRegexString != null) { // not implemented yet
-			this.versionRegEx = Pattern.compile(versionRegexString);
-		}
-		if (this.parent == null)
-			addTopLevelOperatingSystem(this);
-		else
-			this.parent.children.add(this);
-	}
+    private OperatingSystem(Manufacturer manufacturer, OperatingSystem parent, int versionId, String name,
+        String[] aliases,
+        String[] exclude, DeviceType deviceType, String versionRegexString) {
+        this.manufacturer = manufacturer;
+        this.parent = parent;
+        this.children = new ArrayList<OperatingSystem>();
+        // combine manufacturer and version id to one unique id.
+        this.id = (short) ((manufacturer.getId() << 8) + (byte) versionId);
+        this.name = name;
+        this.aliases = Utils.toLowerCase(aliases);
+        this.excludeList = Utils.toLowerCase(exclude);
+        this.deviceType = deviceType;
+        if (versionRegexString != null) { // not implemented yet
+            this.versionRegEx = Pattern.compile(versionRegexString);
+        }
+        if (this.parent == null)
+            addTopLevelOperatingSystem(this);
+        else
+            this.parent.children.add(this);
+    }
 
 	// create collection of top level operating systems during initialization
 	private static void addTopLevelOperatingSystem(OperatingSystem os) {
@@ -277,57 +287,53 @@ public enum OperatingSystem {
 		return manufacturer;
 	}
 
-	/**
-	 * Checks if the given user-agent string matches to the operating system. 
-	 * Only checks for one specific operating system. 
-	 * @param agentString
-	 * @return boolean
-	 */
-	public boolean isInUserAgentString(String agentString)
-	{		
-		for (String alias : aliases)
-		{
-			if (agentString != null && agentString.toLowerCase().indexOf(alias.toLowerCase()) != -1)
-				return true;
-		}	
-		return false;
-	}
+    /**
+     * Checks if the given user-agent string matches to the operating system. 
+     * Only checks for one specific operating system. 
+     * @param agentString
+     * @return boolean
+     */
+    public boolean isInUserAgentString(String agentString)
+    {
+        if (agentString == null) {
+            return false;
+        }
+        final String agentLowerCaseString = agentString.toLowerCase();
+        return isInUserAgentStringLowercase(agentLowerCaseString);
+    }
+
+    private boolean isInUserAgentStringLowercase(final String agentLowerCaseString) {
+        return Utils.contains(agentLowerCaseString, aliases);
+    }
 	
-	/**
-	 * Checks if the given user-agent does not contain one of the tokens which should not match.
-	 * In most cases there are no excluding tokens, so the impact should be small.
-	 * @param agentString
-	 * @return
-	 */
-	private boolean containsExcludeToken(String agentString)
-	{
-		if (excludeList != null) {
-			for (String exclude : excludeList) {
-				if (agentString != null && agentString.toLowerCase().indexOf(exclude.toLowerCase()) != -1)
-					return true;
-			}
-		}
-		return false;
-	}
+    /**
+     * Checks if the given user-agent does not contain one of the tokens which should not match.
+     * In most cases there are no excluding tokens, so the impact should be small.
+     * @param agentLowerCaseString
+     * @return
+     */
+    private boolean containsExcludeTokenLowercase(final String agentLowerCaseString) {
+        return Utils.contains(agentLowerCaseString, excludeList);
+    }
 		
-	private OperatingSystem checkUserAgent(String agentString) {
-		if (this.isInUserAgentString(agentString)) {
-			if (this.children.size() > 0) {
-				for (OperatingSystem childOperatingSystem : this.children) {
-					OperatingSystem match = childOperatingSystem.checkUserAgent(agentString);
-					if (match != null) { 
-						return match;
-					}
-				}
-			}
-			// if children didn't match we continue checking the current to prevent false positives
-			if (!this.containsExcludeToken(agentString)) {
-				return this;
-			}
-			
-		}
-		return null;
-	}
+    private OperatingSystem checkUserAgentLowercase(String agentStringLowercase) {
+        if (this.isInUserAgentStringLowercase(agentStringLowercase)) {
+            if (this.children.size() > 0) {
+                for (OperatingSystem childOperatingSystem : this.children) {
+                    OperatingSystem match = childOperatingSystem.checkUserAgentLowercase(agentStringLowercase);
+                    if (match != null) {
+                        return match;
+                    }
+                }
+            }
+            // if children didn't match we continue checking the current to prevent false positives
+            if (!this.containsExcludeTokenLowercase(agentStringLowercase)) {
+                return this;
+            }
+
+        }
+        return null;
+    }
 	
 	/**
 	 * Parses user agent string and returns the best match. 
@@ -339,25 +345,42 @@ public enum OperatingSystem {
 	{
 		return parseUserAgentString(agentString, topLevelOperatingSystems);
 	}
-	
-	/**
-	 * Parses the user agent string and returns the best match for the given operating systems. 
-	 * Returns OperatingSystem.UNKNOWN if there is no match.
-	 * Be aware that if the order of the provided operating systems is incorrect or the set is too limited it can lead to false matches!
-	 * @param agentString
-	 * @return OperatingSystem
-	 */
-	public static OperatingSystem parseUserAgentString(String agentString, List<OperatingSystem> operatingSystems)
-	{
-		for (OperatingSystem operatingSystem : operatingSystems)
-		{
-			OperatingSystem match = operatingSystem.checkUserAgent(agentString);
-			if (match != null) {
-				return match; // either current operatingSystem or a child object
-			}
-		}	
-		return OperatingSystem.UNKNOWN;
-	}
+
+    public static OperatingSystem parseUserAgentLowercaseString(String agentString)
+    {
+        if (agentString == null) {
+            return OperatingSystem.UNKNOWN;
+        }
+        return parseUserAgentLowercaseString(agentString, topLevelOperatingSystems);
+    }
+
+    /**
+     * Parses the user agent string and returns the best match for the given operating systems. 
+     * Returns OperatingSystem.UNKNOWN if there is no match.
+     * Be aware that if the order of the provided operating systems is incorrect or the set is too limited it can lead to false matches!
+     * @param agentString
+     * @return OperatingSystem
+     */
+    public static OperatingSystem parseUserAgentString(String agentString, List<OperatingSystem> operatingSystems)
+    {
+        if (agentString != null) {
+            final String agentLowercaseString = agentString.toLowerCase();
+            return parseUserAgentLowercaseString(agentLowercaseString, operatingSystems);
+        }
+        return OperatingSystem.UNKNOWN;
+    }
+
+    private static OperatingSystem parseUserAgentLowercaseString(final String agentLowercaseString,
+        List<OperatingSystem> operatingSystems) {
+        for (OperatingSystem operatingSystem : operatingSystems)
+        {
+            OperatingSystem match = operatingSystem.checkUserAgentLowercase(agentLowercaseString);
+            if (match != null) {
+                return match; // either current operatingSystem or a child object
+            }
+        }
+        return OperatingSystem.UNKNOWN;
+    }
 		
 	/**
 	 * Returns the enum constant of this type with the specified id.

@@ -11,14 +11,9 @@ https://github.com/HaraldWalker/user-agent-utils/tree/master
 Support me and buy me a beer:  
 <a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
 
-New in Version 1.15
+New in Version 1.16 (unreleased)
 -------------------
-- Safari 7 and 8 added
-- iOS 8.1 added
-- Wearable device category added with detection of Google Glass
-- Chrome OS added
-- Windows 10 added
-- Android 5 added
+TBA
 
 Javadoc
 -------
@@ -51,6 +46,15 @@ Contributors
 
 Changelog
 ---------
+
+1.15
+----
+- Safari 7 and 8 added
+- iOS 8.1 added
+- Wearable device category added with detection of Google Glass
+- Chrome OS added
+- Windows 10 added
+- Android 5 added
 
 1.14
 ----
