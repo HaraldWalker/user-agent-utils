@@ -4,3 +4,8 @@ target/
 .classpath
 .settings
 .DS_Store
+
+**/obj/*
+*.csproj.user
+*.sln.DotSettings.user
+*.suo
