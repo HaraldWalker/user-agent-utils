@@ -72,10 +72,14 @@ public enum BrowserType {
 	 * Application
 	 */
 	APP("Application"),
-	UNKNOWN("unknown");
+	UNKNOWN("unknown"), 
+	/**
+	 * SmartTv
+	 */
+	TV("SmartTv");
 	
 	private String name;
-	
+
 	private BrowserType(String name) {
 		this.name = name;
 	}
