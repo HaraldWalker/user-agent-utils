@@ -188,6 +188,11 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B401 Safari/600.1.4"
 	};
 	
+	String[] iPhone8_3 = 
+	{
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4"
+	};
+	
 	String[] iPods = {
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; nl-nl) AppleWebKit/420.1 (KHTML, like Gecko)",
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko)",
@@ -276,7 +281,10 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; Android 4.0.4; en-us; Glass 1 Build/IMM76L; XE7) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
 	};
 
-	
+	String[] android5_tablet = {
+			"Mozilla/5.0 (Linux; Android 5.0; Nexus 9 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Safari/537.36" // Nexus 9
+	};
+
 	String[] androidMobile = {
 			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
 	};
@@ -318,7 +326,8 @@ public class OperatingSystemTest {
 	};
 	
 	String[] windows10 = {
-			"Mozilla/5.0 (Windows NT 6.4; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0 Build ID: 20141001101141"
+			"Mozilla/5.0 (Windows NT 6.4; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0 Build ID: 20141001101141",
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0"
 	};
 	
 	String[] windowsMobile7 = {
@@ -409,6 +418,7 @@ public class OperatingSystemTest {
 		testAgents(iPhone7, OperatingSystem.iOS7_IPHONE);
 		testAgents(iPhone8, OperatingSystem.iOS8_IPHONE);
 		testAgents(iPhone8_1, OperatingSystem.iOS8_1_IPHONE);
+		testAgents(iPhone8_3, OperatingSystem.iOS8_3_IPHONE);
 		testAgents(iPods, OperatingSystem.MAC_OS_X_IPOD);
 		testAgents(iPadIos6, OperatingSystem.iOS6_IPAD);
 		testAgents(iPadIos7, OperatingSystem.iOS7_IPAD);
@@ -424,6 +434,7 @@ public class OperatingSystemTest {
 		testAgents(android3_tablet, OperatingSystem.ANDROID3_TABLET);
 		testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
 		testAgents(android4_wearable, OperatingSystem.ANDROID4_WEARABLE);
+		testAgents(android5_tablet, OperatingSystem.ANDROID5_TABLET);
 		testAgents(androidMobile, OperatingSystem.ANDROID_MOBILE);
 		testAgents(androidTablet, OperatingSystem.ANDROID_TABLET);
 		testAgents(chromeOS, OperatingSystem.CHROME_OS);
