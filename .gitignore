@@ -9,3 +9,4 @@ target/
 *.csproj.user
 *.sln.DotSettings.user
 *.suo
+src/main/csharp/packages

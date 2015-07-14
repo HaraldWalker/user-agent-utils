@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\main\csharp\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -43,15 +46,33 @@
         <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
       </ItemGroup>
     </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
-      </ItemGroup>
-    </Otherwise>
+    <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="eu\bitwalker\useragentutils\ApplicationParameterizedTest.cs" />
     <Compile Include="eu\bitwalker\useragentutils\ApplicationTest.cs" />
     <Compile Include="eu\bitwalker\useragentutils\BrowserTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\AbstractUserAgentParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\BlackberryParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\BotParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\CaminoParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\CFNetworkParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\ChromeMobileParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\ChromeParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\FirefoxParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\InternetExplorerMobileParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\InternetExplorerParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\InternetExplorerXboxParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\KonquerorParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\LotusParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\LynxParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\OperaParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\OthersParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\OutlookParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\SafariParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\suite\BrowserDetectTestSuite.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\ThunderbirdParameterizedTest.cs" />
+    <Compile Include="eu\bitwalker\useragentutils\browser\ToolParameterizedTest.cs" />
     <Compile Include="eu\bitwalker\useragentutils\ManufacturerTest.cs" />
     <Compile Include="eu\bitwalker\useragentutils\OperatingSystemTest.cs" />
     <Compile Include="eu\bitwalker\useragentutils\UserAgentTest.cs" />
@@ -63,6 +84,9 @@
       <Project>{34f8d196-30bc-4927-b256-4e8a3d0dd219}</Project>
       <Name>UserAgentUtils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

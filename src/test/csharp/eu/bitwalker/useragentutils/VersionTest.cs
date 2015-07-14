@@ -1,12 +1,13 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace eu.bitwalker.useragentutils
 {
-    [TestClass]
+
+
     public class VersionTest
     {
 
-        [TestMethod]
+        [Test]
         public void shouldCompareCorrectly()
         {
             Assert.IsTrue(new Version("2.5", "2", "5").CompareTo(new Version("3.1", "3", "1")) < 0);

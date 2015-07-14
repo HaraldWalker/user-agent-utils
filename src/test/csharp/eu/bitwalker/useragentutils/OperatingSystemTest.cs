@@ -37,16 +37,17 @@
 
 using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace eu.bitwalker.useragentutils
 {
 
-    /**
-     * @author harald -- @ported by thunder stumpges
-     *
-     */
-    [TestClass]
+
+/**
+ * @author harald
+ *
+ */
+
     public class OperatingSystemTest
     {
 
@@ -202,6 +203,11 @@ namespace eu.bitwalker.useragentutils
             "Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B401 Safari/600.1.4"
         };
 
+        private String[] iPhone8_3 =
+        {
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4"
+        };
+
         private String[] iPods =
         {
             "Mozilla/5.0 (iPod; U; CPU like Mac OS X; nl-nl) AppleWebKit/420.1 (KHTML, like Gecko)",
@@ -311,6 +317,11 @@ namespace eu.bitwalker.useragentutils
             "Mozilla/5.0 (Linux; U; Android 4.0.4; en-us; Glass 1 Build/IMM76L; XE7) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
         };
 
+        private String[] android5_tablet =
+        {
+            "Mozilla/5.0 (Linux; Android 5.0; Nexus 9 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Safari/537.36"
+            // Nexus 9
+        };
 
         private String[] androidMobile =
         {
@@ -363,7 +374,8 @@ namespace eu.bitwalker.useragentutils
 
         private String[] windows10 =
         {
-            "Mozilla/5.0 (Windows NT 6.4; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0 Build ID: 20141001101141"
+            "Mozilla/5.0 (Windows NT 6.4; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0 Build ID: 20141001101141",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0"
         };
 
         private String[] windowsMobile7 =
@@ -433,7 +445,7 @@ namespace eu.bitwalker.useragentutils
 	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#isInUserAgentString(java.lang.String)}.
 	 */
 
-        [TestMethod]
+        [Test]
         public void testIsInUserAgentString()
         {
             Assert.IsTrue(OperatingSystem.SYMBIAN9.isInUserAgentString(symbian9phones[0]));
@@ -443,7 +455,7 @@ namespace eu.bitwalker.useragentutils
 	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#parseUserAgentString(java.lang.String)}.
 	 */
 
-        [TestMethod]
+        [Test]
         public void testParseUserAgentString()
         {
             testAgents(windowsCEdivices, OperatingSystem.WINDOWS_MOBILE);
@@ -471,6 +483,7 @@ namespace eu.bitwalker.useragentutils
             testAgents(iPhone7, OperatingSystem.iOS7_IPHONE);
             testAgents(iPhone8, OperatingSystem.iOS8_IPHONE);
             testAgents(iPhone8_1, OperatingSystem.iOS8_1_IPHONE);
+            testAgents(iPhone8_3, OperatingSystem.iOS8_3_IPHONE);
             testAgents(iPods, OperatingSystem.MAC_OS_X_IPOD);
             testAgents(iPadIos6, OperatingSystem.iOS6_IPAD);
             testAgents(iPadIos7, OperatingSystem.iOS7_IPAD);
@@ -486,6 +499,7 @@ namespace eu.bitwalker.useragentutils
             testAgents(android3_tablet, OperatingSystem.ANDROID3_TABLET);
             testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
             testAgents(android4_wearable, OperatingSystem.ANDROID4_WEARABLE);
+            testAgents(android5_tablet, OperatingSystem.ANDROID5_TABLET);
             testAgents(androidMobile, OperatingSystem.ANDROID_MOBILE);
             testAgents(androidTablet, OperatingSystem.ANDROID_TABLET);
             testAgents(chromeOS, OperatingSystem.CHROME_OS);
@@ -501,25 +515,25 @@ namespace eu.bitwalker.useragentutils
 
         }
 
-        [TestMethod]
+        [Test]
         public void testCustomUserAgentParsing()
         {
             foreach (String agentString in android4g)
             {
                 Assert.AreEqual(OperatingSystem.ANDROID4,
                     OperatingSystem.parseUserAgentString(agentString,
-                        new List<OperatingSystem>() { OperatingSystem.SYMBIAN7, OperatingSystem.ANDROID }));
+                        new List<OperatingSystem> {OperatingSystem.SYMBIAN7, OperatingSystem.ANDROID}));
             }
             // When there is no match in the given set, return UNKNOWN
             foreach (String agentString in roku)
             {
                 Assert.AreEqual(OperatingSystem.UNKNOWN,
                     OperatingSystem.parseUserAgentString(agentString,
-                        new List<OperatingSystem>() { OperatingSystem.SYMBIAN7, OperatingSystem.ANDROID }));
+                        new List<OperatingSystem> {OperatingSystem.SYMBIAN7, OperatingSystem.ANDROID}));
             }
         }
 
-        [TestMethod]
+        [Test]
         public void testDeviceTypes()
         {
             testDeviceTypes(windowsCEdivices, DeviceType.MOBILE);
@@ -547,7 +561,7 @@ namespace eu.bitwalker.useragentutils
 	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#valueOf(short)} 
 	 */
 
-        [TestMethod]
+        [Test]
         public void testValueOf()
         {
             OperatingSystem operatingSystem = OperatingSystem.parseUserAgentString(symbian9phones[0]);
@@ -567,7 +581,7 @@ namespace eu.bitwalker.useragentutils
 	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#valueOf(String)} 
 	 */
 
-        [TestMethod]
+        [Test]
         public void testValueOfString()
         {
             OperatingSystem operatingSystem = OperatingSystem.parseUserAgentString(symbian9phones[0]);
@@ -587,7 +601,7 @@ namespace eu.bitwalker.useragentutils
 	 * Test if generated id values are unique.
 	 */
 
-        [TestMethod]
+        [Test]
         public void testUniqueIdValues()
         {
 

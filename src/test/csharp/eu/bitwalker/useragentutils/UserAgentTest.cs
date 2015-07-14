@@ -1,16 +1,18 @@
 /**
  * 
  */
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+using NUnit.Framework;
 
 namespace eu.bitwalker.useragentutils
 {
 
-    /**
-     * @author harald -- @ported by thunder stumpges
-     *
-     */
-    [TestClass]
+
+/**
+ * @author harald
+ *
+ */
+
     public class UserAgentTest
     {
 
@@ -18,7 +20,7 @@ namespace eu.bitwalker.useragentutils
 	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#parseUserAgentString(java.lang.String)}.
 	 */
 
-        [TestMethod]
+        [Test]
         public void testParseUserAgentString()
         {
             UserAgent userAgent =
@@ -33,20 +35,20 @@ namespace eu.bitwalker.useragentutils
 	 * that checks for proper handling of a <code>null</code> userAgentString.
 	 */
 
-        [TestMethod]
+        [Test]
         public void testParseUserAgentStringNull()
         {
             UserAgent userAgent = UserAgent.parseUserAgentString(null);
             Assert.AreEqual(OperatingSystem.UNKNOWN, userAgent.getOperatingSystem());
             Assert.AreEqual(Browser.UNKNOWN, userAgent.getBrowser());
-            Assert.IsNull(userAgent.getBrowserVersion());
+            Assert.Null(userAgent.getBrowserVersion());
         }
 
         /**
-	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#toString()}.
+	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#ToString()}.
 	 */
 
-        [TestMethod]
+        [Test]
         public void testToString()
         {
             UserAgent userAgent =
@@ -56,9 +58,10 @@ namespace eu.bitwalker.useragentutils
         }
 
         /**
-	     * Test method for {@link eu.bitwalker.useragentutils.UserAgent#valueOf(int)}.
-	     */
-        [TestMethod]
+	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#valueOf(int)}.
+	 */
+
+        [Test]
         public void testValueOf()
         {
             UserAgent userAgent =
@@ -72,7 +75,7 @@ namespace eu.bitwalker.useragentutils
 	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#valueOf(String)}.
 	 */
 
-        [TestMethod]
+        [Test]
         public void testValueOf2()
         {
             UserAgent userAgent =

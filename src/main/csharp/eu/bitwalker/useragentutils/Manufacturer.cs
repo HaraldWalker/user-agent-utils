@@ -104,7 +104,7 @@ namespace eu.bitwalker.useragentutils
 	    /**
 	     * Hewlett-Packard Company, previously Palm
 	     */
-	    public static readonly Manufacturer HP = new Manufacturer(8, "Hewlet Packard");
+	    public static readonly Manufacturer HP = new Manufacturer(8, "Hewlett Packard");
 	    /**
 	     * Sony Ericsson Mobile Communications AB
 	     */

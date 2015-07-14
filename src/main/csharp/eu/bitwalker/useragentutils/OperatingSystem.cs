@@ -77,18 +77,19 @@ namespace eu.bitwalker.useragentutils
 	     * Windows Mobile / Windows CE. Exact version unknown.
 	     */
 	    public static readonly OperatingSystem WINDOWS = new OperatingSystem(		Manufacturer.MICROSOFT,null,1, "Windows", new string[] { "Windows" }, new string[] { "Palm", "ggpht.com"  }, DeviceType.COMPUTER, null ); // catch the rest of older Windows systems (95, NT,...)
-		    public static readonly OperatingSystem WINDOWS_10 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,24, "Windows 10", new string[] { "Windows NT 6.4" }, null, DeviceType.COMPUTER, null ); // before Win, yes, Windows 10 is called 6.4 LOL
+		    public static readonly OperatingSystem WINDOWS_10 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,24, "Windows 10", new string[] { "Windows NT 6.4", "Windows NT 10" }, null, DeviceType.COMPUTER, null ); // before Win, yes, Windows 10 is called 6.4 LOL
 		    public static readonly OperatingSystem WINDOWS_81 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,23, "Windows 8.1", new string[] { "Windows NT 6.3" }, null, DeviceType.COMPUTER, null ); // before Win, yes, Windows 8.1 is called 6.3 LOL
-		    public static readonly OperatingSystem WINDOWS_8 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new string[] { "Windows NT 6.2" }, null, DeviceType.COMPUTER, null ); // before Win, yes, Windows 8 is called 6.2 LOL
-		    public static readonly OperatingSystem WINDOWS_7 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new string[] { "Windows NT 6.1" }, null, DeviceType.COMPUTER, null ); // before Win, yes, Windows 7 is called 6.1 LOL
-		    public static readonly OperatingSystem WINDOWS_VISTA = new OperatingSystem(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new string[] { "Windows NT 6" }, null, DeviceType.COMPUTER, null ); // before Win
+		    public static readonly OperatingSystem WINDOWS_8 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new string[] { "Windows NT 6.2" }, new string[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ); // before Win, yes, Windows 8 is called 6.2 LOL
+		    public static readonly OperatingSystem WINDOWS_7 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new string[] { "Windows NT 6.1" }, new string[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ); // before Win, yes, Windows 7 is called 6.1 LOL
+		    public static readonly OperatingSystem WINDOWS_VISTA = new OperatingSystem(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new string[] { "Windows NT 6" }, new string[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ); // before Win
 		    public static readonly OperatingSystem WINDOWS_2000 = new OperatingSystem(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,15, "Windows 2000", new string[] { "Windows NT 5.0" }, null, DeviceType.COMPUTER, null ); // before Win
 		    public static readonly OperatingSystem WINDOWS_XP = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,10, "Windows XP", new string[] { "Windows NT 5"}, new string[] { "ggpht.com"  }, DeviceType.COMPUTER, null ); // before Win, 5.1 and 5.2 are basically XP systems
-		    public static readonly OperatingSystem WINDOWS_PHONE8_1 = new OperatingSystem(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 53, "Windows Phone 8.1", new string[] { "Windows Phone 8.1" },  null, DeviceType.MOBILE, null ); // before Win
-		    public static readonly OperatingSystem WINDOWS_PHONE8 = new OperatingSystem(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 52, "Windows Phone 8", new string[] { "Windows Phone 8" },  null, DeviceType.MOBILE, null ); // before Win
-		    public static readonly OperatingSystem WINDOWS_MOBILE7 = new OperatingSystem(Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 51, "Windows Phone 7", new string[] { "Windows Phone OS 7" },  null, DeviceType.MOBILE, null ); // should be Windows Phone 7 but to keep it compatible we'll leave the name as is.
+		    public static readonly OperatingSystem WINDOWS_PHONE8_1 = new OperatingSystem(  Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 53, "Windows Phone 8.1", new string[] { "Windows Phone 8.1" },  null, DeviceType.MOBILE, null ); // before Win
+		    public static readonly OperatingSystem WINDOWS_PHONE8 = new OperatingSystem(    Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 52, "Windows Phone 8", new string[] { "Windows Phone 8" },  null, DeviceType.MOBILE, null ); // before Win
+		    public static readonly OperatingSystem WINDOWS_MOBILE7 = new OperatingSystem(   Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 51, "Windows Phone 7", new string[] { "Windows Phone OS 7" },  null, DeviceType.MOBILE, null ); // should be Windows Phone 7 but to keep it compatible we'll leave the name as is.
 		    public static readonly OperatingSystem WINDOWS_MOBILE = new OperatingSystem(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 50, "Windows Mobile", new string[] { "Windows CE" },  null, DeviceType.MOBILE, null ); // before Win
 		    public static readonly OperatingSystem WINDOWS_98 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,5, "Windows 98", new string[] { "Windows 98","Win98" },  new string[] { "Palm" }, DeviceType.COMPUTER, null ); // before Win 
+		    public static readonly OperatingSystem XBOX_OS = new OperatingSystem(           Manufacturer.MICROSOFT, OperatingSystem.WINDOWS,62, "Xbox OS",new string[]{"xbox"},new string[]{}, DeviceType.GAME_CONSOLE, null);
 
 	    public static readonly OperatingSystem ANDROID = new OperatingSystem(		Manufacturer.GOOGLE,null, 0, "Android", new string[] { "Android" },  null, DeviceType.MOBILE, null );
             public static readonly OperatingSystem ANDROID5 = new OperatingSystem(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 5, "Android 5.x", new string[] { "Android 5", "Android-5" },   new string[] { "glass" }, DeviceType.MOBILE, null );
@@ -124,13 +125,21 @@ namespace eu.bitwalker.useragentutils
 	     * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
 	     */	
 	    public static readonly OperatingSystem IOS = new OperatingSystem(			Manufacturer.APPLE,null, 2, "iOS", new string[] { "iPhone OS", "like Mac OS X" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
+		    public static readonly OperatingSystem iOS9_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 90, "iOS 9 (iPhone)", new string[] { "iPhone OS 9" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
+		    public static readonly OperatingSystem iOS8_4_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 49, "iOS 8.4 (iPhone)", new string[] { "iPhone OS 8_4" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
+		    public static readonly OperatingSystem iOS8_3_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 48, "iOS 8.3 (iPhone)", new string[] { "iPhone OS 8_3" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
+		    public static readonly OperatingSystem iOS8_2_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 47, "iOS 8.2 (iPhone)", new string[] { "iPhone OS 8_2" },  null, DeviceType.MOBILE, null ); // version that added Apple Watch support
 		    public static readonly OperatingSystem iOS8_1_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 46, "iOS 8.1 (iPhone)", new string[] { "iPhone OS 8_1" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
-		    public static readonly OperatingSystem iOS8_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 45, "iOS 8 (iPhone)", new string[] { "iPhone OS 8_0" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
+		    public static readonly OperatingSystem iOS8_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 45, "iOS 8 (iPhone)", new string[] { "iPhone OS 8" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
 		    public static readonly OperatingSystem iOS7_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 44, "iOS 7 (iPhone)", new string[] { "iPhone OS 7" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
 		    public static readonly OperatingSystem iOS6_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 43, "iOS 6 (iPhone)", new string[] { "iPhone OS 6" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
 		    public static readonly OperatingSystem iOS5_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new string[] { "iPhone OS 5" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
 		    public static readonly OperatingSystem iOS4_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new string[] { "iPhone OS 4" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
 		    public static readonly OperatingSystem MAC_OS_X_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.IOS, 50, "Mac OS X (iPad)", new string[] { "iPad" },  null, DeviceType.TABLET, null ); // before Mac OS X
+		    public static readonly OperatingSystem iOS9_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 58, "iOS 9 (iPad)", new string[] { "OS 9" },  null, DeviceType.TABLET, null ); // before Mac OS X
+		    public static readonly OperatingSystem iOS8_4_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 57, "iOS 8.4 (iPad)", new string[] { "OS 8_4" },  null, DeviceType.TABLET, null ); // before Mac OS X
+		    public static readonly OperatingSystem iOS8_3_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 56, "iOS 8.3 (iPad)", new string[] { "OS 8_3" },  null, DeviceType.TABLET, null ); // before Mac OS X
+		    public static readonly OperatingSystem iOS8_2_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 55, "iOS 8.2 (iPad)", new string[] { "OS 8_2" },  null, DeviceType.TABLET, null ); // before Mac OS X
 		    public static readonly OperatingSystem iOS8_1_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 54, "iOS 8.1 (iPad)", new string[] { "OS 8_1" },  null, DeviceType.TABLET, null ); // before Mac OS X
 		    public static readonly OperatingSystem iOS8_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 53, "iOS 8 (iPad)", new string[] { "OS 8_0" },  null, DeviceType.TABLET, null ); // before Mac OS X
 		    public static readonly OperatingSystem iOS7_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 52, "iOS 7 (iPad)", new string[] { "OS 7" },  null, DeviceType.TABLET, null ); // before Mac OS X
@@ -243,8 +252,8 @@ namespace eu.bitwalker.useragentutils
 		    // combine manufacturer and version id to one unique id. 
 		    this.id =  (short) ( ( manufacturer.getId() << 8) + (byte) versionId);
 		    this.name = name;
-		    this.aliases = aliases;
-		    this.excludeList = exclude;
+		    this.aliases = aliases.Select(a=>a.ToLower()).ToArray();
+		    this.excludeList = exclude == null ? new string[0] : exclude.Select(e=>e.ToLower()).ToArray();
 		    this.deviceType = deviceType;
 		    if (versionRegexString != null) { // not implemented yet
 			    this.versionRegEx = new Regex(versionRegexString,RegexOptions.Compiled);
@@ -298,45 +307,42 @@ namespace eu.bitwalker.useragentutils
 	     * @param agentString
 	     * @return bool
 	     */
-	    public bool isInUserAgentString(string agentString)
-	    {		
-		    foreach (string alias in aliases)
-		    {
-			    if (agentString != null && agentString.ToLower().IndexOf(alias.ToLower(), System.StringComparison.Ordinal) != -1)
-				    return true;
-		    }	
-		    return false;
+	    public bool isInUserAgentString(string agentString) {
+            if (agentString == null) {
+                return false;
+            }
+            var agentLowerCaseString = agentString.ToLower();
+            return isInUserAgentStringLowercase(agentLowerCaseString);
 	    }
+
+        private bool isInUserAgentStringLowercase(string agentLowerCaseString) {
+            return aliases.Any(agentLowerCaseString.Contains);
+        }
+
 	
-	    /**
-	     * Checks if the given user-agent does not contain one of the tokens which should not match.
-	     * In most cases there are no excluding tokens, so the impact should be small.
-	     * @param agentString
-	     * @return
-	     */
-	    private bool containsExcludeToken(string agentString)
-	    {
-		    if (excludeList != null) {
-			    foreach (string exclude in excludeList) {
-				    if (agentString != null && agentString.ToLower().IndexOf(exclude.ToLower()) != -1)
-					    return true;
-			    }
-		    }
-		    return false;
-	    }
+        /**
+         * Checks if the given user-agent does not contain one of the tokens which should not match.
+         * In most cases there are no excluding tokens, so the impact should be small.
+         * @param agentLowerCaseString
+         * @return
+         */
+        private bool containsExcludeTokenLowercase(string agentLowerCaseString) {
+            return excludeList.Any(agentLowerCaseString.Contains);
+        }
 		
-	    private OperatingSystem checkUserAgent(string agentString) {
-		    if (this.isInUserAgentString(agentString)) {
+	    private OperatingSystem checkUserAgentLowercase(string agentStringLowercase) {
+		    if (this.isInUserAgentStringLowercase(agentStringLowercase)) {
 			    if (this.children.Count > 0) {
 				    foreach (OperatingSystem childOperatingSystem in this.children) {
-					    OperatingSystem match = childOperatingSystem.checkUserAgent(agentString);
+                        OperatingSystem match = childOperatingSystem.checkUserAgentLowercase(agentStringLowercase);
 					    if (match != null) { 
 						    return match;
 					    }
 				    }
 			    }
 			    // if children didn't match we continue checking the current to prevent false positives
-			    if (!this.containsExcludeToken(agentString)) {
+                if (!this.containsExcludeTokenLowercase(agentStringLowercase))
+                {
 				    return this;
 			    }
 			
@@ -354,6 +360,15 @@ namespace eu.bitwalker.useragentutils
 	    {
 		    return parseUserAgentString(agentString, topLevelOperatingSystems);
 	    }
+
+        public static OperatingSystem parseUserAgentLowercaseString(string agentString)
+        {
+            if (agentString == null)
+            {
+                return OperatingSystem.UNKNOWN;
+            }
+            return parseUserAgentLowercaseString(agentString, topLevelOperatingSystems);
+        }
 	
 	    /**
 	     * Parses the user agent string and returns the best match for the given operating systems. 
@@ -362,11 +377,19 @@ namespace eu.bitwalker.useragentutils
 	     * @param agentString
 	     * @return OperatingSystem
 	     */
-	    public static OperatingSystem parseUserAgentString(string agentString, List<OperatingSystem> operatingSystems)
-	    {
+	    public static OperatingSystem parseUserAgentString(string agentString, List<OperatingSystem> operatingSystems) {
+            if (agentString != null) {
+                string agentLowercaseString = agentString.ToLower();
+                return parseUserAgentLowercaseString(agentLowercaseString, operatingSystems);
+            }
+            return OperatingSystem.UNKNOWN;
+        }
+
+        private static OperatingSystem parseUserAgentLowercaseString(string agentLowercaseString,
+            List<OperatingSystem> operatingSystems) {
 		    foreach (OperatingSystem operatingSystem in operatingSystems)
 		    {
-			    OperatingSystem match = operatingSystem.checkUserAgent(agentString);
+			    OperatingSystem match = operatingSystem.checkUserAgentLowercase(agentLowercaseString);
 			    if (match != null) {
 				    return match; // either current operatingSystem or a child object
 			    }

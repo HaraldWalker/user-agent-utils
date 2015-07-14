@@ -85,13 +85,14 @@ namespace eu.bitwalker.useragentutils
 
         public UserAgent(string userAgentString)
         {
-            Browser browser = Browser.parseUserAgentString(userAgentString);
+            string userAgentLowercaseString = userAgentString == null ? null : userAgentString.ToLower();
+            Browser browser = Browser.parseUserAgentLowercaseString(userAgentLowercaseString);
 
             OperatingSystem operatingSystem = OperatingSystem.UNKNOWN;
 
             // BOTs don't have an interesting OS for us
             if (browser != Browser.BOT)
-                operatingSystem = OperatingSystem.parseUserAgentString(userAgentString);
+                operatingSystem = OperatingSystem.parseUserAgentLowercaseString(userAgentLowercaseString);
 
             this.operatingSystem = operatingSystem;
             this.browser = browser;

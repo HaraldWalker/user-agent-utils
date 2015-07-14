@@ -101,6 +101,10 @@ namespace eu.bitwalker.useragentutils
 	     */
 	    public static readonly RenderingEngine KHTML = new RenderingEngine("KHTML");
 	    /**
+	     * Layout engine developed as part ofthe Chromium project. Fored from WebKit.
+	     */
+        public static readonly RenderingEngine BLINK = new RenderingEngine("Blink");
+        /**
 	     * Other or unknown layout engine.
 	     */
 	    public static readonly RenderingEngine OTHER = new RenderingEngine("Other");

@@ -92,7 +92,7 @@ namespace eu.bitwalker.useragentutils
 	    /**
 	     * Family of Internet Explorer browsers
 	     */
-	    public static readonly Browser IE = new Browser( 			Manufacturer.MICROSOFT, null, 1, "Internet Explorer", new string[] { "MSIE", "Trident", "IE " }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "MSIE (([\\d]+)\\.([\\w]+))" ); // before Mozilla
+            public static readonly Browser IE = new Browser(Manufacturer.MICROSOFT, null, 1, "Internet Explorer", new string[] { "MSIE", "Trident", "IE " }, new String[] { "BingPreview", "Xbox", "Xbox One" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "MSIE (([\\d]+)\\.([\\w]+))"); // before Mozilla
 		    /**
 		     * Since version 7 Outlook Express is identifying itself. By detecting Outlook Express we can not 
 		     * identify the Internet Explorer version which is probably used for the rendering.
@@ -103,12 +103,13 @@ namespace eu.bitwalker.useragentutils
 		     * Since 2007 the mobile edition of Internet Explorer identifies itself as IEMobile in the user-agent. 
 		     * If previous versions have to be detected, use the operating system information as well.
 		     */
-		    public static readonly Browser IEMOBILE11 = new Browser(		Manufacturer.MICROSOFT, Browser.IE, 125, "IE Mobile 11", new string[] { "IEMobile/11" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null); // before MSIE strings
-		    public static readonly Browser IEMOBILE10 = new Browser(		Manufacturer.MICROSOFT, Browser.IE, 124, "IE Mobile 10", new string[] { "IEMobile/10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null); // before MSIE strings
+		    public static readonly Browser IEMOBILE11 = new Browser(	Manufacturer.MICROSOFT, Browser.IE, 125, "IE Mobile 11", new string[] { "IEMobile/11" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null); // before MSIE strings
+		    public static readonly Browser IEMOBILE10 = new Browser(	Manufacturer.MICROSOFT, Browser.IE, 124, "IE Mobile 10", new string[] { "IEMobile/10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null); // before MSIE strings
 		    public static readonly Browser IEMOBILE9 = new Browser(		Manufacturer.MICROSOFT, Browser.IE, 123, "IE Mobile 9", new string[] { "IEMobile/9" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null); // before MSIE strings
 		    public static readonly Browser IEMOBILE7 = new Browser(		Manufacturer.MICROSOFT, Browser.IE, 121, "IE Mobile 7", new string[] { "IEMobile 7" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null); // before MSIE strings
 		    public static readonly Browser IEMOBILE6 = new Browser(		Manufacturer.MICROSOFT, Browser.IE, 120, "IE Mobile 6", new string[] { "IEMobile 6" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null); // before MSIE
-		    public static readonly Browser IE11 = new Browser(			Manufacturer.MICROSOFT, Browser.IE, 95, "Internet Explorer 11", new string[] { "Trident/7", "IE 11." }, new string[] {"MSIE 7"}, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "(?:Trident\\/7|IE)(?:\\.[0-9]*;)?(?:.*rv:| )(([0-9]+)\\.?([0-9]+))" );   // before Mozilla
+		    public static readonly Browser IE_XBOX = new Browser(       Manufacturer.MICROSOFT, Browser.IE, 360, "Xbox", new string[] { "xbox" }, new String[] {}, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null);
+		    public static readonly Browser IE11 = new Browser(			Manufacturer.MICROSOFT, Browser.IE, 95, "Internet Explorer 11", new string[] { "Trident/7", "IE 11." }, new string[] {"MSIE 7", "BingPreview"}, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "(?:Trident\\/7|IE)(?:\\.[0-9]*;)?(?:.*rv:| )(([0-9]+)\\.?([0-9]+))" );   // before Mozilla
 		    public static readonly Browser IE10 = new Browser(			Manufacturer.MICROSOFT, Browser.IE, 92, "Internet Explorer 10", new string[] { "MSIE 10" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null );   // before MSIE
 		    public static readonly Browser IE9 = new Browser(			Manufacturer.MICROSOFT, Browser.IE, 90, "Internet Explorer 9", new string[] { "MSIE 9" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null );   // before MSIE
 		    public static readonly Browser IE8 = new Browser(			Manufacturer.MICROSOFT, Browser.IE, 80, "Internet Explorer 8", new string[] { "MSIE 8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null );   // before MSIE
@@ -120,9 +121,15 @@ namespace eu.bitwalker.useragentutils
 	    /**
 	     * Google Chrome browser
 	     */
-	    public static readonly Browser CHROME = new Browser( 		Manufacturer.GOOGLE, null, 1, "Chrome", new string[] { "Chrome", "CrMo", "CriOS" }, new string[] { "OPR/", "Web Preview" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ); // before Mozilla
-		    public static readonly Browser CHROME_MOBILE = new Browser( 	Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new string[] { "CrMo","CriOS", "Mobile Safari" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ); 
-		    public static readonly Browser CHROME40 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 45, "Chrome 40", new string[] { "Chrome/40" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
+	    public static readonly Browser CHROME = new Browser( 		Manufacturer.GOOGLE, null, 1, "Chrome", new string[] { "Chrome", "CrMo", "CriOS" }, new string[] { "OPR/", "Web Preview", "Vivaldi" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ); // before Mozilla
+		    public static readonly Browser CHROME_MOBILE = new Browser( 	Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new string[] { "CrMo","CriOS", "Mobile Safari" },  new String[] {"OPR/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ); 
+		    public static readonly Browser CHROME46 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 51, "Chrome 46", new string[] { "Chrome/46" }, new string[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
+		    public static readonly Browser CHROME45 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 50, "Chrome 45", new string[] { "Chrome/45" }, new string[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
+		    public static readonly Browser CHROME44 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 49, "Chrome 44", new string[] { "Chrome/44" }, new string[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
+		    public static readonly Browser CHROME43 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 48, "Chrome 43", new string[] { "Chrome/43" }, new string[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
+		    public static readonly Browser CHROME42 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 47, "Chrome 42", new string[] { "Chrome/42" }, new string[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
+		    public static readonly Browser CHROME41 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 46, "Chrome 41", new string[] { "Chrome/41" }, new string[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
+            public static readonly Browser CHROME40 = new Browser(      Manufacturer.GOOGLE, Browser.CHROME, 45, "Chrome 40", new string[] { "Chrome/40" }, new string[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // before Mozilla
 		    public static readonly Browser CHROME39 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 44, "Chrome 39", new string[] { "Chrome/39" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
 		    public static readonly Browser CHROME38 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 43, "Chrome 38", new string[] { "Chrome/38" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
 		    public static readonly Browser CHROME37 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 42, "Chrome 37", new string[] { "Chrome/37" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
@@ -135,15 +142,15 @@ namespace eu.bitwalker.useragentutils
 		    public static readonly Browser CHROME30 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 35, "Chrome 30", new string[] { "Chrome/30" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
 		    public static readonly Browser CHROME29 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 34, "Chrome 29", new string[] { "Chrome/29" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
 		    public static readonly Browser CHROME28 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 33, "Chrome 28", new string[] { "Chrome/28" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
-		    public static readonly Browser CHROME27 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 32, "Chrome 27", new string[] { "Chrome/27" }, new string[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
-		    public static readonly Browser CHROME26 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 31, "Chrome 26", new string[] { "Chrome/26" }, new string[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
-		    public static readonly Browser CHROME25 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 30, "Chrome 25", new string[] { "Chrome/25" }, new string[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
-		    public static readonly Browser CHROME24 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 29, "Chrome 24", new string[] { "Chrome/24" }, new string[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
-		    public static readonly Browser CHROME23 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 28, "Chrome 23", new string[] { "Chrome/23" }, new string[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
-		    public static readonly Browser CHROME22 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 27, "Chrome 22", new string[] { "Chrome/22" }, new string[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
-		    public static readonly Browser CHROME21 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 26, "Chrome 21", new string[] { "Chrome/21" }, new string[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
-		    public static readonly Browser CHROME20 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 25, "Chrome 20", new string[] { "Chrome/20" }, new string[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
-		    public static readonly Browser CHROME19 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 24, "Chrome 19", new string[] { "Chrome/19" }, new string[] { "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
+            public static readonly Browser CHROME27 = new Browser(      Manufacturer.GOOGLE, Browser.CHROME, 32, "Chrome 27", new string[] { "Chrome/27" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // before Mozilla
+            public static readonly Browser CHROME26 = new Browser(      Manufacturer.GOOGLE, Browser.CHROME, 31, "Chrome 26", new string[] { "Chrome/26" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // before Mozilla
+            public static readonly Browser CHROME25 = new Browser(      Manufacturer.GOOGLE, Browser.CHROME, 30, "Chrome 25", new string[] { "Chrome/25" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // before Mozilla
+            public static readonly Browser CHROME24 = new Browser(      Manufacturer.GOOGLE, Browser.CHROME, 29, "Chrome 24", new string[] { "Chrome/24" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // before Mozilla
+            public static readonly Browser CHROME23 = new Browser(      Manufacturer.GOOGLE, Browser.CHROME, 28, "Chrome 23", new string[] { "Chrome/23" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // before Mozilla
+            public static readonly Browser CHROME22 = new Browser(      Manufacturer.GOOGLE, Browser.CHROME, 27, "Chrome 22", new string[] { "Chrome/22" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // before Mozilla
+            public static readonly Browser CHROME21 = new Browser(      Manufacturer.GOOGLE, Browser.CHROME, 26, "Chrome 21", new string[] { "Chrome/21" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // before Mozilla
+            public static readonly Browser CHROME20 = new Browser(      Manufacturer.GOOGLE, Browser.CHROME, 25, "Chrome 20", new string[] { "Chrome/20" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // before Mozilla
+            public static readonly Browser CHROME19 = new Browser(      Manufacturer.GOOGLE, Browser.CHROME, 24, "Chrome 19", new string[] { "Chrome/19" }, new string[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // before Mozilla
 		    public static readonly Browser CHROME18 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 23, "Chrome 18", new string[] { "Chrome/18" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
 		    public static readonly Browser CHROME17 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 22, "Chrome 17", new string[] { "Chrome/17" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
 		    public static readonly Browser CHROME16 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 21, "Chrome 16", new string[] { "Chrome/16" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
@@ -156,16 +163,16 @@ namespace eu.bitwalker.useragentutils
 		    public static readonly Browser CHROME9 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 10, "Chrome 9", new string[] { "Chrome/9" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
 		    public static readonly Browser CHROME8 = new Browser( 		Manufacturer.GOOGLE, Browser.CHROME, 5, "Chrome 8", new string[] { "Chrome/8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ); // before Mozilla
 			
-	    public static readonly Browser OMNIWEB = new Browser(		Manufacturer.OTHER, null, 2, "Omniweb", new string[] { "OmniWeb" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // 
+	    public static readonly Browser OMNIWEB = new Browser(		    Manufacturer.OTHER, null, 2, "Omniweb", new string[] { "OmniWeb" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // 
 
-	    public static readonly Browser SAFARI = new Browser(			Manufacturer.APPLE, null, 1, "Safari", new string[] { "Safari" }, new string[] { "OPR/", "Coast/", "Web Preview","Googlebot-Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)" );  // before AppleWebKit
-		    public static readonly Browser BLACKBERRY10 = new Browser( Manufacturer.BLACKBERRY, Browser.SAFARI, 10, "BlackBerry", new string[] { "BB10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null);
-		    public static readonly Browser MOBILE_SAFARI = new Browser(	Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new string[] { "Mobile Safari","Mobile/" }, new string[] { "Coast/", "Googlebot-Mobile" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null );  // before Safari
+	    public static readonly Browser SAFARI = new Browser(			Manufacturer.APPLE, null, 1, "Safari", new string[] { "Safari" }, new string[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi","CFNetwork" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)" );  // before AppleWebKit
+		    public static readonly Browser BLACKBERRY10 = new Browser(  Manufacturer.BLACKBERRY, Browser.SAFARI, 10, "BlackBerry", new string[] { "BB10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null);
+		    public static readonly Browser MOBILE_SAFARI = new Browser(	Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new string[] { "Mobile Safari","Mobile/" }, new string[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null );  // before Safari
 		    public static readonly Browser SILK = new Browser(			Manufacturer.AMAZON, Browser.SAFARI, 15, "Silk", new string[] { "Silk/" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Silk\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\-[\\w]+)?)" );  // http://en.wikipedia.org/wiki/Amazon_Silk
-		    public static readonly Browser SAFARI8 = new Browser(		Manufacturer.APPLE, Browser.SAFARI, 8, "Safari 8", new string[] { "Version/8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null );  // before AppleWebKit
-		    public static readonly Browser SAFARI7 = new Browser(		Manufacturer.APPLE, Browser.SAFARI, 7, "Safari 7", new string[] { "Version/7" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null );  // before AppleWebKit
+		    public static readonly Browser SAFARI8 = new Browser(		Manufacturer.APPLE, Browser.SAFARI, 8, "Safari 8", new string[] { "Version/8" }, new string[] { "Applebot" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null );  // before AppleWebKit
+		    public static readonly Browser SAFARI7 = new Browser(		Manufacturer.APPLE, Browser.SAFARI, 7, "Safari 7", new string[] { "Version/7" }, new string[]{"bing"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null );  // before AppleWebKit
 		    public static readonly Browser SAFARI6 = new Browser(		Manufacturer.APPLE, Browser.SAFARI, 6, "Safari 6", new string[] { "Version/6" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null );  // before AppleWebKit
-		    public static readonly Browser SAFARI5 = new Browser(		Manufacturer.APPLE, Browser.SAFARI, 3, "Safari 5", new string[] { "Version/5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null );  // before AppleWebKit
+		    public static readonly Browser SAFARI5 = new Browser(		Manufacturer.APPLE, Browser.SAFARI, 3, "Safari 5", new string[] { "Version/5" }, new string[]{"Google Web Preview"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null );  // before AppleWebKit
 		    public static readonly Browser SAFARI4 = new Browser(		Manufacturer.APPLE, Browser.SAFARI, 4, "Safari 4", new string[] { "Version/4" }, new string[] { "Googlebot-Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null );  // before AppleWebKit
 
 	    /**
@@ -174,8 +181,14 @@ namespace eu.bitwalker.useragentutils
 	    public static readonly Browser COAST = new Browser(			Manufacturer.OPERA, null, 500, "Opera", new string[] { " Coast/" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Coast\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");   
 		    public static readonly Browser COAST1 = new Browser(			Manufacturer.OPERA, Browser.COAST, 501, "Opera", new string[] { " Coast/1." }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Coast\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");   
 		
-	    public static readonly Browser OPERA = new Browser(			Manufacturer.OPERA, null, 1, "Opera", new string[] { " OPR/", "Opera" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Opera\\/(([\\d]+)\\.([\\w]+))");   // before MSIE
-		    public static readonly Browser OPERA_MINI = new Browser(		Manufacturer.OPERA, Browser.OPERA, 20, "Opera Mini", new string[] { "Opera Mini"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.PRESTO, null); // Opera for mobile devices
+	    public static readonly Browser OPERA = new Browser(			    Manufacturer.OPERA, null, 1, "Opera", new string[] { " OPR/", "Opera" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Opera\\/(([\\d]+)\\.([\\w]+))");   // before MSIE
+		    public static readonly Browser OPERA_MOBILE = new Browser(	Manufacturer.OPERA, Browser.OPERA, 100,"Opera Mobile", new string[] { "Mobile Safari"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"); // Another Opera for mobile devices
+		    public static readonly Browser OPERA_MINI = new Browser(	Manufacturer.OPERA, Browser.OPERA, 20, "Opera Mini", new string[] { "Opera Mini"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.PRESTO, null); // Opera for mobile devices
+		    public static readonly Browser OPERA30 = new Browser(		Manufacturer.OPERA, Browser.OPERA, 30, "Opera 30", new string[] { "OPR/30." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");
+		    public static readonly Browser OPERA29 = new Browser(		Manufacturer.OPERA, Browser.OPERA, 29, "Opera 29", new string[] { "OPR/29." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");
+		    public static readonly Browser OPERA28 = new Browser(		Manufacturer.OPERA, Browser.OPERA, 28, "Opera 28", new string[] { "OPR/28." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");
+		    public static readonly Browser OPERA27 = new Browser(		Manufacturer.OPERA, Browser.OPERA, 27, "Opera 27", new string[] { "OPR/27." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");
+		    public static readonly Browser OPERA26 = new Browser(		Manufacturer.OPERA, Browser.OPERA, 26, "Opera 26", new string[] { "OPR/26." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");
 		    public static readonly Browser OPERA25 = new Browser(		Manufacturer.OPERA, Browser.OPERA, 25, "Opera 25", new string[] { "OPR/25." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");
 		    public static readonly Browser OPERA24 = new Browser(		Manufacturer.OPERA, Browser.OPERA, 24, "Opera 24", new string[] { "OPR/24." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");
 		    public static readonly Browser OPERA23 = new Browser(		Manufacturer.OPERA, Browser.OPERA, 23, "Opera 23", new string[] { "OPR/23." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");
@@ -189,14 +202,14 @@ namespace eu.bitwalker.useragentutils
 		    public static readonly Browser OPERA11 = new Browser(		Manufacturer.OPERA, Browser.OPERA, 11, "Opera 11", new string[] { "Version/11." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))");
 		    public static readonly Browser OPERA10 = new Browser(		Manufacturer.OPERA, Browser.OPERA, 10, "Opera 10", new string[] { "Opera/9.8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))");  
 		    public static readonly Browser OPERA9 = new Browser(			Manufacturer.OPERA, Browser.OPERA, 5, "Opera 9", new string[] { "Opera/9" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, null);  
-	    public static readonly Browser KONQUEROR = new Browser(		Manufacturer.OTHER, null, 1, "Konqueror", new string[] { "Konqueror"}, null, BrowserType.WEB_BROWSER, RenderingEngine.KHTML, "Konqueror\\/(([0-9]+)\\.?([\\w]+)?(-[\\w]+)?)" );  
+	    public static readonly Browser KONQUEROR = new Browser(		Manufacturer.OTHER, null, 1, "Konqueror", new string[] { "Konqueror"}, new string[]{"Exabot"}, BrowserType.WEB_BROWSER, RenderingEngine.KHTML, "Konqueror\\/(([0-9]+)\\.?([\\w]+)?(-[\\w]+)?)" );  
 			
 	    public static readonly Browser DOLFIN2 = new Browser( 		Manufacturer.SAMSUNG, null, 1, "Samsung Dolphin 2", new string[] { "Dolfin/2" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ); // webkit based browser for the bada os
 	
 	    /*
 	     * Apple WebKit compatible client. Can be a browser or an application with embedded browser using UIWebView.
 	     */
-	    public static readonly Browser APPLE_WEB_KIT = new Browser(	Manufacturer.APPLE, null, 50, "Apple WebKit", new string[] { "AppleWebKit" }, new string[] { "OPR/", "Web Preview", "Googlebot-Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit 
+	    public static readonly Browser APPLE_WEB_KIT = new Browser(	Manufacturer.APPLE, null, 50, "Apple WebKit", new string[] { "AppleWebKit" }, new string[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit 
 		    public static readonly Browser APPLE_ITUNES = new Browser(	Manufacturer.APPLE, Browser.APPLE_WEB_KIT, 52, "iTunes", new string[] { "iTunes" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null); // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit 
 		    public static readonly Browser APPLE_APPSTORE = new Browser(	Manufacturer.APPLE, Browser.APPLE_WEB_KIT, 53, "App Store", new string[] { "MacAppStore" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null); // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit 
 		    public static readonly Browser ADOBE_AIR = new Browser(	Manufacturer.ADOBE, Browser.APPLE_WEB_KIT, 1, "Adobe AIR application", new string[] { "AdobeAIR" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null); // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit 
@@ -208,7 +221,7 @@ namespace eu.bitwalker.useragentutils
 
 	    public static readonly Browser FLOCK = new Browser(			Manufacturer.OTHER, null, 4, "Flock", new string[]{"Flock"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Flock\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)");
 		
-	    public static readonly Browser FIREFOX = new Browser(		Manufacturer.MOZILLA, null, 10, "Firefox", new string[] { "Firefox" }, new string[] {"ggpht.com"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Firefox\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");  // using Gecko Engine
+	    public static readonly Browser FIREFOX = new Browser(		Manufacturer.MOZILLA, null, 10, "Firefox", new string[] { "Firefox" }, new string[] {"ggpht.com", "WordPress.com mShots"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Firefox\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");  // using Gecko Engine
 		    public static readonly Browser FIREFOX3MOBILE = new Browser(	Manufacturer.MOZILLA, Browser.FIREFOX, 31, "Firefox 3 Mobile", new string[] { "Firefox/3.5 Maemo" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
 		    public static readonly Browser FIREFOX_MOBILE = new Browser(	Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new string[] { "Mobile" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
 			    public static readonly Browser FIREFOX_MOBILE23 = new Browser(Manufacturer.MOZILLA, FIREFOX_MOBILE, 223, "Firefox Mobile 23", new string[] { "Firefox/23" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
@@ -231,7 +244,7 @@ namespace eu.bitwalker.useragentutils
 		    public static readonly Browser FIREFOX24 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 105, "Firefox 24", new string[] { "Firefox/24" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine		
 		    public static readonly Browser FIREFOX23 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 104, "Firefox 23", new string[] { "Firefox/23" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine		
 		    public static readonly Browser FIREFOX22 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 103, "Firefox 22", new string[] { "Firefox/22" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
-		    public static readonly Browser FIREFOX21 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 102, "Firefox 21", new string[] { "Firefox/21" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
+		    public static readonly Browser FIREFOX21 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 102, "Firefox 21", new string[] { "Firefox/21" }, new string[]{"WordPress.com mShots"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
 		    public static readonly Browser FIREFOX20 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 101, "Firefox 20", new string[] { "Firefox/20" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
 		    public static readonly Browser FIREFOX19 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 100, "Firefox 19", new string[] { "Firefox/19" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
 		    public static readonly Browser FIREFOX18 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 99, "Firefox 18", new string[] { "Firefox/18" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
@@ -250,7 +263,7 @@ namespace eu.bitwalker.useragentutils
 		    public static readonly Browser FIREFOX5 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 50, "Firefox 5", new string[] { "Firefox/5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
 		    public static readonly Browser FIREFOX4 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 40, "Firefox 4", new string[] { "Firefox/4" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
 		    public static readonly Browser FIREFOX3 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 30, "Firefox 3", new string[] { "Firefox/3" }, new string[] {"ggpht.com"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
-		    public static readonly Browser FIREFOX2 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 20, "Firefox 2", new string[] { "Firefox/2" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
+		    public static readonly Browser FIREFOX2 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 20, "Firefox 2", new string[] { "Firefox/2" }, new string[]{"WordPress.com mShots"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
 		    public static readonly Browser FIREFOX1_5 = new Browser(		Manufacturer.MOZILLA, Browser.FIREFOX, 15, "Firefox 1.5", new string[] { "Firefox/1.5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null );  // using Gecko Engine
 		
 	    /*
@@ -265,15 +278,17 @@ namespace eu.bitwalker.useragentutils
 		    public static readonly Browser THUNDERBIRD6 = new Browser(  	Manufacturer.MOZILLA, Browser.THUNDERBIRD, 160, "Thunderbird 6", new string[] { "Thunderbird/6" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.GECKO, null );  // using Gecko Engine
 		    public static readonly Browser THUNDERBIRD3 = new Browser(  	Manufacturer.MOZILLA, Browser.THUNDERBIRD, 130, "Thunderbird 3", new string[] { "Thunderbird/3" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.GECKO, null );  // using Gecko Engine
 		    public static readonly Browser THUNDERBIRD2 = new Browser(  	Manufacturer.MOZILLA, Browser.THUNDERBIRD, 120, "Thunderbird 2", new string[] { "Thunderbird/2" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.GECKO, null );  // using Gecko Engine	
+	
+	    public static readonly Browser VIVALDI = new Browser(       Manufacturer.OTHER, null, 108338, "Vivaldi", new string[] { "Vivaldi" }, new string[] {}, BrowserType.WEB_BROWSER, RenderingEngine.BLINK, "Vivaldi/(([\\d]+).([\\d]+).([\\d]+).([\\d]+))");
 		
 	    public static readonly Browser SEAMONKEY = new Browser(		Manufacturer.OTHER, null, 15, "SeaMonkey", new string[]{"SeaMonkey"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "SeaMonkey\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"); // using Gecko Engine
 	
-	    public static readonly Browser BOT = new Browser(			Manufacturer.OTHER, null,12, "Robot/Spider", new string[] {"Googlebot", "Web Preview", "bot", "spider", "crawler", "Feedfetcher", "Slurp", "Twiceler", "Nutch", "BecomeBot"}, null, BrowserType.ROBOT, RenderingEngine.OTHER, null);
+	    public static readonly Browser BOT = new Browser(			Manufacturer.OTHER, null,12, "Robot/Spider", new string[] {"Googlebot", "Mediapartners-Google", "Web Preview", "bot", "Applebot", "spider", "crawler", "Feedfetcher", "Slurp", "Twiceler", "Nutch", "BecomeBot", "bingbot", "BingPreview", "Google Web Preview", "WordPress.com mShots", "Seznam", "facebookexternalhit" , "YandexMarket", "Teoma", "ThumbSniper", "Phantom.js"}, null, BrowserType.ROBOT, RenderingEngine.OTHER, null);
 	    public static readonly Browser BOT_MOBILE = new Browser( 	Manufacturer.OTHER, Browser.BOT, 20 , "Mobil Robot/Spider", new string[] {"Googlebot-Mobile"}, null, BrowserType.ROBOT, RenderingEngine.OTHER, null);
 	
 	    public static readonly Browser MOZILLA = new Browser(		Manufacturer.MOZILLA, null, 1, "Mozilla", new string[] { "Mozilla", "Moozilla" }, new string[] {"ggpht.com"}, BrowserType.WEB_BROWSER, RenderingEngine.OTHER, null); // rest of the mozilla browsers
 	
-	    public static readonly Browser CFNETWORK = new Browser(		Manufacturer.OTHER, null, 6, "CFNetwork", new string[] { "CFNetwork" }, null, BrowserType.UNKNOWN, RenderingEngine.OTHER, null ); // Mac OS X cocoa library
+	    public static readonly Browser CFNETWORK = new Browser(		Manufacturer.OTHER, null, 6, "CFNetwork", new string[] { "CFNetwork" }, null, BrowserType.UNKNOWN, RenderingEngine.OTHER, "CFNetwork/(([\\d]+)(?:\\.([\\d]))?(?:\\.([\\d]+))?)" ); // Mac OS X cocoa library
 	
 	    public static readonly Browser EUDORA = new Browser(			Manufacturer.OTHER, null, 7, "Eudora", new string[] { "Eudora", "EUDORA" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.OTHER, null );  // email client by Qualcomm
 	
@@ -311,8 +326,8 @@ namespace eu.bitwalker.useragentutils
 		    this.name = name;
 		    this.parent = parent;
 		    this.children = new List<Browser>();
-		    this.aliases = ToLower(aliases);
-		    this.excludeList = ToLower(exclude);
+		    this.aliases = aliases.Select(a=>a.ToLower()).ToArray();
+		    this.excludeList = exclude == null ? new string[0] : exclude.Select(e=>e.ToLower()).ToArray();
 		    this.browserType = browserType;
 		    this.manufacturer = manufacturer;
 		    this.renderingEngine = renderingEngine;
@@ -323,16 +338,6 @@ namespace eu.bitwalker.useragentutils
 		    else 
 			    this.parent.children.Add(this);
 	    }
-
-      private static string[] ToLower(string[] strArr) {
-        if (strArr == null) return null;
-        string[] res = new string[strArr.Length];
-        for (int i=0; i<strArr.Length; i++) {
-          res[i] = strArr[i].ToLower();
-        }
-        return res;
-      }
-
 
 	    // create collection of top level browsers during initialization
 	    private static void addTopLevelBrowser(Browser browser) {
@@ -415,45 +420,26 @@ namespace eu.bitwalker.useragentutils
 	     * Checks if the given user-agent string matches to the browser. 
 	     * Only checks for one specific browser. 
 	     */
-	    public bool isInUserAgentString(string agentString)
-	    {
-        if (agentString == null) return false;
 
-        string agentStringLowerCase = agentString.ToLower();
-		    foreach (string alias in aliases)
-		    {
-          if (agentStringLowerCase.Contains(alias))
-				    return true;
-		    }
-		    return false;
+        public bool isInUserAgentString(string agentString)
+        {
+            if (agentString == null)
+                return false;
+
+            string agentStringLowerCase = agentString.ToLower();
+            return isInUserAgentLowercaseString(agentStringLowerCase);
+        }
+
+        private bool isInUserAgentLowercaseString(string agentStringLowerCase) {
+            return aliases.Any(agentStringLowerCase.Contains);
 	    }
 	
-	    /**
-	     * Checks if the given user-agent does not contain one of the tokens which should not match.
-	     * In most cases there are no excluding tokens, so the impact should be small.
-	     * @param agentString
-	     * @return
-	     */
-	    private bool containsExcludeToken(string agentString)
-	    {
-        if (agentString == null) return false;
-
-		    if (excludeList != null) {
-          string agentStringLowerCase = agentString.ToLower();
-          foreach (string exclude in excludeList) {
-            if (agentStringLowerCase.Contains(exclude))
-					    return true;
-			    }
-		    }
-		    return false;
-	    }
-	
-	    private Browser checkUserAgent(string agentString) {
-		    if (this.isInUserAgentString(agentString)) {
+	    private Browser checkUserAgentLowercase(string agentLowercaseString) {
+		    if (this.isInUserAgentLowercaseString(agentLowercaseString)) {
 			
 			    if (this.children.Count > 0) {
 				    foreach (Browser childBrowser in this.children) {
-					    Browser match = childBrowser.checkUserAgent(agentString);
+					    Browser match = childBrowser.checkUserAgentLowercase(agentLowercaseString);
 					    if (match != null) { 
 						    return match;
 					    }
@@ -461,7 +447,7 @@ namespace eu.bitwalker.useragentutils
 			    }
 			
 			    // if children didn't match we continue checking the current to prevent false positives
-			    if (!this.containsExcludeToken(agentString)) {
+			    if (!excludeList.Any(agentLowercaseString.Contains)) {
 				    return this;
 			    }
 			
@@ -483,7 +469,16 @@ namespace eu.bitwalker.useragentutils
 	    {
 		    return parseUserAgentString(agentString, topLevelBrowsers);
 	    }
-	
+
+        public static Browser parseUserAgentLowercaseString(string agentString)
+        {
+            if (agentString == null)
+            {
+                return Browser.UNKNOWN;
+            }
+            return parseUserAgentLowercaseString(agentString, topLevelBrowsers);
+        }
+
 	    /**
 	     * Iterates over the given Browsers (incl. children) to compare the browser 
 	     * signature with the user agent string. 
@@ -493,10 +488,18 @@ namespace eu.bitwalker.useragentutils
 	     * @param agentString
 	     * @return Browser
 	     */
-	    public static Browser parseUserAgentString(string agentString, List<Browser> browsers)
-	    {
-		    foreach (Browser browser in browsers) {
-			    Browser match = browser.checkUserAgent(agentString);
+	    public static Browser parseUserAgentString(string agentString, List<Browser> browsers) {
+            if (agentString != null) {
+                String agentLowercaseString = agentString.ToLower();
+                return parseUserAgentLowercaseString(agentLowercaseString, browsers);
+            }
+            return Browser.UNKNOWN;
+        }
+
+        private static Browser parseUserAgentLowercaseString(String agentLowercaseString, List<Browser> browsers) {
+            foreach (Browser browser in browsers)
+            {
+			    Browser match = browser.checkUserAgentLowercase(agentLowercaseString);
 			    if (match != null) {
 				    return match; // either current operatingSystem or a child object
 			    }

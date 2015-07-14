@@ -36,33 +36,37 @@
 */
 
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace eu.bitwalker.useragentutils
 {
 
-    /**
-     * Test class for application detection.
-     * @author harald -- @ported by thunder stumpges
-     * 
-     */
-    [TestClass]
+
+/**
+ * Test class for application detection.
+ * @author harald
+ * 
+ */
+
     public class ManufacturerTest
     {
-		
-	    /**
-	     * Test if generated id values are unique.
-	     */
-	    [TestMethod]
-	    public void testUniqueIdValues() {
-		
-		    List<short> retrievedIdValues = new List<short>();
-		
-		    foreach (Manufacturer application in Manufacturer.values()) {
+
+        /**
+	 * Test if generated id values are unique.
+	 */
+
+        [Test]
+        public void testUniqueIdValues()
+        {
+
+            List<short> retrievedIdValues = new List<short>();
+
+            foreach (Manufacturer application in Manufacturer.values())
+            {
                 Assert.IsTrue(!retrievedIdValues.Contains(application.getId()), application.getId() + " already exists");
-			    retrievedIdValues.Add(application.getId());
-		    }
-	    }
+                retrievedIdValues.Add(application.getId());
+            }
+        }
 
     }
 }

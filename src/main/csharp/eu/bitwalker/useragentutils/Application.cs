@@ -116,7 +116,7 @@ namespace eu.bitwalker.useragentutils
 			    string[] aliases, ApplicationType applicationType) {
 		    this.id = (short) ((manufacturer.getId() << 8) + (byte) versionId);
 		    this.name = name;
-		    this.aliases = aliases;
+		    this.aliases = aliases.Select(a=>a.ToLower()).ToArray();
 		    this.applicationType = applicationType;
 		    this.manufacturer = manufacturer;
 	    }
@@ -148,12 +148,13 @@ namespace eu.bitwalker.useragentutils
 	     * checks for one specific application.
 	     */
 	    public bool isInReferrerString(string referrerString) {
-		    foreach (string alias in aliases) {
-			    if (referrerString.ToLower().IndexOf(alias.ToLower()) != -1)
-				    return true;
-		    }
-		    return false;
+            var referrerStringLowerCase = referrerString.ToLower();
+	        return isInReferrerStringLowerCase(referrerStringLowerCase);
 	    }
+
+        private bool isInReferrerStringLowerCase(string referrerStringLowerCase) {
+            return aliases.Any(referrerStringLowerCase.Contains);
+        }
 
 	    /*
 	     * Iterates over all Application to compare the signature with the referrer
@@ -162,8 +163,10 @@ namespace eu.bitwalker.useragentutils
 	    public static Application parseReferrerString(string referrerString) {
 		    // skip the empty and "-" referrer
 		    if (referrerString != null && referrerString.Length > 1) {
-			    foreach (Application applicationInList in Application.values()) {
-				    if (applicationInList.isInReferrerString(referrerString))
+                var referrerStringLowerCase = referrerString.ToLower();
+                foreach (Application applicationInList in Application.values())
+                {
+                    if (applicationInList.isInReferrerStringLowerCase(referrerStringLowerCase))
 					    return applicationInList;
 			    }
 		    }
