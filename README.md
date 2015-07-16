@@ -49,6 +49,22 @@ Contributors
 * Please use the `trunk` branch on GitHub when making a pull request
 * This project is in maintenance mode. We will try to stay up to date and fix bugs but do not expect any big new features or changes. 
 * If you want big changes feel free to fork this project and start your own version.
+ 
+FAQ
+---
+
+_Can I add new browsers or operating systems?_  
+Unfortunately not directly. This library uses enums to represent browsers and operating systems to make using it easy and readable. Unfortunately the use of enums also has some disadvantages. You can make a pull request on trunk for a new browser or operating system if all tests are still passing. The purpose of this library is not to detect every possible version, so you’ll have to provide the business value for a change.
+
+_Where can I report bugs or make feature requests_  
+Go to https://github.com/HaraldWalker/user-agent-utils/issues
+
+_How can I improve the performance of the user-agent parsing?_  
+When handling requests on a web-server, consider if you need both the browser and operating system or if one of the two gives you enough information. As the parsing uses an ordered tree structure, performance depends a lot on the type of clients making the requests. The most common browsers and operating systems will be parsed faster than exotic ones. Consider caching the results temporarily.
+
+_Are there other libraries like this?_  
+When I started this project in 2010 there were no other libraries offering the features I was looking for. Currently there are both open source as well as commercial solutions.
+
 
 Changelog
 ---------
