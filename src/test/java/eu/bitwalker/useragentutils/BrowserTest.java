@@ -85,7 +85,11 @@ public class BrowserTest {
 	String[] ie11clients = new String[] {
 			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",
 			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko", //64bit Win8
-	};	
+	};
+
+	String[] edgeClients = new String[] {
+			"Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36 Edge/12.0"
+	};
 	
 	String[] ie55clients = new String[] {
 			"Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0; .NET CLR 1.1.4322)",
@@ -590,6 +594,7 @@ public class BrowserTest {
 		testAgents(ie9clients, Browser.IE9);
 		testAgents(ie10clients, Browser.IE10);
 		testAgents(ie11clients, Browser.IE11);
+		testAgents(edgeClients, Browser.EDGE_12);
 		testAgents(ieTooOld, Browser.IE);
 		testAgents(outlook2007, Browser.OUTLOOK2007);
 		testAgents(outlook2010, Browser.OUTLOOK2010);
