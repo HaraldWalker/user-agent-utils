@@ -47,6 +47,8 @@ Add dependency for snapshot releases:
 Contributors
 ------------
 * Please use the `trunk` branch on GitHub when making a pull request
+* This project is in maintenance mode. We will try to stay up to date and fix bugs but do not expect any big new features or changes. 
+* If you want big changes feel free to fork this project and start your own version.
 
 Changelog
 ---------
