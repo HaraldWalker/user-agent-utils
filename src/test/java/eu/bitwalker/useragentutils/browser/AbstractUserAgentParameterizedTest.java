@@ -47,13 +47,13 @@ public abstract class AbstractUserAgentParameterizedTest {
 
 		Version browserVersion = userAgent.getBrowserVersion();
 		if (null != browserVersion) {
-			assertEquals(this.expectedBrowserVersion, browserVersion.toString());
+			assertEquals(this.userAgentValue, this.expectedBrowserVersion, browserVersion.toString());
 		} else {
-			assertEquals(this.expectedBrowserVersion, browserVersion);
+			assertEquals(this.userAgentValue, this.expectedBrowserVersion, browserVersion);
 		}
 
 		OperatingSystem os = userAgent.getOperatingSystem();
-		assertEquals(expectedOS, os);
+		assertEquals(this.userAgentValue, expectedOS, os);
 	}
 
 }

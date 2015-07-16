@@ -66,12 +66,6 @@ public enum Browser {
 		OUTLOOK2010(	Manufacturer.MICROSOFT, Browser.OUTLOOK, 108, "Outlook 2010", new String[] {"MSOffice 14", "Microsoft Outlook 14"}, null, BrowserType.EMAIL_CLIENT, RenderingEngine.WORD, null), // before IE7
 
 	/**
-	 * Family of Microsoft Edge browsers
-	 */
-	EDGE(Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] {"Edge"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\\\/((12)\\\\.([0-9]*)))"),
-	EDGE_12(Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge", new String[] {"Edge/12"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\\\/((12)\\\\.([0-9]*)))"    ),
-
-	/**
 	 * Family of Internet Explorer browsers
 	 */
 	IE( 			Manufacturer.MICROSOFT, null, 1, "Internet Explorer", new String[] { "MSIE", "Trident", "IE " }, new String[]{"BingPreview", "Xbox", "Xbox One"}, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "MSIE (([\\d]+)\\.([\\w]+))" ), // before Mozilla
@@ -100,6 +94,13 @@ public enum Browser {
 		IE5_5(			Manufacturer.MICROSOFT, Browser.IE, 55, "Internet Explorer 5.5", new String[] { "MSIE 5.5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
 		IE5(			Manufacturer.MICROSOFT, Browser.IE, 50, "Internet Explorer 5", new String[] { "MSIE 5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null ), // before MSIE
 
+	/**
+	 * Family of Microsoft Edge browsers. Pretends to be Chrome and claims to be webkit compatible. 
+	 */
+	EDGE(Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] {"Edge"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\\\/((12)\\\\.([0-9]*)))"),
+		EDGE12(Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge", new String[] {"Edge/12"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\\\/((12)\\\\.([0-9]*)))"    ),
+		EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE, 302, "Microsoft Edge Mobile", new String[] {"Mobile Safari", "Edge/12"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\\\/((12)\\\\.([0-9]*)))"    ),
+	
 	/**
 	 * Google Chrome browser
 	 */
@@ -207,6 +208,8 @@ public enum Browser {
 		FIREFOX3MOBILE(	Manufacturer.MOZILLA, Browser.FIREFOX, 31, "Firefox 3 Mobile", new String[] { "Firefox/3.5 Maemo" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 		FIREFOX_MOBILE(	Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new String[] { "Mobile" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 			FIREFOX_MOBILE23(Manufacturer.MOZILLA, FIREFOX_MOBILE, 223, "Firefox Mobile 23", new String[] { "Firefox/23" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+		FIREFOX42(		Manufacturer.MOZILLA, Browser.FIREFOX, 219, "Firefox 42", new String[] { "Firefox/42" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+		FIREFOX41(		Manufacturer.MOZILLA, Browser.FIREFOX, 218, "Firefox 41", new String[] { "Firefox/41" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 		FIREFOX40(		Manufacturer.MOZILLA, Browser.FIREFOX, 217, "Firefox 40", new String[] { "Firefox/40" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 		FIREFOX39(		Manufacturer.MOZILLA, Browser.FIREFOX, 216, "Firefox 39", new String[] { "Firefox/39" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 		FIREFOX38(		Manufacturer.MOZILLA, Browser.FIREFOX, 215, "Firefox 38", new String[] { "Firefox/38" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
