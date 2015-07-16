@@ -13,7 +13,7 @@ Support me and buy me a beer:
 
 Advice
 ------
-A lot of user-agents lie about their identify. That makes US sniffing a guessing game. On website it is a better approach to detect features using a javascript library like Modernizr (http://modernizr.com/).  
+A lot of user-agents lie about their identify. That makes US sniffing a guessing game. On websites it is a better approach to detect features using a javascript library like Modernizr (http://modernizr.com/).  
 
 New in Version 1.17 (unreleased)
 -------------------
