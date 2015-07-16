@@ -17,10 +17,10 @@ A lot of user-agents lie about their identify. That makes US sniffing a guessing
 
 New in Version 1.17 (unreleased)
 -------------------
--- Added Ubuntu and Ubuntu Touch (mobile) detection  
--- Added Windows 10 mobile detection  
--- Added Microsoft Edge browser detection (contributed by https://github.com/nmaves)  
--- Added future Firefox version up to 42.
+- Added Ubuntu and Ubuntu Touch (mobile) detection  
+- Added Windows 10 mobile detection  
+- Added Microsoft Edge browser detection (contributed by https://github.com/nmaves)  
+- Added future Firefox version up to 42.
 
 Javadoc
 -------
