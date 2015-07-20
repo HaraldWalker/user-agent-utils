@@ -222,6 +222,59 @@ public class OperatingSystemTest {
 	String[] iPadIos8_4 = {
 			"Mozilla/5.0 (iPad; CPU OS 8_4 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12H143 Safari/600.1.4"
 	};
+    
+    String[] iOS8_4 = {
+            "MyAppName/123 CFNetwork/711.4.6 Darwin/14.0.0"
+    };
+
+    String[] iOS8_3 = {
+    		"MyAppName/123 CFNetwork/711.3.18 Darwin/14.0.0"
+    };
+
+    String[] iOS8_2 = {
+    		"MyAppName/123 CFNetwork/711.2.23 Darwin/14.0.0"
+    };
+
+    String[] iOS8_1 = {
+    		"MyAppName/123 CFNetwork/711.1.16 Darwin/14.0.0",
+    		"MyAppName/456 CFNetwork/711.1.12 Darwin/14.0.0"
+    };
+
+    String[] iOS8 = {
+    		"MyAppName/123 CFNetwork/711.0.6 Darwin/14.0.0"
+    };
+
+    String[] iOS7 = {
+    		"MyAppName/123 CFNetwork/672.1.15 Darwin/14.0.0",
+    		"MyAppName/123 CFNetwork/672.1.14 Darwin/14.0.0",
+    		"MyAppName/123 CFNetwork/672.1.13 Darwin/14.0.0",
+    		"MyAppName/123 CFNetwork/672.1.12 Darwin/14.0.0",
+    		"MyAppName/123 CFNetwork/672.1.11 Darwin/14.0.0",
+    		"MyAppName/123 CFNetwork/672.1.10 Darwin/14.0.0",
+    		"MyAppName/123 CFNetwork/672.1.9 Darwin/14.0.0",
+    		"MyAppName/123 CFNetwork/672.0.8 Darwin/14.0.0",
+    		"MyAppName/123 CFNetwork/672.0.2 Darwin/14.0.0"
+    };
+
+    String[] iOS6 = {
+    		"MyAppName/123 CFNetwork/609.1.4 Darwin/13.0.0",
+    		"MyAppName/123 CFNetwork/609 Darwin/13.0.0",
+    		"MyAppName/123 CFNetwork/602 Darwin/13.0.0"
+    };
+
+    String[] iOS5 = {
+    		"MyAppName/123 CFNetwork/548.1.4 Darwin/11.0.0",
+    		"MyAppName/123 CFNetwork/548.0.4 Darwin/11.0.0",
+    		"MyAppName/123 CFNetwork/548.0.3 Darwin/11.0.0"
+    };
+
+    String[] iOS4 = {
+    		"MyAppName/123 CFNetwork/485.13.9 Darwin/11.0.0",
+    		"MyAppName/123 CFNetwork/485.12.30 Darwin/11.0.0",
+    		"MyAppName/123 CFNetwork/485.12.7 Darwin/11.0.0",
+    		"MyAppName/123 CFNetwork/485.10.2 Darwin/11.0.0",
+    		"MyAppName/123 CFNetwork/485.2 Darwin/11.0.0"
+    };
 	
 	String[] blackberries = {
 				"BlackBerry8700/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/150",
@@ -438,6 +491,15 @@ public class OperatingSystemTest {
 		testAgents(iPadIos8, OperatingSystem.iOS8_IPAD);
 		testAgents(iPadIos8_4, OperatingSystem.iOS8_4_IPAD);
 		testAgents(iPad, OperatingSystem.MAC_OS_X_IPAD);
+		testAgents(iOS8_4, OperatingSystem.iOS8_4);
+		testAgents(iOS8_3, OperatingSystem.iOS8_3);
+		testAgents(iOS8_2, OperatingSystem.iOS8_2);
+		testAgents(iOS8_1, OperatingSystem.iOS8_1);
+		testAgents(iOS8, OperatingSystem.iOS8);
+		testAgents(iOS7, OperatingSystem.iOS7);
+		testAgents(iOS6, OperatingSystem.iOS6);
+		testAgents(iOS5, OperatingSystem.iOS5);
+		testAgents(iOS4, OperatingSystem.iOS4);
 		testAgents(blackberries, OperatingSystem.BLACKBERRY);
 		testAgents(blackberry6, OperatingSystem.BLACKBERRY6);
 		testAgents(android1g, OperatingSystem.ANDROID1);
