@@ -216,7 +216,11 @@ public class OperatingSystemTest {
 	};
 	
 	String[] iPadIos8 = {
-			"Mozilla/5.0 (iPad; CPU OS 8_0 like Mac OS X) AppleWebKit/538.34.9 (KHTML, like Gecko) Mobile/12A4265u"
+			"Mozilla/5.0 (iPad; CPU OS 8_0 like Mac OS X) AppleWebKit/538.34.9 (KHTML, like Gecko) Mobile/12A4265u",
+	};
+	
+	String[] iPadIos8_4 = {
+			"Mozilla/5.0 (iPad; CPU OS 8_4 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12H143 Safari/600.1.4"
 	};
 	
 	String[] blackberries = {
@@ -344,6 +348,10 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; HTC; HTC6990LVW) like Gecko"
 	};
 	
+	String[] windows10mobile = {
+			"Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; NOKIA; Lumia 735) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Mobile Safari/537.36 Edge/12.0"
+	};
+	
 	String[] bada = {
 			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500NEJE5; U; Bada/1.0; fr-fr) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.0 Mobile WVGA SMM-MMS/1.2.0 NexPlayer/3.0 profile/MIDP-2.1 configuration/CLDC-1.1 OPN-B",
 			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500XXJL2; U; Bada/1.2; de-de) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.2 Mobile WVGA SMM-MMS/1.2.0 OPN-B"
@@ -351,6 +359,10 @@ public class OperatingSystemTest {
 	
 	String[] maemo = {
 			"Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900"
+	};
+	
+	String[] ubuntu_touch = {
+			"Mozilla/5.0 (Linux; Ubuntu 14.04 like Android 4.4) AppleWebKit/537.36 Chromium/35.0.1870.2 Mobile Safari/537.36 "
 	};
 	
 	String[] kindle2 = {
@@ -397,6 +409,7 @@ public class OperatingSystemTest {
 		testAgents(windowsMobile7, OperatingSystem.WINDOWS_MOBILE7);
 		testAgents(windowsMobile8, OperatingSystem.WINDOWS_PHONE8);
 		testAgents(windowsMobile8_1, OperatingSystem.WINDOWS_PHONE8_1);
+		testAgents(windows10mobile, OperatingSystem.WINDOWS_10_MOBILE);
 		testAgents(windowsVista, OperatingSystem.WINDOWS_VISTA);
 		testAgents(windows7, OperatingSystem.WINDOWS_7);
 		testAgents(windows8, OperatingSystem.WINDOWS_8);
@@ -423,6 +436,7 @@ public class OperatingSystemTest {
 		testAgents(iPadIos6, OperatingSystem.iOS6_IPAD);
 		testAgents(iPadIos7, OperatingSystem.iOS7_IPAD);
 		testAgents(iPadIos8, OperatingSystem.iOS8_IPAD);
+		testAgents(iPadIos8_4, OperatingSystem.iOS8_4_IPAD);
 		testAgents(iPad, OperatingSystem.MAC_OS_X_IPAD);
 		testAgents(blackberries, OperatingSystem.BLACKBERRY);
 		testAgents(blackberry6, OperatingSystem.BLACKBERRY6);
@@ -447,7 +461,7 @@ public class OperatingSystemTest {
 		testAgents(genericMobile, OperatingSystem.UNKNOWN_MOBILE);
 		testAgents(genericTablet, OperatingSystem.UNKNOWN_TABLET);
 		testAgents(unknown, OperatingSystem.UNKNOWN);
-
+		testAgents(ubuntu_touch, OperatingSystem.UBUNTU_TOUCH_MOBILE);
 	}
 
 	@Test
@@ -475,6 +489,7 @@ public class OperatingSystemTest {
 		testDeviceTypes(iPad, DeviceType.TABLET);	
 		testDeviceTypes(gameconsoles, DeviceType.GAME_CONSOLE);
 		testDeviceTypes(googleTV, DeviceType.DMR);
+		testDeviceTypes(ubuntu_touch, DeviceType.MOBILE);
 	}
 	
 	public void testGroupRecursion() {
