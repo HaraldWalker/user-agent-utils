@@ -68,8 +68,8 @@ public enum Browser {
 	/**
 	 * Family of Microsoft Edge browsers
 	 */
-	EDGE(Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] {"Edge"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\\\/((12)\\\\.([0-9]*)))"),
-	EDGE_12(Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge", new String[] {"Edge/12"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\\\/((12)\\\\.([0-9]*)))"    ),
+	EDGE(Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] {"Edge"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\/((12)\\.([0-9]*)))"),
+	EDGE_12(Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge", new String[] {"Edge/12"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\/((12)\\.([0-9]*)))"    ),
 
 	/**
 	 * Family of Internet Explorer browsers
