@@ -34,7 +34,7 @@ public class ChromeParameterizedTest extends AbstractUserAgentParameterizedTest 
 						Browser.CHROME8, "8.0.558.0", OperatingSystem.WINDOWS_XP },
 				{
 						"Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/540.0 (KHTML, like Gecko) Ubuntu/10.10 Chrome/8.1.0.0 Safari/540.0",
-						Browser.CHROME8, "8.1.0.0", OperatingSystem.LINUX },
+						Browser.CHROME8, "8.1.0.0", OperatingSystem.UBUNTU },
 				// chrome9
 
 				{
@@ -46,7 +46,7 @@ public class ChromeParameterizedTest extends AbstractUserAgentParameterizedTest 
 				// chrome10
 				{
 						"Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/534.15 (KHTML, like Gecko) Ubuntu/10.10 Chromium/10.0.613.0 Chrome/10.0.613.0 Safari/534.15",
-						Browser.CHROME10, "10.0.613.0", OperatingSystem.LINUX },
+						Browser.CHROME10, "10.0.613.0", OperatingSystem.UBUNTU },
 				// chrome11
 				{
 						"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.697.0 Safari/534.24",

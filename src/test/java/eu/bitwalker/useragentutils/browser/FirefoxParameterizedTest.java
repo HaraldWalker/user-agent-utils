@@ -25,7 +25,7 @@ public class FirefoxParameterizedTest extends
 				// firefox3
 				{
 						"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.14) Gecko/2009090216 Ubuntu/9.04 (jaunty) Firefox/3.0.14",
-						Browser.FIREFOX3, "3.0.14", OperatingSystem.LINUX },
+						Browser.FIREFOX3, "3.0.14", OperatingSystem.UBUNTU },
 				// firefox4
 				{
 						"Mozilla/5.0 (X11; Linux x86_64; rv:2.0b4) Gecko/20100818 Firefox/4.0b4",

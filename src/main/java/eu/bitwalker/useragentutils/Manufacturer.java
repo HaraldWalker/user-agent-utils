@@ -132,7 +132,12 @@ public enum Manufacturer {
 	/**
 	 * Adobe Systems Inc.
 	 */
-	ADOBE(23, "Adobe Systems Inc.");
+	ADOBE(23, "Adobe Systems Inc."),
+	/**
+	 * Canonical Ltd.
+	 */
+	CONONICAL(25,"Canonical Ltd.");
+	
 	
 	
 	private final short id;
