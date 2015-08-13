@@ -152,7 +152,7 @@ public enum OperatingSystem {
 		KINDLE3(		Manufacturer.AMAZON,OperatingSystem.KINDLE, 30, "Linux (Kindle 3)", new String[] { "Kindle/3" }, null, DeviceType.TABLET, null ),	
 		KINDLE2(		Manufacturer.AMAZON,OperatingSystem.KINDLE, 20, "Linux (Kindle 2)", new String[] { "Kindle/2" }, null, DeviceType.TABLET, null ),	
 	LINUX(			Manufacturer.OTHER,null, 2, "Linux", new String[] { "Linux", "CamelHttpStream" }, null, DeviceType.COMPUTER, null ), // CamelHttpStream is being used by Evolution, an email client for Linux
-		UBUNTU(   Manufacturer.CONONICAL, OperatingSystem.LINUX, 1, "Ubuntu", new String[] {"ubuntu"}, null, DeviceType.UNKNOWN, null),
+		UBUNTU(   Manufacturer.CONONICAL, OperatingSystem.LINUX, 1, "Ubuntu", new String[] {"ubuntu"}, null, DeviceType.COMPUTER, null),
 			UBUNTU_TOUCH_MOBILE(   Manufacturer.CONONICAL, OperatingSystem.UBUNTU, 200, "Ubuntu Touch (mobile)", new String[] {"mobile"}, null, DeviceType.MOBILE, null),
 	
 	/**
