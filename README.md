@@ -17,7 +17,9 @@ A lot of user-agents lie about their identify. That makes US sniffing a guessing
 
 New in Version 1.18 (unreleased)
 -------------------
-TBA
+- #118 Updated Opera support
+- #115 Improved Ubuntu detection
+- #114 Fixed Microsoft Edge version detection
 
 Javadoc
 -------
