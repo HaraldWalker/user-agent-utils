@@ -15,12 +15,15 @@ Advice
 ------
 A lot of user-agents lie about their identify. That makes US sniffing a guessing game. On websites it is a better approach to detect features using a javascript library like Modernizr (http://modernizr.com/).  
 
-New in Version 1.17
+If you want faster updates, switch to snapshot releases.     
+
+New in Version 1.18 (unreleased)
 -------------------
-- Added Ubuntu and Ubuntu Touch (mobile) detection  
-- Added Windows 10 mobile detection  
-- Added Microsoft Edge browser detection (contributed by https://github.com/nmaves)  
-- Added future Firefox versions up to 42.
+- #118 Updated Opera support
+- #115 Improved Ubuntu detection
+- #114 Fixed Microsoft Edge version detection
+- #125 Improved Opera version detection
+- Safari 9 support
 
 Javadoc
 -------
@@ -52,7 +55,13 @@ Contributors
 * Please use the `trunk` branch on GitHub when making a pull request
 * This project is in maintenance mode. We will try to stay up to date and fix bugs but do not expect any big new features or changes. 
 * If you want big changes feel free to fork this project and start your own version.
- 
+* Code has been contributed by: Nathan Maves, Francisco Collao (https://github.com/pcollaog), Madgency (https://github.com/guignol), Pavel Sher (https://github.com/pavelsher), Pierre Etchemaite, Alexander Radzin (https://github.com/alexradzin), SeabassNg (https://github.com/SeabassNg), Sudeep Sinha(https://github.com/sudeep-sinha), John Dydo, frankdev (https://github.com/frankdev), Lew Dawson, Joachim Mueller (https://github.com/joachimmueller), Jason Calabrese (https://github.com/jasoncalabrese), Thorsten Schaefer, Parker Seidel (https://github.com/parker), Joris Aerts (https://github.com/JorisAerts), Stephan Heffner, Filipe Névola (https://github.com/filipenevola), John Patrick (https://github.com/nhojpatrick), Konrad Kubacki (https://github.com/konradkg)
+
+Sponsors
+--------
+Jetbrains  
+
+
 FAQ
 ---
 
@@ -68,9 +77,19 @@ When handling requests on a web-server, consider if you need both the browser an
 _Are there other libraries like this?_  
 When I started this project in 2010 there were no other libraries offering the features I was looking for. Currently there are both open source as well as commercial solutions.
 
+Contact
+-------
+http://www.bitwalker.eu/contact  
 
 Changelog
 ---------
+
+1.17
+----
+- Added Ubuntu and Ubuntu Touch (mobile) detection  
+- Added Windows 10 mobile detection  
+- Added Microsoft Edge browser detection (contributed by https://github.com/nmaves)  
+- Added future Firefox versions up to 42.
 
 1.16
 ----

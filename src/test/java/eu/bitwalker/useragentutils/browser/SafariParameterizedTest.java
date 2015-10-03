@@ -21,6 +21,9 @@ public class SafariParameterizedTest extends AbstractUserAgentParameterizedTest 
 	@Parameters
 	public static Collection<Object[]> testData() {
 		return asList(new Object[][] {
+				{
+					"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.1.56 (KHTML, like Gecko) Version/9.0 Safari/601.1.56",
+					Browser.SAFARI9, "9.0", OperatingSystem.MAC_OS_X },
 				// safari
 				{
 						"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/525.28.3 (KHTML, like Gecko) Version/3.2.3 Safari/525.28.3",
