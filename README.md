@@ -17,7 +17,7 @@ A lot of user-agents lie about their identify. That makes US sniffing a guessing
 
 If you want faster updates, switch to snapshot releases.     
 
-New in Version 1.18 (unreleased)
+New in Version 1.18
 -------------------
 - #118 Updated Opera support
 - #115 Improved Ubuntu detection
