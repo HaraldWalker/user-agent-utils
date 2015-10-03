@@ -17,13 +17,9 @@ A lot of user-agents lie about their identify. That makes US sniffing a guessing
 
 If you want faster updates, switch to snapshot releases.     
 
-New in Version 1.18 (unreleased)
+New in Version 1.19 (unreleased)
 -------------------
-- #118 Updated Opera support
-- #115 Improved Ubuntu detection
-- #114 Fixed Microsoft Edge version detection
-- #125 Improved Opera version detection
-- Safari 9 support
+TBA
 
 Javadoc
 -------
@@ -83,6 +79,14 @@ http://www.bitwalker.eu/contact
 
 Changelog
 ---------
+
+1.18
+----
+- #118 Updated Opera support
+- #115 Improved Ubuntu detection
+- #114 Fixed Microsoft Edge version detection
+- #125 Improved Opera version detection
+- Safari 9 support
 
 1.17
 ----
