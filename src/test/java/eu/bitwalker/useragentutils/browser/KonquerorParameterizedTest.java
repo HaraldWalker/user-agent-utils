@@ -25,7 +25,7 @@ public class KonquerorParameterizedTest extends
 				// konqueror
 				{
 						"Mozilla/5.0 (compatible; konqueror/3.3; linux 2.4.21-243-smp4G) (KHTML, like Geko)",
-						Browser.KONQUEROR, null, OperatingSystem.LINUX },
+						Browser.KONQUEROR, "3.3", OperatingSystem.LINUX },
 				{
 						"Mozilla/6.0 (compatible; Konqueror/4.2; i686 FreeBSD 6.4; 20060308)",
 						Browser.KONQUEROR, "4.2", OperatingSystem.UNKNOWN },

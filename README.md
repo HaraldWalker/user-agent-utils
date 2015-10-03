@@ -15,11 +15,15 @@ Advice
 ------
 A lot of user-agents lie about their identify. That makes US sniffing a guessing game. On websites it is a better approach to detect features using a javascript library like Modernizr (http://modernizr.com/).  
 
+If you want faster updates, switch to snapshot releases.     
+
 New in Version 1.18 (unreleased)
 -------------------
 - #118 Updated Opera support
 - #115 Improved Ubuntu detection
 - #114 Fixed Microsoft Edge version detection
+- #125 Improved Opera version detection
+- Safari 9 support
 
 Javadoc
 -------
@@ -51,7 +55,7 @@ Contributors
 * Please use the `trunk` branch on GitHub when making a pull request
 * This project is in maintenance mode. We will try to stay up to date and fix bugs but do not expect any big new features or changes. 
 * If you want big changes feel free to fork this project and start your own version.
-* Code has been contributed by: Nathan Maves, Francisco Collao (https://github.com/pcollaog), Madgency (https://github.com/guignol), Pavel Sher (https://github.com/pavelsher), Pierre Etchemaite, Alexander Radzin (https://github.com/alexradzin), SeabassNg (https://github.com/SeabassNg), Sudeep Sinha(https://github.com/sudeep-sinha), John Dydo, frankdev (https://github.com/frankdev), Lew Dawson, Joachim Mueller (https://github.com/joachimmueller), Jason Calabrese (https://github.com/jasoncalabrese), Thorsten Schaefer, Parker Seidel (https://github.com/parker), Joris Aerts (https://github.com/JorisAerts), Stephan Heffner, Filipe Névola (https://github.com/filipenevola), John Patrick (https://github.com/nhojpatrick)
+* Code has been contributed by: Nathan Maves, Francisco Collao (https://github.com/pcollaog), Madgency (https://github.com/guignol), Pavel Sher (https://github.com/pavelsher), Pierre Etchemaite, Alexander Radzin (https://github.com/alexradzin), SeabassNg (https://github.com/SeabassNg), Sudeep Sinha(https://github.com/sudeep-sinha), John Dydo, frankdev (https://github.com/frankdev), Lew Dawson, Joachim Mueller (https://github.com/joachimmueller), Jason Calabrese (https://github.com/jasoncalabrese), Thorsten Schaefer, Parker Seidel (https://github.com/parker), Joris Aerts (https://github.com/JorisAerts), Stephan Heffner, Filipe Névola (https://github.com/filipenevola), John Patrick (https://github.com/nhojpatrick), Konrad Kubacki (https://github.com/konradkg)
 
 Sponsors
 --------
