@@ -1,7 +1,10 @@
 bin/
 target/
 javadoc/
+src/main/main.iml
+src/test/test.iml
 .project
 .classpath
+.idea
 .settings
 .DS_Store

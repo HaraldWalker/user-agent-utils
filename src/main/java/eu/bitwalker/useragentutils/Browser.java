@@ -97,7 +97,13 @@ public enum Browser {
 	 * Google Chrome browser
 	 */
 	CHROME( 		Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ), // before Mozilla
-		CHROME_MOBILE( 	Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo","CriOS", "Mobile Safari" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ), 
+		CHROME_MOBILE( 	Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo","CriOS", "Mobile Safari" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ),
+		CHROME46( 		Manufacturer.GOOGLE, Browser.CHROME, 51, "Chrome 46", new String[] { "Chrome/46" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME45( 		Manufacturer.GOOGLE, Browser.CHROME, 50, "Chrome 45", new String[] { "Chrome/45" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME44( 		Manufacturer.GOOGLE, Browser.CHROME, 49, "Chrome 44", new String[] { "Chrome/44" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME43( 		Manufacturer.GOOGLE, Browser.CHROME, 48, "Chrome 43", new String[] { "Chrome/43" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME42( 		Manufacturer.GOOGLE, Browser.CHROME, 47, "Chrome 42", new String[] { "Chrome/42" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME41( 		Manufacturer.GOOGLE, Browser.CHROME, 46, "Chrome 41", new String[] { "Chrome/41" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME40( 		Manufacturer.GOOGLE, Browser.CHROME, 45, "Chrome 40", new String[] { "Chrome/40" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME39( 		Manufacturer.GOOGLE, Browser.CHROME, 44, "Chrome 39", new String[] { "Chrome/39" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME38( 		Manufacturer.GOOGLE, Browser.CHROME, 43, "Chrome 38", new String[] { "Chrome/38" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
@@ -152,6 +158,13 @@ public enum Browser {
 		
 	OPERA(			Manufacturer.OPERA, null, 1, "Opera", new String[] { " OPR/", "Opera" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Opera\\/(([\\d]+)\\.([\\w]+))"),   // before MSIE
 		OPERA_MINI(		Manufacturer.OPERA, Browser.OPERA, 20, "Opera Mini", new String[] { "Opera Mini"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.PRESTO, null), // Opera for mobile devices
+		OPERA32(		Manufacturer.OPERA, Browser.OPERA, 32, "Opera 32", new String[] { "OPR/32." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+		OPERA31(		Manufacturer.OPERA, Browser.OPERA, 31, "Opera 31", new String[] { "OPR/31." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+		OPERA30(		Manufacturer.OPERA, Browser.OPERA, 30, "Opera 30", new String[] { "OPR/30." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+		OPERA29(		Manufacturer.OPERA, Browser.OPERA, 29, "Opera 29", new String[] { "OPR/29." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+		OPERA28(		Manufacturer.OPERA, Browser.OPERA, 28, "Opera 28", new String[] { "OPR/28." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+		OPERA27(		Manufacturer.OPERA, Browser.OPERA, 27, "Opera 25", new String[] { "OPR/27." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+		OPERA26(		Manufacturer.OPERA, Browser.OPERA, 26, "Opera 26", new String[] { "OPR/26." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 		OPERA25(		Manufacturer.OPERA, Browser.OPERA, 25, "Opera 25", new String[] { "OPR/25." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 		OPERA24(		Manufacturer.OPERA, Browser.OPERA, 24, "Opera 24", new String[] { "OPR/24." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 		OPERA23(		Manufacturer.OPERA, Browser.OPERA, 23, "Opera 23", new String[] { "OPR/23." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),

@@ -236,7 +236,7 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.77 Safari/537.36",
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36"
 	};
-	
+
 	String[] chrome36 = new String[] {
 			"	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36"
 	};
@@ -250,7 +250,11 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36"
 	};
 
-	
+	String[] chrome45 = new String[] {
+		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+	};
+
+
 	String[] firefox3 = new String[] {
 			"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.14) Gecko/2009090216 Ubuntu/9.04 (jaunty) Firefox/3.0.14"
 	};
@@ -414,7 +418,11 @@ public class BrowserTest {
 	String[] opera24 = {
 			"	Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36 OPR/24.0.1558.51 (Edition Next)"
 		};
-	
+
+	String[] opera32 = {
+		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36 OPR/32.0.1948.69"
+	};
+
 	String[] operaMini = {
 		"Opera/9.60 (J2ME/MIDP; Opera Mini/4.2.13337/458; U; en) Presto/2.2.0",
 		"Opera/9.80 (J2ME/MIDP; Opera Mini/5.0.16823/1428; U; en) Presto/2.2.0"
@@ -480,7 +488,8 @@ public class BrowserTest {
 	};
 
 	String[] onshapeAndroid = {
-			"Onshape/1.13.8 (Linux; Android 5.0.1; nvidia SHIELD Tablet)"
+			"Onshape/1.13.8 (Linux; Android 5.0.1; nvidia SHIELD Tablet)",
+			"Onshape/1.36.3604 (samsung | SM-G920V; Android 5.1.1)"
 	};
 
 	String[] silk = {
@@ -604,6 +613,7 @@ public class BrowserTest {
 		testAgents(chrome32, Browser.CHROME32);
 		testAgents(chrome33, Browser.CHROME33);
 		testAgents(chrome36, Browser.CHROME36);
+		testAgents(chrome45, Browser.CHROME45);
 		testAgents(firefox3, Browser.FIREFOX3);
 		testAgents(firefox4, Browser.FIREFOX4);
 		testAgents(firefox5, Browser.FIREFOX5);
@@ -638,6 +648,7 @@ public class BrowserTest {
 		testAgents(opera20, Browser.OPERA20);
 		testAgents(opera23, Browser.OPERA23);
 		testAgents(opera24, Browser.OPERA24);
+		testAgents(opera32, Browser.OPERA32);
 		testAgents(operaCoast, Browser.COAST1);
 		testAgents(camino2, Browser.CAMINO2);
 		testAgents(camino, Browser.CAMINO);		
@@ -649,9 +660,9 @@ public class BrowserTest {
 		testAgents(proxy, Browser.DOWNLOAD);
 		testAgents(thunderbird3, Browser.THUNDERBIRD3);
 		testAgents(thunderbird2, Browser.THUNDERBIRD2);
-                testAgents(onshapeIPad, Browser.ONSHAPE_IPAD);
-                testAgents(onshapeIPhone, Browser.ONSHAPE_IPHONE);
-                testAgents(onshapeAndroid, Browser.ONSHAPE_ANDROID);
+		testAgents(onshapeIPad, Browser.ONSHAPE_IPAD);
+		testAgents(onshapeIPhone, Browser.ONSHAPE_IPHONE);
+		testAgents(onshapeAndroid, Browser.ONSHAPE_ANDROID);
 		testAgents(silk, Browser.SILK);
 		testAgents(iTunes, Browser.APPLE_ITUNES);
 		testAgents(appStore, Browser.APPLE_APPSTORE);
