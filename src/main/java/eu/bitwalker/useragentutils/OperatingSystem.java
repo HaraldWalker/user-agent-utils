@@ -261,7 +261,7 @@ public enum OperatingSystem {
 	
 	/*
 	 * Shortcut to check of an operating system is a mobile device.
-	 * Left in here for backwards compatibility. Use .getDeciceType() instead.
+	 * Left in here for backwards compatibility. Use .getDeviceType() instead.
 	 */
 	@Deprecated
 	public boolean isMobileDevice() {
