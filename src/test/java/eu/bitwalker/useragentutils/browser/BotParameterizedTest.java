@@ -76,6 +76,8 @@ public class BotParameterizedTest extends AbstractUserAgentParameterizedTest {
 						Browser.BOT, null, OperatingSystem.UNKNOWN },
 				{ 		"Phantom.js bot", 
 						Browser.BOT, null, OperatingSystem.UNKNOWN },
+				{ 		"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.1-development Safari/538.1", 
+						Browser.BOT, null, OperatingSystem.UNKNOWN }
 		});
 	}
 }
