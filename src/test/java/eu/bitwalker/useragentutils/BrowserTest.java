@@ -87,10 +87,14 @@ public class BrowserTest {
 			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko", //64bit Win8
 	};
 
-	String[] edgeClients = new String[] {
+	String[] edge12Clients = new String[] {
 			"Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36 Edge/12.0",
 			"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240",
 			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10532"
+	};
+
+	String [] edge13Clients = new String[] {
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586"
 	};
 	
 	String[] edgeMobileClients = new String[] {
@@ -612,7 +616,8 @@ public class BrowserTest {
 		testAgents(ie9clients, Browser.IE9);
 		testAgents(ie10clients, Browser.IE10);
 		testAgents(ie11clients, Browser.IE11);
-		testAgents(edgeClients, Browser.EDGE12);
+		testAgents(edge12Clients, Browser.EDGE12);
+		testAgents(edge13Clients, Browser.EDGE13);
 		testAgents(edgeMobileClients, Browser.EDGE_MOBILE12);
 		testAgents(ieTooOld, Browser.IE);
 		testAgents(outlook2007, Browser.OUTLOOK2007);
