@@ -19,7 +19,7 @@ If you want faster updates, switch to snapshot releases.
 
 New in Version 1.19 (unreleased)
 -------------------
-TBA
+- #138 Improved future Microsoft Edge detection; added latest version
 
 Javadoc
 -------

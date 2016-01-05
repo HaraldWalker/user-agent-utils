@@ -44,8 +44,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import eu.bitwalker.useragentutils.Application;
-
 /**
  * Test class for application detection.
  * @author harald
