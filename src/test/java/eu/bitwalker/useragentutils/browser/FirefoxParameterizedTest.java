@@ -56,6 +56,14 @@ public class FirefoxParameterizedTest extends
 				{
 						"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:25.0) Gecko/20100101 Firefox/25.0",
 						Browser.FIREFOX25, "25.0", OperatingSystem.MAC_OS_X },
+				// firefox43
+				{
+						"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:43.0) Gecko/20100101 Firefox/43.0",
+						Browser.FIREFOX43, "43.0", OperatingSystem.MAC_OS_X },
+				// firefox49 not known -> should fallback to Browser.FIREFOX
+				{
+							"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:49.0) Gecko/20100101 Firefox/49.0",
+							Browser.FIREFOX, "49.0", OperatingSystem.MAC_OS_X },
 				// firefox3mobile
 				{
 						"Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900",
