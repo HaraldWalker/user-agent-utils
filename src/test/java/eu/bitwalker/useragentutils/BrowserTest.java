@@ -301,13 +301,17 @@ public class BrowserTest {
 	};
 	
 	String[] firefoxMobile = {
-		"Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0"	
+		"Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0",
 	};
 	
+	String[] firefoxMobileForIos = {
+			"Mozilla/5.0 (iPad; CPU OS 9_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) FxiOS/1.2 Mobile/13C75 Safari/601.1.46"
+	};
+			
 	String[] firefoxMobile23 = {
 			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0"	
 	};
-	
+		
 	String[] safari = {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/525.28.3 (KHTML, like Gecko) Version/3.2.3 Safari/525.28.3",
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-gb) AppleWebKit/523.10.6 (KHTML, like Gecko) Version/3.0.4 Safari/523.10.6"
@@ -659,6 +663,7 @@ public class BrowserTest {
 		testAgents(firefox25, Browser.FIREFOX25);
 		testAgents(firefox3mobile, Browser.FIREFOX3MOBILE);
 		testAgents(firefoxMobile, Browser.FIREFOX_MOBILE);
+		testAgents(firefoxMobileForIos, Browser.FIREFOX_MOBILE_IOS);
 		testAgents(firefoxMobile23, Browser.FIREFOX_MOBILE23);
 		testAgents(safari, Browser.SAFARI);
 		testAgents(dolfin, Browser.DOLFIN2);
@@ -709,7 +714,7 @@ public class BrowserTest {
 	@Test
 	public void testCustomUserAgentParsing() {
 		// Test limited to the big browser families. As Camino can not be detected any longer, the second best match is Firefox3 (a child of Firefox).
-		for (String agentString : camino2) {
+		for (String agentString : firefox3) {
 			assertEquals(Browser.FIREFOX3, Browser.parseUserAgentString(agentString,Arrays.asList(Browser.IE,Browser.CHROME, Browser.APPLE_WEB_KIT, Browser.FIREFOX)));
 		}
 		// When there is no match in the given set, return UNKNOWN
