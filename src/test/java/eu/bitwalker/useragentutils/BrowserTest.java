@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers 
+* Copyright (c) 2008-2016, Harald Walker (bitwalker.eu) and contributing developers 
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -279,7 +279,7 @@ public class BrowserTest {
 	String[] firefox6 = new String[] {
 	"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0a2) Gecko/20110612 Firefox/6.0a2"
 	};
-
+	
 	String[] firefox19 = new String[] {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:19.0) Gecko/20100101 Firefox/19.0"
 	};
@@ -310,6 +310,10 @@ public class BrowserTest {
 			
 	String[] firefoxMobile23 = {
 			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0"	
+	};
+	
+	String[] futureFirefoxVersion = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:28.0) Gecko/20100101 Firefox/60.0"
 	};
 		
 	String[] safari = {
@@ -665,6 +669,7 @@ public class BrowserTest {
 		testAgents(firefoxMobile, Browser.FIREFOX_MOBILE);
 		testAgents(firefoxMobileForIos, Browser.FIREFOX_MOBILE_IOS);
 		testAgents(firefoxMobile23, Browser.FIREFOX_MOBILE23);
+		testAgents(futureFirefoxVersion, Browser.FIREFOX);
 		testAgents(safari, Browser.SAFARI);
 		testAgents(dolfin, Browser.DOLFIN2);
 		testAgents(safari8, Browser.SAFARI8);
