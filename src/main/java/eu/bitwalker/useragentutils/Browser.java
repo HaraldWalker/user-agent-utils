@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers 
+* Copyright (c) 2008-2016, Harald Walker (bitwalker.eu) and contributing developers 
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -97,15 +97,20 @@ public enum Browser {
 	/**
 	 * Family of Microsoft Edge browsers. Pretends to be Chrome and claims to be webkit compatible. 
 	 */
-	EDGE(Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] {"Edge"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\/((12)\\.([0-9]*)))"),
-		EDGE12(Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge", new String[] {"Edge/12"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\/((12)\\.([0-9]*)))"    ),
-		EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE, 302, "Microsoft Edge Mobile", new String[] {"Mobile Safari", "Edge/12"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\/((12)\\.([0-9]*)))"    ),
+	EDGE(			Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] {"Edge"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\/(([0-9]+)\\.([0-9]*)))"),
+		EDGE_MOBILE(	Manufacturer.MICROSOFT, Browser.EDGE, 304, "Microsoft Edge Mobile", new String[] {"Mobile Safari"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
+			EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 302, "Microsoft Edge Mobile 12", new String[] {"Mobile Safari", "Edge/12"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE13(			Manufacturer.MICROSOFT, Browser.EDGE, 303, "Microsoft Edge 13", new String[] {"Edge/13"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE12(			Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge 12", new String[] {"Edge/12"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 	
 	/**
 	 * Google Chrome browser
 	 */
 	CHROME( 		Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview", "Vivaldi" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ), // before Mozilla
 		CHROME_MOBILE( 	Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo","CriOS", "Mobile Safari" }, new String[] {"OPR/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ),
+		CHROME49( 		Manufacturer.GOOGLE, Browser.CHROME, 55, "Chrome 49", new String[] { "Chrome/49" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME48( 		Manufacturer.GOOGLE, Browser.CHROME, 53, "Chrome 48", new String[] { "Chrome/48" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME47( 		Manufacturer.GOOGLE, Browser.CHROME, 52, "Chrome 47", new String[] { "Chrome/47" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME46( 		Manufacturer.GOOGLE, Browser.CHROME, 51, "Chrome 46", new String[] { "Chrome/46" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME45( 		Manufacturer.GOOGLE, Browser.CHROME, 50, "Chrome 45", new String[] { "Chrome/45" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME44( 		Manufacturer.GOOGLE, Browser.CHROME, 49, "Chrome 44", new String[] { "Chrome/44" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
@@ -148,9 +153,64 @@ public enum Browser {
 
 	OMNIWEB(		Manufacturer.OTHER, null, 2, "Omniweb", new String[] { "OmniWeb" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), //
 
-	SAFARI(			Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi","CFNetwork" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)" ),  // before AppleWebKit
+	FIREFOX(		Manufacturer.MOZILLA, null, 10, "Firefox", new String[] { "Firefox", "FxiOS" }, new String[] {"camino", "flock", "ggpht.com", "WordPress.com mShots"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Firefox\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),  // using Gecko Engine
+	FIREFOX3MOBILE(	Manufacturer.MOZILLA, Browser.FIREFOX, 31, "Firefox 3 Mobile", new String[] { "Firefox/3.5 Maemo" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX_MOBILE(	Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new String[] { "Mobile" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+		FIREFOX_MOBILE23(Manufacturer.MOZILLA, FIREFOX_MOBILE, 223, "Firefox Mobile 23", new String[] { "Firefox/23" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+		/**
+		 * Firefox for iOS devices. This Firefox version is using webkit instead of gecko rendering engine.
+		 */
+		FIREFOX_MOBILE_IOS(Manufacturer.MOZILLA, FIREFOX_MOBILE, 224, "Firefox Mobile (iOS)", new String[] { "FxiOS" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),  
+	FIREFOX45(		Manufacturer.MOZILLA, Browser.FIREFOX, 222, "Firefox 45", new String[] { "Firefox/45" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX44(		Manufacturer.MOZILLA, Browser.FIREFOX, 221, "Firefox 44", new String[] { "Firefox/44" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX43(		Manufacturer.MOZILLA, Browser.FIREFOX, 220, "Firefox 43", new String[] { "Firefox/43" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX42(		Manufacturer.MOZILLA, Browser.FIREFOX, 219, "Firefox 42", new String[] { "Firefox/42" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX41(		Manufacturer.MOZILLA, Browser.FIREFOX, 218, "Firefox 41", new String[] { "Firefox/41" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX40(		Manufacturer.MOZILLA, Browser.FIREFOX, 217, "Firefox 40", new String[] { "Firefox/40" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX39(		Manufacturer.MOZILLA, Browser.FIREFOX, 216, "Firefox 39", new String[] { "Firefox/39" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX38(		Manufacturer.MOZILLA, Browser.FIREFOX, 215, "Firefox 38", new String[] { "Firefox/38" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX37(		Manufacturer.MOZILLA, Browser.FIREFOX, 214, "Firefox 37", new String[] { "Firefox/37" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX36(		Manufacturer.MOZILLA, Browser.FIREFOX, 213, "Firefox 36", new String[] { "Firefox/36" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX35(		Manufacturer.MOZILLA, Browser.FIREFOX, 212, "Firefox 35", new String[] { "Firefox/35" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX34(		Manufacturer.MOZILLA, Browser.FIREFOX, 211, "Firefox 34", new String[] { "Firefox/34" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX33(		Manufacturer.MOZILLA, Browser.FIREFOX, 210, "Firefox 33", new String[] { "Firefox/33" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX32(		Manufacturer.MOZILLA, Browser.FIREFOX, 109, "Firefox 32", new String[] { "Firefox/32" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX31(		Manufacturer.MOZILLA, Browser.FIREFOX, 310, "Firefox 31", new String[] { "Firefox/31" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX30(		Manufacturer.MOZILLA, Browser.FIREFOX, 300, "Firefox 30", new String[] { "Firefox/30" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX29(		Manufacturer.MOZILLA, Browser.FIREFOX, 290, "Firefox 29", new String[] { "Firefox/29" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX28(		Manufacturer.MOZILLA, Browser.FIREFOX, 280, "Firefox 28", new String[] { "Firefox/28" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX27(		Manufacturer.MOZILLA, Browser.FIREFOX, 108, "Firefox 27", new String[] { "Firefox/27" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX26(		Manufacturer.MOZILLA, Browser.FIREFOX, 107, "Firefox 26", new String[] { "Firefox/26" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX25(		Manufacturer.MOZILLA, Browser.FIREFOX, 106, "Firefox 25", new String[] { "Firefox/25" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX24(		Manufacturer.MOZILLA, Browser.FIREFOX, 105, "Firefox 24", new String[] { "Firefox/24" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX23(		Manufacturer.MOZILLA, Browser.FIREFOX, 104, "Firefox 23", new String[] { "Firefox/23" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX22(		Manufacturer.MOZILLA, Browser.FIREFOX, 103, "Firefox 22", new String[] { "Firefox/22" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX21(		Manufacturer.MOZILLA, Browser.FIREFOX, 102, "Firefox 21", new String[] { "Firefox/21" }, new String[]{"WordPress.com mShots"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX20(		Manufacturer.MOZILLA, Browser.FIREFOX, 101, "Firefox 20", new String[] { "Firefox/20" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX19(		Manufacturer.MOZILLA, Browser.FIREFOX, 100, "Firefox 19", new String[] { "Firefox/19" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX18(		Manufacturer.MOZILLA, Browser.FIREFOX, 99, "Firefox 18", new String[] { "Firefox/18" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX17(		Manufacturer.MOZILLA, Browser.FIREFOX, 98, "Firefox 17", new String[] { "Firefox/17" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX16(		Manufacturer.MOZILLA, Browser.FIREFOX, 97, "Firefox 16", new String[] { "Firefox/16" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX15(		Manufacturer.MOZILLA, Browser.FIREFOX, 96, "Firefox 15", new String[] { "Firefox/15" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX14(		Manufacturer.MOZILLA, Browser.FIREFOX, 95, "Firefox 14", new String[] { "Firefox/14" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX13(		Manufacturer.MOZILLA, Browser.FIREFOX, 94, "Firefox 13", new String[] { "Firefox/13" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX12(		Manufacturer.MOZILLA, Browser.FIREFOX, 93, "Firefox 12", new String[] { "Firefox/12" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX11(		Manufacturer.MOZILLA, Browser.FIREFOX, 92, "Firefox 11", new String[] { "Firefox/11" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX10(		Manufacturer.MOZILLA, Browser.FIREFOX, 91, "Firefox 10", new String[] { "Firefox/10" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX9(		Manufacturer.MOZILLA, Browser.FIREFOX, 90, "Firefox 9", new String[] { "Firefox/9" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX8(		Manufacturer.MOZILLA, Browser.FIREFOX, 80, "Firefox 8", new String[] { "Firefox/8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX7(		Manufacturer.MOZILLA, Browser.FIREFOX, 70, "Firefox 7", new String[] { "Firefox/7" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX6(		Manufacturer.MOZILLA, Browser.FIREFOX, 60, "Firefox 6", new String[] { "Firefox/6." }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX5(		Manufacturer.MOZILLA, Browser.FIREFOX, 50, "Firefox 5", new String[] { "Firefox/5." }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX4(		Manufacturer.MOZILLA, Browser.FIREFOX, 40, "Firefox 4", new String[] { "Firefox/4." }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX3(		Manufacturer.MOZILLA, Browser.FIREFOX, 30, "Firefox 3", new String[] { "Firefox/3." }, new String[] {"Camino", "Flock", "ggpht.com"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX2(		Manufacturer.MOZILLA, Browser.FIREFOX, 20, "Firefox 2", new String[] { "Firefox/2." }, new String[]{"Camino", "WordPress.com mShots"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX1_5(		Manufacturer.MOZILLA, Browser.FIREFOX, 15, "Firefox 1.5", new String[] { "Firefox/1.5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+
+	
+	SAFARI(			Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi","CFNetwork", "Phantom" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)" ),  // before AppleWebKit
 		BLACKBERRY10( Manufacturer.BLACKBERRY, Browser.SAFARI, 10, "BlackBerry", new String[] { "BB10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null),
-		MOBILE_SAFARI(	Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new String[] { "Mobile Safari","Mobile/" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),  // before Safari
+		MOBILE_SAFARI(	Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new String[] { "Mobile Safari","Mobile/" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "FxiOS" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),  // before Safari
 		SILK(			Manufacturer.AMAZON, Browser.SAFARI, 15, "Silk", new String[] { "Silk/" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Silk\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\-[\\w]+)?)" ),  // http://en.wikipedia.org/wiki/Amazon_Silk
 		SAFARI9(		Manufacturer.APPLE, Browser.SAFARI, 9, "Safari 9", new String[] { "Version/9" }, new String[] { "Applebot" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ),  // before AppleWebKit
 		SAFARI8(		Manufacturer.APPLE, Browser.SAFARI, 8, "Safari 8", new String[] { "Version/8" }, new String[] { "Applebot" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ),  // before AppleWebKit
@@ -197,7 +257,7 @@ public enum Browser {
 	/*
 	 * Apple WebKit compatible client. Can be a browser or an application with embedded browser using UIWebView.
 	 */
-	APPLE_WEB_KIT(	Manufacturer.APPLE, null, 50, "Apple WebKit", new String[] { "AppleWebKit" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
+	APPLE_WEB_KIT(	Manufacturer.APPLE, null, 50, "Apple WebKit", new String[] { "AppleWebKit" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "Phantom" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
 		APPLE_ITUNES(	Manufacturer.APPLE, Browser.APPLE_WEB_KIT, 52, "iTunes", new String[] { "iTunes" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
 		APPLE_APPSTORE(	Manufacturer.APPLE, Browser.APPLE_WEB_KIT, 53, "App Store", new String[] { "MacAppStore" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
 		ADOBE_AIR(	Manufacturer.ADOBE, Browser.APPLE_WEB_KIT, 1, "Adobe AIR application", new String[] { "AdobeAIR" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
@@ -208,53 +268,6 @@ public enum Browser {
 		CAMINO2(		Manufacturer.OTHER, Browser.CAMINO, 17, "Camino 2", new String[] { "Camino/2" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 
 	FLOCK(			Manufacturer.OTHER, null, 4, "Flock", new String[]{"Flock"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Flock\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"),
-
-	FIREFOX(		Manufacturer.MOZILLA, null, 10, "Firefox", new String[] { "Firefox" }, new String[] {"ggpht.com", "WordPress.com mShots"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Firefox\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),  // using Gecko Engine
-		FIREFOX3MOBILE(	Manufacturer.MOZILLA, Browser.FIREFOX, 31, "Firefox 3 Mobile", new String[] { "Firefox/3.5 Maemo" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX_MOBILE(	Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new String[] { "Mobile" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-			FIREFOX_MOBILE23(Manufacturer.MOZILLA, FIREFOX_MOBILE, 223, "Firefox Mobile 23", new String[] { "Firefox/23" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX42(		Manufacturer.MOZILLA, Browser.FIREFOX, 219, "Firefox 42", new String[] { "Firefox/42" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX41(		Manufacturer.MOZILLA, Browser.FIREFOX, 218, "Firefox 41", new String[] { "Firefox/41" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX40(		Manufacturer.MOZILLA, Browser.FIREFOX, 217, "Firefox 40", new String[] { "Firefox/40" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX39(		Manufacturer.MOZILLA, Browser.FIREFOX, 216, "Firefox 39", new String[] { "Firefox/39" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX38(		Manufacturer.MOZILLA, Browser.FIREFOX, 215, "Firefox 38", new String[] { "Firefox/38" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX37(		Manufacturer.MOZILLA, Browser.FIREFOX, 214, "Firefox 37", new String[] { "Firefox/37" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX36(		Manufacturer.MOZILLA, Browser.FIREFOX, 213, "Firefox 36", new String[] { "Firefox/36" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX35(		Manufacturer.MOZILLA, Browser.FIREFOX, 212, "Firefox 35", new String[] { "Firefox/35" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX34(		Manufacturer.MOZILLA, Browser.FIREFOX, 211, "Firefox 34", new String[] { "Firefox/34" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX33(		Manufacturer.MOZILLA, Browser.FIREFOX, 210, "Firefox 33", new String[] { "Firefox/33" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX32(		Manufacturer.MOZILLA, Browser.FIREFOX, 109, "Firefox 32", new String[] { "Firefox/32" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX31(		Manufacturer.MOZILLA, Browser.FIREFOX, 310, "Firefox 31", new String[] { "Firefox/31" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX30(		Manufacturer.MOZILLA, Browser.FIREFOX, 300, "Firefox 30", new String[] { "Firefox/30" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX29(		Manufacturer.MOZILLA, Browser.FIREFOX, 290, "Firefox 29", new String[] { "Firefox/29" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX28(		Manufacturer.MOZILLA, Browser.FIREFOX, 280, "Firefox 28", new String[] { "Firefox/28" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX27(		Manufacturer.MOZILLA, Browser.FIREFOX, 108, "Firefox 27", new String[] { "Firefox/27" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX26(		Manufacturer.MOZILLA, Browser.FIREFOX, 107, "Firefox 26", new String[] { "Firefox/26" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX25(		Manufacturer.MOZILLA, Browser.FIREFOX, 106, "Firefox 25", new String[] { "Firefox/25" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX24(		Manufacturer.MOZILLA, Browser.FIREFOX, 105, "Firefox 24", new String[] { "Firefox/24" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX23(		Manufacturer.MOZILLA, Browser.FIREFOX, 104, "Firefox 23", new String[] { "Firefox/23" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX22(		Manufacturer.MOZILLA, Browser.FIREFOX, 103, "Firefox 22", new String[] { "Firefox/22" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX21(		Manufacturer.MOZILLA, Browser.FIREFOX, 102, "Firefox 21", new String[] { "Firefox/21" }, new String[]{"WordPress.com mShots"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX20(		Manufacturer.MOZILLA, Browser.FIREFOX, 101, "Firefox 20", new String[] { "Firefox/20" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX19(		Manufacturer.MOZILLA, Browser.FIREFOX, 100, "Firefox 19", new String[] { "Firefox/19" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX18(		Manufacturer.MOZILLA, Browser.FIREFOX, 99, "Firefox 18", new String[] { "Firefox/18" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX17(		Manufacturer.MOZILLA, Browser.FIREFOX, 98, "Firefox 17", new String[] { "Firefox/17" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX16(		Manufacturer.MOZILLA, Browser.FIREFOX, 97, "Firefox 16", new String[] { "Firefox/16" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX15(		Manufacturer.MOZILLA, Browser.FIREFOX, 96, "Firefox 15", new String[] { "Firefox/15" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX14(		Manufacturer.MOZILLA, Browser.FIREFOX, 95, "Firefox 14", new String[] { "Firefox/14" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX13(		Manufacturer.MOZILLA, Browser.FIREFOX, 94, "Firefox 13", new String[] { "Firefox/13" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX12(		Manufacturer.MOZILLA, Browser.FIREFOX, 93, "Firefox 12", new String[] { "Firefox/12" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX11(		Manufacturer.MOZILLA, Browser.FIREFOX, 92, "Firefox 11", new String[] { "Firefox/11" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX10(		Manufacturer.MOZILLA, Browser.FIREFOX, 91, "Firefox 10", new String[] { "Firefox/10" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX9(		Manufacturer.MOZILLA, Browser.FIREFOX, 90, "Firefox 9", new String[] { "Firefox/9" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX8(		Manufacturer.MOZILLA, Browser.FIREFOX, 80, "Firefox 8", new String[] { "Firefox/8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX7(		Manufacturer.MOZILLA, Browser.FIREFOX, 70, "Firefox 7", new String[] { "Firefox/7" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX6(		Manufacturer.MOZILLA, Browser.FIREFOX, 60, "Firefox 6", new String[] { "Firefox/6" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX5(		Manufacturer.MOZILLA, Browser.FIREFOX, 50, "Firefox 5", new String[] { "Firefox/5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX4(		Manufacturer.MOZILLA, Browser.FIREFOX, 40, "Firefox 4", new String[] { "Firefox/4" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX3(		Manufacturer.MOZILLA, Browser.FIREFOX, 30, "Firefox 3", new String[] { "Firefox/3" }, new String[] {"ggpht.com"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX2(		Manufacturer.MOZILLA, Browser.FIREFOX, 20, "Firefox 2", new String[] { "Firefox/2" }, new String[]{"WordPress.com mShots"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
-		FIREFOX1_5(		Manufacturer.MOZILLA, Browser.FIREFOX, 15, "Firefox 1.5", new String[] { "Firefox/1.5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 
 	/*
 	 * Thunderbird email client, based on the same Gecko engine Firefox is using.
@@ -273,7 +286,7 @@ public enum Browser {
 
 	SEAMONKEY(		Manufacturer.OTHER, null, 15, "SeaMonkey", new String[]{"SeaMonkey"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "SeaMonkey\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
 
-	BOT(			Manufacturer.OTHER, null,12, "Robot/Spider", new String[] {"Googlebot", "Mediapartners-Google", "Web Preview", "bot", "Applebot" , "spider", "crawler", "Feedfetcher", "Slurp", "Twiceler", "Nutch", "BecomeBot", "bingbot", "BingPreview", "Google Web Preview", "WordPress.com mShots", "Seznam", "facebookexternalhit" , "YandexMarket", "Teoma", "ThumbSniper", "Phantom.js"}, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
+	BOT(			Manufacturer.OTHER, null,12, "Robot/Spider", new String[] {"Googlebot", "Mediapartners-Google", "Web Preview", "bot", "Applebot" , "spider", "crawler", "Feedfetcher", "Slurp", "Twiceler", "Nutch", "BecomeBot", "bingbot", "BingPreview", "Google Web Preview", "WordPress.com mShots", "Seznam", "facebookexternalhit" , "YandexMarket", "Teoma", "ThumbSniper", "Phantom"}, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
 	BOT_MOBILE( 	Manufacturer.OTHER, Browser.BOT, 20 , "Mobil Robot/Spider", new String[] {"Googlebot-Mobile"}, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
 
 	MOZILLA(		Manufacturer.MOZILLA, null, 1, "Mozilla", new String[] { "Mozilla", "Moozilla" }, new String[] {"ggpht.com"}, BrowserType.WEB_BROWSER, RenderingEngine.OTHER, null), // rest of the mozilla browsers

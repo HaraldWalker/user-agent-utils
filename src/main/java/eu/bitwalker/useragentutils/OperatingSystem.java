@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers
+* Copyright (c) 2008-2016, Harald Walker (bitwalker.eu) and contributing developers
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -68,8 +68,10 @@ public enum OperatingSystem {
 		XBOX_OS(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS,62, "Xbox OS",new String[]{"xbox"},new String[]{}, DeviceType.GAME_CONSOLE, null),
 		
 	ANDROID(		Manufacturer.GOOGLE,null, 0, "Android", new String[] { "Android" },  new String[] {"Ubuntu"}, DeviceType.MOBILE, null ),
-        ANDROID5(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 5, "Android 5.x", new String[] { "Android 5", "Android-5" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
-        ANDROID5_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID5, 50, "Android 5.x Tablet", new String[] { "Android 5", "Android-5"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+                ANDROID6(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 6, "Android 6.x", new String[] { "Android 6", "Android-6" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+                ANDROID6_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID6, 60, "Android 6.x Tablet", new String[] { "Android 6", "Android-6"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+                ANDROID5(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 5, "Android 5.x", new String[] { "Android 5", "Android-5" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+                ANDROID5_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID5, 50, "Android 5.x Tablet", new String[] { "Android 5", "Android-5"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
 		ANDROID4(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 4, "Android 4.x", new String[] { "Android 4", "Android-4" },   new String[] { "glass", "ubuntu"}, DeviceType.MOBILE, null ),
 		ANDROID4_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID4, 40, "Android 4.x Tablet", new String[] { "Android 4", "Android-4"}, new String[] { "mobile", "glass", "ubuntu" }, DeviceType.TABLET, null ),
 		ANDROID4_WEARABLE(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 400, "Android 4.x", new String[] { "Android 4" }, new String[] {"ubuntu"}, DeviceType.WEARABLE, null ),
@@ -261,7 +263,7 @@ public enum OperatingSystem {
 	
 	/*
 	 * Shortcut to check of an operating system is a mobile device.
-	 * Left in here for backwards compatibility. Use .getDeciceType() instead.
+	 * Left in here for backwards compatibility. Use .getDeviceType() instead.
 	 */
 	@Deprecated
 	public boolean isMobileDevice() {

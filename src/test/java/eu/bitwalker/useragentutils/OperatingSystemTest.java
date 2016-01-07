@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers  
+* Copyright (c) 2008-2016, Harald Walker (bitwalker.eu) and contributing developers  
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -255,9 +255,14 @@ public class OperatingSystemTest {
 			//"Dalvik/2.0.0 (Linux; U; Android 4.4.4; Nexus 5 Build/KTU84P) evme/2.0.2533" // disabled as it is not clear yet, which client sends this incomplete user-agent
 	};
 
-    String[] android5g = {
-            "Mozilla/5.0 (Linux; Android 5.0; Nexus 4 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Mobile Safari/537.36"
-    };
+        String[] android5g = {
+                        "Mozilla/5.0 (Linux; Android 5.0; Nexus 4 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Mobile Safari/537.36"
+        };
+        
+	String[] android6g = {
+			"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/46.0.2490.76 Mobile Safari/537.36", // Nexus 5 WebView
+			"Mozilla/5.0 (Linux; Android 6.0; Nexus 5X Build/MDB08L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36" // Nexus 5x
+	};
 	
 	String[] android2_tablet= {
 	"Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Kindle Fire Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"
@@ -287,6 +292,10 @@ public class OperatingSystemTest {
 
 	String[] android5_tablet = {
 			"Mozilla/5.0 (Linux; Android 5.0; Nexus 9 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Safari/537.36" // Nexus 9
+	};
+	
+	String[] android6_tablet = {
+			"Mozilla/5.0 (Linux; Android 6.0; Nexus 9 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Safari/537.36" // Nexus 9
 	};
 
 	String[] androidMobile = {
@@ -447,12 +456,14 @@ public class OperatingSystemTest {
 		testAgents(android1g, OperatingSystem.ANDROID1);
 		testAgents(android2g, OperatingSystem.ANDROID2);
 		testAgents(android4g, OperatingSystem.ANDROID4);
-        testAgents(android5g, OperatingSystem.ANDROID5);
+                testAgents(android5g, OperatingSystem.ANDROID5);
+		testAgents(android6g, OperatingSystem.ANDROID6);
 		testAgents(android2_tablet, OperatingSystem.ANDROID2_TABLET);
 		testAgents(android3_tablet, OperatingSystem.ANDROID3_TABLET);
 		testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
 		testAgents(android4_wearable, OperatingSystem.ANDROID4_WEARABLE);
 		testAgents(android5_tablet, OperatingSystem.ANDROID5_TABLET);
+		testAgents(android6_tablet, OperatingSystem.ANDROID6_TABLET);
 		testAgents(androidMobile, OperatingSystem.ANDROID_MOBILE);
 		testAgents(androidTablet, OperatingSystem.ANDROID_TABLET);
 		testAgents(chromeOS, OperatingSystem.CHROME_OS);
