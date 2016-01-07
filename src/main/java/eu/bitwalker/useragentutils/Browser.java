@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers 
+* Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -14,12 +14,12 @@
 * copyright notice, this list of conditions and the following
 * disclaimer in the documentation and/or other materials
 * provided with the distribution.
-* 
+*
 * * Neither the name of bitwalker nor the names of its
 * contributors may be used to endorse or promote products
 * derived from this software without specific prior written
 * permission.
-* 
+*
 * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
 * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
 * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
@@ -95,19 +95,20 @@ public enum Browser {
 		IE5(			Manufacturer.MICROSOFT, Browser.IE, 50, "Internet Explorer 5", new String[] { "MSIE 5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null ), // before MSIE
 
 	/**
-	 * Family of Microsoft Edge browsers. Pretends to be Chrome and claims to be webkit compatible. 
+	 * Family of Microsoft Edge browsers. Pretends to be Chrome and claims to be webkit compatible.
 	 */
 	EDGE(			Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] {"Edge"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\/(([0-9]+)\\.([0-9]*)))"),
 		EDGE_MOBILE(	Manufacturer.MICROSOFT, Browser.EDGE, 304, "Microsoft Edge Mobile", new String[] {"Mobile Safari"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
 			EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 302, "Microsoft Edge Mobile 12", new String[] {"Mobile Safari", "Edge/12"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE13(			Manufacturer.MICROSOFT, Browser.EDGE, 303, "Microsoft Edge 13", new String[] {"Edge/13"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE12(			Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge 12", new String[] {"Edge/12"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
-	
+
 	/**
 	 * Google Chrome browser
 	 */
 	CHROME( 		Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview", "Vivaldi" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ), // before Mozilla
 		CHROME_MOBILE( 	Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo","CriOS", "Mobile Safari" }, new String[] {"OPR/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)" ),
+		CHROME47( 		Manufacturer.GOOGLE, Browser.CHROME, 52, "Chrome 47", new String[] { "Chrome/47" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME46( 		Manufacturer.GOOGLE, Browser.CHROME, 51, "Chrome 46", new String[] { "Chrome/46" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME45( 		Manufacturer.GOOGLE, Browser.CHROME, 50, "Chrome 45", new String[] { "Chrome/45" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME44( 		Manufacturer.GOOGLE, Browser.CHROME, 49, "Chrome 44", new String[] { "Chrome/44" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
@@ -215,6 +216,7 @@ public enum Browser {
 		FIREFOX3MOBILE(	Manufacturer.MOZILLA, Browser.FIREFOX, 31, "Firefox 3 Mobile", new String[] { "Firefox/3.5 Maemo" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 		FIREFOX_MOBILE(	Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new String[] { "Mobile" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 			FIREFOX_MOBILE23(Manufacturer.MOZILLA, FIREFOX_MOBILE, 223, "Firefox Mobile 23", new String[] { "Firefox/23" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+		FIREFOX43(		Manufacturer.MOZILLA, Browser.FIREFOX, 220, "Firefox 43", new String[] { "Firefox/43" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 		FIREFOX42(		Manufacturer.MOZILLA, Browser.FIREFOX, 219, "Firefox 42", new String[] { "Firefox/42" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 		FIREFOX41(		Manufacturer.MOZILLA, Browser.FIREFOX, 218, "Firefox 41", new String[] { "Firefox/41" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 		FIREFOX40(		Manufacturer.MOZILLA, Browser.FIREFOX, 217, "Firefox 40", new String[] { "Firefox/40" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
@@ -301,7 +303,7 @@ public enum Browser {
 	APPLE_MAIL(		Manufacturer.APPLE, null, 51, "Apple Mail", new String[0], null, BrowserType.EMAIL_CLIENT, RenderingEngine.WEBKIT, null); // not detectable any longer.
 
 	/*
-	 * An id for each browser version which is unique per manufacturer. 
+	 * An id for each browser version which is unique per manufacturer.
 	 */
 	private final short id;
 	private final String name;
