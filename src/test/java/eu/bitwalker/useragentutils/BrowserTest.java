@@ -449,7 +449,8 @@ public class BrowserTest {
 	
 	String[] operaMini = {
 		"Opera/9.60 (J2ME/MIDP; Opera Mini/4.2.13337/458; U; en) Presto/2.2.0",
-		"Opera/9.80 (J2ME/MIDP; Opera Mini/5.0.16823/1428; U; en) Presto/2.2.0"
+		"Opera/9.80 (J2ME/MIDP; Opera Mini/5.0.16823/1428; U; en) Presto/2.2.0",
+		"Opera/9.80 (iPhone; Opera Mini/7.0.5/37.6116; U; en) Presto/2.12.423 Version/12.16"
 	};
 	
 	String[] operaCoast = {
