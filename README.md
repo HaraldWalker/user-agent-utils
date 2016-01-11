@@ -19,7 +19,7 @@ If you want faster updates, switch to snapshot releases.
 
 New in Version 1.20 (unreleased)
 -------------------
-TBA
+- #142 Fix iPhone detection in case of Opera Mini agent-string  
 
 Javadoc
 -------
