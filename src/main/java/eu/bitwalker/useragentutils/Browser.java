@@ -79,7 +79,7 @@ public enum Browser {
 		 * Since 2007 the mobile edition of Internet Explorer identifies itself as IEMobile in the user-agent.
 		 * If previous versions have to be detected, use the operating system information as well.
 		 */
-		IEMOBILE11(		Manufacturer.MICROSOFT, Browser.IE, 125, "IE Mobile 11", new String[] { "IEMobile/11" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
+		IEMOBILE11(		Manufacturer.MICROSOFT, Browser.IE, 125, "IE Mobile 11", new String[] { "IEMobile/11" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "(?:Trident\\/7|IE)(?:\\.[0-9]*;)?(?:.*rv:| )(([0-9]+)\\.?([0-9]+))" ), // before Mozilla
 		IEMOBILE10(		Manufacturer.MICROSOFT, Browser.IE, 124, "IE Mobile 10", new String[] { "IEMobile/10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
 		IEMOBILE9(		Manufacturer.MICROSOFT, Browser.IE, 123, "IE Mobile 9", new String[] { "IEMobile/9" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
 		IEMOBILE7(		Manufacturer.MICROSOFT, Browser.IE, 121, "IE Mobile 7", new String[] { "IEMobile 7" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
