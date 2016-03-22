@@ -33,7 +33,7 @@ Add dependency:
 <dependency>
    <groupId>eu.bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.18</version>
+   <version>1.19</version>
 </dependency>
 ```
 
@@ -42,7 +42,7 @@ Add dependency for snapshot releases:
 <dependency>
    <groupId>eu.bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.19-SNAPSHOT</version>
+   <version>1.20-SNAPSHOT</version>
 </dependency>
 ```
 
