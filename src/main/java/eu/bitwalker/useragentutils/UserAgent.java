@@ -69,11 +69,23 @@ public class UserAgent implements Serializable
 {
 	
 	private static final long serialVersionUID = 7025462762784240212L;
-	private OperatingSystem operatingSystem = OperatingSystem.UNKNOWN;
-	private Browser browser = Browser.UNKNOWN;
+	private OperatingSystem operatingSystem;
+	private Browser browser;
 	private int id;
 	private String userAgentString;
 		
+	
+	/**
+	 * This constructor is created for APIs that require default constructor 
+	 * and should never be used directly.
+	 * @deprecated Use {@link #UserAgent(OperatingSystem, Browser)} 
+	 */
+	@Deprecated
+	public UserAgent() 
+	{
+		this(OperatingSystem.UNKNOWN, Browser.UNKNOWN);
+	}
+	
 	public UserAgent(OperatingSystem operatingSystem, Browser browser)
 	{
 		this.operatingSystem = operatingSystem;
