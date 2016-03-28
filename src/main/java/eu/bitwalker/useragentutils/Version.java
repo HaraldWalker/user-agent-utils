@@ -48,6 +48,16 @@ public class Version implements Comparable<Version> {
 	String majorVersion;
 	String minorVersion;
 	
+	/**
+	 * This constructor is created for APIs that require default constructor 
+	 * and should never be used directly.
+	 * @deprecated Use {@link #Version(String, String, String)} 
+	 */
+	@Deprecated
+	public Version() {
+		// default constructor for APIs that require it (e.g. JSON serialization)
+	}
+
 	public Version(String version, String majorVersion, String minorVersion) {
 		super();
 		this.version = version;
