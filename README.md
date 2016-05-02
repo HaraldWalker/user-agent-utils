@@ -8,7 +8,9 @@ http://www.bitwalker.eu/software/user-agent-utils
 For the latest release, go to
 https://github.com/HaraldWalker/user-agent-utils/tree/master
 
-Support me and buy me a beer:  
+User-agent-utils needs your support
+-----------------------------------
+It is hard to continue development and support for this library without contributions from users like you. If you find it useful, please consider making a donation. Your donation will help, encourage and support the library's continued development.  
 <a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
 
 Advice
