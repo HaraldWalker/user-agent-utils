@@ -31,6 +31,10 @@ public class SafariParameterizedTest extends AbstractUserAgentParameterizedTest 
 				{
 						"Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-gb) AppleWebKit/523.10.6 (KHTML, like Gecko) Version/3.0.4 Safari/523.10.6",
 						Browser.SAFARI, "3.0.4", OperatingSystem.MAC_OS_X },
+				
+				{		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.78.2 (KHTML, like Gecko, Safari/9537.85.12.18) ADM/784", 
+						Browser.SAFARI, null, OperatingSystem.MAC_OS_X}, //TODO solve the WebKitVersion Ambiguity (see SafariUtils)
+				
 				// safari6
 				{
 						"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10",
@@ -48,6 +52,10 @@ public class SafariParameterizedTest extends AbstractUserAgentParameterizedTest 
 				{
 						"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7; da-dk) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1",
 						Browser.SAFARI5, "5.0.5", OperatingSystem.MAC_OS_X },
+				
+				{		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.59.10 (KHTML, like Gecko, Safari/6534.59.10) ADM/763", 
+						Browser.SAFARI5, "5.1.10", OperatingSystem.MAC_OS_X},
+				
 				// safari4
 				{
 						"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2; en-us) AppleWebKit/531.21.8 (KHTML, like Gecko) Version/4.0.4 Safari/531.21.10",
@@ -58,6 +66,8 @@ public class SafariParameterizedTest extends AbstractUserAgentParameterizedTest 
 				{
 						"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/531.2+ (KHTML, like Gecko) Version/4.0.1 Safari/530.18",
 						Browser.SAFARI4, "4.0.1", OperatingSystem.MAC_OS_X },
+				
+				
 				// mobileSafari
 				{
 						"Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
@@ -79,7 +89,21 @@ public class SafariParameterizedTest extends AbstractUserAgentParameterizedTest 
 						Browser.MOBILE_SAFARI, "5.1", OperatingSystem.iOS5_IPHONE },
 				{
 						"Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3",
-						Browser.MOBILE_SAFARI, "5.1", OperatingSystem.iOS5_IPHONE } 
+						Browser.MOBILE_SAFARI, "5.1", OperatingSystem.iOS5_IPHONE },
+						
+				{		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.58.2 (KHTML, like Gecko, Safari/6534.58.2) ADM/722", 
+							Browser.SAFARI5, "5.1.8", OperatingSystem.MAC_OS_X},
+				
+				{		"Mozilla/5.0 (iPad; CPU OS 7_0_6 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) GSA/3.2.1.25875 Mobile/11B651 Safari/8536.25", 
+							Browser.MOBILE_SAFARI, "6.0.1", OperatingSystem.iOS7_IPAD},
+				
+				{		"Mozilla/5.0 (iPad; CPU OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) 1Password/3.7.2/370204 (like Mobile/8C148 Safari/6533.18.5)", 
+							Browser.MOBILE_SAFARI, "6.0.1", OperatingSystem.iOS6_IPAD},
+				{		"Mozilla/5.0 (iPad; CPU OS 8_1_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) GSA/4.2.2.38484 Mobile/12B435 Safari/9537.53", 
+							Browser.MOBILE_SAFARI, null, OperatingSystem.iOS8_1_IPAD},
+				{		"Mozilla/5.0 (iPad; CPU OS 8_0_2 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) GSA/4.2.2.38484 Mobile/12A405 Safari/9537.53", 
+							Browser.MOBILE_SAFARI, null, OperatingSystem.iOS8_IPAD},
+				
 			});
 	}
 }

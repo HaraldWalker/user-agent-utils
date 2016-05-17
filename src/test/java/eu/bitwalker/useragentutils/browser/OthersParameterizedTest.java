@@ -72,8 +72,44 @@ public class OthersParameterizedTest extends AbstractUserAgentParameterizedTest 
 						Browser.VIVALDI, "1.0.111.2", OperatingSystem.MAC_OS_X },
 				{
 						"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.114 Safari/537.36 Vivaldi/1.0.111.2",
-						Browser.VIVALDI, "1.0.111.2", OperatingSystem.WINDOWS_7 }
+						Browser.VIVALDI, "1.0.111.2", OperatingSystem.WINDOWS_7 },
+						
+				//TODO: os version should be 6.0.1
+				{"Mozilla/5.0 (iPhone; CPU iPhone OS 6_1 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10B142", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS6_IPHONE},
+				{"Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J3", Browser.APPLE_WEB_KIT, null, OperatingSystem.MAC_OS_X_IPAD},
+				//TODO: os version should be 6.0.1
+				{"Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_4 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10B350", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS6_IPHONE},
+				{"Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11B554a", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS7_IPHONE},
+						
+				{"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.59.8 (KHTML, like Gecko, Safari/6534.59.8) ADM/763", Browser.SAFARI5, "5.1.9", OperatingSystem.MAC_OS_X},
+				{"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.57.2 (KHTML, like Gecko, Safari/6534.57.2) ADM/722", Browser.SAFARI5, "5.1.7", OperatingSystem.MAC_OS_X},
+				{"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.59.8 (KHTML, like Gecko, Safari/6534.59.8) ADM/751", Browser.SAFARI5, "5.1.9", OperatingSystem.MAC_OS_X},
+				{"Mozilla/5.0 (iPad; CPU OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10B329", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS6_IPAD},
+				{"Mozilla/5.0 (iPad; CPU OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10B329 Ranger/2.1.4", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS6_IPAD},
+				{"Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11A465", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS7_IPAD},
+				{"Mozilla/5.0 (iPad; CPU OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11B554a", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS7_IPAD},
+				{"Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11A465", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS7_IPHONE},
+				{"Mozilla/5.0 (iPhone; CPU iPhone OS 7_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D167", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS7_IPHONE},
+				{"Mozilla/5.0 (iPad; CPU OS 7_1_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D201", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS7_IPAD},
+				{"Mozilla/5.0 (iPad; CPU OS 6_0_1 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10A523", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS6_IPAD},
+				{"Mozilla/5.0 (iPhone; CPU iPhone OS 9_0_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A452", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS9_IPHONE},
+				{"Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13C75", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS9_IPHONE},
+				{"Mozilla/5.0 (iPad; CPU OS 9_0_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A452", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS9_IPAD},
+				{"Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS9_IPHONE},
+				{"Mozilla/5.0 (iPad; CPU OS 7_1_2 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D257", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS7_IPAD},
+				{"Mozilla/5.0 (iPad; CPU OS 8_1_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12B440", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS8_1_IPAD},
+				{"Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12B411", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS8_1_IPHONE},
+				{"Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10B329", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS6_IPHONE},
+				{"Mozilla/5.0 (iPhone; CPU iPhone OS 8_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12D508 AolApp/3.2.1.15", Browser.APPLE_WEB_KIT, null, OperatingSystem.iOS8_2_IPHONE},
+				
+				{"Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-US; rv:1.0.2) Gecko/20020924 AOL/7.0", Browser.MOZILLA, null, OperatingSystem.MAC_OS_X},
 
+				// TODO: should be blackberry 5 and version 5.0 or 5.0.0.732 
+				{"BlackBerry9650/5.0.0.732 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105", Browser.UNKNOWN, null, OperatingSystem.BLACKBERRY},
+
+				// TODO: discover version of firefox-mobile
+				{"Mozilla/5.0 (iPad; CPU OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.2 Mobile/12F69 Safari/600.1.4", Browser.FIREFOX_MOBILE_IOS, null, OperatingSystem.iOS8_3_IPAD},
+				
 		});
 	}
 }
