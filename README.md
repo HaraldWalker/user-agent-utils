@@ -8,20 +8,31 @@ http://www.bitwalker.eu/software/user-agent-utils
 For the latest release, go to
 https://github.com/HaraldWalker/user-agent-utils/tree/master
 
-User-agent-utils needs your support
------------------------------------
-It is hard to continue development and support for this library without contributions from users like you. If you find it useful, please consider making a donation. Your donation will help, encourage and support the library's continued development.  
+EOL WARNING
+-----------
+This library is reaching end-of-life.  
+Version 1.20 is probably the last official release.  
+
+User-agent-utils needed your support
+------------------------------------
+If you used this library for a commercial product, a donation would have been great during the past years.   
+ 
 <a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
 
 Advice
 ------
 A lot of user-agents lie about their identity. That makes US sniffing a guessing game. On websites it is a better approach to detect features using a javascript library like Modernizr (http://modernizr.com/).  
 
-If you want faster updates, switch to snapshot releases.     
+Instead of using browser switches, build sites and services that are cross-platform/cross-device compatible.       
 
 New in Version 1.20 (unreleased)
 -------------------
-- #142 Fix iPhone detection in case of Opera Mini agent-string  
+- #142 Fix iPhone detection in case of Opera Mini agent-string 
+- #154 Prevent bots with bot in UA-String from pretending to be Safari
+- Added latest Edge versions
+- Added current and future Chrome and Firefox versions 
+- #152 improved version discovery specifically for Safari
+- #146 Fixed IE mobile 11 version detection
 
 Javadoc
 -------
@@ -50,10 +61,9 @@ Add dependency for snapshot releases:
 
 Contributors
 ------------
-* Please use the `trunk` branch on GitHub when making a pull request
-* This project is in maintenance mode. We will try to stay up to date and fix bugs but do not expect any big new features or changes. 
-* If you want big changes feel free to fork this project and start your own version.
-* Code has been contributed by: Nathan Maves, Francisco Collao (https://github.com/pcollaog), Madgency (https://github.com/guignol), Pavel Sher (https://github.com/pavelsher), Pierre Etchemaite, Alexander Radzin (https://github.com/alexradzin), SeabassNg (https://github.com/SeabassNg), Sudeep Sinha(https://github.com/sudeep-sinha), John Dydo, frankdev (https://github.com/frankdev), Lew Dawson, Joachim Mueller (https://github.com/joachimmueller), Jason Calabrese (https://github.com/jasoncalabrese), Thorsten Schaefer, Parker Seidel (https://github.com/parker), Joris Aerts (https://github.com/JorisAerts), Stephan Heffner, Filipe Névola (https://github.com/filipenevola), John Patrick (https://github.com/nhojpatrick), Konrad Kubacki (https://github.com/konradkg)
+* This project is NOT accepting any new contributions.  
+* If you want changes, feel free to fork this project and start your own version. Send me a link and I'll be happy to promote it.  
+* Code has been contributed by: Nathan Maves, Francisco Collao (https://github.com/pcollaog), Madgency (https://github.com/guignol), Pavel Sher (https://github.com/pavelsher), Pierre Etchemaite, Alexander Radzin (https://github.com/alexradzin), SeabassNg (https://github.com/SeabassNg), Sudeep Sinha (https://github.com/sudeep-sinha), John Dydo, frankdev (https://github.com/frankdev), Lew Dawson, Joachim Mueller (https://github.com/joachimmueller), Jason Calabrese (https://github.com/jasoncalabrese), Thorsten Schaefer, Parker Seidel (https://github.com/parker), Joris Aerts (https://github.com/JorisAerts), Stephan Heffner, Filipe Névola (https://github.com/filipenevola), John Patrick (https://github.com/nhojpatrick), Konrad Kubacki (https://github.com/konradkg), Vipul Delwadia (https://github.com/vipuldelwadia) and more. A BIG thank you to all of them!
 
 Sponsors
 --------
