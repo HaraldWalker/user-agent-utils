@@ -100,7 +100,10 @@ public enum Browser {
 	 */
 	EDGE(			Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] {"Edge"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, new PatternBasedVersionFetcher("(?:Edge\\/(([0-9]+)\\.([0-9]*)))")),
 		EDGE_MOBILE(	Manufacturer.MICROSOFT, Browser.EDGE, 304, "Microsoft Edge Mobile", new String[] {"Mobile Safari"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
-			EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 302, "Microsoft Edge Mobile 12", new String[] {"Mobile Safari", "Edge/12"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE_MOBILE14(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 307, "Microsoft Edge Mobile 14", new String[] {"Edge/14"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE_MOBILE13(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 308, "Microsoft Edge Mobile 13", new String[] {"Edge/13"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 302, "Microsoft Edge Mobile 12", new String[] {"Edge/12"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE14(			Manufacturer.MICROSOFT, Browser.EDGE, 305, "Microsoft Edge 14", new String[] {"Edge/14"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE13(			Manufacturer.MICROSOFT, Browser.EDGE, 303, "Microsoft Edge 13", new String[] {"Edge/13"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE12(			Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge 12", new String[] {"Edge/12"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 	
@@ -163,6 +166,7 @@ public enum Browser {
 		 * Firefox for iOS devices. This Firefox version is using webkit instead of gecko rendering engine.
 		 */
 		FIREFOX_MOBILE_IOS(Manufacturer.MOZILLA, FIREFOX_MOBILE, 224, "Firefox Mobile (iOS)", new String[] { "FxiOS" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),  
+	FIREFOX48(		Manufacturer.MOZILLA, Browser.FIREFOX, 227, "Firefox 48", new String[] { "Firefox/48" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 	FIREFOX47(		Manufacturer.MOZILLA, Browser.FIREFOX, 226, "Firefox 47", new String[] { "Firefox/47" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 	FIREFOX46(		Manufacturer.MOZILLA, Browser.FIREFOX, 225, "Firefox 46", new String[] { "Firefox/46" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 	FIREFOX45(		Manufacturer.MOZILLA, Browser.FIREFOX, 222, "Firefox 45", new String[] { "Firefox/45" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
