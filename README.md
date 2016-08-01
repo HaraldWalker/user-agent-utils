@@ -21,7 +21,7 @@ If you used this library for a commercial product, a donation would have been gr
 
 Advice
 ------
-A lot of user-agents lie about their identity. That makes US sniffing a guessing game. On websites it is a better approach to detect features using a javascript library like Modernizr (http://modernizr.com/).  
+A lot of user-agents lie about their identity. That makes UA sniffing a guessing game. On websites it is a better approach to detect features using a javascript library like Modernizr (http://modernizr.com/).  
 
 Instead of using browser switches, build sites and services that are cross-platform/cross-device compatible.       
 
