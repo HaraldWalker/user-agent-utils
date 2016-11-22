@@ -124,7 +124,15 @@ public enum OperatingSystem {
 		iOS6_IPAD(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 51, "iOS 6 (iPad)", new String[] { "OS 6" },  null, DeviceType.TABLET, null ), // before Mac OS X
 		MAC_OS_X_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 40, "Mac OS X (iPhone)", new String[] { "iPhone" },  null, DeviceType.MOBILE, null ), // before Mac OS X
 		MAC_OS_X_IPOD(	Manufacturer.APPLE, OperatingSystem.IOS, 30, "Mac OS X (iPod)", new String[] { "iPod" },  null, DeviceType.MOBILE, null ), // before Mac OS X
-	
+		iOS8_4(	Manufacturer.APPLE,OperatingSystem.IOS, 101, "iOS 8.4", new String[] { "CFNetwork/711.4.6" },  null, DeviceType.MOBILE, null ), // use CFNetwork
+		iOS8_3(	Manufacturer.APPLE,OperatingSystem.IOS, 102, "iOS 8.3", new String[] { "CFNetwork/711.3.18" },  null, DeviceType.MOBILE, null ), // use CFNetwork
+		iOS8_2(	Manufacturer.APPLE,OperatingSystem.IOS, 103, "iOS 8.2", new String[] { "CFNetwork/711.2.23" },  null, DeviceType.MOBILE, null ),// use CFNetwork
+		iOS8_1(	Manufacturer.APPLE,OperatingSystem.IOS, 104, "iOS 8.1", new String[] { "CFNetwork/711.1.16", "CFNetwork/711.1.12" },  null, DeviceType.MOBILE, null ), // use CFNetwork
+		iOS8(	Manufacturer.APPLE,OperatingSystem.IOS, 105, "iOS 8", new String[] { "CFNetwork/711.0.6" },  null, DeviceType.MOBILE, null ), // use CFNetwork
+		iOS7(	Manufacturer.APPLE,OperatingSystem.IOS, 106, "iOS 7", new String[] { "CFNetwork/672" },  null, DeviceType.MOBILE, null ), // use CFNetwork
+		iOS6(	Manufacturer.APPLE,OperatingSystem.IOS, 107, "iOS 6", new String[] { "CFNetwork/609" },  null, DeviceType.MOBILE, null ), // use CFNetwork
+		iOS5(	Manufacturer.APPLE,OperatingSystem.IOS, 108, "iOS 5", new String[] { "CFNetwork/548" },  null, DeviceType.MOBILE, null ), // use CFNetwork
+		iOS4(	Manufacturer.APPLE,OperatingSystem.IOS, 109, "iOS 4", new String[] { "CFNetwork/485" },  null, DeviceType.MOBILE, null ), // use CFNetwork
 	MAC_OS_X(		Manufacturer.APPLE,null, 10, "Mac OS X", new String[] { "Mac OS X" , "CFNetwork"}, null, DeviceType.COMPUTER, null ), // before Mac	
 
 	/**
