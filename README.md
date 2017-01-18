@@ -98,7 +98,7 @@ Changelog
 
 1.21
 ----
-- Added support for Chrome 52,53,54,55 and MS Edge 15
+- Added support for Chrome 52,53,54,55,56 and MS Edge 15
 
 1.20
 ---------
