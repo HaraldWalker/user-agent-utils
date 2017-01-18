@@ -100,6 +100,11 @@ Changelog
 ----
 - Added support for Chrome 52,53,54,55 and MS Edge 15
 
+1.20
+---------
+- Added iOS 10, iOS 10.0, iOS 10.1, iOS 10.2 for iPhone and iPad
+
+
 1.19
 ----
 - #138 Improved future Microsoft Edge detection and added  Edge 13
