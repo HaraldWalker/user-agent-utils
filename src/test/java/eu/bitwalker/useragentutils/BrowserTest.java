@@ -96,11 +96,31 @@ public class BrowserTest {
 	String [] edge13Clients = new String[] {
 			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586"
 	};
-	
-	String[] edgeMobileClients = new String[] {
+
+	String [] edge14Clients = new String[] {
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393",
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 Edge/14.14316",
+			"Mozilla/5.0 (Windows NT 10.0; ARM; Lumia 930) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/14.14295",
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14931"
+	};
+
+	String [] edge15Clients = new String[] {
+			"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.14986",
+			"Mozilla/5.0 (Windows NT 10.0; ARM; Lumia 640 XL Dual SIM) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.14965"
+	};
+
+	String[] edgeMobile12Clients = new String[] {
 			"Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.0"
 	};
-	
+
+	String[] edgeMobile13Clients = new String[] {
+			"Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/13.0"
+	};
+
+	String[] edgeMobile14Clients = new String[] {
+			"Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/14.0"
+	};
+
 	String[] ie55clients = new String[] {
 			"Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0; .NET CLR 1.1.4322)",
 			"Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)",
@@ -260,12 +280,35 @@ public class BrowserTest {
 	String[] chrome31 = new String[] {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36"
 	};
-
 	
+	String[] chrome50 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36 QQBrowser/4.1.4132.400"
+	};
+
+	String[] chrome51 = new String[] {
+			"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu/16.04 Chrome/51.0.2704.106 Safari/537.36"
+	};
+
+	String[] chrome52 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.18.3) AppleWebKit/538.16.36 (KHTML, like Gecko) Chrome/52.0.2749.11 Safari/538.16.36"
+	};
+
+	String[] chrome53 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36"
+	};
+
+	String[] chrome54 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.98 Safari/537.36"
+	};
+
+	String[] chrome55 = new String[] {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.17.3) AppleWebKit/536.27.14 (KHTML, like Gecko) Chrome/55.0.2734.24 Safari/536.27.14"
+	};
+
 	String[] firefox3 = new String[] {
 			"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.14) Gecko/2009090216 Ubuntu/9.04 (jaunty) Firefox/3.0.14"
 	};
-	
+
 	String[] firefox4 = new String[] {
 			"Mozilla/5.0 (X11; Linux x86_64; rv:2.0b4) Gecko/20100818 Firefox/4.0b4",
 			"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:2.0b9pre) Gecko/20101228 Firefox/4.0b9pre"
@@ -628,7 +671,10 @@ public class BrowserTest {
 		testAgents(ie11clients, Browser.IE11);
 		testAgents(edge12Clients, Browser.EDGE12);
 		testAgents(edge13Clients, Browser.EDGE13);
-		testAgents(edgeMobileClients, Browser.EDGE_MOBILE12);
+		testAgents(edge14Clients, Browser.EDGE14);
+		testAgents(edgeMobile12Clients, Browser.EDGE_MOBILE12);
+		testAgents(edgeMobile13Clients, Browser.EDGE_MOBILE13);
+		testAgents(edgeMobile14Clients, Browser.EDGE_MOBILE14);
 		testAgents(ieTooOld, Browser.IE);
 		testAgents(outlook2007, Browser.OUTLOOK2007);
 		testAgents(outlook2010, Browser.OUTLOOK2010);
@@ -660,6 +706,12 @@ public class BrowserTest {
 		testAgents(chrome32, Browser.CHROME32);
 		testAgents(chrome33, Browser.CHROME33);
 		testAgents(chrome36, Browser.CHROME36);
+		testAgents(chrome50, Browser.CHROME50);
+		testAgents(chrome51, Browser.CHROME51);
+		testAgents(chrome52, Browser.CHROME52);
+		testAgents(chrome53, Browser.CHROME53);
+		testAgents(chrome54, Browser.CHROME54);
+		testAgents(chrome55, Browser.CHROME55);
 		testAgents(firefox3, Browser.FIREFOX3);
 		testAgents(firefox4, Browser.FIREFOX4);
 		testAgents(firefox5, Browser.FIREFOX5);

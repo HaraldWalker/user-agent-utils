@@ -103,6 +103,7 @@ public enum Browser {
 		EDGE_MOBILE14(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 307, "Microsoft Edge Mobile 14", new String[] {"Edge/14"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE_MOBILE13(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 308, "Microsoft Edge Mobile 13", new String[] {"Edge/13"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 302, "Microsoft Edge Mobile 12", new String[] {"Edge/12"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE15(			Manufacturer.MICROSOFT, Browser.EDGE, 309, "Microsoft Edge 15", new String[] {"Edge/15"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE14(			Manufacturer.MICROSOFT, Browser.EDGE, 305, "Microsoft Edge 14", new String[] {"Edge/14"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE13(			Manufacturer.MICROSOFT, Browser.EDGE, 303, "Microsoft Edge 13", new String[] {"Edge/13"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE12(			Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge 12", new String[] {"Edge/12"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
@@ -112,7 +113,11 @@ public enum Browser {
 	 */
 	CHROME( 		Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview", "Vivaldi" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)") ), // before Mozilla
 		CHROME_MOBILE( 	Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo","CriOS", "Mobile Safari" }, new String[] {"OPR/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)") ),
-		CHROME51( 		Manufacturer.GOOGLE, Browser.CHROME, 57, "Chrome 51", new String[] { "Chrome/50" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME55( 		Manufacturer.GOOGLE, Browser.CHROME, 61, "Chrome 55", new String[] { "Chrome/55" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME54( 		Manufacturer.GOOGLE, Browser.CHROME, 60, "Chrome 54", new String[] { "Chrome/54" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME53( 		Manufacturer.GOOGLE, Browser.CHROME, 59, "Chrome 53", new String[] { "Chrome/53" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME52( 		Manufacturer.GOOGLE, Browser.CHROME, 58, "Chrome 52", new String[] { "Chrome/52" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME51( 		Manufacturer.GOOGLE, Browser.CHROME, 57, "Chrome 51", new String[] { "Chrome/51" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME50( 		Manufacturer.GOOGLE, Browser.CHROME, 56, "Chrome 50", new String[] { "Chrome/50" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME49( 		Manufacturer.GOOGLE, Browser.CHROME, 55, "Chrome 49", new String[] { "Chrome/49" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME48( 		Manufacturer.GOOGLE, Browser.CHROME, 53, "Chrome 48", new String[] { "Chrome/48" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla

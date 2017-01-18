@@ -96,6 +96,10 @@ http://www.bitwalker.eu/contact
 Changelog
 ---------
 
+1.21
+----
+- Added support for Chrome 52,53,54,55 and MS Edge 15
+
 1.19
 ----
 - #138 Improved future Microsoft Edge detection and added  Edge 13
