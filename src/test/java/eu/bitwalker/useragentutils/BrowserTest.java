@@ -676,6 +676,7 @@ public class BrowserTest {
 		testAgents(edge12Clients, Browser.EDGE12);
 		testAgents(edge13Clients, Browser.EDGE13);
 		testAgents(edge14Clients, Browser.EDGE14);
+		testAgents(edge15Clients, Browser.EDGE15);
 		testAgents(edgeMobile12Clients, Browser.EDGE_MOBILE12);
 		testAgents(edgeMobile13Clients, Browser.EDGE_MOBILE13);
 		testAgents(edgeMobile14Clients, Browser.EDGE_MOBILE14);
