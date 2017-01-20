@@ -96,9 +96,14 @@ http://www.bitwalker.eu/contact
 Changelog
 ---------
 
+1.21
+----
+- Added support for Chrome 52,53,54,55,56 and MS Edge 15
+
 1.20
 ---------
 - Added iOS 10, iOS 10.0, iOS 10.1, iOS 10.2 for iPhone and iPad
+
 
 1.19
 ----
