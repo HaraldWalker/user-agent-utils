@@ -17,6 +17,8 @@ PULL REQUESTS WILL NOT BE PROCESSED.
 
 If you want to improve this library, fork it and release it yourself.  
 
+You can use (Woothee Java)[https://github.com/woothee/woothee-java] as an up-to-date alternative.
+
 User-agent-utils needed your support
 ------------------------------------
 If you used this library for a commercial product, a donation would have been great during the past years.   
