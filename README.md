@@ -17,6 +17,9 @@ PULL REQUESTS WILL NOT BE PROCESSED.
 
 If you want to improve this library, fork it and release it yourself.  
 
+As alternative have a look at the Browscap project and its implementations.  
+https://github.com/HaraldWalker/user-agent-utils  
+
 User-agent-utils needed your support
 ------------------------------------
 If you used this library for a commercial product, a donation would have been great during the past years.   
