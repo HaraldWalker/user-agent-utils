@@ -28,7 +28,7 @@ A lot of user-agents lie about their identity. That makes US sniffing a guessing
 
 Instead of using browser switches, build sites and services that are cross-platform/cross-device compatible.       
 
-New in Version 1.20 (unreleased)
+New in Version 1.20 (last official release!)
 -------------------
 - #142 Fix iPhone detection in case of Opera Mini agent-string 
 - #154 Prevent bots with bot in UA-String from pretending to be Safari
