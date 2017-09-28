@@ -10,8 +10,15 @@ https://github.com/HaraldWalker/user-agent-utils/tree/master
 
 EOL WARNING
 -----------
-This library is reaching end-of-life.  
-Version 1.20 is probably the last official release.  
+This library has reached end-of-life!  
+Version 1.20 is the last official release.
+  
+PULL REQUESTS WILL NOT BE PROCESSED.  
+
+If you want to improve this library, fork it and release it yourself.  
+
+As alternative have a look at the Browscap project and its implementations.  
+https://github.com/HaraldWalker/user-agent-utils  
 
 User-agent-utils needed your support
 ------------------------------------
@@ -25,7 +32,7 @@ A lot of user-agents lie about their identity. That makes US sniffing a guessing
 
 Instead of using browser switches, build sites and services that are cross-platform/cross-device compatible.       
 
-New in Version 1.20 (unreleased)
+New in Version 1.20
 -------------------
 - #142 Fix iPhone detection in case of Opera Mini agent-string 
 - #154 Prevent bots with bot in UA-String from pretending to be Safari
@@ -46,7 +53,7 @@ Add dependency:
 <dependency>
    <groupId>eu.bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.19</version>
+   <version>1.20</version>
 </dependency>
 ```
 
@@ -55,7 +62,7 @@ Add dependency for snapshot releases:
 <dependency>
    <groupId>eu.bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.20-SNAPSHOT</version>
+   <version>1.21-SNAPSHOT</version>
 </dependency>
 ```
 
