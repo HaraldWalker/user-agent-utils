@@ -10,8 +10,9 @@ https://github.com/HaraldWalker/user-agent-utils/tree/master
 
 EOL WARNING
 -----------
-This library has reached end-of-life!  
-Version 1.20 is the last official release.
+This library has reached end-of-life and will not see regular updates any longer.
+
+Version 1.20 was the last official release in 2016.
   
 PULL REQUESTS WILL NOT BE PROCESSED.  
 
@@ -32,14 +33,10 @@ A lot of user-agents lie about their identity. That makes UA sniffing a guessing
 
 Instead of using browser switches, build sites and services that are cross-platform/cross-device compatible.       
 
-New in Version 1.20
+New in Version 1.21 (snapshot)  
 -------------------
-- #142 Fix iPhone detection in case of Opera Mini agent-string 
-- #154 Prevent bots with bot in UA-String from pretending to be Safari
-- Added latest Edge versions
 - Added current and future Chrome and Firefox versions 
-- #152 improved version discovery specifically for Safari
-- #146 Fixed IE mobile 11 version detection
+- Added iOS and Android versions since version 1.20. 
 
 Javadoc
 -------
@@ -98,6 +95,14 @@ http://www.bitwalker.eu/contact
 
 Changelog
 ---------
+1.20 (current)  
+----
+- #142 Fix iPhone detection in case of Opera Mini agent-string 
+- #154 Prevent bots with bot in UA-String from pretending to be Safari
+- Added latest Edge versions
+- Added current and future Chrome and Firefox versions 
+- #152 improved version discovery specifically for Safari
+- #146 Fixed IE mobile 11 version detection
 
 1.19
 ----
