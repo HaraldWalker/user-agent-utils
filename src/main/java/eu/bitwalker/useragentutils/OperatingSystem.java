@@ -66,12 +66,17 @@ public enum OperatingSystem {
 		WINDOWS_MOBILE(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 50, "Windows Mobile", new String[] { "Windows CE" },  null, DeviceType.MOBILE, null ), // before Win
 		WINDOWS_98(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,5, "Windows 98", new String[] { "Windows 98","Win98" },  new String[] { "Palm" }, DeviceType.COMPUTER, null ), // before Win 
 		XBOX_OS(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS,62, "Xbox OS",new String[]{"xbox"},new String[]{}, DeviceType.GAME_CONSOLE, null),
-		
+	
+	// for Google user-agent, see https://developer.chrome.com/multidevice/user-agent
 	ANDROID(		Manufacturer.GOOGLE,null, 0, "Android", new String[] { "Android" },  new String[] {"Ubuntu"}, DeviceType.MOBILE, null ),
-                ANDROID6(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 6, "Android 6.x", new String[] { "Android 6", "Android-6" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
-                ANDROID6_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID6, 60, "Android 6.x Tablet", new String[] { "Android 6", "Android-6"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
-                ANDROID5(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 5, "Android 5.x", new String[] { "Android 5", "Android-5" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
-                ANDROID5_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID5, 50, "Android 5.x Tablet", new String[] { "Android 5", "Android-5"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+		ANDROID8(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 8, "Android 8.x", new String[] { "Android 8", "Android-8" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+        ANDROID8_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID8, 80, "Android 8.x Tablet", new String[] { "Android 8", "Android-8"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+		ANDROID7(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 7, "Android 7.x", new String[] { "Android 7", "Android-7" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+        ANDROID7_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID7, 70, "Android 7.x Tablet", new String[] { "Android 7", "Android-7"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+		ANDROID6(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 6, "Android 6.x", new String[] { "Android 6", "Android-6" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+        ANDROID6_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID6, 60, "Android 6.x Tablet", new String[] { "Android 6", "Android-6"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+        ANDROID5(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 5, "Android 5.x", new String[] { "Android 5", "Android-5" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+        ANDROID5_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID5, 50, "Android 5.x Tablet", new String[] { "Android 5", "Android-5"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
 		ANDROID4(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 4, "Android 4.x", new String[] { "Android 4", "Android-4" },   new String[] { "glass", "ubuntu"}, DeviceType.MOBILE, null ),
 		ANDROID4_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID4, 40, "Android 4.x Tablet", new String[] { "Android 4", "Android-4"}, new String[] { "mobile", "glass", "ubuntu" }, DeviceType.TABLET, null ),
 		ANDROID4_WEARABLE(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 400, "Android 4.x", new String[] { "Android 4" }, new String[] {"ubuntu"}, DeviceType.WEARABLE, null ),
