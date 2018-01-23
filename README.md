@@ -32,14 +32,10 @@ A lot of user-agents lie about their identity. That makes UA sniffing a guessing
 
 Instead of using browser switches, build sites and services that are cross-platform/cross-device compatible.       
 
-New in Version 1.20
+New in Version 1.21
 -------------------
-- #142 Fix iPhone detection in case of Opera Mini agent-string 
-- #154 Prevent bots with bot in UA-String from pretending to be Safari
-- Added latest Edge versions
 - Added current and future Chrome and Firefox versions 
-- #152 improved version discovery specifically for Safari
-- #146 Fixed IE mobile 11 version detection
+- Added iOS and Android versions since version 1.20. 
 
 Javadoc
 -------
@@ -98,6 +94,14 @@ http://www.bitwalker.eu/contact
 
 Changelog
 ---------
+1.20 (current)  
+----
+- #142 Fix iPhone detection in case of Opera Mini agent-string 
+- #154 Prevent bots with bot in UA-String from pretending to be Safari
+- Added latest Edge versions
+- Added current and future Chrome and Firefox versions 
+- #152 improved version discovery specifically for Safari
+- #146 Fixed IE mobile 11 version detection
 
 1.19
 ----
