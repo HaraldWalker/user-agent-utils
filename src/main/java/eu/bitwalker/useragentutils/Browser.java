@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008-2016, Harald Walker (bitwalker.eu) and contributing developers 
+* Copyright (c) 2008-2018, Harald Walker (bitwalker.eu) and contributing developers 
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -403,6 +403,7 @@ public enum Browser {
 	/**
 	 * Detects the detailed version information of the browser. Depends on the userAgent to be available.
 	 * Returns null if it can not detect the version information.
+	 * @param userAgentString User-agent string as provided in the request.
 	 * @return Version
 	 */
 	public Version getVersion(String userAgentString) {
@@ -488,8 +489,8 @@ public enum Browser {
 	 * Starts with the top level browsers and only if one of those matches
 	 * checks children browsers.
 	 * Steps out of loop as soon as there is a match.
-	 * @param agentString
-	 * @return Browser
+	 * @param agentString User-agent sting as provided in the request.
+	 * @return Browser enum
 	 */
 	public static Browser parseUserAgentString(String agentString)
 	{
@@ -510,8 +511,9 @@ public enum Browser {
      * If no match can be found Browser.UNKNOWN will be returned.
      * Steps out of loop as soon as there is a match.
      * Be aware that if the order of the provided Browsers is incorrect or if the set is too limited it can lead to false matches!
-     * @param agentString
-     * @return Browser
+     * @param agentString User-agent sting as provided in the request.
+     * @param browsers List of browsers.
+     * @return Browser enum
      */
     public static Browser parseUserAgentString(String agentString, List<Browser> browsers)
     {
@@ -535,8 +537,8 @@ public enum Browser {
 	/**
 	 * Returns the enum constant of this type with the specified id.
 	 * Throws IllegalArgumentException if the value does not exist.
-	 * @param id
-	 * @return
+	 * @param id Id of the browser
+	 * @return Browser enum
 	 */
 	public static Browser valueOf(short id)
 	{

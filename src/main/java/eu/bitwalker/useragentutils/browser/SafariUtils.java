@@ -10,7 +10,7 @@ import eu.bitwalker.useragentutils.Version;
  * There are 2 types of user agent strings that present Safari: one that contains fragment {@code Version/1.2.3} from where the version of
  * Safari browser can be extracted and others that do not. 
  * Fortunately Safari User-Agent string contains version of WebKit that can be used to discover the version of Safari browser. 
- * This class contains mapping between version of WebKit and Safari browser taken from  {@link <a href="https://en.wikipedia.org/wiki/Safari_version_history">Wikipedia</a>}  
+ * This class contains mapping between version of WebKit and Safari browser taken from  @see <a href="https://en.wikipedia.org/wiki/Safari_version_history">Wikipedia</a>.
  * In most cases version of WebKit exists and uniquely identifies version of Safari browser. 
  * Unfortunately there are several exceptions. 
  * <ol>

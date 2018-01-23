@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008-2016, Harald Walker (bitwalker.eu) and contributing developers  
+* Copyright (c) 2008-2018, Harald Walker (bitwalker.eu) and contributing developers  
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -112,7 +112,7 @@ public class UserAgent implements Serializable
 
 	
 	/**
-	 * @param userAgentString
+	 * @param userAgentString  User-agent string as provided in the request.
 	 * @return UserAgent
 	 */
 	public static UserAgent parseUserAgentString(String userAgentString) {		
@@ -145,7 +145,7 @@ public class UserAgent implements Serializable
 	}
 
 	/**
-	 * Returns an unique integer value of the operating system & browser combination
+	 * Returns an unique integer value of the operating system and browser combination
 	 * @return the id
 	 */
 	public int getId() {
@@ -161,8 +161,8 @@ public class UserAgent implements Serializable
 	
 	/**
 	 * Returns UserAgent based on specified unique id
-	 * @param id
-	 * @return
+	 * @param id Id value of the user agent.
+	 * @return UserAgent
 	 */
 	public static UserAgent valueOf(int id)
 	{
@@ -173,8 +173,8 @@ public class UserAgent implements Serializable
 	
 	/**
 	 * Returns UserAgent based on combined string representation
-	 * @param name
-	 * @return
+	 * @param name Name of the user agent.
+	 * @return UserAgent
 	 */
 	public static UserAgent valueOf(String name)
 	{

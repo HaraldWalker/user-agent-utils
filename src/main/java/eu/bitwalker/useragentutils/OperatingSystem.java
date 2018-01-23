@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2008-2016, Harald Walker (bitwalker.eu) and contributing developers
+* Copyright (c) 2008-2018, Harald Walker (bitwalker.eu) and contributing developers
 * All rights reserved.
 * 
 * Redistribution and use in source and binary forms, with or
@@ -304,7 +304,7 @@ public enum OperatingSystem {
     /**
      * Checks if the given user-agent string matches to the operating system. 
      * Only checks for one specific operating system. 
-     * @param agentString
+     * @param agentString User-agent string as provided in the request.
      * @return boolean
      */
     public boolean isInUserAgentString(String agentString)
@@ -323,8 +323,8 @@ public enum OperatingSystem {
     /**
      * Checks if the given user-agent does not contain one of the tokens which should not match.
      * In most cases there are no excluding tokens, so the impact should be small.
-     * @param agentLowerCaseString
-     * @return
+     * @param agentLowerCaseString Lower case version of the user-agent string
+     * @return true or false
      */
     private boolean containsExcludeTokenLowercase(final String agentLowerCaseString) {
         return Utils.contains(agentLowerCaseString, excludeList);
@@ -352,8 +352,8 @@ public enum OperatingSystem {
 	/**
 	 * Parses user agent string and returns the best match. 
 	 * Returns OperatingSystem.UNKNOWN if there is no match.
-	 * @param agentString
-	 * @return OperatingSystem
+	 * @param agentString User-agent string as provided in the request.
+	 * @return OperatingSystem enum
 	 */
 	public static OperatingSystem parseUserAgentString(String agentString)
 	{
@@ -372,8 +372,8 @@ public enum OperatingSystem {
      * Parses the user agent string and returns the best match for the given operating systems. 
      * Returns OperatingSystem.UNKNOWN if there is no match.
      * Be aware that if the order of the provided operating systems is incorrect or the set is too limited it can lead to false matches!
-     * @param agentString
-     * @return OperatingSystem
+     * @param agentString User-agent string as provided in the request.
+     * @return OperatingSystem enum
      */
     public static OperatingSystem parseUserAgentString(String agentString, List<OperatingSystem> operatingSystems)
     {
@@ -399,8 +399,8 @@ public enum OperatingSystem {
 	/**
 	 * Returns the enum constant of this type with the specified id.
 	 * Throws IllegalArgumentException if the value does not exist.
-	 * @param id
-	 * @return 
+	 * @param id Id value of the operating system.
+	 * @return OperatingSystem enum
 	 */
 	public static OperatingSystem valueOf(short id)
 	{

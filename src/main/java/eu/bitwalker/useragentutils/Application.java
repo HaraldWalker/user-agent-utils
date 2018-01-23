@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2008-2016, Harald Walker (bitwalker.eu) and contributing developers  
+ * Copyright (c) 2008-2018, Harald Walker (bitwalker.eu) and contributing developers  
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or
@@ -148,8 +148,8 @@ public enum Application {
 	 * Returns the enum constant of this type with the specified id. Throws
 	 * IllegalArgumentException if the value does not exist.
 	 * 
-	 * @param id
-	 * @return
+	 * @param id Id of the application
+	 * @return Application enum
 	 */
 	public static Application valueOf(short id) {
 		for (Application application : Application.values()) {
