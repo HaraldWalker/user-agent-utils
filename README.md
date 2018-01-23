@@ -10,8 +10,9 @@ https://github.com/HaraldWalker/user-agent-utils/tree/master
 
 EOL WARNING
 -----------
-This library has reached end-of-life!  
-Version 1.20 is the last official release.
+This library has reached end-of-life and will not see regular updates any longer.
+
+Version 1.20 was the last official release. 
   
 PULL REQUESTS WILL NOT BE PROCESSED.  
 
