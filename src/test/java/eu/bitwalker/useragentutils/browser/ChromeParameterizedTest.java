@@ -61,6 +61,9 @@ public class ChromeParameterizedTest extends AbstractUserAgentParameterizedTest 
 							"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36",
 						Browser.CHROME43, "43.0.2357.124", OperatingSystem.MAC_OS_X },
 				{
+							"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36",
+							Browser.CHROME63, "63.0.3239.132", OperatingSystem.MAC_OS_X },
+				{
 					"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36",
 						Browser.CHROME47, "47.0.2526.73", OperatingSystem.MAC_OS_X
 				}			

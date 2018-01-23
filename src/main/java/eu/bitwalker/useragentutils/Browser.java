@@ -112,7 +112,21 @@ public enum Browser {
 	 */
 	CHROME( 		Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview", "Vivaldi" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)") ), // before Mozilla
 		CHROME_MOBILE( 	Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo","CriOS", "Mobile Safari" }, new String[] {"OPR/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)") ),
-		CHROME51( 		Manufacturer.GOOGLE, Browser.CHROME, 57, "Chrome 51", new String[] { "Chrome/50" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME65( 		Manufacturer.GOOGLE, Browser.CHROME, 71, "Chrome 65", new String[] { "Chrome/65" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME64( 		Manufacturer.GOOGLE, Browser.CHROME, 70, "Chrome 64", new String[] { "Chrome/64" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME63( 		Manufacturer.GOOGLE, Browser.CHROME, 69, "Chrome 63", new String[] { "Chrome/63" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME62( 		Manufacturer.GOOGLE, Browser.CHROME, 68, "Chrome 62", new String[] { "Chrome/62" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME61( 		Manufacturer.GOOGLE, Browser.CHROME, 67, "Chrome 61", new String[] { "Chrome/61" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME60( 		Manufacturer.GOOGLE, Browser.CHROME, 66, "Chrome 60", new String[] { "Chrome/60" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME59( 		Manufacturer.GOOGLE, Browser.CHROME, 65, "Chrome 59", new String[] { "Chrome/59" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME58( 		Manufacturer.GOOGLE, Browser.CHROME, 64, "Chrome 58", new String[] { "Chrome/58" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME57( 		Manufacturer.GOOGLE, Browser.CHROME, 63, "Chrome 57", new String[] { "Chrome/57" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME56( 		Manufacturer.GOOGLE, Browser.CHROME, 62, "Chrome 56", new String[] { "Chrome/56" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME55( 		Manufacturer.GOOGLE, Browser.CHROME, 61, "Chrome 55", new String[] { "Chrome/55" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME54( 		Manufacturer.GOOGLE, Browser.CHROME, 60, "Chrome 54", new String[] { "Chrome/54" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME53( 		Manufacturer.GOOGLE, Browser.CHROME, 59, "Chrome 53", new String[] { "Chrome/53" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME52( 		Manufacturer.GOOGLE, Browser.CHROME, 58, "Chrome 52", new String[] { "Chrome/52" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME51( 		Manufacturer.GOOGLE, Browser.CHROME, 57, "Chrome 51", new String[] { "Chrome/51" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME50( 		Manufacturer.GOOGLE, Browser.CHROME, 56, "Chrome 50", new String[] { "Chrome/50" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME49( 		Manufacturer.GOOGLE, Browser.CHROME, 55, "Chrome 49", new String[] { "Chrome/49" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME48( 		Manufacturer.GOOGLE, Browser.CHROME, 53, "Chrome 48", new String[] { "Chrome/48" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
@@ -167,6 +181,17 @@ public enum Browser {
 		 * Firefox for iOS devices. This Firefox version is using webkit instead of gecko rendering engine.
 		 */
 		FIREFOX_MOBILE_IOS(Manufacturer.MOZILLA, FIREFOX_MOBILE, 224, "Firefox Mobile (iOS)", new String[] { "FxiOS" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),  
+	FIREFOX59(		Manufacturer.MOZILLA, Browser.FIREFOX, 238, "Firefox 59", new String[] { "Firefox/59" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX58(		Manufacturer.MOZILLA, Browser.FIREFOX, 237, "Firefox 58", new String[] { "Firefox/58" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX57(		Manufacturer.MOZILLA, Browser.FIREFOX, 236, "Firefox 57", new String[] { "Firefox/57" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX56(		Manufacturer.MOZILLA, Browser.FIREFOX, 235, "Firefox 56", new String[] { "Firefox/56" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX55(		Manufacturer.MOZILLA, Browser.FIREFOX, 234, "Firefox 55", new String[] { "Firefox/55" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX54(		Manufacturer.MOZILLA, Browser.FIREFOX, 233, "Firefox 54", new String[] { "Firefox/54" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX53(		Manufacturer.MOZILLA, Browser.FIREFOX, 232, "Firefox 53", new String[] { "Firefox/53" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX52(		Manufacturer.MOZILLA, Browser.FIREFOX, 231, "Firefox 52", new String[] { "Firefox/52" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX51(		Manufacturer.MOZILLA, Browser.FIREFOX, 230, "Firefox 51", new String[] { "Firefox/51" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX50(		Manufacturer.MOZILLA, Browser.FIREFOX, 229, "Firefox 50", new String[] { "Firefox/50" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX49(		Manufacturer.MOZILLA, Browser.FIREFOX, 228, "Firefox 49", new String[] { "Firefox/49" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 	FIREFOX48(		Manufacturer.MOZILLA, Browser.FIREFOX, 227, "Firefox 48", new String[] { "Firefox/48" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 	FIREFOX47(		Manufacturer.MOZILLA, Browser.FIREFOX, 226, "Firefox 47", new String[] { "Firefox/47" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 	FIREFOX46(		Manufacturer.MOZILLA, Browser.FIREFOX, 225, "Firefox 46", new String[] { "Firefox/46" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
