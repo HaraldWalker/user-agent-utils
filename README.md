@@ -12,7 +12,7 @@ EOL WARNING
 -----------
 This library has reached end-of-life and will not see regular updates any longer.
 
-Version 1.20 was the last official release. 
+Version 1.20 was the last official release in 2016.
   
 PULL REQUESTS WILL NOT BE PROCESSED.  
 
@@ -33,7 +33,7 @@ A lot of user-agents lie about their identity. That makes UA sniffing a guessing
 
 Instead of using browser switches, build sites and services that are cross-platform/cross-device compatible.       
 
-New in Version 1.21
+New in Version 1.21 (snapshot)  
 -------------------
 - Added current and future Chrome and Firefox versions 
 - Added iOS and Android versions since version 1.20. 
