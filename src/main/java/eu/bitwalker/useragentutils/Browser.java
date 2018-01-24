@@ -251,6 +251,8 @@ public enum Browser {
 		BLACKBERRY10( Manufacturer.BLACKBERRY, Browser.SAFARI, 10, "BlackBerry", new String[] { "BB10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null),
 		MOBILE_SAFARI(	Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new String[] { "Mobile Safari","Mobile/" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "FxiOS" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),  // before Safari
 		SILK(			Manufacturer.AMAZON, Browser.SAFARI, 15, "Silk", new String[] { "Silk/" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("Silk\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\-[\\w]+)?)") ),  // http://en.wikipedia.org/wiki/Amazon_Silk
+		SAFARI11(		Manufacturer.APPLE, Browser.SAFARI, 12, "Safari 11", new String[] { "Version/11" }, new String[] { "bot" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ),  // before AppleWebKit
+		SAFARI10(		Manufacturer.APPLE, Browser.SAFARI, 11, "Safari 10", new String[] { "Version/10" }, new String[] { "bot" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ),  // before AppleWebKit
 		SAFARI9(		Manufacturer.APPLE, Browser.SAFARI, 9, "Safari 9", new String[] { "Version/9" }, new String[] { "bot" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ),  // before AppleWebKit
 		SAFARI8(		Manufacturer.APPLE, Browser.SAFARI, 8, "Safari 8", new String[] { "Version/8" }, new String[] { "bot" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ),  // before AppleWebKit
 		SAFARI7(		Manufacturer.APPLE, Browser.SAFARI, 7, "Safari 7", new String[] { "Version/7" }, new String[]{"bing"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ),  // before AppleWebKit

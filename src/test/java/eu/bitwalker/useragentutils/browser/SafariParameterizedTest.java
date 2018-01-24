@@ -24,6 +24,13 @@ public class SafariParameterizedTest extends AbstractUserAgentParameterizedTest 
 				{
 					"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.1.56 (KHTML, like Gecko) Version/9.0 Safari/601.1.56",
 					Browser.SAFARI9, "9.0", OperatingSystem.MAC_OS_X },
+				{
+					"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8",
+					Browser.SAFARI10, "10.1.2", OperatingSystem.MAC_OS_X },
+				{
+					"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/604.4.7 (KHTML, like Gecko) Version/11.0.2 Safari/604.4.7",
+					Browser.SAFARI11, "11.0.2", OperatingSystem.MAC_OS_X },
+						
 				// safari
 				{
 						"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/525.28.3 (KHTML, like Gecko) Version/3.2.3 Safari/525.28.3",
