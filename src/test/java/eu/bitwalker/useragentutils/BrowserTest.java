@@ -500,7 +500,15 @@ public class BrowserTest {
 			"Mozilla/5.0 (compatible; Ask Jeeves/Teoma; +http://about.ask.com/en/docs/about/webmasters.shtml)",
 			"ThumbSniper (http://thumbsniper.com)",
 			"Phantom.js bot",
-			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4 (compatible; YandexMobileBot/3.0; +http://yandex.com/bots)"
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4 (compatible; YandexMobileBot/3.0; +http://yandex.com/bots)",
+			"Java/1.8.0_20",
+			"Java/1.8.0_74",
+			"python-requests/2.18.4",
+			"python-requests/2.18.1",
+			"Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)",
+			"AdsBot-Google (+http://www.google.com/adsbot.html)",
+			"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+			"Mozilla/5.0 (compatible; AhrefsBot/5.2; +http://ahrefs.com/robot/)"
 	};
 	
 	String[] mobileBot = {
