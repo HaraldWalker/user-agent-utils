@@ -40,7 +40,6 @@ New in Version 1.21
 - Added Tizen as operating system including detection of smart TVs
 - Added detection of linux based smart TVs
 - Added additional bot detection 
-- Added iOS and Android versions since version 1.20. 
 
 Javadoc
 -------
