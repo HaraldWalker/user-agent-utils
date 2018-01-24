@@ -97,15 +97,21 @@ public enum Browser {
 
 	/**
 	 * Family of Microsoft Edge browsers. Pretends to be Chrome and claims to be webkit compatible. 
+	 * Numbering used here is actually the rendering engine version, not the displayed edge version. 
+	 * For instance 14.14332 is Edge 37 while 14.14342 is Edge 38. User agent only provides the version of the rendering engine. 
+	 * @see https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history
 	 */
 	EDGE(			Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] {"Edge"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, new PatternBasedVersionFetcher("(?:Edge\\/(([0-9]+)\\.([0-9]*)))")),
 		EDGE_MOBILE(	Manufacturer.MICROSOFT, Browser.EDGE, 304, "Microsoft Edge Mobile", new String[] {"Mobile Safari"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
-		EDGE_MOBILE14(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 307, "Microsoft Edge Mobile 14", new String[] {"Edge/14"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
-		EDGE_MOBILE13(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 308, "Microsoft Edge Mobile 13", new String[] {"Edge/13"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
-		EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 302, "Microsoft Edge Mobile 12", new String[] {"Edge/12"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
-		EDGE14(			Manufacturer.MICROSOFT, Browser.EDGE, 305, "Microsoft Edge 14", new String[] {"Edge/14"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
-		EDGE13(			Manufacturer.MICROSOFT, Browser.EDGE, 303, "Microsoft Edge 13", new String[] {"Edge/13"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
-		EDGE12(			Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge 12", new String[] {"Edge/12"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE_MOBILE15(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 310, "Microsoft Edge Mobile (layout engine 15)", new String[] {"Edge/15"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE_MOBILE14(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 307, "Microsoft Edge Mobile (layout engine 14)", new String[] {"Edge/14"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE_MOBILE13(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 308, "Microsoft Edge Mobile (layout engine 13)", new String[] {"Edge/13"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE_MOBILE, 302, "Microsoft Edge Mobile (layout engine 12)", new String[] {"Edge/12"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE16(			Manufacturer.MICROSOFT, Browser.EDGE, 312, "Microsoft Edge (layout engine 16)", new String[] {"Edge/16"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE15(			Manufacturer.MICROSOFT, Browser.EDGE, 309, "Microsoft Edge (layout engine 15)", new String[] {"Edge/15"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE14(			Manufacturer.MICROSOFT, Browser.EDGE, 305, "Microsoft Edge (layout engine 14)", new String[] {"Edge/14"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE13(			Manufacturer.MICROSOFT, Browser.EDGE, 303, "Microsoft Edge (layout engine 13)", new String[] {"Edge/13"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
+		EDGE12(			Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge (layout engine 12)", new String[] {"Edge/12"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 	
 	/**
 	 * Google Chrome browser
@@ -269,6 +275,16 @@ public enum Browser {
 	OPERA(			Manufacturer.OPERA, null, 1, "Opera", new String[] { " OPR/", "Opera" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, new PatternBasedVersionFetcher("[o][p][e]?[r][a]?\\/(([\\d]+)\\.([\\w]+)(\\.([\\w]+))?(\\.([\\w]+))?)")),   // before MSIE
 		OPERA_MOBILE(	Manufacturer.OPERA, Browser.OPERA, 100,"Opera Mobile", new String[] { "Mobile Safari"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")), // Another Opera for mobile devices
 		OPERA_MINI(		Manufacturer.OPERA, Browser.OPERA, 20, "Opera Mini", new String[] { "Opera Mini"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.PRESTO, null), // Opera for mobile devices
+		OPERA51(		Manufacturer.OPERA, Browser.OPERA, 51, "Opera 51", new String[] { "OPR/51." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
+		OPERA50(		Manufacturer.OPERA, Browser.OPERA, 50, "Opera 50", new String[] { "OPR/50." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
+		OPERA49(		Manufacturer.OPERA, Browser.OPERA, 49, "Opera 49", new String[] { "OPR/49." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
+		OPERA48(		Manufacturer.OPERA, Browser.OPERA, 48, "Opera 48", new String[] { "OPR/48." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
+		OPERA47(		Manufacturer.OPERA, Browser.OPERA, 47, "Opera 47", new String[] { "OPR/47." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
+		OPERA46(		Manufacturer.OPERA, Browser.OPERA, 46, "Opera 46", new String[] { "OPR/46." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
+		OPERA45(		Manufacturer.OPERA, Browser.OPERA, 45, "Opera 45", new String[] { "OPR/45." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
+		OPERA44(		Manufacturer.OPERA, Browser.OPERA, 44, "Opera 44", new String[] { "OPR/44." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
+		OPERA43(		Manufacturer.OPERA, Browser.OPERA, 43, "Opera 43", new String[] { "OPR/43." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
+		OPERA42(		Manufacturer.OPERA, Browser.OPERA, 42, "Opera 42", new String[] { "OPR/42." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
 		OPERA34(		Manufacturer.OPERA, Browser.OPERA, 34, "Opera 34", new String[] { "OPR/34." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
 		OPERA33(		Manufacturer.OPERA, Browser.OPERA, 33, "Opera 33", new String[] { "OPR/33." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
 		OPERA32(		Manufacturer.OPERA, Browser.OPERA, 32, "Opera 32", new String[] { "OPR/32." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),

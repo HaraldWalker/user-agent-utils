@@ -68,6 +68,12 @@ public class OperaParameterizedTest extends AbstractUserAgentParameterizedTest {
 				{
 						"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36 OPR/27.0.1689.76",
 						Browser.OPERA27, "27.0.1689.76", OperatingSystem.WINDOWS_7 },
+				{
+						"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 OPR/43.0.2442.991",
+						Browser.OPERA43, "43.0.2442.991", OperatingSystem.WINDOWS_7 },
+				{
+						"Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36 OPR/47.0.2631.39",
+						Browser.OPERA47, "47.0.2631.39", OperatingSystem.WINDOWS_VISTA },
 				// Issue #86
 				{
 						"Mozilla/5.0 (Linux; Android 4.1.2; HTC One SV Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Mobile Safari/537.36 OPR/28.0.1764.90386",

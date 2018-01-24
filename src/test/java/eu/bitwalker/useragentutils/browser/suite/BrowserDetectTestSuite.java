@@ -10,6 +10,7 @@ import eu.bitwalker.useragentutils.browser.CFNetworkParameterizedTest;
 import eu.bitwalker.useragentutils.browser.CaminoParameterizedTest;
 import eu.bitwalker.useragentutils.browser.ChromeMobileParameterizedTest;
 import eu.bitwalker.useragentutils.browser.ChromeParameterizedTest;
+import eu.bitwalker.useragentutils.browser.EdgeParameterizedTest;
 import eu.bitwalker.useragentutils.browser.FirefoxParameterizedTest;
 import eu.bitwalker.useragentutils.browser.InternetExplorerMobileParameterizedTest;
 import eu.bitwalker.useragentutils.browser.InternetExplorerParameterizedTest;
@@ -32,6 +33,7 @@ import eu.bitwalker.useragentutils.browser.ToolParameterizedTest;
 		CFNetworkParameterizedTest.class,
 		ChromeParameterizedTest.class,
 		ChromeMobileParameterizedTest.class, 
+		EdgeParameterizedTest.class,
 		FirefoxParameterizedTest.class,
 		InternetExplorerMobileParameterizedTest.class,
 		InternetExplorerParameterizedTest.class,

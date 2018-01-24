@@ -373,7 +373,6 @@ public class BrowserTest {
 	String[] opera = {
 			"Opera/8.0 (Macintosh; PPC Mac OS X; U; en)",
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/66.0.1889.174",
-			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36 OPR/43.0.1948.25"
 		};
 	
 	String[] opera9 = {
