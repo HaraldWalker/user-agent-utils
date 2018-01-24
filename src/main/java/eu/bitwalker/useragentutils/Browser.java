@@ -99,7 +99,7 @@ public enum Browser {
 	 * Family of Microsoft Edge browsers. Pretends to be Chrome and claims to be webkit compatible. 
 	 * Numbering used here is actually the rendering engine version, not the displayed edge version. 
 	 * For instance 14.14332 is Edge 37 while 14.14342 is Edge 38. User agent only provides the version of the rendering engine. 
-	 * @see https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history
+	 * @see <a href="https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history">Microsoft Edge release history</a>
 	 */
 	EDGE(			Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] {"Edge"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, new PatternBasedVersionFetcher("(?:Edge\\/(([0-9]+)\\.([0-9]*)))")),
 		EDGE_MOBILE(	Manufacturer.MICROSOFT, Browser.EDGE, 304, "Microsoft Edge Mobile", new String[] {"Mobile Safari"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, null ),
