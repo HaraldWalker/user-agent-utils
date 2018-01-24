@@ -33,13 +33,9 @@ A lot of user-agents lie about their identity. That makes UA sniffing a guessing
 
 Instead of using browser switches, build sites and services that are cross-platform/cross-device compatible.       
 
-New in Version 1.21 
+New in Version 1.22 
 -------------------
-- Added current and future Chrome, Firefox, Safari, Edge versions
-- Updated Android and iOS detection
-- Added Tizen as operating system including detection of smart TVs
-- Added detection of linux based smart TVs
-- Added additional bot detection 
+TBA  
 
 Javadoc
 -------
@@ -94,6 +90,15 @@ http://www.bitwalker.eu/contact
 
 Changelog
 ---------
+
+1.21
+----
+- Added current and future Chrome, Firefox, Safari, Edge versions
+- Updated Android and iOS detection
+- Added Tizen as operating system including detection of smart TVs
+- Added detection of linux based smart TVs
+- Added additional bot detection 
+
 1.20 
 ----
 - #142 Fix iPhone detection in case of Opera Mini agent-string 
