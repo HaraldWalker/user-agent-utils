@@ -397,7 +397,12 @@ public class OperatingSystemTest {
 	};
 	
 	String[] ubuntu_touch = {
-			"Mozilla/5.0 (Linux; Ubuntu 14.04 like Android 4.4) AppleWebKit/537.36 Chromium/35.0.1870.2 Mobile Safari/537.36 "
+			"Mozilla/5.0 (Linux; Ubuntu 14.04 like Android 4.4) AppleWebKit/537.36 Chromium/35.0.1870.2 Mobile Safari/537.36"
+	};
+	
+	String[] linuxSmartTV = {
+			"Opera/9.80 (Linux mips; ) Presto/2.12.407 Version/12.51 MB97/0.0.39.18 (DIGIHOME, Mxl661L32, wireless) VSTVB_MB97 SmartTvA/3.0.0",
+			"Mozilla/5.0 (SmartHub; SMART-TV; U; Linux/SmartTV+2015; Maple2012) AppleWebKit/537.42+ (KHTML, like Gecko) SmartTV Safari/537.42+"
 	};
 
 	String[] ubuntu = {
@@ -509,6 +514,7 @@ public class OperatingSystemTest {
 		testAgents(genericTablet, OperatingSystem.UNKNOWN_TABLET);
 		testAgents(unknown, OperatingSystem.UNKNOWN);
 		testAgents(ubuntu_touch, OperatingSystem.UBUNTU_TOUCH_MOBILE);
+		testAgents(linuxSmartTV, OperatingSystem.LINUX_SMART_TV);
 	}
 
 	@Test

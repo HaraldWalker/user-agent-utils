@@ -165,6 +165,7 @@ public enum OperatingSystem {
 	LINUX(			Manufacturer.OTHER,null, 2, "Linux", new String[] { "Linux", "CamelHttpStream" }, null, DeviceType.COMPUTER, null ), // CamelHttpStream is being used by Evolution, an email client for Linux
 		UBUNTU(   Manufacturer.CONONICAL, OperatingSystem.LINUX, 1, "Ubuntu", new String[] {"ubuntu"}, null, DeviceType.COMPUTER, null),
 			UBUNTU_TOUCH_MOBILE(   Manufacturer.CONONICAL, OperatingSystem.UBUNTU, 200, "Ubuntu Touch (mobile)", new String[] {"mobile"}, null, DeviceType.MOBILE, null),
+		LINUX_SMART_TV(   Manufacturer.OTHER, OperatingSystem.LINUX, 21, "Linux (SmartTV)", new String[] {"SmartTv"}, null, DeviceType.DMR, null),
 	
 	/**
 	 * Other Symbian OS versions
