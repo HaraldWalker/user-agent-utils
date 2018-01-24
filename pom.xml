@@ -7,7 +7,7 @@
 	<name>User-Agent-Utils</name>
 	<url>http://www.bitwalker.eu/software/user-agent-utils</url>
 	<artifactId>UserAgentUtils</artifactId>
-	<version>1.21-SNAPSHOT</version>
+	<version>1.21</version>
 	<description>Utility classes to handle user-agents.</description>
 	<properties>
 		<github.global.server>github</github.global.server>
