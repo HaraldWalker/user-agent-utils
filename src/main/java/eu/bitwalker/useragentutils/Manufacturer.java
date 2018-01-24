@@ -136,7 +136,11 @@ public enum Manufacturer {
 	/**
 	 * Canonical Ltd.
 	 */
-	CONONICAL(25,"Canonical Ltd.");
+	CONONICAL(25,"Canonical Ltd."),
+	/**
+	 * Linux Foundation, owner of the Tizen Project
+	 */
+	LINUX_FOUNDATION(26,"Linux Foundation");
 	
 	
 	

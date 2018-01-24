@@ -155,6 +155,21 @@ public enum OperatingSystem {
      *  Google TV uses Android 2.x or 3.x but doesn't identify itself as Android.
      */
 	GOOGLE_TV(		Manufacturer.GOOGLE,null, 100, "Android (Google TV)", new String[] { "GoogleTV" }, null, DeviceType.DMR, null ),	
+	
+	/**
+	 * Tizen is a Linux Foundation project. Mostly used by various Samsung devices.
+	 * @see <a href="https://wiki.tizen.org/Tizen_Browser">Tizen Browser user-agent format</a> 
+	 * @see <a href="http://developer.samsung.com/technical-doc/view.do?v=T000000203">Samsung Internet User-Agent String Format</a>
+	 * Not specified how devices like car display or a fridge would identify themselves. 
+	 */
+	TIZEN(		Manufacturer.LINUX_FOUNDATION,null, 101, "Tizen", new String[] { "Tizen" }, null, DeviceType.UNKNOWN, null ),	
+		TIZEN3(		Manufacturer.LINUX_FOUNDATION, OperatingSystem.TIZEN, 30, "Tizen 3", new String[] { "Tizen 3." }, null, DeviceType.UNKNOWN, null ),	
+		TIZEN3_MOBILE(		Manufacturer.LINUX_FOUNDATION,OperatingSystem.TIZEN3, 31, "Tizen 3 (Mobile)", new String[] { "mobile"}, null, DeviceType.MOBILE, null ),	
+		TIZEN3_TV(		Manufacturer.LINUX_FOUNDATION,OperatingSystem.TIZEN3, 32, "Tizen 3 (SmartTV)", new String[] { "Smart-TV", " TV "}, null, DeviceType.DMR, null ),	
+		TIZEN2(		Manufacturer.LINUX_FOUNDATION, OperatingSystem.TIZEN, 20, "Tizen 2", new String[] { "Tizen 2." }, null, DeviceType.UNKNOWN, null ),	
+		TIZEN2_MOBILE(		Manufacturer.LINUX_FOUNDATION,OperatingSystem.TIZEN2, 21, "Tizen 2 (Mobile)", new String[] { "mobile" }, null, DeviceType.MOBILE, null ),	
+		TIZEN2_TV(		Manufacturer.LINUX_FOUNDATION,OperatingSystem.TIZEN2, 22, "Tizen 2 (SmartTV)", new String[] { "Smart-TV"," TV " }, null, DeviceType.DMR, null ),	
+		TIZEN_MOBILE(		Manufacturer.LINUX_FOUNDATION, OperatingSystem.TIZEN, 10, "Tizen (mobile)", new String[] { "mobile" }, null, DeviceType.MOBILE, null ),	
 
 	/**
 	 * Various Linux based operating systems.

@@ -422,6 +422,29 @@ public class OperatingSystemTest {
 		"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true" // silk mode
 	};
 	
+	String[] tizen2_tv = {
+			"Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1",
+			"Mozilla/5.0 (Linux; Tizen 2.3; SmartHub; SMART-TV; SmartTV; U; Maple2012) AppleWebKit/538.1+ (KHTML, like Gecko) TV Safari/538.1+"
+	};
+	
+	String[] tizen2_mobile = {
+			"Mozilla/5.0 (Linux; Tizen 2.3; SAMSUNG SM-Z130H) AppleWebKit/537.3 (KHTML, like Gecko) SamsungBrowser/1.0 Mobile Safari/537.3",
+			"Mozilla/5.0 (Linux; U; Tizen 2.0; en-us) AppleWebKit/537.1 (KHTML, like Gecko) Mobile TizenBrowser/2.0"
+	};
+	
+	String[] tizen3_mobile = {
+			"Mozilla/5.0 (Linux; Tizen 3.0; SAMSUNG SM-Z400Y) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/2.0 Chrome/47.0.2526.69 Mobile Safari/537.36"
+	};
+	
+	String[] tizen3_tv = {
+			"Mozilla/5.0 (SMART-TV; Linux; Tizen 3.0) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/2.0 Chrome/47.0.2526.69 TV safari/537.36"
+	};
+	
+	// sometimes there is no useful information. Could by any kind of device. 
+	String[] tizen = {
+			"Opera/9.80 (Tizen; Opera Mini/7.6.9/36.2084; U; en) Presto/2.12.423 Version/12.16"
+	};
+		
 	String[] roku = {
 			"Roku/DVP-4.1 (024.01E01250A)", // Roku 2 XD
 			"Roku/DVP-3.0 (013.00E02227A)"
@@ -515,6 +538,11 @@ public class OperatingSystemTest {
 		testAgents(unknown, OperatingSystem.UNKNOWN);
 		testAgents(ubuntu_touch, OperatingSystem.UBUNTU_TOUCH_MOBILE);
 		testAgents(linuxSmartTV, OperatingSystem.LINUX_SMART_TV);
+		testAgents(tizen, OperatingSystem.TIZEN);
+		testAgents(tizen2_mobile, OperatingSystem.TIZEN2_MOBILE);
+		testAgents(tizen2_tv, OperatingSystem.TIZEN2_TV);
+		testAgents(tizen3_mobile, OperatingSystem.TIZEN3_MOBILE);
+		testAgents(tizen3_tv, OperatingSystem.TIZEN3_TV);
 	}
 
 	@Test
@@ -598,7 +626,7 @@ public class OperatingSystemTest {
 		
 		for (OperatingSystem operatingSystem : OperatingSystem.values())
 		{
-			assertTrue(!retrievedIdValues.contains(operatingSystem.getId()));
+			assertTrue("value for " + operatingSystem + "should not be used by another enum",!retrievedIdValues.contains(operatingSystem.getId()));
 			retrievedIdValues.add(operatingSystem.getId());
 		}
 		
