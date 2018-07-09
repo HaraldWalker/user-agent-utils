@@ -233,6 +233,11 @@ public class UserAgent implements Serializable
 		} else if (!operatingSystem.equals(other.operatingSystem))
 			return false;
 		return true;
-	}	
+	}
+
+	/**
+	 * @return userAgentString
+	 */
+	public String getUserAgentString() { return userAgentString; }
 	
 }
