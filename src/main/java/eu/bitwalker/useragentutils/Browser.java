@@ -427,6 +427,10 @@ public enum Browser {
 	 * @return Version
 	 */
 	public Version getVersion(String userAgentString) {
+		if (userAgentString == null) {
+			return null;
+		}
+		
 		if (versionFetcher == null) {
 			return getGroup() != this ? getGroup().getVersion(userAgentString) : null;
 		}
