@@ -1,25 +1,25 @@
 /*
-* Copyright (c) 2008-2018, Harald Walker (bitwalker.eu) and contributing developers 
+* Copyright (c) 2008-2018, Harald Walker (bitwalker.eu) and contributing developers
 * All rights reserved.
-* 
+*
 * Redistribution and use in source and binary forms, with or
 * without modification, are permitted provided that the
 * following conditions are met:
-* 
+*
 * * Redistributions of source code must retain the above
 * copyright notice, this list of conditions and the following
 * disclaimer.
-* 
+*
 * * Redistributions in binary form must reproduce the above
 * copyright notice, this list of conditions and the following
 * disclaimer in the documentation and/or other materials
 * provided with the distribution.
-* 
+*
 * * Neither the name of bitwalker nor the names of its
 * contributors may be used to endorse or promote products
 * derived from this software without specific prior written
 * permission.
-* 
+*
 * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
 * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
 * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
@@ -96,9 +96,9 @@ public enum Browser {
 		IE5(			Manufacturer.MICROSOFT, Browser.IE, 50, "Internet Explorer 5", new String[] { "MSIE 5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null ), // before MSIE
 
 	/**
-	 * Family of Microsoft Edge browsers. Pretends to be Chrome and claims to be webkit compatible. 
-	 * Numbering used here is actually the rendering engine version, not the displayed edge version. 
-	 * For instance 14.14332 is Edge 37 while 14.14342 is Edge 38. User agent only provides the version of the rendering engine. 
+	 * Family of Microsoft Edge browsers. Pretends to be Chrome and claims to be webkit compatible.
+	 * Numbering used here is actually the rendering engine version, not the displayed edge version.
+	 * For instance 14.14332 is Edge 37 while 14.14342 is Edge 38. User agent only provides the version of the rendering engine.
 	 * @see <a href="https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history">Microsoft Edge release history</a>
 	 */
 	EDGE(			Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] {"Edge"}, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, new PatternBasedVersionFetcher("(?:Edge\\/(([0-9]+)\\.([0-9]*)))")),
@@ -112,19 +112,19 @@ public enum Browser {
 		EDGE14(			Manufacturer.MICROSOFT, Browser.EDGE, 305, "Microsoft Edge (layout engine 14)", new String[] {"Edge/14"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE13(			Manufacturer.MICROSOFT, Browser.EDGE, 303, "Microsoft Edge (layout engine 13)", new String[] {"Edge/13"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE12(			Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge (layout engine 12)", new String[] {"Edge/12"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
-	
+
 	/**
 	 * Google Chrome browser
 	 */
-	CHROME( 		Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview", "Vivaldi" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)") ), // before Mozilla
+	CHROME( 		Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview", "Vivaldi", "HeadlessChrome" } , BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)") ), // before Mozilla
 		CHROME_MOBILE( 	Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo","CriOS", "Mobile Safari" }, new String[] {"OPR/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)") ),
-		CHROME65( 		Manufacturer.GOOGLE, Browser.CHROME, 71, "Chrome 65", new String[] { "Chrome/65" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
-		CHROME64( 		Manufacturer.GOOGLE, Browser.CHROME, 70, "Chrome 64", new String[] { "Chrome/64" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
-		CHROME63( 		Manufacturer.GOOGLE, Browser.CHROME, 69, "Chrome 63", new String[] { "Chrome/63" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
-		CHROME62( 		Manufacturer.GOOGLE, Browser.CHROME, 68, "Chrome 62", new String[] { "Chrome/62" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
-		CHROME61( 		Manufacturer.GOOGLE, Browser.CHROME, 67, "Chrome 61", new String[] { "Chrome/61" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
-		CHROME60( 		Manufacturer.GOOGLE, Browser.CHROME, 66, "Chrome 60", new String[] { "Chrome/60" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
-		CHROME59( 		Manufacturer.GOOGLE, Browser.CHROME, 65, "Chrome 59", new String[] { "Chrome/59" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME65( 		Manufacturer.GOOGLE, Browser.CHROME, 71, "Chrome 65", new String[] { "Chrome/65" }, new String[] { "OPR/", "Web Preview", "Vivaldi", "HeadlessChrome" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME64( 		Manufacturer.GOOGLE, Browser.CHROME, 70, "Chrome 64", new String[] { "Chrome/64" }, new String[] { "OPR/", "Web Preview", "Vivaldi", "HeadlessChrome" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME63( 		Manufacturer.GOOGLE, Browser.CHROME, 69, "Chrome 63", new String[] { "Chrome/63" }, new String[] { "OPR/", "Web Preview", "Vivaldi", "HeadlessChrome" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME62( 		Manufacturer.GOOGLE, Browser.CHROME, 68, "Chrome 62", new String[] { "Chrome/62" }, new String[] { "OPR/", "Web Preview", "Vivaldi", "HeadlessChrome" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME61( 		Manufacturer.GOOGLE, Browser.CHROME, 67, "Chrome 61", new String[] { "Chrome/61" }, new String[] { "OPR/", "Web Preview", "Vivaldi", "HeadlessChrome" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME60( 		Manufacturer.GOOGLE, Browser.CHROME, 66, "Chrome 60", new String[] { "Chrome/60" }, new String[] { "OPR/", "Web Preview", "Vivaldi", "HeadlessChrome" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
+		CHROME59( 		Manufacturer.GOOGLE, Browser.CHROME, 65, "Chrome 59", new String[] { "Chrome/59" }, new String[] { "OPR/", "Web Preview", "Vivaldi", "HeadlessChrome" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME58( 		Manufacturer.GOOGLE, Browser.CHROME, 64, "Chrome 58", new String[] { "Chrome/58" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME57( 		Manufacturer.GOOGLE, Browser.CHROME, 63, "Chrome 57", new String[] { "Chrome/57" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
 		CHROME56( 		Manufacturer.GOOGLE, Browser.CHROME, 62, "Chrome 56", new String[] { "Chrome/56" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null ), // before Mozilla
@@ -186,7 +186,7 @@ public enum Browser {
 		/**
 		 * Firefox for iOS devices. This Firefox version is using webkit instead of gecko rendering engine.
 		 */
-		FIREFOX_MOBILE_IOS(Manufacturer.MOZILLA, FIREFOX_MOBILE, 224, "Firefox Mobile (iOS)", new String[] { "FxiOS" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),  
+		FIREFOX_MOBILE_IOS(Manufacturer.MOZILLA, FIREFOX_MOBILE, 224, "Firefox Mobile (iOS)", new String[] { "FxiOS" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),
 	FIREFOX59(		Manufacturer.MOZILLA, Browser.FIREFOX, 238, "Firefox 59", new String[] { "Firefox/59" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 	FIREFOX58(		Manufacturer.MOZILLA, Browser.FIREFOX, 237, "Firefox 58", new String[] { "Firefox/58" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 	FIREFOX57(		Manufacturer.MOZILLA, Browser.FIREFOX, 236, "Firefox 57", new String[] { "Firefox/57" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
@@ -247,13 +247,13 @@ public enum Browser {
 	FIREFOX2(		Manufacturer.MOZILLA, Browser.FIREFOX, 20, "Firefox 2", new String[] { "Firefox/2." }, new String[]{"Camino", "WordPress.com mShots"}, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 	FIREFOX1_5(		Manufacturer.MOZILLA, Browser.FIREFOX, 15, "Firefox 1.5", new String[] { "Firefox/1.5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 
-	
-	SAFARI(			Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi","CFNetwork", "Phantom" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT,
+
+	SAFARI(			Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi","CFNetwork", "Phantom", "HeadlessChrome" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT,
 						new SequentialVersionFetcher(
 								new PatternBasedVersionFetcher("Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // before AppleWebKit
 								new VersionFetcherFromMap(Pattern.compile("AppleWebKit/(\\d+(?:.\\d+){1,2})"), SafariUtils.getWebKitToSafariVersion())
-						) 
-					),  
+						)
+					),
 		BLACKBERRY10( Manufacturer.BLACKBERRY, Browser.SAFARI, 10, "BlackBerry", new String[] { "BB10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null),
 		MOBILE_SAFARI(	Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new String[] { "Mobile Safari","Mobile/" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "FxiOS" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null ),  // before Safari
 		SILK(			Manufacturer.AMAZON, Browser.SAFARI, 15, "Silk", new String[] { "Silk/" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("Silk\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\-[\\w]+)?)") ),  // http://en.wikipedia.org/wiki/Amazon_Silk
@@ -314,7 +314,7 @@ public enum Browser {
 	/*
 	 * Apple WebKit compatible client. Can be a browser or an application with embedded browser using UIWebView.
 	 */
-	APPLE_WEB_KIT(	Manufacturer.APPLE, null, 50, "Apple WebKit", new String[] { "AppleWebKit" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "Phantom" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
+	APPLE_WEB_KIT(	Manufacturer.APPLE, null, 50, "Apple WebKit", new String[] { "AppleWebKit" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "Phantom", "HeadlessChrome" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
 		APPLE_ITUNES(	Manufacturer.APPLE, Browser.APPLE_WEB_KIT, 52, "iTunes", new String[] { "iTunes" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
 		APPLE_APPSTORE(	Manufacturer.APPLE, Browser.APPLE_WEB_KIT, 53, "App Store", new String[] { "MacAppStore" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
 		ADOBE_AIR(	Manufacturer.ADOBE, Browser.APPLE_WEB_KIT, 1, "Adobe AIR application", new String[] { "AdobeAIR" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
@@ -343,9 +343,9 @@ public enum Browser {
 
 	SEAMONKEY(		Manufacturer.OTHER, null, 15, "SeaMonkey", new String[]{"SeaMonkey"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, new PatternBasedVersionFetcher("SeaMonkey\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)")), // using Gecko Engine
 
-	BOT(			Manufacturer.OTHER, null,12, "Robot/Spider", new String[] {"Googlebot", "Mediapartners-Google", "Web Preview", "bot", "Applebot" , "spider", "crawler", "Feedfetcher", "Slurp", "Twiceler", "Nutch", "BecomeBot", 
+	BOT(			Manufacturer.OTHER, null,12, "Robot/Spider", new String[] { "Googlebot", "Mediapartners-Google", "Web Preview", "bot", "Applebot" , "spider", "crawler", "Feedfetcher", "Slurp", "Twiceler", "Nutch", "BecomeBot",
 					"bingbot", "BingPreview", "Google Web Preview", "WordPress.com mShots", "Seznam", "facebookexternalhit" , "YandexMarket", "Teoma", "ThumbSniper", "Phantom",
-					"Go-http-client", "Java/", "python-requests", "YandexBot", "AdsBot-Google", "AhrefsBot" }, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
+					"Go-http-client", "Java/", "python-requests", "YandexBot", "AdsBot-Google", "AhrefsBot", "HeadlessChrome", "Easy-Thumb" }, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
 		BOT_MOBILE( 	Manufacturer.OTHER, Browser.BOT, 20 , "Mobile Robot/Spider", new String[] {"Googlebot-Mobile"}, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
 
 	MOZILLA(		Manufacturer.MOZILLA, null, 1, "Mozilla", new String[] { "Mozilla", "Moozilla" }, new String[] {"ggpht.com"}, BrowserType.WEB_BROWSER, RenderingEngine.OTHER, null), // rest of the mozilla browsers
@@ -371,7 +371,7 @@ public enum Browser {
 	APPLE_MAIL(		Manufacturer.APPLE, null, 51, "Apple Mail", new String[0], null, BrowserType.EMAIL_CLIENT, RenderingEngine.WEBKIT, null); // not detectable any longer.
 
 	/*
-	 * An id for each browser version which is unique per manufacturer. 
+	 * An id for each browser version which is unique per manufacturer.
 	 */
 	private final short id;
 	private final String name;
@@ -385,8 +385,8 @@ public enum Browser {
 	private VersionFetcher versionFetcher;
 	private static List<Browser> topLevelBrowsers;
 
-	
-	
+
+
 	private Browser(Manufacturer manufacturer, Browser parent, int versionId, String name, String[] aliases, String[] exclude, BrowserType browserType, RenderingEngine renderingEngine, VersionFetcher versionFetcher) {
 		this.id =  (short) ( ( manufacturer.getId() << 8) + (byte) versionId);
 		this.name = name;
@@ -430,7 +430,7 @@ public enum Browser {
 		if (userAgentString == null) {
 			return null;
 		}
-		
+
 		if (versionFetcher == null) {
 			return getGroup() != this ? getGroup().getVersion(userAgentString) : null;
 		}
