@@ -108,6 +108,9 @@ public enum OperatingSystem {
 	 * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
 	 */	
 	IOS(			Manufacturer.APPLE,null, 2, "iOS", new String[] { "iPhone", "like Mac OS X" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS12_2_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 95, "iOS 12.2 (iPhone)", new String[] { "iPhone OS 12_2" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
+		iOS12_1_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 94, "iOS 12.1 (iPhone)", new String[] { "iPhone OS 12_1" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
+		iOS12_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 93, "iOS 12 (iPhone)", new String[] { "iPhone OS 12" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
 		iOS11_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 92, "iOS 11 (iPhone)", new String[] { "iPhone OS 11" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS10_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 91, "iOS 10 (iPhone)", new String[] { "iPhone OS 10" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS9_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 90, "iOS 9 (iPhone)", new String[] { "iPhone OS 9" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
